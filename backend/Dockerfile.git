@@ -1,0 +1,40 @@
+# 阶段 1: 克隆代码
+FROM alpine/git:latest AS git-clone
+LABEL maintainer="markdown-editor"
+LABEL description="Markdown Editor Backend - Git Clone Stage"
+
+ARG GIT_REPO_URL=https://github.com/PekJone/markdown-editor.git
+ARG GIT_BRANCH=main
+
+WORKDIR /app
+RUN git clone --depth 1 --branch ${GIT_BRANCH} ${GIT_REPO_URL} /app/backend
+
+# 阶段 2: 构建应用
+FROM maven:3.8.6-jdk-8 AS builder
+WORKDIR /build
+
+COPY --from=git-clone /app/backend/pom.xml .
+RUN mvn dependency:go-offline -B
+
+COPY --from=git-clone /app/backend/src ./src
+RUN mvn clean package -DskipTests -q
+
+# 阶段 3: 运行时镜像
+FROM openjdk:8-jre-alpine
+LABEL maintainer="markdown-editor"
+LABEL description="Markdown Editor Backend"
+
+WORKDIR /app
+
+COPY --from=builder /build/target/editor-backend-1.0.0.jar app.jar
+
+RUN mkdir -p /app/uploads
+
+RUN ln -sf /usr/share/zoneinfo/Asia/Shanghai /etc/localtime && echo 'Asia/Shanghai' > /etc/timezone
+
+EXPOSE 8081
+
+HEALTHCHECK --interval=30s --timeout=3s --retries=3 \
+  CMD wget --quiet --tries=1 --spider http://localhost:8081/actuator/health || exit 1
+
+ENTRYPOINT ["java", "-jar", "-Djava.security.egd=file:/dev/./urandom", "app.jar"]

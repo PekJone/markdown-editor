@@ -2,12 +2,524 @@
 
 ## 目录
 - [环境要求](#环境要求)
-- [快速部署](#快速部署)
+- [部署方式](#部署方式)
+  - [方式一：本地文件部署](#方式一本地文件部署)
+  - [方式二：Git克隆部署](#方式二git克隆部署)
 - [配置说明](#配置说明)
 - [常用命令](#常用命令)
 - [访问地址](#访问地址)
 - [故障排查](#故障排查)
 - [备份与恢复](#备份与恢复)
+
+---
+
+## 部署方式
+
+本项目支持两种部署方式，请根据实际情况选择：
+
+### 方式一：本地文件部署
+
+通过将本地构建好的项目文件上传到服务器进行部署。适用于没有Git环境或需要部署特定版本的情况。
+
+**特点：**
+- 部署速度快（无需克隆整个仓库）
+- 可以部署任意版本的代码
+- 需要手动上传文件
+
+**操作步骤：**
+
+#### 1. 上传项目文件到服务器
+
+将整个 `markdown-editor` 目录上传到服务器的部署目录（例如 `/opt/markdown-editor`）。
+
+```bash
+# 假设你在本地开发机器上
+scp -r markdown-editor/ user@your-server:/opt/
+```
+
+#### 2. 配置环境变量
+
+在服务器上编辑 `.env` 文件，根据实际需求修改配置：
+
+```bash
+cd /opt/markdown-editor
+nano .env
+```
+
+主要配置项说明：
+```
+# 数据库配置
+DB_HOST=39.107.242.71        # 数据库主机地址
+DB_PORT=3346                 # 数据库端口
+DB_NAME=markdown_editor      # 数据库名称
+DB_USERNAME=root             # 数据库用户名
+DB_PASSWORD=123456           # 数据库密码
+
+# JWT 配置（生产环境建议修改）
+JWT_SECRET=your-secret-key-here
+JWT_EXPIRATION=86400000
+
+# 服务端口配置
+BACKEND_PORT=8081            # 后端端口
+FRONTEND_PORT=80             # 前端端口
+```
+
+#### 3. 启动服务
+
+```bash
+cd /opt/markdown-editor
+
+# 构建并启动服务
+docker compose up -d --build
+
+# 或者直接启动（如果已经构建过）
+docker compose up -d
+```
+
+#### 4. 查看服务状态
+
+```bash
+# 查看所有服务状态
+docker compose ps
+
+# 查看服务日志
+docker compose logs -f
+
+# 查看特定服务日志
+docker compose logs -f backend
+docker compose logs -f frontend
+```
+
+---
+
+### 方式二：Git克隆部署
+
+通过Dockerfile直接从Git仓库克隆代码并在容器内构建。适用于持续部署和更新场景。
+
+**特点：**
+- 部署简单，只需一个 `docker-compose.git.yml` 文件
+- 支持一键更新：重新构建即可获取最新代码
+- 适合CI/CD自动化部署
+- 需要服务器能访问Git仓库
+
+**操作步骤：**
+
+#### 1. 服务器环境准备
+
+确保服务器已安装 Docker 和 Docker Compose：
+
+```bash
+# 检查 Docker 版本
+docker --version
+
+# 检查 Docker Compose 版本
+docker compose version
+```
+
+如果未安装，请参考本文档 [环境要求](#环境要求) 部分进行安装。
+
+#### 2. 创建部署目录
+
+```bash
+# 创建部署目录
+sudo mkdir -p /opt/markdown-editor
+cd /opt/markdown-editor
+```
+
+#### 3. 创建 docker-compose.git.yml 配置文件
+
+将 `docker-compose.git.yml` 文件上传到服务器，或者直接创建：
+
+```bash
+nano docker-compose.git.yml
+```
+
+**完整配置内容：**
+
+```yaml
+version: '3.8'
+
+services:
+  # 后端服务 - 从Git克隆部署
+  backend:
+    build:
+      context: ./backend
+      dockerfile: Dockerfile.git
+    container_name: markdown-backend-git
+    restart: unless-stopped
+    ports:
+      - "${BACKEND_PORT:-8081}:8081"
+    environment:
+      # Git 配置
+      GIT_REPO_URL: ${GIT_REPO_URL:-https://github.com/PekJone/markdown-editor.git}
+      GIT_BRANCH: ${GIT_BRANCH:-main}
+      # 数据库配置（使用外部数据库）
+      SPRING_DATASOURCE_URL: jdbc:mysql://${DB_HOST:-39.107.242.71}:${DB_PORT:-3346}/${DB_NAME:-markdown_editor}?useUnicode=true&characterEncoding=utf-8&useSSL=false&serverTimezone=Asia/Shanghai&allowPublicKeyRetrieval=true
+      SPRING_DATASOURCE_USERNAME: ${DB_USERNAME:-root}
+      SPRING_DATASOURCE_PASSWORD: ${DB_PASSWORD:-123456}
+      # JWT 配置
+      JWT_SECRET: ${JWT_SECRET:-markdown-editor-secret-key-2024}
+      JWT_EXPIRATION: ${JWT_EXPIRATION:-86400000}
+      # 文件上传目录
+      FILE_UPLOAD_DIR: ${FILE_UPLOAD_DIR:-/app/uploads}
+      # 时区配置
+      TZ: ${TZ:-Asia/Shanghai}
+    volumes:
+      # 上传文件持久化
+      - uploads-git:/app/uploads
+    networks:
+      - markdown-network-git
+    healthcheck:
+      test: ["CMD", "wget", "-q", "--spider", "http://localhost:8081/actuator/health"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+      start_period: 60s
+
+  # 前端服务 - 从Git克隆部署
+  frontend:
+    build:
+      context: ./frontend
+      dockerfile: Dockerfile.git
+    container_name: markdown-frontend-git
+    restart: unless-stopped
+    ports:
+      - "${FRONTEND_PORT:-8080}:80"
+    depends_on:
+      - backend
+    networks:
+      - markdown-network-git
+    environment:
+      # Git 配置
+      GIT_REPO_URL: ${GIT_REPO_URL:-https://github.com/PekJone/markdown-editor.git}
+      GIT_BRANCH: ${GIT_BRANCH:-main}
+      # API代理配置
+      API_BASE_URL: http://backend:8081
+      TZ=${TZ:-Asia/Shanghai}
+    healthcheck:
+      test: ["CMD", "wget", "-q", "--spider", "http://localhost/"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+      start_period: 60s
+
+# 持久化数据卷
+volumes:
+  uploads-git:
+    driver: local
+
+# 网络配置
+networks:
+  markdown-network-git:
+    driver: bridge
+```
+
+#### 4. 创建后端 Dockerfile.git
+
+将 `backend/Dockerfile.git` 文件上传到服务器的 `/opt/markdown-editor/backend/` 目录：
+
+```bash
+mkdir -p /opt/markdown-editor/backend
+nano /opt/markdown-editor/backend/Dockerfile.git
+```
+
+**完整配置内容：**
+
+```dockerfile
+# 阶段 1: 克隆代码
+FROM alpine/git:latest AS git-clone
+LABEL maintainer="markdown-editor"
+LABEL description="Markdown Editor Backend - Git Clone Stage"
+
+ARG GIT_REPO_URL=https://github.com/PekJone/markdown-editor.git
+ARG GIT_BRANCH=main
+
+WORKDIR /app
+RUN git clone --depth 1 --branch ${GIT_BRANCH} ${GIT_REPO_URL} /app/backend
+
+# 阶段 2: 构建应用
+FROM maven:3.8.6-jdk-8 AS builder
+WORKDIR /build
+
+COPY --from=git-clone /app/backend/pom.xml .
+RUN mvn dependency:go-offline -B
+
+COPY --from=git-clone /app/backend/src ./src
+RUN mvn clean package -DskipTests -q
+
+# 阶段 3: 运行时镜像
+FROM openjdk:8-jre-alpine
+LABEL maintainer="markdown-editor"
+LABEL description="Markdown Editor Backend"
+
+WORKDIR /app
+
+COPY --from=builder /build/target/editor-backend-1.0.0.jar app.jar
+
+RUN mkdir -p /app/uploads
+
+RUN ln -sf /usr/share/zoneinfo/Asia/Shanghai /etc/localtime && echo 'Asia/Shanghai' > /etc/timezone
+
+EXPOSE 8081
+
+HEALTHCHECK --interval=30s --timeout=3s --retries=3 \
+  CMD wget --quiet --tries=1 --spider http://localhost:8081/actuator/health || exit 1
+
+ENTRYPOINT ["java", "-jar", "-Djava.security.egd=file:/dev/./urandom", "app.jar"]
+```
+
+#### 5. 创建前端 Dockerfile.git
+
+将 `frontend/Dockerfile.git` 文件上传到服务器的 `/opt/markdown-editor/frontend/` 目录：
+
+```bash
+mkdir -p /opt/markdown-editor/frontend
+nano /opt/markdown-editor/frontend/Dockerfile.git
+```
+
+**完整配置内容：**
+
+```dockerfile
+# 阶段 1: 克隆代码
+FROM alpine/git:latest AS git-clone
+LABEL maintainer="markdown-editor"
+LABEL description="Markdown Editor Frontend - Git Clone Stage"
+
+ARG GIT_REPO_URL=https://github.com/PekJone/markdown-editor.git
+ARG GIT_BRANCH=main
+
+WORKDIR /app
+RUN git clone --depth 1 --branch ${GIT_BRANCH} ${GIT_REPO_URL} /app/frontend
+
+# 阶段 2: 构建应用
+FROM node:18-alpine AS builder
+LABEL maintainer="markdown-editor"
+LABEL description="Markdown Editor Frontend Build Stage"
+
+WORKDIR /app
+
+COPY --from=git-clone /app/frontend/package*.json ./
+
+RUN npm config set registry https://registry.npmmirror.com
+
+RUN npm ci --only=production --registry=https://registry.npmmirror.com
+
+COPY --from=git-clone /app/frontend . .
+
+RUN npm run build
+
+# 阶段 3: 运行时镜像
+FROM nginx:alpine
+LABEL maintainer="markdown-editor"
+LABEL description="Markdown Editor Frontend"
+
+RUN ln -sf /usr/share/zoneinfo/Asia/Shanghai /etc/localtime && echo 'Asia/Shanghai' > /etc/timezone
+
+COPY --from=builder /app/dist /usr/share/nginx/html
+
+COPY --from=git-clone /app/frontend/nginx.conf /etc/nginx/nginx.conf
+COPY --from=git-clone /app/frontend/nginx.conf /etc/nginx/conf.d/default.conf
+
+EXPOSE 80
+
+HEALTHCHECK --interval=30s --timeout=3s --retries=3 \
+  CMD wget --quiet --tries=1 --spider http://localhost/ || exit 1
+
+CMD ["nginx", "-g", "daemon off;"]
+```
+
+#### 6. 创建前端 nginx.conf（必需）
+
+前端部署需要nginx配置文件，请创建 `/opt/markdown-editor/frontend/nginx.conf`：
+
+```bash
+nano /opt/markdown-editor/frontend/nginx.conf
+```
+
+**完整配置内容：**
+
+```nginx
+worker_processes auto;
+error_log /var/log/nginx/error.log warn;
+pid /var/run/nginx.pid;
+
+events {
+    worker_connections 1024;
+}
+
+http {
+    include /etc/nginx/mime.types;
+    default_type application/octet-stream;
+
+    log_format main '$remote_addr - $remote_user [$time_local] "$request" '
+                    '$status $body_bytes_sent "$http_referer" '
+                    '"$http_user_agent" "$http_x_forwarded_for"';
+
+    access_log /var/log/nginx/access.log main;
+
+    sendfile on;
+    tcp_nopush on;
+    tcp_nodelay on;
+    keepalive_timeout 65;
+    types_hash_max_size 2048;
+
+    # Gzip 压缩
+    gzip on;
+    gzip_vary on;
+    gzip_proxied any;
+    gzip_comp_level 6;
+    gzip_types text/plain text/css text/xml text/javascript
+               application/json application/javascript application/xml+rss
+               application/rss+xml font/truetype font/opentype
+               application/vnd.ms-fontobject image/svg+xml;
+
+    server {
+        listen 80;
+        server_name localhost;
+        root /usr/share/nginx/html;
+        index index.html;
+
+        # 静态资源缓存
+        location ~* \.(js|css|png|jpg|jpeg|gif|ico|svg|woff|woff2|ttf|eot)$ {
+            expires 30d;
+            add_header Cache-Control "public, immutable";
+        }
+
+        # API 代理
+        location /api/ {
+            proxy_pass http://backend:8081;
+            proxy_set_header Host $host;
+            proxy_set_header X-Real-IP $remote_addr;
+            proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
+            proxy_set_header X-Forwarded-Proto $scheme;
+            proxy_connect_timeout 60s;
+            proxy_send_timeout 60s;
+            proxy_read_timeout 60s;
+        }
+
+        # 前端路由
+        location / {
+            try_files $uri $uri/ /index.html;
+        }
+
+        # 健康检查
+        location /health {
+            return 200 'OK';
+            add_header Content-Type text/plain;
+        }
+    }
+}
+```
+
+#### 7. 创建环境变量配置文件（可选）
+
+创建 `.env` 文件自定义配置：
+
+```bash
+nano /opt/markdown-editor/.env
+```
+
+**配置内容：**
+
+```env
+# Git 仓库配置
+GIT_REPO_URL=https://github.com/PekJone/markdown-editor.git
+GIT_BRANCH=main
+
+# 数据库配置
+DB_HOST=39.107.242.71
+DB_PORT=3346
+DB_NAME=markdown_editor
+DB_USERNAME=root
+DB_PASSWORD=123456
+
+# JWT 配置
+JWT_SECRET=markdown-editor-secret-key-2024
+JWT_EXPIRATION=86400000
+
+# 服务端口配置
+BACKEND_PORT=8081
+FRONTEND_PORT=8080
+
+# 时区配置
+TZ=Asia/Shanghai
+```
+
+#### 8. 启动服务
+
+```bash
+cd /opt/markdown-editor
+
+# 构建并启动服务（首次部署）
+docker compose -f docker-compose.git.yml up -d --build
+```
+
+#### 9. 查看服务状态
+
+```bash
+# 查看所有服务状态
+docker compose -f docker-compose.git.yml ps
+
+# 查看服务日志
+docker compose -f docker-compose.git.yml logs -f
+
+# 查看特定服务日志
+docker compose -f docker-compose.git.yml logs -f backend
+docker compose -f docker-compose.git.yml logs -f frontend
+```
+
+#### 10. 更新部署
+
+当Git仓库有更新时，只需重新构建即可：
+
+```bash
+cd /opt/markdown-editor
+
+# 拉取最新代码并重新构建
+docker compose -f docker-compose.git.yml up -d --build
+
+# 或者只重建某个服务
+docker compose -f docker-compose.git.yml up -d --build backend
+docker compose -f docker-compose.git.yml up -d --build frontend
+```
+
+#### 11. 一键部署脚本
+
+创建便捷脚本 `/opt/markdown-editor/start-git.sh`：
+
+```bash
+#!/bin/bash
+echo "===== Markdown Editor Git 部署 ====="
+echo "开始部署..."
+docker compose -f docker-compose.git.yml up -d --build
+echo "部署完成！"
+echo "前端地址: http://你的服务器IP:8080"
+echo "后端地址: http://你的服务器IP:8081"
+echo "Swagger文档: http://你的服务器IP:8081/swagger-ui/index.html"
+```
+
+添加执行权限并使用：
+
+```bash
+chmod +x /opt/markdown-editor/start-git.sh
+./start-git.sh
+```
+
+创建停止脚本 `/opt/markdown-editor/stop-git.sh`：
+
+```bash
+#!/bin/bash
+echo "===== 停止 Markdown Editor ====="
+docker compose -f docker-compose.git.yml down
+echo "服务已停止"
+```
+
+添加执行权限并使用：
+
+```bash
+chmod +x /opt/markdown-editor/stop-git.sh
+./stop-git.sh
+```
 
 ---
 
@@ -20,7 +532,7 @@
 - **Docker Compose**: 2.0+
 - **内存**: 至少 2GB RAM
 - **磁盘**: 至少 10GB 可用空间
-- **网络**: 能访问外部数据库 (39.107.242.71:3346)
+- **网络**: 能访问外部数据库 (39.107.242.71:3346) 和 GitHub
 
 ### 安装 Docker 和 Docker Compose
 
@@ -68,74 +580,6 @@ docker --version
 
 # 检查 Docker Compose 版本
 docker compose version
-```
-
----
-
-## 快速部署
-
-### 1. 上传项目文件到服务器
-
-将整个 `markdown-editor` 目录上传到服务器的部署目录（例如 `/opt/markdown-editor`）。
-
-```bash
-# 假设你在本地开发机器上
-scp -r markdown-editor/ user@your-server:/opt/
-```
-
-### 2. 配置环境变量
-
-在服务器上编辑 `.env` 文件，根据实际需求修改配置：
-
-```bash
-cd /opt/markdown-editor
-nano .env
-```
-
-主要配置项说明：
-```
-# 数据库配置
-DB_HOST=39.107.242.71        # 数据库主机地址
-DB_PORT=3346                 # 数据库端口
-DB_NAME=markdown_editor      # 数据库名称
-DB_USERNAME=root             # 数据库用户名
-DB_PASSWORD=123456           # 数据库密码
-
-# JWT 配置（生产环境建议修改）
-JWT_SECRET=your-secret-key-here
-JWT_EXPIRATION=86400000
-
-# 服务端口配置
-BACKEND_PORT=8081            # 后端端口
-FRONTEND_PORT=80             # 前端端口
-```
-
-### 3. 启动服务
-
-在项目根目录下执行：
-
-```bash
-cd /opt/markdown-editor
-
-# 构建并启动服务
-docker compose up -d --build
-
-# 或者直接启动（如果已经构建过）
-docker compose up -d
-```
-
-### 4. 查看服务状态
-
-```bash
-# 查看所有服务状态
-docker compose ps
-
-# 查看服务日志
-docker compose logs -f
-
-# 查看特定服务日志
-docker compose logs -f backend
-docker compose logs -f frontend
 ```
 
 ---
