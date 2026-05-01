@@ -124,8 +124,19 @@ public class DocumentServiceImpl implements DocumentService {
         return result;
     }
 
+    private static final java.util.Map<Long, Long> viewCache = new java.util.concurrent.ConcurrentHashMap<>();
+
     @Override
     public int incrementViewCount(Long id) {
+        Long lastViewTime = viewCache.get(id);
+        long now = System.currentTimeMillis();
+        
+        if (lastViewTime != null && now - lastViewTime < 1000) {
+            return 0;
+        }
+        
+        viewCache.put(id, now);
+        
         Document document = documentMapper.selectById(id);
         if (document != null) {
             Integer viewCount = document.getViewCount();
