@@ -14,9 +14,11 @@ import com.markdown.editor.service.DocumentService;
 import com.markdown.editor.service.MessageService;
 import com.markdown.editor.service.UserStatisticsService;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.scheduling.annotation.Async;
 import org.springframework.stereotype.Service;
 
 import java.util.*;
+import java.util.concurrent.CompletableFuture;
 import java.util.stream.Collectors;
 
 @Service
@@ -128,37 +130,50 @@ public class CommentServiceImpl extends ServiceImpl<CommentMapper, Comment> impl
         }
 
         Map<Long, User> userMap = new HashMap<>();
-        if (!userIds.isEmpty()) {
-            List<User> users = userMapper.selectBatchIds(userIds);
-            for (User user : users) {
-                userMap.put(user.getId(), user);
-            }
-        }
-
         Map<Long, Document> documentMap = new HashMap<>();
-        if (!documentIds.isEmpty()) {
-            List<Document> documents = documentService.selectBatchIds(new ArrayList<>(documentIds));
-            for (Document doc : documents) {
-                documentMap.put(doc.getId(), doc);
-            }
-        }
-
         Map<Long, Comment> parentCommentMap = new HashMap<>();
-        if (!parentCommentIds.isEmpty()) {
-            List<Comment> parentComments = baseMapper.selectBatchIds(parentCommentIds);
-            for (Comment pc : parentComments) {
-                parentCommentMap.put(pc.getId(), pc);
-                userIds.add(pc.getUserId());
-            }
-        }
 
-        if (!userIds.isEmpty() && userMap.size() < userIds.size()) {
+        CompletableFuture<Void> userFuture = CompletableFuture.runAsync(() -> {
+            if (!userIds.isEmpty()) {
+                List<User> users = userMapper.selectBatchIds(new ArrayList<>(userIds));
+                for (User user : users) {
+                    userMap.put(user.getId(), user);
+                }
+            }
+        });
+
+        CompletableFuture<Void> documentFuture = CompletableFuture.runAsync(() -> {
+            if (!documentIds.isEmpty()) {
+                List<Document> documents = documentService.selectBatchIds(new ArrayList<>(documentIds));
+                for (Document doc : documents) {
+                    documentMap.put(doc.getId(), doc);
+                }
+            }
+        });
+
+        CompletableFuture<Void> parentCommentFuture = CompletableFuture.runAsync(() -> {
+            if (!parentCommentIds.isEmpty()) {
+                List<Comment> parentComments = baseMapper.selectBatchIds(parentCommentIds);
+                for (Comment pc : parentComments) {
+                    parentCommentMap.put(pc.getId(), pc);
+                    synchronized (userIds) {
+                        userIds.add(pc.getUserId());
+                    }
+                }
+            }
+        });
+
+        CompletableFuture.allOf(userFuture, documentFuture, parentCommentFuture).join();
+
+        if (parentCommentMap.size() > 0) {
             List<Long> missingUserIds = userIds.stream()
                     .filter(id -> !userMap.containsKey(id))
                     .collect(Collectors.toList());
-            List<User> users = userMapper.selectBatchIds(missingUserIds);
-            for (User user : users) {
-                userMap.put(user.getId(), user);
+            if (!missingUserIds.isEmpty()) {
+                List<User> users = userMapper.selectBatchIds(missingUserIds);
+                for (User user : users) {
+                    userMap.put(user.getId(), user);
+                }
             }
         }
 
@@ -208,34 +223,45 @@ public class CommentServiceImpl extends ServiceImpl<CommentMapper, Comment> impl
         }
 
         Map<Long, User> userMap = new HashMap<>();
-        if (!userIds.isEmpty()) {
-            List<User> users = userMapper.selectBatchIds(userIds);
-            for (User user : users) {
-                userMap.put(user.getId(), user);
+        Map<Long, Comment> parentCommentMap = new HashMap<>();
+
+        CompletableFuture<Void> userFuture = CompletableFuture.runAsync(() -> {
+            if (!userIds.isEmpty()) {
+                List<User> users = userMapper.selectBatchIds(new ArrayList<>(userIds));
+                for (User user : users) {
+                    userMap.put(user.getId(), user);
+                }
+            }
+        });
+
+        CompletableFuture<Void> parentCommentFuture = CompletableFuture.runAsync(() -> {
+            if (!parentCommentIds.isEmpty()) {
+                List<Comment> parentComments = baseMapper.selectBatchIds(parentCommentIds);
+                for (Comment pc : parentComments) {
+                    parentCommentMap.put(pc.getId(), pc);
+                    synchronized (userIds) {
+                        userIds.add(pc.getUserId());
+                    }
+                }
+            }
+        });
+
+        CompletableFuture.allOf(userFuture, parentCommentFuture).join();
+
+        if (parentCommentMap.size() > 0) {
+            List<Long> missingUserIds = userIds.stream()
+                    .filter(id -> !userMap.containsKey(id))
+                    .collect(Collectors.toList());
+            if (!missingUserIds.isEmpty()) {
+                List<User> users = userMapper.selectBatchIds(missingUserIds);
+                for (User user : users) {
+                    userMap.put(user.getId(), user);
+                }
             }
         }
 
         Map<Long, Document> documentMap = documents.stream()
                 .collect(Collectors.toMap(Document::getId, d -> d));
-
-        Map<Long, Comment> parentCommentMap = new HashMap<>();
-        if (!parentCommentIds.isEmpty()) {
-            List<Comment> parentComments = baseMapper.selectBatchIds(parentCommentIds);
-            for (Comment pc : parentComments) {
-                parentCommentMap.put(pc.getId(), pc);
-                userIds.add(pc.getUserId());
-            }
-        }
-
-        if (!userIds.isEmpty() && userMap.size() < userIds.size()) {
-            List<Long> missingUserIds = userIds.stream()
-                    .filter(id -> !userMap.containsKey(id))
-                    .collect(Collectors.toList());
-            List<User> users = userMapper.selectBatchIds(missingUserIds);
-            for (User user : users) {
-                userMap.put(user.getId(), user);
-            }
-        }
 
         List<CommentDTO> dtoList = new ArrayList<>();
         for (Comment comment : filteredComments) {
