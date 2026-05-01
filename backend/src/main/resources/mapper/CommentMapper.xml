@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.markdown.editor.mapper.CommentMapper">
+
+    <resultMap id="CommentWithDetailsResultMap" type="com.markdown.editor.dto.CommentDTO">
+        <id column="id" property="id"/>
+        <result column="document_id" property="documentId"/>
+        <result column="user_id" property="userId"/>
+        <result column="parent_id" property="parentId"/>
+        <result column="content" property="content"/>
+        <result column="created_at" property="createdAt"/>
+        <result column="username" property="username"/>
+        <result column="nickname" property="nickname"/>
+        <result column="document_title" property="documentTitle"/>
+        <result column="replied_user_id" property="repliedUserId"/>
+        <result column="replied_username" property="repliedUsername"/>
+        <result column="replied_nickname" property="repliedNickname"/>
+    </resultMap>
+
+    <select id="selectMyCommentsWithDetails" resultMap="CommentWithDetailsResultMap">
+        SELECT 
+            c.id,
+            c.document_id,
+            c.user_id,
+            c.parent_id,
+            c.content,
+            c.created_at,
+            u.username,
+            u.nickname,
+            d.title AS document_title,
+            pu.id AS replied_user_id,
+            pu.username AS replied_username,
+            pu.nickname AS replied_nickname
+        FROM comment c
+        LEFT JOIN user u ON c.user_id = u.id
+        LEFT JOIN document d ON c.document_id = d.id
+        LEFT JOIN comment pc ON c.parent_id = pc.id
+        LEFT JOIN user pu ON pc.user_id = pu.id
+        WHERE c.user_id = #{userId}
+        ORDER BY c.created_at DESC
+        LIMIT #{offset}, #{size}
+    </select>
+
+    <select id="countMyComments" resultType="java.lang.Long">
+        SELECT COUNT(*) FROM comment WHERE user_id = #{userId}
+    </select>
+
+    <select id="selectReceivedCommentsWithDetails" resultMap="CommentWithDetailsResultMap">
+        SELECT 
+            c.id,
+            c.document_id,
+            c.user_id,
+            c.parent_id,
+            c.content,
+            c.created_at,
+            u.username,
+            u.nickname,
+            d.title AS document_title,
+            pu.id AS replied_user_id,
+            pu.username AS replied_username,
+            pu.nickname AS replied_nickname
+        FROM comment c
+        LEFT JOIN user u ON c.user_id = u.id
+        LEFT JOIN document d ON c.document_id = d.id
+        LEFT JOIN comment pc ON c.parent_id = pc.id
+        LEFT JOIN user pu ON pc.user_id = pu.id
+        WHERE d.user_id = #{userId} AND c.user_id != #{userId}
+        ORDER BY c.created_at DESC
+        LIMIT #{offset}, #{size}
+    </select>
+
+    <select id="countReceivedComments" resultType="java.lang.Long">
+        SELECT COUNT(*) 
+        FROM comment c
+        JOIN document d ON c.document_id = d.id
+        WHERE d.user_id = #{userId} AND c.user_id != #{userId}
+    </select>
+
+</mapper>

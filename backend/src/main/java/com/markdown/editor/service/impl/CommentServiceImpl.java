@@ -16,18 +16,13 @@ import com.markdown.editor.service.UserStatisticsService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import java.util.*;
-import java.util.concurrent.*;
-import java.util.stream.Collectors;
+import java.time.LocalDateTime;
+import java.util.ArrayList;
+import java.util.Collections;
+import java.util.List;
 
 @Service
 public class CommentServiceImpl extends ServiceImpl<CommentMapper, Comment> implements CommentService {
-
-    private static final ExecutorService DB_QUERY_EXECUTOR = new ThreadPoolExecutor(
-            10, 20, 60L, TimeUnit.SECONDS,
-            new LinkedBlockingQueue<>(200),
-            new ThreadPoolExecutor.CallerRunsPolicy()
-    );
 
     @Autowired
     private UserStatisticsService userStatisticsService;
@@ -118,243 +113,27 @@ public class CommentServiceImpl extends ServiceImpl<CommentMapper, Comment> impl
     public CommentListResult getMyCommentsWithDetails(Long userId, int page, int size) {
         long startTime = System.currentTimeMillis();
 
-        List<Comment> comments = selectByUserId(userId);
-        long total = comments.size();
-        
-        if (comments.isEmpty()) {
-            return new CommentListResult(Collections.emptyList(), 0, size, page + 1);
-        }
+        int offset = page * size;
+        List<CommentDTO> records = baseMapper.selectMyCommentsWithDetails(userId, offset, size);
+        Long total = baseMapper.countMyComments(userId);
 
-        Set<Long> userIds = new HashSet<>();
-        Set<Long> documentIds = new HashSet<>();
-        Set<Long> parentCommentIds = new HashSet<>();
-
-        for (Comment comment : comments) {
-            userIds.add(comment.getUserId());
-            documentIds.add(comment.getDocumentId());
-            if (comment.getParentId() != null) {
-                parentCommentIds.add(comment.getParentId());
-            }
-        }
-
-        CompletableFuture<Map<Long, User>> userFuture = CompletableFuture.supplyAsync(
-                () -> {
-                    if (userIds.isEmpty()) {
-                        return Collections.emptyMap();
-                    }
-                    List<User> users = userMapper.selectBatchIds(new ArrayList<>(userIds));
-                    Map<Long, User> map = new HashMap<>();
-                    for (User user : users) {
-                        map.put(user.getId(), user);
-                    }
-                    return map;
-                }, DB_QUERY_EXECUTOR
-        );
-
-        CompletableFuture<Map<Long, Document>> documentFuture = CompletableFuture.supplyAsync(
-                () -> {
-                    if (documentIds.isEmpty()) {
-                        return Collections.emptyMap();
-                    }
-                    List<Document> documents = documentService.selectBatchIds(new ArrayList<>(documentIds));
-                    Map<Long, Document> map = new HashMap<>();
-                    for (Document doc : documents) {
-                        map.put(doc.getId(), doc);
-                    }
-                    return map;
-                }, DB_QUERY_EXECUTOR
-        );
-
-        CompletableFuture<Map<Long, Comment>> parentCommentFuture = CompletableFuture.supplyAsync(
-                () -> {
-                    if (parentCommentIds.isEmpty()) {
-                        return Collections.emptyMap();
-                    }
-                    List<Comment> parentComments = baseMapper.selectBatchIds(new ArrayList<>(parentCommentIds));
-                    Map<Long, Comment> map = new HashMap<>();
-                    for (Comment pc : parentComments) {
-                        map.put(pc.getId(), pc);
-                        userIds.add(pc.getUserId());
-                    }
-                    return map;
-                }, DB_QUERY_EXECUTOR
-        );
-
-        CompletableFuture.allOf(userFuture, documentFuture, parentCommentFuture).join();
-
-        Map<Long, User> userMap = userFuture.get();
-        Map<Long, Document> documentMap = documentFuture.get();
-        Map<Long, Comment> parentCommentMap = parentCommentFuture.get();
-
-        if (!parentCommentMap.isEmpty()) {
-            Set<Long> existingUserIds = userMap.keySet();
-            List<Long> missingUserIds = userIds.stream()
-                    .filter(id -> !existingUserIds.contains(id))
-                    .collect(Collectors.toList());
-            if (!missingUserIds.isEmpty()) {
-                List<User> missingUsers = userMapper.selectBatchIds(missingUserIds);
-                for (User user : missingUsers) {
-                    userMap.put(user.getId(), user);
-                }
-            }
-        }
-
-        List<CommentDTO> dtoList = new ArrayList<>(comments.size());
-        for (Comment comment : comments) {
-            dtoList.add(convertToDTO(comment, userMap, documentMap, parentCommentMap));
-        }
-
-        int start = page * size;
-        int end = Math.min(start + size, (int) total);
-        if (start >= total) {
-            return new CommentListResult(Collections.emptyList(), total, size, page + 1);
-        }
-
-        List<CommentDTO> paginatedList = dtoList.subList(start, end);
-        
         long endTime = System.currentTimeMillis();
-        System.out.println("getMyCommentsWithDetails execution time: " + (endTime - startTime) + "ms");
+        System.out.println("getMyCommentsWithDetails (JOIN): " + (endTime - startTime) + "ms");
 
-        return new CommentListResult(paginatedList, total, size, page + 1);
+        return new CommentListResult(records, total != null ? total : 0, size, page + 1);
     }
 
     @Override
     public CommentListResult getReceivedCommentsWithDetails(Long userId, int page, int size) {
         long startTime = System.currentTimeMillis();
 
-        List<Document> documents = documentService.selectByUserId(userId);
-        if (documents.isEmpty()) {
-            return new CommentListResult(Collections.emptyList(), 0, size, page + 1);
-        }
+        int offset = page * size;
+        List<CommentDTO> records = baseMapper.selectReceivedCommentsWithDetails(userId, offset, size);
+        Long total = baseMapper.countReceivedComments(userId);
 
-        Map<Long, Document> documentMap = new HashMap<>();
-        for (Document doc : documents) {
-            documentMap.put(doc.getId(), doc);
-        }
-
-        List<Long> documentIds = documents.stream()
-                .map(Document::getId)
-                .collect(Collectors.toList());
-
-        List<Comment> comments = selectByDocumentIds(documentIds);
-        List<Comment> filteredComments = comments.stream()
-                .filter(c -> !c.getUserId().equals(userId))
-                .collect(Collectors.toList());
-
-        long total = filteredComments.size();
-        if (filteredComments.isEmpty()) {
-            return new CommentListResult(Collections.emptyList(), 0, size, page + 1);
-        }
-
-        Set<Long> userIds = new HashSet<>();
-        Set<Long> parentCommentIds = new HashSet<>();
-
-        for (Comment comment : filteredComments) {
-            userIds.add(comment.getUserId());
-            if (comment.getParentId() != null) {
-                parentCommentIds.add(comment.getParentId());
-            }
-        }
-
-        CompletableFuture<Map<Long, User>> userFuture = CompletableFuture.supplyAsync(
-                () -> {
-                    if (userIds.isEmpty()) {
-                        return Collections.emptyMap();
-                    }
-                    List<User> users = userMapper.selectBatchIds(new ArrayList<>(userIds));
-                    Map<Long, User> map = new HashMap<>();
-                    for (User user : users) {
-                        map.put(user.getId(), user);
-                    }
-                    return map;
-                }, DB_QUERY_EXECUTOR
-        );
-
-        CompletableFuture<Map<Long, Comment>> parentCommentFuture = CompletableFuture.supplyAsync(
-                () -> {
-                    if (parentCommentIds.isEmpty()) {
-                        return Collections.emptyMap();
-                    }
-                    List<Comment> parentComments = baseMapper.selectBatchIds(new ArrayList<>(parentCommentIds));
-                    Map<Long, Comment> map = new HashMap<>();
-                    for (Comment pc : parentComments) {
-                        map.put(pc.getId(), pc);
-                        userIds.add(pc.getUserId());
-                    }
-                    return map;
-                }, DB_QUERY_EXECUTOR
-        );
-
-        CompletableFuture.allOf(userFuture, parentCommentFuture).join();
-
-        Map<Long, User> userMap = userFuture.get();
-        Map<Long, Comment> parentCommentMap = parentCommentFuture.get();
-
-        if (!parentCommentMap.isEmpty()) {
-            Set<Long> existingUserIds = userMap.keySet();
-            List<Long> missingUserIds = userIds.stream()
-                    .filter(id -> !existingUserIds.contains(id))
-                    .collect(Collectors.toList());
-            if (!missingUserIds.isEmpty()) {
-                List<User> missingUsers = userMapper.selectBatchIds(missingUserIds);
-                for (User user : missingUsers) {
-                    userMap.put(user.getId(), user);
-                }
-            }
-        }
-
-        List<CommentDTO> dtoList = new ArrayList<>(filteredComments.size());
-        for (Comment comment : filteredComments) {
-            dtoList.add(convertToDTO(comment, userMap, documentMap, parentCommentMap));
-        }
-
-        int start = page * size;
-        int end = Math.min(start + size, (int) total);
-        if (start >= total) {
-            return new CommentListResult(Collections.emptyList(), total, size, page + 1);
-        }
-
-        List<CommentDTO> paginatedList = dtoList.subList(start, end);
-        
         long endTime = System.currentTimeMillis();
-        System.out.println("getReceivedCommentsWithDetails execution time: " + (endTime - startTime) + "ms");
+        System.out.println("getReceivedCommentsWithDetails (JOIN): " + (endTime - startTime) + "ms");
 
-        return new CommentListResult(paginatedList, total, size, page + 1);
-    }
-
-    private CommentDTO convertToDTO(Comment comment, Map<Long, User> userMap,
-                                    Map<Long, Document> documentMap, Map<Long, Comment> parentCommentMap) {
-        CommentDTO dto = new CommentDTO();
-        dto.setId(comment.getId());
-        dto.setDocumentId(comment.getDocumentId());
-        dto.setUserId(comment.getUserId());
-        dto.setParentId(comment.getParentId());
-        dto.setContent(comment.getContent());
-        dto.setCreatedAt(comment.getCreatedAt());
-
-        User user = userMap.get(comment.getUserId());
-        if (user != null) {
-            dto.setUsername(user.getUsername());
-            dto.setNickname(user.getNickname());
-        }
-
-        Document doc = documentMap.get(comment.getDocumentId());
-        if (doc != null) {
-            dto.setDocumentTitle(doc.getTitle());
-        }
-
-        if (comment.getParentId() != null) {
-            Comment parentComment = parentCommentMap.get(comment.getParentId());
-            if (parentComment != null) {
-                User repliedUser = userMap.get(parentComment.getUserId());
-                if (repliedUser != null) {
-                    dto.setRepliedUserId(repliedUser.getId());
-                    dto.setRepliedUsername(repliedUser.getUsername());
-                    dto.setRepliedNickname(repliedUser.getNickname());
-                }
-            }
-        }
-
-        return dto;
+        return new CommentListResult(records, total != null ? total : 0, size, page + 1);
     }
 }
