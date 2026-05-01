@@ -6,7 +6,7 @@ ARG GIT_REPO_URL=https://github.com/PekJone/markdown-editor.git
 ARG GIT_BRANCH=main
 
 WORKDIR /app
-RUN git config --global http.sslVerify false && git clone --depth 1 --branch ${GIT_BRANCH} ${GIT_REPO_URL} /app/repo
+RUN GIT_SSL_NO_VERIFY=true git clone --depth 1 --branch ${GIT_BRANCH} ${GIT_REPO_URL} /app/repo
 
 FROM maven:3.8.6-jdk-8 AS builder
 WORKDIR /build
