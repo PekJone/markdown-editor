@@ -1,150 +1,150 @@
-# Markdown Editor 部署说明文档
+# Markdown Editor Deployment Documentation
 
-## 目录
+## Table of Contents
 
-- [环境要求](#环境要求)
-- [部署方式](#部署方式)
-  - [方式一：本地文件部署](#方式一本地文件部署)
-  - [方式二：Git克隆部署](#方式二git克隆部署)
-- [配置说明](#配置说明)
-- [常用命令](#常用命令)
-- [访问地址](#访问地址)
-- [故障排查](#故障排查)
-- [备份与恢复](#备份与恢复)
+- [Environment Requirements](#environment-requirements)
+- [Deployment Methods](#deployment-methods)
+  - [Method 1: Local File Deployment](#method-1-local-file-deployment)
+  - [Method 2: Git Clone Deployment](#method-2-git-clone-deployment)
+- [Configuration Instructions](#configuration-instructions)
+- [Common Commands](#common-commands)
+- [Access Addresses](#access-addresses)
+- [Troubleshooting](#troubleshooting)
+- [Backup and Recovery](#backup-and-recovery)
 
 ***
 
-## 部署方式
+## Deployment Methods
 
-本项目支持两种部署方式，请根据实际情况选择：
+This project supports two deployment methods. Please choose according to your actual situation:
 
-### 方式一：本地文件部署
+### Method 1: Local File Deployment
 
-通过将本地构建好的项目文件上传到服务器进行部署。适用于没有Git环境或需要部署特定版本的情况。
+Deploy by uploading locally built project files to the server. Suitable for cases without Git environment or when deploying a specific version.
 
-**特点：**
+**Features:**
 
-- 部署速度快（无需克隆整个仓库）
-- 可以部署任意版本的代码
-- 需要手动上传文件
+- Fast deployment (no need to clone entire repository)
+- Can deploy any version of code
+- Requires manual file upload
 
-**操作步骤：**
+**Steps:**
 
-#### 1. 上传项目文件到服务器
+#### 1. Upload Project Files to Server
 
-将整个 `markdown-editor` 目录上传到服务器的部署目录（例如 `/opt/markdown-editor`）。
+Upload the entire `markdown-editor` directory to the server's deployment directory (e.g., `/opt/markdown-editor`).
 
 ```bash
-# 假设你在本地开发机器上
+# Assuming you are on your local development machine
 scp -r markdown-editor/ user@your-server:/opt/
 ```
 
-#### 2. 配置环境变量
+#### 2. Configure Environment Variables
 
-在服务器上编辑 `.env` 文件，根据实际需求修改配置：
+Edit the `.env` file on the server and modify the configuration according to your needs:
 
 ```bash
 cd /opt/markdown-editor
 nano .env
 ```
 
-主要配置项说明：
+Main configuration items:
 
 ```
-# 数据库配置
-DB_HOST=39.107.242.71        # 数据库主机地址
-DB_PORT=3346                 # 数据库端口
-DB_NAME=markdown_editor      # 数据库名称
-DB_USERNAME=root             # 数据库用户名
-DB_PASSWORD=123456           # 数据库密码
+# Database Configuration
+DB_HOST=39.107.242.71        # Database host address
+DB_PORT=3346                 # Database port
+DB_NAME=markdown_editor      # Database name
+DB_USERNAME=root             # Database username
+DB_PASSWORD=123456           # Database password
 
-# JWT 配置（生产环境建议修改）
+# JWT Configuration (recommended to modify in production)
 JWT_SECRET=your-secret-key-here
 JWT_EXPIRATION=86400000
 
-# 服务端口配置
-BACKEND_PORT=8081            # 后端端口
-FRONTEND_PORT=80             # 前端端口
+# Service Port Configuration
+BACKEND_PORT=8081            # Backend port
+FRONTEND_PORT=8080           # Frontend port
 ```
 
-#### 3. 启动服务
+#### 3. Start Services
 
 ```bash
 cd /opt/markdown-editor
 
-# 构建并启动服务
+# Build and start services
 docker compose up -d --build
 
-# 或者直接启动（如果已经构建过）
+# Or start directly (if already built)
 docker compose up -d
 ```
 
-#### 4. 查看服务状态
+#### 4. Check Service Status
 
 ```bash
-# 查看所有服务状态
+# Check all service status
 docker compose ps
 
-# 查看服务日志
+# Check service logs
 docker compose logs -f
 
-# 查看特定服务日志
+# Check specific service logs
 docker compose logs -f backend
 docker compose logs -f frontend
 ```
 
 ***
 
-### 方式二：Git克隆部署
+### Method 2: Git Clone Deployment
 
-通过Dockerfile直接从Git仓库克隆代码并在容器内构建。适用于持续部署和更新场景。
+Clone code directly from Git repository through Dockerfile and build inside the container. Suitable for continuous deployment and update scenarios.
 
-**特点：**
+**Features:**
 
-- 部署简单，只需一个 `docker-compose.git.yml` 文件
-- 支持一键更新：重新构建即可获取最新代码
-- 适合CI/CD自动化部署
-- 需要服务器能访问Git仓库
+- Simple deployment, only needs one `docker-compose.git.yml` file
+- Supports one-click update: rebuild to get latest code
+- Suitable for CI/CD automated deployment
+- Requires server to access Git repository
 
-**操作步骤：**
+**Steps:**
 
-#### 1. 服务器环境准备
+#### 1. Server Environment Preparation
 
-确保服务器已安装 Docker 和 Docker Compose：
+Ensure Docker and Docker Compose are installed on the server:
 
 ```bash
-# 检查 Docker 版本
+# Check Docker version
 docker --version
 
-# 检查 Docker Compose 版本
+# Check Docker Compose version
 docker compose version
 ```
 
-如果未安装，请参考本文档 [环境要求](#环境要求) 部分进行安装。
+If not installed, please refer to the [Environment Requirements](#environment-requirements) section of this document for installation.
 
-#### 2. 创建部署目录
+#### 2. Create Deployment Directory
 
 ```bash
-# 创建部署目录
+# Create deployment directory
 sudo mkdir -p /opt/markdown-editor
 cd /opt/markdown-editor
 ```
 
-#### 3. 创建 docker-compose.git.yml 配置文件
+#### 3. Create docker-compose.git.yml Configuration File
 
-将 `docker-compose.git.yml` 文件上传到服务器，或者直接创建：
+Upload the `docker-compose.git.yml` file to the server, or create it directly:
 
 ```bash
 nano docker-compose.git.yml
 ```
 
-**完整配置内容：**
+**Complete configuration content:**
 
 ```yaml
 version: '3.8'
 
 services:
-  # 后端服务 - 从Git克隆部署
+  # Backend Service - Deploy from Git Clone
   backend:
     build:
       context: ./backend
@@ -154,22 +154,22 @@ services:
     ports:
       - "${BACKEND_PORT:-8081}:8081"
     environment:
-      # Git 配置
+      # Git Configuration
       GIT_REPO_URL: ${GIT_REPO_URL:-https://github.com/PekJone/markdown-editor.git}
       GIT_BRANCH: ${GIT_BRANCH:-main}
-      # 数据库配置（使用外部数据库）
+      # Database Configuration (using external database)
       SPRING_DATASOURCE_URL: jdbc:mysql://${DB_HOST:-39.107.242.71}:${DB_PORT:-3346}/${DB_NAME:-markdown_editor}?useUnicode=true&characterEncoding=utf-8&useSSL=false&serverTimezone=Asia/Shanghai&allowPublicKeyRetrieval=true
       SPRING_DATASOURCE_USERNAME: ${DB_USERNAME:-root}
       SPRING_DATASOURCE_PASSWORD: ${DB_PASSWORD:-123456}
-      # JWT 配置
+      # JWT Configuration
       JWT_SECRET: ${JWT_SECRET:-markdown-editor-secret-key-2024}
       JWT_EXPIRATION: ${JWT_EXPIRATION:-86400000}
-      # 文件上传目录
+      # File Upload Directory
       FILE_UPLOAD_DIR: ${FILE_UPLOAD_DIR:-/app/uploads}
-      # 时区配置
+      # Timezone Configuration
       TZ: ${TZ:-Asia/Shanghai}
     volumes:
-      # 上传文件持久化
+      # Upload file persistence
       - uploads-git:/app/uploads
     networks:
       - markdown-network-git
@@ -180,7 +180,7 @@ services:
       retries: 3
       start_period: 60s
 
-  # 前端服务 - 从Git克隆部署
+  # Frontend Service - Deploy from Git Clone
   frontend:
     build:
       context: ./frontend
@@ -194,12 +194,12 @@ services:
     networks:
       - markdown-network-git
     environment:
-      # Git 配置
+      # Git Configuration
       GIT_REPO_URL: ${GIT_REPO_URL:-https://github.com/PekJone/markdown-editor.git}
       GIT_BRANCH: ${GIT_BRANCH:-main}
-      # API代理配置
+      # API Proxy Configuration
       API_BASE_URL: http://backend:8081
-      TZ=${TZ:-Asia/Shanghai}
+      TZ: ${TZ:-Asia/Shanghai}
     healthcheck:
       test: ["CMD", "wget", "-q", "--spider", "http://localhost/"]
       interval: 30s
@@ -207,30 +207,29 @@ services:
       retries: 3
       start_period: 60s
 
-# 持久化数据卷
+# Persistence Volumes
 volumes:
   uploads-git:
     driver: local
 
-# 网络配置
+# Network Configuration
 networks:
   markdown-network-git:
     driver: bridge
 ```
 
-#### 4. 创建后端 Dockerfile.git
+#### 4. Create Backend Dockerfile.git
 
-将 `backend/Dockerfile.git` 文件上传到服务器的 `/opt/markdown-editor/backend/` 目录：
+Upload the `backend/Dockerfile.git` file to the server's `/opt/markdown-editor/backend/` directory:
 
 ```bash
 mkdir -p /opt/markdown-editor/backend
 nano /opt/markdown-editor/backend/Dockerfile.git
 ```
 
-**完整配置内容：**
+**Complete configuration content:**
 
 ```dockerfile
-# 阶段 1: 克隆代码
 FROM alpine/git:latest AS git-clone
 LABEL maintainer="markdown-editor"
 LABEL description="Markdown Editor Backend - Git Clone Stage"
@@ -241,7 +240,6 @@ ARG GIT_BRANCH=main
 WORKDIR /app
 RUN git clone --depth 1 --branch ${GIT_BRANCH} ${GIT_REPO_URL} /app/backend
 
-# 阶段 2: 构建应用
 FROM maven:3.8.6-jdk-8 AS builder
 WORKDIR /build
 
@@ -251,7 +249,6 @@ RUN mvn dependency:go-offline -B
 COPY --from=git-clone /app/backend/src ./src
 RUN mvn clean package -DskipTests -q
 
-# 阶段 3: 运行时镜像
 FROM openjdk:8-jre-alpine
 LABEL maintainer="markdown-editor"
 LABEL description="Markdown Editor Backend"
@@ -272,19 +269,18 @@ HEALTHCHECK --interval=30s --timeout=3s --retries=3 \
 ENTRYPOINT ["java", "-jar", "-Djava.security.egd=file:/dev/./urandom", "app.jar"]
 ```
 
-#### 5. 创建前端 Dockerfile.git
+#### 5. Create Frontend Dockerfile.git
 
-将 `frontend/Dockerfile.git` 文件上传到服务器的 `/opt/markdown-editor/frontend/` 目录：
+Upload the `frontend/Dockerfile.git` file to the server's `/opt/markdown-editor/frontend/` directory:
 
 ```bash
 mkdir -p /opt/markdown-editor/frontend
 nano /opt/markdown-editor/frontend/Dockerfile.git
 ```
 
-**完整配置内容：**
+**Complete configuration content:**
 
 ```dockerfile
-# 阶段 1: 克隆代码
 FROM alpine/git:latest AS git-clone
 LABEL maintainer="markdown-editor"
 LABEL description="Markdown Editor Frontend - Git Clone Stage"
@@ -295,7 +291,6 @@ ARG GIT_BRANCH=main
 WORKDIR /app
 RUN git clone --depth 1 --branch ${GIT_BRANCH} ${GIT_REPO_URL} /app/frontend
 
-# 阶段 2: 构建应用
 FROM node:18-alpine AS builder
 LABEL maintainer="markdown-editor"
 LABEL description="Markdown Editor Frontend Build Stage"
@@ -312,7 +307,6 @@ COPY --from=git-clone /app/frontend . .
 
 RUN npm run build
 
-# 阶段 3: 运行时镜像
 FROM nginx:alpine
 LABEL maintainer="markdown-editor"
 LABEL description="Markdown Editor Frontend"
@@ -332,15 +326,15 @@ HEALTHCHECK --interval=30s --timeout=3s --retries=3 \
 CMD ["nginx", "-g", "daemon off;"]
 ```
 
-#### 6. 创建前端 nginx.conf（必需）
+#### 6. Create Frontend nginx.conf (Required)
 
-前端部署需要nginx配置文件，请创建 `/opt/markdown-editor/frontend/nginx.conf`：
+The frontend deployment requires an nginx configuration file. Please create `/opt/markdown-editor/frontend/nginx.conf`:
 
 ```bash
 nano /opt/markdown-editor/frontend/nginx.conf
 ```
 
-**完整配置内容：**
+**Complete configuration content:**
 
 ```nginx
 worker_processes auto;
@@ -367,7 +361,7 @@ http {
     keepalive_timeout 65;
     types_hash_max_size 2048;
 
-    # Gzip 压缩
+    # Gzip Compression
     gzip on;
     gzip_vary on;
     gzip_proxied any;
@@ -383,13 +377,13 @@ http {
         root /usr/share/nginx/html;
         index index.html;
 
-        # 静态资源缓存
+        # Static Resource Cache
         location ~* \.(js|css|png|jpg|jpeg|gif|ico|svg|woff|woff2|ttf|eot)$ {
             expires 30d;
             add_header Cache-Control "public, immutable";
         }
 
-        # API 代理
+        # API Proxy
         location /api/ {
             proxy_pass http://backend:8081;
             proxy_set_header Host $host;
@@ -401,12 +395,12 @@ http {
             proxy_read_timeout 60s;
         }
 
-        # 前端路由
+        # Frontend Routing
         location / {
             try_files $uri $uri/ /index.html;
         }
 
-        # 健康检查
+        # Health Check
         location /health {
             return 200 'OK';
             add_header Content-Type text/plain;
@@ -415,110 +409,110 @@ http {
 }
 ```
 
-#### 7. 创建环境变量配置文件（可选）
+#### 7. Create Environment Variable Configuration File (Optional)
 
-创建 `.env` 文件自定义配置：
+Create `.env` file for custom configuration:
 
 ```bash
 nano /opt/markdown-editor/.env
 ```
 
-**配置内容：**
+**Configuration content:**
 
 ```env
-# Git 仓库配置
+# Git Repository Configuration
 GIT_REPO_URL=https://github.com/PekJone/markdown-editor.git
 GIT_BRANCH=main
 
-# 数据库配置
+# Database Configuration
 DB_HOST=39.107.242.71
 DB_PORT=3346
 DB_NAME=markdown_editor
 DB_USERNAME=root
 DB_PASSWORD=123456
 
-# JWT 配置
+# JWT Configuration
 JWT_SECRET=markdown-editor-secret-key-2024
 JWT_EXPIRATION=86400000
 
-# 服务端口配置
+# Service Port Configuration
 BACKEND_PORT=8081
 FRONTEND_PORT=8080
 
-# 时区配置
+# Timezone Configuration
 TZ=Asia/Shanghai
 ```
 
-#### 8. 启动服务
+#### 8. Start Services
 
 ```bash
 cd /opt/markdown-editor
 
-# 构建并启动服务（首次部署）
+# Build and start services (first deployment)
 docker compose -f docker-compose.git.yml up -d --build
 ```
 
-#### 9. 查看服务状态
+#### 9. Check Service Status
 
 ```bash
-# 查看所有服务状态
+# Check all service status
 docker compose -f docker-compose.git.yml ps
 
-# 查看服务日志
+# Check service logs
 docker compose -f docker-compose.git.yml logs -f
 
-# 查看特定服务日志
+# Check specific service logs
 docker compose -f docker-compose.git.yml logs -f backend
 docker compose -f docker-compose.git.yml logs -f frontend
 ```
 
-#### 10. 更新部署
+#### 10. Update Deployment
 
-当Git仓库有更新时，只需重新构建即可：
+When there are updates in the Git repository, simply rebuild:
 
 ```bash
 cd /opt/markdown-editor
 
-# 拉取最新代码并重新构建
+# Pull latest code and rebuild
 docker compose -f docker-compose.git.yml up -d --build
 
-# 或者只重建某个服务
+# Or rebuild only a specific service
 docker compose -f docker-compose.git.yml up -d --build backend
 docker compose -f docker-compose.git.yml up -d --build frontend
 ```
 
-#### 11. 一键部署脚本
+#### 11. One-Click Deployment Script
 
-创建便捷脚本 `/opt/markdown-editor/start-git.sh`：
+Create a convenient script `/opt/markdown-editor/start-git.sh`:
 
 ```bash
 #!/bin/bash
-echo "===== Markdown Editor Git 部署 ====="
-echo "开始部署..."
+echo "===== Markdown Editor Git Deployment ====="
+echo "Starting deployment..."
 docker compose -f docker-compose.git.yml up -d --build
-echo "部署完成！"
-echo "前端地址: http://你的服务器IP:8080"
-echo "后端地址: http://你的服务器IP:8081"
-echo "Swagger文档: http://你的服务器IP:8081/swagger-ui/index.html"
+echo "Deployment completed!"
+echo "Frontend URL: http://your-server-ip:8080"
+echo "Backend URL: http://your-server-ip:8081"
+echo "Swagger Documentation: http://your-server-ip:8081/swagger-ui/index.html"
 ```
 
-添加执行权限并使用：
+Add execution permission and use:
 
 ```bash
 chmod +x /opt/markdown-editor/start-git.sh
 ./start-git.sh
 ```
 
-创建停止脚本 `/opt/markdown-editor/stop-git.sh`：
+Create stop script `/opt/markdown-editor/stop-git.sh`:
 
 ```bash
 #!/bin/bash
-echo "===== 停止 Markdown Editor ====="
+echo "===== Stopping Markdown Editor ====="
 docker compose -f docker-compose.git.yml down
-echo "服务已停止"
+echo "Services stopped"
 ```
 
-添加执行权限并使用：
+Add execution permission and use:
 
 ```bash
 chmod +x /opt/markdown-editor/stop-git.sh
@@ -527,228 +521,228 @@ chmod +x /opt/markdown-editor/stop-git.sh
 
 ***
 
-## 环境要求
+## Environment Requirements
 
-在部署前，请确保服务器满足以下要求：
+Before deployment, ensure the server meets the following requirements:
 
-- **操作系统**: Linux (推荐 Ubuntu 20.04+ / CentOS 7+)
+- **Operating System**: Linux (Recommended Ubuntu 20.04+ / CentOS 7+)
 - **Docker**: 20.10+
 - **Docker Compose**: 2.0+
-- **内存**: 至少 2GB RAM
-- **磁盘**: 至少 10GB 可用空间
-- **网络**: 能访问外部数据库 (39.107.242.71:3346) 和 GitHub
+- **Memory**: At least 2GB RAM
+- **Disk**: At least 10GB available space
+- **Network**: Access to external database (39.107.242.71:3346) and GitHub
 
-### 安装 Docker 和 Docker Compose
+### Install Docker and Docker Compose
 
-如果服务器还没有安装 Docker 和 Docker Compose，请按照以下步骤安装：
+If Docker and Docker Compose are not installed on the server, follow these steps:
 
-#### Ubuntu/Debian 系统:
+#### Ubuntu/Debian Systems:
 
 ```bash
-# 更新系统
+# Update system
 sudo apt update && sudo apt upgrade -y
 
-# 安装依赖
+# Install dependencies
 sudo apt install -y apt-transport-https ca-certificates curl software-properties-common
 
-# 添加 Docker 官方 GPG 密钥
+# Add Docker official GPG key
 curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo gpg --dearmor -o /usr/share/keyrings/docker-archive-keyring.gpg
 
-# 添加 Docker 软件源
+# Add Docker software source
 echo "deb [arch=amd64 signed-by=/usr/share/keyrings/docker-archive-keyring.gpg] https://download.docker.com/linux/ubuntu $(lsb_release -cs) stable" | sudo tee /etc/apt/sources.list.d/docker.list > /dev/null
 
-# 安装 Docker
+# Install Docker
 sudo apt update
 sudo apt install -y docker-ce docker-ce-cli containerd.io docker-compose-plugin
 
-# 启动 Docker 并设置开机自启
+# Start Docker and set to autostart
 sudo systemctl start docker
 sudo systemctl enable docker
 ```
 
-#### CentOS/RHEL 系统:
+#### CentOS/RHEL Systems:
 
 ```bash
-# 安装 Docker
+# Install Docker
 sudo yum install -y yum-utils
 sudo yum-config-manager --add-repo https://download.docker.com/linux/centos/docker-ce.repo
 sudo yum install -y docker-ce docker-ce-cli containerd.io docker-compose-plugin
 
-# 启动 Docker 并设置开机自启
+# Start Docker and set to autostart
 sudo systemctl start docker
 sudo systemctl enable docker
 ```
 
-#### 验证安装:
+#### Verify Installation:
 
 ```bash
-# 检查 Docker 版本
+# Check Docker version
 docker --version
 
-# 检查 Docker Compose 版本
+# Check Docker Compose version
 docker compose version
 ```
 
 ***
 
-## 配置说明
+## Configuration Instructions
 
-### 数据库配置
+### Database Configuration
 
-当前配置使用外部 MySQL 数据库，地址为：`39.107.242.71:3346`
+Current configuration uses external MySQL database at address: `39.107.242.71:3346`
 
-**注意**：
+**Note**:
 
-- 确保服务器能访问这个数据库地址
-- 确保数据库用户有足够的权限
-- 如果需要更换数据库，请修改 `.env` 文件中的配置
+- Ensure the server can access this database address
+- Ensure the database user has sufficient permissions
+- If you need to change the database, modify the configuration in the `.env` file
 
-### 端口配置
+### Port Configuration
 
-| 服务 | 宿主机端口 | 容器端口 | 说明     |
+| Service | Host Port | Container Port | Description |
 | -- | ----- | ---- | ------ |
-| 前端 | 80    | 80   | 用户访问入口 |
-| 后端 | 8081  | 8081 | API 服务 |
+| Frontend | 8080  | 80   | User access entry |
+| Backend | 8081  | 8081 | API Service |
 
-如果端口被占用，可以在 `.env` 文件中修改端口。
+If the port is occupied, you can modify the port in the `.env` file.
 
-### 持久化配置
+### Persistence Configuration
 
-- **上传文件**: 存储在 Docker volume `markdown-editor_uploads` 中
-- 数据会自动持久化，容器重启不会丢失
+- **Upload Files**: Stored in Docker volume `markdown-editor_uploads`
+- Data is automatically persisted and won't be lost when the container restarts
 
 ***
 
-## 常用命令
+## Common Commands
 
-### 服务管理
+### Service Management
 
 ```bash
-# 启动所有服务
+# Start all services
 docker compose up -d
 
-# 停止所有服务
+# Stop all services
 docker compose stop
 
-# 重启所有服务
+# Restart all services
 docker compose restart
 
-# 停止并删除所有容器
+# Stop and delete all containers
 docker compose down
 
-# 停止并删除所有容器、网络、卷（慎用）
+# Stop and delete all containers, networks, volumes (use with caution)
 docker compose down -v
 ```
 
-### 日志查看
+### Log Viewing
 
 ```bash
-# 查看所有服务日志
+# View all service logs
 docker compose logs -f
 
-# 查看后端日志
+# View backend logs
 docker compose logs -f backend
 
-# 查看前端日志
+# View frontend logs
 docker compose logs -f frontend
 
-# 查看最近100行日志
+# View last 100 lines of logs
 docker compose logs --tail=100
 ```
 
-### 更新部署
+### Update Deployment
 
 ```bash
-# 1. 拉取最新代码
+# 1. Pull latest code
 git pull
 
-# 2. 重新构建并启动
+# 2. Rebuild and start
 docker compose up -d --build
 
-# 3. 清理旧镜像（可选）
+# 3. Clean up old images (optional)
 docker image prune -a
 ```
 
-### 进入容器
+### Enter Container
 
 ```bash
-# 进入后端容器
+# Enter backend container
 docker compose exec backend sh
 
-# 进入前端容器
+# Enter frontend container
 docker compose exec frontend sh
 ```
 
 ***
 
-## 访问地址
+## Access Addresses
 
-部署成功后，可以通过以下地址访问：
+After successful deployment, you can access via the following addresses:
 
-| 服务             | 访问地址                                               |
+| Service             | Access Address                                               |
 | -------------- | -------------------------------------------------- |
-| **前端应用**       | `http://your-server-ip:8080`                       |
-| **后端 API**     | `http://your-server-ip:8081`                       |
-| **Swagger 文档** | `http://your-server-ip:8081/swagger-ui/index.html` |
+| **Frontend Application**       | `http://your-server-ip:8080`                       |
+| **Backend API**     | `http://your-server-ip:8081`                       |
+| **Swagger Documentation** | `http://your-server-ip:8081/swagger-ui/index.html` |
 
-**注意**：
+**Note**:
 
-- 如果需要通过域名访问，请配置 DNS 解析或反向代理
-- 生产环境建议配置 HTTPS
+- If you need to access via domain name, configure DNS resolution or reverse proxy
+- It is recommended to configure HTTPS in production environment
 
 ***
 
-## 故障排查
+## Troubleshooting
 
-### 服务无法启动
+### Services Cannot Start
 
-1. 检查端口是否被占用：
+1. Check if ports are occupied:
 
 ```bash
-# 检查端口占用
+# Check port occupancy
 sudo netstat -tlnp | grep -E ':(80|8081)'
 ```
 
-1. 检查 Docker 服务状态：
+2. Check Docker service status:
 
 ```bash
 sudo systemctl status docker
 ```
 
-1. 查看详细错误日志：
+3. View detailed error logs:
 
 ```bash
 docker compose logs backend
 docker compose logs frontend
 ```
 
-### 数据库连接失败
+### Database Connection Failed
 
-1. 检查网络连接：
+1. Check network connection:
 
 ```bash
-# 在容器内测试数据库连接
+# Test database connection inside container
 docker compose exec backend ping 39.107.242.71
 ```
 
-1. 确认数据库配置正确：
+2. Confirm database configuration is correct:
 
 ```bash
-# 检查环境变量
+# Check environment variables
 docker compose exec backend env | grep SPRING_DATASOURCE
 ```
 
-1. 检查数据库用户权限
+3. Check database user permissions
 
-### 上传文件问题
+### Upload File Issues
 
-1. 检查目录权限：
+1. Check directory permissions:
 
 ```bash
 docker compose exec backend ls -la /app/uploads
 ```
 
-1. 检查磁盘空间：
+2. Check disk space:
 
 ```bash
 docker system df
@@ -756,65 +750,65 @@ docker system df
 
 ***
 
-## 备份与恢复
+## Backup and Recovery
 
-### 备份上传文件
+### Backup Upload Files
 
 ```bash
-# 创建备份目录
+# Create backup directory
 mkdir -p /opt/backups
 
-# 备份上传文件
+# Backup upload files
 docker run --rm -v markdown-editor_uploads:/data -v /opt/backups:/backup alpine tar czf /backup/uploads-$(date +%Y%m%d).tar.gz -C /data .
 ```
 
-### 恢复上传文件
+### Restore Upload Files
 
 ```bash
-# 从备份文件恢复
+# Restore from backup file
 docker run --rm -v markdown-editor_uploads:/data -v /opt/backups:/backup alpine tar xzf /backup/uploads-20240101.tar.gz -C /data
 ```
 
-### 查看备份
+### View Backups
 
 ```bash
-# 列出备份文件
+# List backup files
 ls -lh /opt/backups/
 ```
 
 ***
 
-## 安全建议
+## Security Recommendations
 
-1. **修改默认密码和密钥**
-   - 修改数据库密码
-   - 修改 JWT\_SECRET 为强密钥
-2. **配置防火墙**
+1. **Modify default passwords and keys**
+   - Modify database password
+   - Modify JWT_SECRET to a strong key
+2. **Configure firewall**
 
 ```bash
-# 只开放必要端口
+# Only open necessary ports
 sudo ufw allow 80/tcp
 sudo ufw allow 22/tcp
 sudo ufw enable
 ```
 
-1. **配置 HTTPS**（生产环境必需）
-   - 使用 Let's Encrypt
-   - 或配置 Nginx SSL 证书
-2. **定期备份**
-   - 设置定时备份任务
-   - 定期测试备份恢复
-3. **监控服务状态**
-   - 配置健康检查告警
-   - 监控资源使用情况
+3. **Configure HTTPS** (required in production)
+   - Use Let's Encrypt
+   - Or configure Nginx SSL certificate
+4. **Regular backups**
+   - Set up scheduled backup tasks
+   - Regularly test backup recovery
+5. **Monitor service status**
+   - Configure health check alerts
+   - Monitor resource usage
 
 ***
 
-## 性能优化
+## Performance Optimization
 
-1. **资源限制**
+1. **Resource Limits**
 
-可以在 `docker-compose.yml` 中添加资源限制：
+You can add resource limits in `docker-compose.yml`:
 
 ```yaml
 backend:
@@ -825,31 +819,30 @@ backend:
         cpus: '0.5'
 ```
 
-1. **日志管理**
+2. **Log Management**
 
-配置日志轮询，避免占用过多磁盘空间。
+Configure log rotation to avoid occupying too much disk space.
 
-1. **缓存优化**
+3. **Cache Optimization**
 
-配置适当的缓存策略，提高响应速度。
-
-***
-
-## 技术支持
-
-如有问题，请查看：
-
-- 服务日志：`docker compose logs -f`
-- 项目文档：README.md
-- Swagger 文档：<http://your-server-ip:8081/swagger-ui/index.html>
+Configure appropriate caching strategies to improve response speed.
 
 ***
 
-## 更新日志
+## Technical Support
+
+If you have any questions, please check:
+
+- Service logs: `docker compose logs -f`
+- Project documentation: README.md
+- Swagger documentation: http://your-server-ip:8081/swagger-ui/index.html
+
+***
+
+## Update Log
 
 ### v1.0.0 (2024-01-01)
 
-- 初始版本
-- 支持 Docker Compose 部署
-- 使用外部 MySQL 数据库
-
+- Initial version
+- Support Docker Compose deployment
+- Use external MySQL database
