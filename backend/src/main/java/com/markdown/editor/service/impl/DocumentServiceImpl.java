@@ -124,18 +124,9 @@ public class DocumentServiceImpl implements DocumentService {
         return result;
     }
 
-    private static final java.util.Map<Long, Long> viewCache = new java.util.concurrent.ConcurrentHashMap<>();
-
     @Override
     public int incrementViewCount(Long id) {
-        Long lastViewTime = viewCache.get(id);
-        long now = System.currentTimeMillis();
-        
-        if (lastViewTime != null && now - lastViewTime < 1000) {
-            return 0;
-        }
-        
-        viewCache.put(id, now);
+        logger.info("=== incrementViewCount 被调用，文档ID: {}, 调用时间: {}", id, System.currentTimeMillis());
         
         Document document = documentMapper.selectById(id);
         if (document != null) {
@@ -143,8 +134,11 @@ public class DocumentServiceImpl implements DocumentService {
             if (viewCount == null) {
                 viewCount = 0;
             }
+            logger.info("文档ID: {}, 原浏览量: {}, 增加到: {}", id, viewCount, viewCount + 1);
             document.setViewCount(viewCount + 1);
-            return documentMapper.updateById(document);
+            int result = documentMapper.updateById(document);
+            logger.info("文档ID: {}, 更新结果: {}", id, result);
+            return result;
         }
         return 0;
     }

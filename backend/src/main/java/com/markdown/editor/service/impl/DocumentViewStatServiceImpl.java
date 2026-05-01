@@ -77,10 +77,8 @@ public class DocumentViewStatServiceImpl implements DocumentViewStatService {
                 LogUtils.info(logger, "创建浏览量统计，文档ID: {}, 日期: {}", documentId, today);
             }
 
-            // 同时更新文档的总浏览量
-            document.setViewCount(document.getViewCount() + 1);
-            documentMapper.updateById(document);
-            LogUtils.info(logger, "更新文档总浏览量，文档ID: {}, 总浏览量: {}", documentId, document.getViewCount());
+            // 注意：文档的总浏览量已经在 DocumentServiceImpl.incrementViewCount() 中更新
+            // 这里不再重复更新，避免浏览量增加2次
 
         } catch (Exception e) {
             LogUtils.error(logger, "记录浏览量失败，文档ID: {}", documentId, e);

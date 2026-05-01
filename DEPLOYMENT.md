@@ -315,7 +315,6 @@ RUN ln -sf /usr/share/zoneinfo/Asia/Shanghai /etc/localtime && echo 'Asia/Shangh
 
 COPY --from=builder /app/dist /usr/share/nginx/html
 
-COPY --from=git-clone /app/repo/frontend/nginx.conf /etc/nginx/nginx.conf
 COPY --from=git-clone /app/repo/frontend/nginx.conf /etc/nginx/conf.d/default.conf
 
 EXPOSE 80
