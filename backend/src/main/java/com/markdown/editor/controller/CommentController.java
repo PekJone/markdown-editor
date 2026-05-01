@@ -191,17 +191,10 @@ public class CommentController {
         LogUtils.info(logger, "用户[{}]获取自己的评论列表，页码: {}, 每页大小: {}", userDetails.getUsername(), page, size);
 
         try {
-            List<CommentDTO> paginatedComments = commentService.getMyCommentsWithDetails(userDetails.getId(), page, size);
+            CommentService.CommentListResult result = commentService.getMyCommentsWithDetails(userDetails.getId(), page, size);
 
-            Map<String, Object> response = new HashMap<>();
-            List<Comment> allComments = commentService.selectByUserId(userDetails.getId());
-            response.put("records", paginatedComments);
-            response.put("total", allComments.size());
-            response.put("size", size);
-            response.put("current", page + 1);
-
-            LogUtils.info(logger, "用户[{}]获取自己的评论列表成功，共{}条评论，当前页{}条", userDetails.getUsername(), allComments.size(), paginatedComments.size());
-            return ResponseEntity.ok(response);
+            LogUtils.info(logger, "用户[{}]获取自己的评论列表成功，共{}条评论，当前页{}条", userDetails.getUsername(), result.getTotal(), result.getRecords().size());
+            return ResponseEntity.ok(result);
         } catch (Exception e) {
             LogUtils.error(logger, "用户[{}]获取自己的评论列表失败", e, userDetails.getUsername());
             throw e;
@@ -214,30 +207,10 @@ public class CommentController {
         LogUtils.info(logger, "用户[{}]获取收到的评论列表，页码: {}, 每页大小: {}", userDetails.getUsername(), page, size);
 
         try {
-            List<Document> documents = documentService.selectByUserId(userDetails.getId());
-            List<Long> documentIds = new ArrayList<>();
-            for (Document document : documents) {
-                documentIds.add(document.getId());
-            }
+            CommentService.CommentListResult result = commentService.getReceivedCommentsWithDetails(userDetails.getId(), page, size);
 
-            List<Comment> allComments = new ArrayList<>();
-            if (!documentIds.isEmpty()) {
-                allComments = commentService.selectByDocumentIds(documentIds);
-            }
-            long total = allComments.stream()
-                    .filter(c -> !c.getUserId().equals(userDetails.getId()))
-                    .count();
-
-            List<CommentDTO> paginatedComments = commentService.getReceivedCommentsWithDetails(userDetails.getId(), page, size);
-
-            Map<String, Object> response = new HashMap<>();
-            response.put("records", paginatedComments);
-            response.put("total", total);
-            response.put("size", size);
-            response.put("current", page + 1);
-
-            LogUtils.info(logger, "用户[{}]获取收到的评论列表成功，共{}条评论，当前页{}条", userDetails.getUsername(), total, paginatedComments.size());
-            return ResponseEntity.ok(response);
+            LogUtils.info(logger, "用户[{}]获取收到的评论列表成功，共{}条评论，当前页{}条", userDetails.getUsername(), result.getTotal(), result.getRecords().size());
+            return ResponseEntity.ok(result);
         } catch (Exception e) {
             LogUtils.error(logger, "用户[{}]获取收到的评论列表失败", e, userDetails.getUsername());
             throw e;
