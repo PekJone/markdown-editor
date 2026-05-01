@@ -6,15 +6,15 @@ ARG GIT_REPO_URL=https://github.com/PekJone/markdown-editor.git
 ARG GIT_BRANCH=main
 
 WORKDIR /app
-RUN git config --global http.sslVerify false && git clone --depth 1 --branch ${GIT_BRANCH} ${GIT_REPO_URL} /app/backend
+RUN git config --global http.sslVerify false && git clone --depth 1 --branch ${GIT_BRANCH} ${GIT_REPO_URL} /app/repo
 
 FROM maven:3.8.6-jdk-8 AS builder
 WORKDIR /build
 
-COPY --from=git-clone /app/backend/pom.xml .
+COPY --from=git-clone /app/repo/backend/pom.xml .
 RUN mvn dependency:go-offline -B
 
-COPY --from=git-clone /app/backend/src ./src
+COPY --from=git-clone /app/repo/backend/src ./src
 RUN mvn clean package -DskipTests -q
 
 FROM openjdk:8-jre-alpine
