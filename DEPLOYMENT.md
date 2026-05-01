@@ -687,7 +687,7 @@ docker compose exec frontend sh
 
 | 服务             | 访问地址                                               |
 | -------------- | -------------------------------------------------- |
-| **前端应用**       | `http://your-server-ip`                            |
+| **前端应用**       | `http://your-server-ip:8080`                       |
 | **后端 API**     | `http://your-server-ip:8081`                       |
 | **Swagger 文档** | `http://your-server-ip:8081/swagger-ui/index.html` |
 
