@@ -31,10 +31,10 @@
             pu.id AS replied_user_id,
             pu.username AS replied_username,
             pu.nickname AS replied_nickname
-        FROM comment c
+        FROM comments c
         LEFT JOIN user u ON c.user_id = u.id
         LEFT JOIN document d ON c.document_id = d.id
-        LEFT JOIN comment pc ON c.parent_id = pc.id
+        LEFT JOIN comments pc ON c.parent_id = pc.id
         LEFT JOIN user pu ON pc.user_id = pu.id
         WHERE c.user_id = #{userId}
         ORDER BY c.created_at DESC
@@ -42,7 +42,7 @@
     </select>
 
     <select id="countMyComments" resultType="java.lang.Long">
-        SELECT COUNT(*) FROM comment WHERE user_id = #{userId}
+        SELECT COUNT(*) FROM comments WHERE user_id = #{userId}
     </select>
 
     <select id="selectReceivedCommentsWithDetails" resultMap="CommentWithDetailsResultMap">
@@ -59,10 +59,10 @@
             pu.id AS replied_user_id,
             pu.username AS replied_username,
             pu.nickname AS replied_nickname
-        FROM comment c
+        FROM comments c
         LEFT JOIN user u ON c.user_id = u.id
         LEFT JOIN document d ON c.document_id = d.id
-        LEFT JOIN comment pc ON c.parent_id = pc.id
+        LEFT JOIN comments pc ON c.parent_id = pc.id
         LEFT JOIN user pu ON pc.user_id = pu.id
         WHERE d.user_id = #{userId} AND c.user_id != #{userId}
         ORDER BY c.created_at DESC
@@ -71,7 +71,7 @@
 
     <select id="countReceivedComments" resultType="java.lang.Long">
         SELECT COUNT(*) 
-        FROM comment c
+        FROM comments c
         JOIN document d ON c.document_id = d.id
         WHERE d.user_id = #{userId} AND c.user_id != #{userId}
     </select>
