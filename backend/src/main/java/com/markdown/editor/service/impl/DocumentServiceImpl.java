@@ -185,4 +185,9 @@ public class DocumentServiceImpl implements DocumentService {
         }
         return true;
     }
+
+    @Override
+    public List<Document> selectBatchIds(List<Long> ids) {
+        return documentMapper.selectBatchIds(ids);
+    }
 }

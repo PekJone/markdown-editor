@@ -137,11 +137,9 @@ public class CommentServiceImpl extends ServiceImpl<CommentMapper, Comment> impl
 
         Map<Long, Document> documentMap = new HashMap<>();
         if (!documentIds.isEmpty()) {
-            for (Long docId : documentIds) {
-                Document doc = documentService.selectById(docId);
-                if (doc != null) {
-                    documentMap.put(docId, doc);
-                }
+            List<Document> documents = documentService.selectBatchIds(new ArrayList<>(documentIds));
+            for (Document doc : documents) {
+                documentMap.put(doc.getId(), doc);
             }
         }
 

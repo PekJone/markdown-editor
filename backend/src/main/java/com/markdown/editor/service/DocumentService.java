@@ -4,6 +4,7 @@ import com.baomidou.mybatisplus.extension.plugins.pagination.Page;
 import com.markdown.editor.entity.Document;
 
 import java.util.List;
+import java.util.Map;
 
 public interface DocumentService {
     Document selectById(Long id);
@@ -20,4 +21,5 @@ public interface DocumentService {
     int incrementLikeCount(Long id);
     int decrementLikeCount(Long id);
     boolean saveBatch(java.util.List<Document> documents);
+    List<Document> selectBatchIds(List<Long> ids);
 }
