@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.markdown.editor.mapper.DocumentViewStatMapper">
+
+    <resultMap id="BaseResultMap" type="com.markdown.editor.entity.DocumentViewStat">
+        <id column="id" property="id" />
+        <result column="document_id" property="documentId" />
+        <result column="user_id" property="userId" />
+        <result column="view_date" property="viewDate" />
+        <result column="view_count" property="viewCount" />
+        <result column="created_at" property="createdAt" />
+        <result column="updated_at" property="updatedAt" />
+    </resultMap>
+
+    <select id="countByUserIdAndDateRange" resultType="map">
+        SELECT view_date as date, SUM(view_count) as count
+        FROM document_view_stat
+        WHERE user_id = #{userId}
+          AND view_date BETWEEN DATE(#{startTime}) AND DATE(#{endTime})
+        GROUP BY view_date
+        ORDER BY view_date ASC
+    </select>
+
+</mapper>

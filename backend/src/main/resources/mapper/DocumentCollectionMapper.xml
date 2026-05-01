@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.markdown.editor.mapper.DocumentCollectionMapper">
+
+    <select id="countByUserIdAndDateRange" resultType="map">
+        SELECT DATE(dc.created_at) as date, COUNT(*) as count
+        FROM document_collections dc
+        INNER JOIN documents d ON dc.document_id = d.id
+        WHERE d.user_id = #{userId}
+          AND dc.created_at BETWEEN #{startTime} AND #{endTime}
+        GROUP BY DATE(dc.created_at)
+        ORDER BY date ASC
+    </select>
+
+</mapper>
