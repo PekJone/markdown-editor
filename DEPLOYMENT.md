@@ -1,6 +1,7 @@
 # Markdown Editor 部署说明文档
 
 ## 目录
+
 - [环境要求](#环境要求)
 - [部署方式](#部署方式)
   - [方式一：本地文件部署](#方式一本地文件部署)
@@ -11,7 +12,7 @@
 - [故障排查](#故障排查)
 - [备份与恢复](#备份与恢复)
 
----
+***
 
 ## 部署方式
 
@@ -22,6 +23,7 @@
 通过将本地构建好的项目文件上传到服务器进行部署。适用于没有Git环境或需要部署特定版本的情况。
 
 **特点：**
+
 - 部署速度快（无需克隆整个仓库）
 - 可以部署任意版本的代码
 - 需要手动上传文件
@@ -47,6 +49,7 @@ nano .env
 ```
 
 主要配置项说明：
+
 ```
 # 数据库配置
 DB_HOST=39.107.242.71        # 数据库主机地址
@@ -90,13 +93,14 @@ docker compose logs -f backend
 docker compose logs -f frontend
 ```
 
----
+***
 
 ### 方式二：Git克隆部署
 
 通过Dockerfile直接从Git仓库克隆代码并在容器内构建。适用于持续部署和更新场景。
 
 **特点：**
+
 - 部署简单，只需一个 `docker-compose.git.yml` 文件
 - 支持一键更新：重新构建即可获取最新代码
 - 适合CI/CD自动化部署
@@ -521,7 +525,7 @@ chmod +x /opt/markdown-editor/stop-git.sh
 ./stop-git.sh
 ```
 
----
+***
 
 ## 环境要求
 
@@ -539,6 +543,7 @@ chmod +x /opt/markdown-editor/stop-git.sh
 如果服务器还没有安装 Docker 和 Docker Compose，请按照以下步骤安装：
 
 #### Ubuntu/Debian 系统:
+
 ```bash
 # 更新系统
 sudo apt update && sudo apt upgrade -y
@@ -562,6 +567,7 @@ sudo systemctl enable docker
 ```
 
 #### CentOS/RHEL 系统:
+
 ```bash
 # 安装 Docker
 sudo yum install -y yum-utils
@@ -574,6 +580,7 @@ sudo systemctl enable docker
 ```
 
 #### 验证安装:
+
 ```bash
 # 检查 Docker 版本
 docker --version
@@ -582,7 +589,7 @@ docker --version
 docker compose version
 ```
 
----
+***
 
 ## 配置说明
 
@@ -591,16 +598,17 @@ docker compose version
 当前配置使用外部 MySQL 数据库，地址为：`39.107.242.71:3346`
 
 **注意**：
+
 - 确保服务器能访问这个数据库地址
 - 确保数据库用户有足够的权限
 - 如果需要更换数据库，请修改 `.env` 文件中的配置
 
 ### 端口配置
 
-| 服务 | 宿主机端口 | 容器端口 | 说明 |
-|------|----------|---------|------|
-| 前端 | 80 | 80 | 用户访问入口 |
-| 后端 | 8081 | 8081 | API 服务 |
+| 服务 | 宿主机端口 | 容器端口 | 说明     |
+| -- | ----- | ---- | ------ |
+| 前端 | 80    | 80   | 用户访问入口 |
+| 后端 | 8081  | 8081 | API 服务 |
 
 如果端口被占用，可以在 `.env` 文件中修改端口。
 
@@ -609,7 +617,7 @@ docker compose version
 - **上传文件**: 存储在 Docker volume `markdown-editor_uploads` 中
 - 数据会自动持久化，容器重启不会丢失
 
----
+***
 
 ## 常用命令
 
@@ -671,40 +679,44 @@ docker compose exec backend sh
 docker compose exec frontend sh
 ```
 
----
+***
 
 ## 访问地址
 
 部署成功后，可以通过以下地址访问：
 
-| 服务 | 访问地址 |
-|------|---------|
-| **前端应用** | `http://your-server-ip` |
-| **后端 API** | `http://your-server-ip:8081` |
+| 服务             | 访问地址                                               |
+| -------------- | -------------------------------------------------- |
+| **前端应用**       | `http://your-server-ip`                            |
+| **后端 API**     | `http://your-server-ip:8081`                       |
 | **Swagger 文档** | `http://your-server-ip:8081/swagger-ui/index.html` |
 
 **注意**：
+
 - 如果需要通过域名访问，请配置 DNS 解析或反向代理
 - 生产环境建议配置 HTTPS
 
----
+***
 
 ## 故障排查
 
 ### 服务无法启动
 
 1. 检查端口是否被占用：
+
 ```bash
 # 检查端口占用
 sudo netstat -tlnp | grep -E ':(80|8081)'
 ```
 
-2. 检查 Docker 服务状态：
+1. 检查 Docker 服务状态：
+
 ```bash
 sudo systemctl status docker
 ```
 
-3. 查看详细错误日志：
+1. 查看详细错误日志：
+
 ```bash
 docker compose logs backend
 docker compose logs frontend
@@ -713,32 +725,36 @@ docker compose logs frontend
 ### 数据库连接失败
 
 1. 检查网络连接：
+
 ```bash
 # 在容器内测试数据库连接
 docker compose exec backend ping 39.107.242.71
 ```
 
-2. 确认数据库配置正确：
+1. 确认数据库配置正确：
+
 ```bash
 # 检查环境变量
 docker compose exec backend env | grep SPRING_DATASOURCE
 ```
 
-3. 检查数据库用户权限
+1. 检查数据库用户权限
 
 ### 上传文件问题
 
 1. 检查目录权限：
+
 ```bash
 docker compose exec backend ls -la /app/uploads
 ```
 
-2. 检查磁盘空间：
+1. 检查磁盘空间：
+
 ```bash
 docker system df
 ```
 
----
+***
 
 ## 备份与恢复
 
@@ -766,15 +782,15 @@ docker run --rm -v markdown-editor_uploads:/data -v /opt/backups:/backup alpine 
 ls -lh /opt/backups/
 ```
 
----
+***
 
 ## 安全建议
 
 1. **修改默认密码和密钥**
    - 修改数据库密码
-   - 修改 JWT_SECRET 为强密钥
-
+   - 修改 JWT\_SECRET 为强密钥
 2. **配置防火墙**
+
 ```bash
 # 只开放必要端口
 sudo ufw allow 80/tcp
@@ -782,19 +798,17 @@ sudo ufw allow 22/tcp
 sudo ufw enable
 ```
 
-3. **配置 HTTPS**（生产环境必需）
+1. **配置 HTTPS**（生产环境必需）
    - 使用 Let's Encrypt
    - 或配置 Nginx SSL 证书
-
-4. **定期备份**
+2. **定期备份**
    - 设置定时备份任务
    - 定期测试备份恢复
-
-5. **监控服务状态**
+3. **监控服务状态**
    - 配置健康检查告警
    - 监控资源使用情况
 
----
+***
 
 ## 性能优化
 
@@ -811,28 +825,31 @@ backend:
         cpus: '0.5'
 ```
 
-2. **日志管理**
+1. **日志管理**
 
 配置日志轮询，避免占用过多磁盘空间。
 
-3. **缓存优化**
+1. **缓存优化**
 
 配置适当的缓存策略，提高响应速度。
 
----
+***
 
 ## 技术支持
 
 如有问题，请查看：
+
 - 服务日志：`docker compose logs -f`
 - 项目文档：README.md
-- Swagger 文档：http://your-server-ip:8081/swagger-ui/index.html
+- Swagger 文档：<http://your-server-ip:8081/swagger-ui/index.html>
 
----
+***
 
 ## 更新日志
 
 ### v1.0.0 (2024-01-01)
+
 - 初始版本
 - 支持 Docker Compose 部署
 - 使用外部 MySQL 数据库
+
