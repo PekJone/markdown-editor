@@ -289,7 +289,7 @@ ARG GIT_REPO_URL=https://github.com/PekJone/markdown-editor.git
 ARG GIT_BRANCH=main
 
 WORKDIR /app
-RUN git clone --depth 1 --branch ${GIT_BRANCH} ${GIT_REPO_URL} /app/frontend
+RUN GIT_SSL_NO_VERIFY=true git clone --depth 1 --branch ${GIT_BRANCH} ${GIT_REPO_URL} /app/repo
 
 FROM node:18-alpine AS builder
 LABEL maintainer="markdown-editor"
@@ -297,13 +297,13 @@ LABEL description="Markdown Editor Frontend Build Stage"
 
 WORKDIR /app
 
-COPY --from=git-clone /app/frontend/package*.json ./
+COPY --from=git-clone /app/repo/frontend/package*.json ./
 
 RUN npm config set registry https://registry.npmmirror.com
 
-RUN npm ci --only=production --registry=https://registry.npmmirror.com
+RUN npm install --registry=https://registry.npmmirror.com
 
-COPY --from=git-clone /app/frontend . .
+COPY --from=git-clone /app/repo/frontend . .
 
 RUN npm run build
 
@@ -315,8 +315,8 @@ RUN ln -sf /usr/share/zoneinfo/Asia/Shanghai /etc/localtime && echo 'Asia/Shangh
 
 COPY --from=builder /app/dist /usr/share/nginx/html
 
-COPY --from=git-clone /app/frontend/nginx.conf /etc/nginx/nginx.conf
-COPY --from=git-clone /app/frontend/nginx.conf /etc/nginx/conf.d/default.conf
+COPY --from=git-clone /app/repo/frontend/nginx.conf /etc/nginx/nginx.conf
+COPY --from=git-clone /app/repo/frontend/nginx.conf /etc/nginx/conf.d/default.conf
 
 EXPOSE 80
 
