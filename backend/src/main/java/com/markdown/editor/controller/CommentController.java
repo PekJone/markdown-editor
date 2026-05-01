@@ -22,10 +22,13 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.security.core.Authentication;
 import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.web.bind.annotation.*;
+
 import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
 import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 
 @CrossOrigin(origins = "*", maxAge = 3600)
 @RestController
@@ -46,8 +49,6 @@ public class CommentController {
     private DocumentService documentService;
 
     private org.slf4j.Logger logger = org.slf4j.LoggerFactory.getLogger(CommentController.class);
-
-
 
     @GetMapping("/document/{documentId}")
     public ResponseEntity<?> getCommentsByDocumentId(@PathVariable Long documentId) {
@@ -93,7 +94,6 @@ public class CommentController {
             comment.setCreatedAt(LocalDateTime.now());
             comment.setUpdatedAt(LocalDateTime.now());
 
-            // 如果是回复评论，设置父评论ID
             if (comment.getParentId() != null) {
                 LogUtils.info(logger, "用户[{}]回复评论，父评论ID: {}", userDetails.getUsername(), comment.getParentId());
             }
@@ -102,10 +102,8 @@ public class CommentController {
             if (result > 0) {
                 LogUtils.info(logger, "用户[{}]添加评论成功，评论ID: {}", userDetails.getUsername(), comment.getId());
                 
-                // 发送评论消息通知
                 Document document = documentService.selectById(comment.getDocumentId());
                 if (document != null) {
-                    // 通知文章作者（排除自己评论自己文章的情况）
                     if (!document.getUserId().equals(userDetails.getId())) {
                         Message message = new Message();
                         message.setSenderId(userDetails.getId());
@@ -116,7 +114,6 @@ public class CommentController {
                         messageService.sendMessage(message);
                     }
                     
-                    // 如果是回复评论，通知被回复的用户（排除回复自己的情况）
                     if (comment.getParentId() != null) {
                         try {
                             Comment parentComment = commentService.selectById(comment.getParentId());
@@ -130,7 +127,6 @@ public class CommentController {
                                 messageService.sendMessage(message);
                             }
                         } catch (Exception e) {
-                            // 忽略获取父评论时的异常
                         }
                     }
                 }
@@ -159,10 +155,8 @@ public class CommentController {
                 return ResponseEntity.notFound().build();
             }
 
-            // 检查是否是管理员（通过角色字段）、评论的创建者或文章的作者
             boolean isAdmin = SystemConstant.ROLE_ADMIN.equals(userDetails.getRole());
             
-            // 获取评论所属的文章
             Document document = documentService.selectById(comment.getDocumentId());
             boolean isDocumentAuthor = document != null && document.getUserId().equals(userDetails.getId());
 
@@ -197,36 +191,16 @@ public class CommentController {
         LogUtils.info(logger, "用户[{}]获取自己的评论列表，页码: {}, 每页大小: {}", userDetails.getUsername(), page, size);
 
         try {
-            List<Comment> comments = commentService.selectByUserId(userDetails.getId());
-            List<CommentDTO> commentDTOs = new ArrayList<>();
+            List<CommentDTO> paginatedComments = commentService.getMyCommentsWithDetails(userDetails.getId(), page, size);
 
-            for (Comment comment : comments) {
-                CommentDTO dto = convertToDTO(comment);
-                // 添加文章标题
-                Document document = documentService.selectById(comment.getDocumentId());
-                if (document != null) {
-                    dto.setDocumentTitle(document.getTitle());
-                }
-                commentDTOs.add(dto);
-            }
-
-            // 分页处理
-            int total = commentDTOs.size();
-            int start = page * size;
-            int end = Math.min(start + size, total);
-            List<CommentDTO> paginatedComments = new ArrayList<>();
-            if (start < total) {
-                paginatedComments = new ArrayList<>(commentDTOs.subList(start, end));
-            }
-
-            // 构建分页响应
-            java.util.Map<String, Object> response = new java.util.HashMap<>();
+            Map<String, Object> response = new HashMap<>();
+            List<Comment> allComments = commentService.selectByUserId(userDetails.getId());
             response.put("records", paginatedComments);
-            response.put("total", total);
+            response.put("total", allComments.size());
             response.put("size", size);
             response.put("current", page + 1);
 
-            LogUtils.info(logger, "用户[{}]获取自己的评论列表成功，共{}条评论，当前页{}条", userDetails.getUsername(), total, paginatedComments.size());
+            LogUtils.info(logger, "用户[{}]获取自己的评论列表成功，共{}条评论，当前页{}条", userDetails.getUsername(), allComments.size(), paginatedComments.size());
             return ResponseEntity.ok(response);
         } catch (Exception e) {
             LogUtils.error(logger, "用户[{}]获取自己的评论列表失败", e, userDetails.getUsername());
@@ -240,44 +214,23 @@ public class CommentController {
         LogUtils.info(logger, "用户[{}]获取收到的评论列表，页码: {}, 每页大小: {}", userDetails.getUsername(), page, size);
 
         try {
-            // 获取用户的所有文章
             List<Document> documents = documentService.selectByUserId(userDetails.getId());
             List<Long> documentIds = new ArrayList<>();
             for (Document document : documents) {
                 documentIds.add(document.getId());
             }
 
-            // 获取这些文章的评论
-            List<Comment> comments = new ArrayList<>();
+            List<Comment> allComments = new ArrayList<>();
             if (!documentIds.isEmpty()) {
-                comments = commentService.selectByDocumentIds(documentIds);
+                allComments = commentService.selectByDocumentIds(documentIds);
             }
+            long total = allComments.stream()
+                    .filter(c -> !c.getUserId().equals(userDetails.getId()))
+                    .count();
 
-            List<CommentDTO> commentDTOs = new ArrayList<>();
-            for (Comment comment : comments) {
-                // 排除自己的评论
-                if (!comment.getUserId().equals(userDetails.getId())) {
-                    CommentDTO dto = convertToDTO(comment);
-                    // 添加文章标题
-                    Document document = documentService.selectById(comment.getDocumentId());
-                    if (document != null) {
-                        dto.setDocumentTitle(document.getTitle());
-                    }
-                    commentDTOs.add(dto);
-                }
-            }
+            List<CommentDTO> paginatedComments = commentService.getReceivedCommentsWithDetails(userDetails.getId(), page, size);
 
-            // 分页处理
-            int total = commentDTOs.size();
-            int start = page * size;
-            int end = Math.min(start + size, total);
-            List<CommentDTO> paginatedComments = new ArrayList<>();
-            if (start < total) {
-                paginatedComments = new ArrayList<>(commentDTOs.subList(start, end));
-            }
-
-            // 构建分页响应
-            java.util.Map<String, Object> response = new java.util.HashMap<>();
+            Map<String, Object> response = new HashMap<>();
             response.put("records", paginatedComments);
             response.put("total", total);
             response.put("size", size);
@@ -300,14 +253,12 @@ public class CommentController {
         dto.setContent(comment.getContent());
         dto.setCreatedAt(comment.getCreatedAt());
 
-        // 获取评论者信息
         User user = userMapper.selectById(comment.getUserId());
         if (user != null) {
             dto.setUsername(user.getUsername());
             dto.setNickname(user.getNickname());
         }
 
-        // 如果是回复评论，获取被回复用户的信息
         if (comment.getParentId() != null) {
             Comment parentComment = commentService.selectById(comment.getParentId());
             if (parentComment != null) {
