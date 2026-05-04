@@ -134,8 +134,8 @@ public class DocumentController {
         
         try {
             Page<Document> pageObject = new Page<>(page, size);
-            // 获取用户自己的文档
-            Page<Document> documents = documentService.selectPage(pageObject, userDetails.getId(), null, null, null);
+            // 使用优化后的查询，一次性获取文档及其评论数和收藏数
+            Page<Document> documents = documentService.selectPageWithCounts(pageObject, userDetails.getId(), null, null, null);
             LogUtils.info(logger, "用户[{}]获取自己的文档列表成功，共{}个文档", userDetails.getUsername(), documents.getTotal());
             
             List<com.markdown.editor.entity.Dictionary> categoryDicts = dictionaryService.selectByDictType("article_category");
@@ -157,13 +157,6 @@ public class DocumentController {
                         doc.setCategory(categoryName);
                     }
                 }
-                
-                Long documentId = doc.getId();
-                int commentCount = commentService.countByDocumentId(documentId);
-                doc.setCommentCount(commentCount);
-                
-                int collectionCount = documentCollectionService.countByDocumentId(documentId);
-                doc.setCollectionCount(collectionCount);
             }
             
             return ResponseEntity.ok(documents);
@@ -790,7 +783,7 @@ public class DocumentController {
         LogUtils.info(logger, "获取作者的其他文章，作者ID: {}, 排除文档ID: {}", userId, excludeId);
         
         try {
-            List<Document> documents = documentService.selectByUserId(userId);
+            List<Document> documents = documentService.selectUserDocumentsWithStats(userId);
             
             if (excludeId != null) {
                 documents = documents.stream()
@@ -855,7 +848,7 @@ public class DocumentController {
         LogUtils.info(logger, "获取作者的所有文章，作者ID: {}, 页码: {}, 每页大小: {}", userId, page, size);
         
         try {
-            List<Document> documents = documentService.selectByUserId(userId);
+            List<Document> documents = documentService.selectUserDocumentsWithStats(userId);
             
             int total = documents.size();
             int start = (page - 1) * size;

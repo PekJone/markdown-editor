@@ -179,6 +179,37 @@ public class DocumentServiceImpl implements DocumentService {
     }
 
     @Override
+    public Page<Document> selectPageWithCounts(Page<Document> page, Long userId, String category, String tags, String keyword) {
+        int offset = (int) page.offset();
+        int size = (int) page.getSize();
+        
+        List<Document> records = documentMapper.selectPageWithCounts(userId, category, tags, keyword, offset, size);
+        Long total = documentMapper.selectPageWithCountsCount(userId, category, tags, keyword);
+        
+        page.setRecords(records);
+        page.setTotal(total);
+        return page;
+    }
+
+    @Override
+    public List<Document> selectUserDocumentsWithStats(Long userId) {
+        return documentMapper.selectUserDocumentsWithStats(userId);
+    }
+
+    @Override
+    public List<Document> selectUserCollections(Long userId) {
+        return documentMapper.selectUserCollections(userId);
+    }
+
+    @Override
+    public List<Document> selectDocumentsWithStatsByIds(List<Long> ids) {
+        if (ids == null || ids.isEmpty()) {
+            return java.util.Collections.emptyList();
+        }
+        return documentMapper.selectDocumentsWithStatsByIds(ids);
+    }
+
+    @Override
     public long count(QueryWrapper<Document> wrapper) {
         return documentMapper.selectCount(wrapper);
     }

@@ -123,8 +123,7 @@ public class StatisticsServiceImpl implements StatisticsService {
     private int calculateTotalViews(Long userId) {
         int totalViews = 0;
         try {
-            Page<Document> userDocumentsPage = documentService.selectPage(new Page<>(1, 1000), userId, null, null, null);
-            List<Document> userDocuments = userDocumentsPage.getRecords();
+            List<Document> userDocuments = documentService.selectUserDocumentsWithStats(userId);
             LogUtils.info(logger, "获取到{}篇文档", userDocuments.size());
             for (Document doc : userDocuments) {
                 Integer viewCount = doc.getViewCount();
@@ -219,43 +218,35 @@ public class StatisticsServiceImpl implements StatisticsService {
         // 设置用户ID
         userStatistics.setUserId(userId);
 
-        // 计算原创文档数
-        Page<Document> userDocumentsPage = documentService.selectPage(new Page<>(1, 1000), userId, null, null, null);
-        List<Document> userDocuments = userDocumentsPage.getRecords();
+        // 一次性获取用户所有文档及其统计数据（评论数、收藏数）
+        List<Document> userDocuments = documentService.selectUserDocumentsWithStats(userId);
         LogUtils.info(logger, "获取到{}篇文档", userDocuments.size());
         userStatistics.setBlogCount(userDocuments.size());
 
-        // 计算总点赞数
+        // 计算总点赞数、被收藏数、评论总数、总浏览量
         int totalLikes = 0;
+        int totalCollections = 0;
+        int totalComments = 0;
+        int totalViews = 0;
+        
         for (Document doc : userDocuments) {
             Integer likeCount = doc.getLikeCount();
             totalLikes += likeCount != null ? likeCount : 0;
-        }
-        userStatistics.setLikesCount(totalLikes);
-
-        // 计算被收藏数
-        int totalCollections = 0;
-        for (Document doc : userDocuments) {
-            Long docId = doc.getId();
-            totalCollections += documentCollectionService.selectByDocumentId(docId).size();
-        }
-        userStatistics.setCollectionsCount(totalCollections);
-
-        // 计算评论总数
-        int totalComments = 0;
-        for (Document doc : userDocuments) {
-            Long docId = doc.getId();
-            totalComments += commentService.countByDocumentId(docId);
-        }
-        userStatistics.setCommentsCount(totalComments);
-
-        // 计算总浏览量
-        int totalViews = 0;
-        for (Document doc : userDocuments) {
+            
+            Integer collectionCount = doc.getCollectionCount();
+            totalCollections += collectionCount != null ? collectionCount : 0;
+            
+            Integer commentCount = doc.getCommentCount();
+            totalComments += commentCount != null ? commentCount : 0;
+            
             Integer viewCount = doc.getViewCount();
             LogUtils.info(logger, "文档ID: {}, 浏览量: {}", doc.getId(), viewCount);
             totalViews += viewCount != null ? viewCount : 0;
         }
+        
+        userStatistics.setLikesCount(totalLikes);
+        userStatistics.setCollectionsCount(totalCollections);
+        userStatistics.setCommentsCount(totalComments);
         LogUtils.info(logger, "总浏览量: {}", totalViews);
 
         // 计算关注用户数

@@ -13,6 +13,10 @@ public interface DocumentService {
     Page<Document> selectPage(Page<Document> page, Long userId, String category, String tags, String keyword);
     Page<Document> selectPublicPage(Page<Document> page, String category, String tags, String keyword);
     Page<Document> selectAllExceptSecretPage(Page<Document> page, String category, String tags, String keyword);
+    Page<Document> selectPageWithCounts(Page<Document> page, Long userId, String category, String tags, String keyword);
+    List<Document> selectUserDocumentsWithStats(Long userId);
+    List<Document> selectUserCollections(Long userId);
+    List<Document> selectDocumentsWithStatsByIds(List<Long> ids);
     long count(com.baomidou.mybatisplus.core.conditions.query.QueryWrapper<Document> wrapper);
     int insert(Document document);
     int update(Document document);

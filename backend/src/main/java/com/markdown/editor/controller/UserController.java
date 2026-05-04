@@ -90,14 +90,7 @@ public class UserController {
     public ResponseEntity<?> getUserCollections(
             @ApiParam(value = "用户ID", required = true)
             @PathVariable Long userId) {
-        List<DocumentCollection> collections = documentCollectionService.selectByUserId(userId);
-        List<Document> collectionDocuments = new ArrayList<>();
-        for (DocumentCollection collection : collections) {
-            Document document = documentService.selectById(collection.getDocumentId());
-            if (document != null) {
-                collectionDocuments.add(document);
-            }
-        }
+        List<Document> collectionDocuments = documentService.selectUserCollections(userId);
         return ResponseEntity.ok(ApiResponse.success("获取收藏列表成功", collectionDocuments));
     }
 
