@@ -6,6 +6,9 @@ services:
     build:
       context: ./backend
       dockerfile: Dockerfile.git
+      args:
+        # 传入时间戳强制 Docker 每次重新执行 git clone 阶段
+        BUILD_TIMESTAMP: "${BUILD_TIMESTAMP:-1}"
     container_name: markdown-backend-git
     restart: unless-stopped
     ports:
@@ -42,6 +45,9 @@ services:
     build:
       context: ./frontend
       dockerfile: Dockerfile.git
+      args:
+        # 传入时间戳强制 Docker 每次重新执行 git clone 阶段
+        BUILD_TIMESTAMP: "${BUILD_TIMESTAMP:-1}"
     container_name: markdown-frontend-git
     restart: unless-stopped
     ports:

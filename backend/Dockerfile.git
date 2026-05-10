@@ -5,14 +5,26 @@ LABEL description="Markdown Editor Backend - Git Clone Stage"
 ARG GIT_REPO_URL=https://github.com/PekJone/markdown-editor.git
 ARG GIT_BRANCH=main
 
+# 使用时间戳变量强制 Docker 重新执行这个阶段
+ARG BUILD_TIMESTAMP
+
 WORKDIR /app
 
+# 配置 Git
 RUN git config --global http.sslVerify false && \
     git config --global http.postBuffer 524288000 && \
     git config --global https.postBuffer 524288000 && \
     git config --global http.lowSpeedLimit 0 && \
-    git config --global http.lowSpeedTime 999999 && \
-    GIT_SSL_NO_VERIFY=true git clone --depth 1 --branch ${GIT_BRANCH} ${GIT_REPO_URL} /app/repo --verbose
+    git config --global http.lowSpeedTime 999999
+
+# 先克隆仓库（带时间戳强制重新执行）
+RUN GIT_SSL_NO_VERIFY=true git clone --depth 1 --branch ${GIT_BRANCH} ${GIT_REPO_URL} /app/repo --verbose
+
+# 拉取最新代码
+WORKDIR /app/repo
+RUN git fetch origin ${GIT_BRANCH} && \
+    git reset --hard origin/${GIT_BRANCH} && \
+    git log -1 --stat
 
 FROM maven:3.8.6-jdk-8 AS builder
 WORKDIR /build
