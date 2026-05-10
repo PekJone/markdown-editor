@@ -1,0 +1,18 @@
+FROM openjdk:8-jre-alpine
+LABEL maintainer="markdown-editor"
+LABEL description="Markdown Editor Backend"
+
+WORKDIR /app
+
+COPY target/editor-backend-1.0.0.jar app.jar
+
+RUN mkdir -p /app/uploads
+
+RUN ln -sf /usr/share/zoneinfo/Asia/Shanghai /etc/localtime && echo 'Asia/Shanghai' > /etc/timezone
+
+EXPOSE 8081
+
+HEALTHCHECK --interval=30s --timeout=3s --retries=3 \
+  CMD wget --quiet --tries=1 --spider http://localhost:8081/actuator/health || exit 1
+
+ENTRYPOINT ["java", "-jar", "-Djava.security.egd=file:/dev/./urandom", "app.jar"]

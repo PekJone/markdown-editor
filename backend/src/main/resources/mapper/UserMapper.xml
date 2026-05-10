@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.markdown.editor.mapper.UserMapper">
+    <select id="selectByUsername" parameterType="java.lang.String" resultType="com.markdown.editor.entity.User">
+        SELECT * FROM users WHERE username = #{username}
+    </select>
+    
+    <select id="selectByEmail" parameterType="java.lang.String" resultType="com.markdown.editor.entity.User">
+        SELECT * FROM users WHERE email = #{email}
+    </select>
+    
+    <select id="selectByNickname" parameterType="java.lang.String" resultType="com.markdown.editor.entity.User">
+        SELECT * FROM users WHERE nickname = #{nickname}
+    </select>
+</mapper>

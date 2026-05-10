@@ -1,0 +1,43 @@
+FROM alpine/git:latest AS git-clone
+LABEL maintainer="markdown-editor"
+LABEL description="Markdown Editor Backend - Git Clone Stage"
+
+ARG GIT_REPO_URL=https://github.com/PekJone/markdown-editor.git
+ARG GIT_BRANCH=main
+
+WORKDIR /app
+
+RUN git config --global http.sslVerify false && \
+    git config --global http.postBuffer 524288000 && \
+    git config --global https.postBuffer 524288000 && \
+    git config --global http.lowSpeedLimit 0 && \
+    git config --global http.lowSpeedTime 999999 && \
+    GIT_SSL_NO_VERIFY=true git clone --depth 1 --branch ${GIT_BRANCH} ${GIT_REPO_URL} /app/repo --verbose
+
+FROM maven:3.8.6-jdk-8 AS builder
+WORKDIR /build
+
+COPY --from=git-clone /app/repo/backend/pom.xml .
+RUN mvn dependency:go-offline -B
+
+COPY --from=git-clone /app/repo/backend/src ./src
+RUN mvn clean package -DskipTests -q
+
+FROM openjdk:8-jre-alpine
+LABEL maintainer="markdown-editor"
+LABEL description="Markdown Editor Backend"
+
+WORKDIR /app
+
+COPY --from=builder /build/target/editor-backend-1.0.0.jar app.jar
+
+RUN mkdir -p /app/uploads
+
+RUN ln -sf /usr/share/zoneinfo/Asia/Shanghai /etc/localtime && echo 'Asia/Shanghai' > /etc/timezone
+
+EXPOSE 8081
+
+HEALTHCHECK --interval=30s --timeout=3s --retries=3 \
+  CMD wget --quiet --tries=1 --spider http://localhost:8081/actuator/health || exit 1
+
+ENTRYPOINT ["java", "-jar", "-Djava.security.egd=file:/dev/./urandom", "app.jar"]
