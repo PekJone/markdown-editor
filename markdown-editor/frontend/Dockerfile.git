@@ -1,4 +1,4 @@
-FROM alpine/git:latest AS git-clone
+FROM alpine:latest AS git-clone
 LABEL maintainer="markdown-editor"
 LABEL description="Markdown Editor Frontend - Git Clone Stage"
 
@@ -10,12 +10,18 @@ ARG BUILD_TIMESTAMP
 
 WORKDIR /app
 
+# 安装 git 和其他依赖
+RUN apk update && \
+    apk add --no-cache git curl openssh-client && \
+    rm -rf /var/cache/apk/*
+
 # 配置 Git
 RUN git config --global http.sslVerify false && \
     git config --global http.postBuffer 524288000 && \
     git config --global https.postBuffer 524288000 && \
     git config --global http.lowSpeedLimit 0 && \
-    git config --global http.lowSpeedTime 999999
+    git config --global http.lowSpeedTime 999999 && \
+    git config --global core.compression 0
 
 # 先克隆仓库（带时间戳强制重新执行）
 RUN GIT_SSL_NO_VERIFY=true git clone --depth 1 --branch ${GIT_BRANCH} ${GIT_REPO_URL} /app/repo --verbose
