@@ -1,0 +1,1148 @@
+2026-05-11 16:42:06.130 [main] DEBUG c.m.editor.MarkdownEditorApplication - Running with Spring Boot v2.7.14, Spring v5.3.29
+2026-05-11 16:42:08.124 [main] DEBUG c.m.e.filter.JwtAuthenticationFilter - Filter 'jwtAuthenticationFilter' configured for use
+2026-05-11 16:49:21.045 [http-nio-8081-exec-8] WARN  com.zaxxer.hikari.pool.PoolBase - MarkdownHikariCP - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@34572968 (No operations allowed after connection closed.). Possibly consider using a shorter maxLifetime value.
+2026-05-11 16:49:21.045 [http-nio-8081-exec-4] WARN  com.zaxxer.hikari.pool.PoolBase - MarkdownHikariCP - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@7df3473e (No operations allowed after connection closed.). Possibly consider using a shorter maxLifetime value.
+2026-05-11 16:49:21.045 [http-nio-8081-exec-7] WARN  com.zaxxer.hikari.pool.PoolBase - MarkdownHikariCP - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@1b53d938 (No operations allowed after connection closed.). Possibly consider using a shorter maxLifetime value.
+2026-05-11 16:49:26.046 [http-nio-8081-exec-4] WARN  com.zaxxer.hikari.pool.PoolBase - MarkdownHikariCP - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@6daec61c (No operations allowed after connection closed.). Possibly consider using a shorter maxLifetime value.
+2026-05-11 16:49:26.046 [http-nio-8081-exec-8] WARN  com.zaxxer.hikari.pool.PoolBase - MarkdownHikariCP - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@78fbf1af (No operations allowed after connection closed.). Possibly consider using a shorter maxLifetime value.
+2026-05-11 16:49:26.046 [http-nio-8081-exec-7] WARN  com.zaxxer.hikari.pool.PoolBase - MarkdownHikariCP - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@1e1184a8 (No operations allowed after connection closed.). Possibly consider using a shorter maxLifetime value.
+2026-05-11 16:58:54.584 [http-nio-8081-exec-4] WARN  com.zaxxer.hikari.pool.PoolBase - MarkdownHikariCP - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@24850192 (No operations allowed after connection closed.). Possibly consider using a shorter maxLifetime value.
+2026-05-11 16:58:54.584 [http-nio-8081-exec-3] WARN  com.zaxxer.hikari.pool.PoolBase - MarkdownHikariCP - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@27f1c2df (No operations allowed after connection closed.). Possibly consider using a shorter maxLifetime value.
+2026-05-11 16:58:54.584 [http-nio-8081-exec-8] WARN  com.zaxxer.hikari.pool.PoolBase - MarkdownHikariCP - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@22342538 (No operations allowed after connection closed.). Possibly consider using a shorter maxLifetime value.
+2026-05-11 16:58:58.446 [http-nio-8081-exec-6] WARN  com.zaxxer.hikari.pool.PoolBase - MarkdownHikariCP - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@5a166fcc (No operations allowed after connection closed.). Possibly consider using a shorter maxLifetime value.
+2026-05-11 16:58:58.446 [http-nio-8081-exec-1] WARN  com.zaxxer.hikari.pool.PoolBase - MarkdownHikariCP - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@1c7f0ef1 (No operations allowed after connection closed.). Possibly consider using a shorter maxLifetime value.
+2026-05-11 16:58:58.446 [http-nio-8081-exec-2] WARN  com.zaxxer.hikari.pool.PoolBase - MarkdownHikariCP - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@68fc4a2b (No operations allowed after connection closed.). Possibly consider using a shorter maxLifetime value.
+2026-05-11 16:58:58.971 [trend-data-worker] ERROR c.m.e.service.impl.TrendServiceImpl - 获取评论数数据失败
+org.apache.ibatis.binding.BindingException: Invalid bound statement (not found): com.markdown.editor.mapper.CommentMapper.countByUserIdAndDateRange
+	at org.apache.ibatis.binding.MapperMethod$SqlCommand.<init>(MapperMethod.java:235)
+	at com.baomidou.mybatisplus.core.override.MybatisMapperMethod.<init>(MybatisMapperMethod.java:50)
+	at com.baomidou.mybatisplus.core.override.MybatisMapperProxy.lambda$cachedInvoker$0(MybatisMapperProxy.java:111)
+	at java.base/java.util.concurrent.ConcurrentHashMap.computeIfAbsent(ConcurrentHashMap.java:1708)
+	at com.baomidou.mybatisplus.core.toolkit.CollectionUtils.computeIfAbsent(CollectionUtils.java:115)
+	at com.baomidou.mybatisplus.core.override.MybatisMapperProxy.cachedInvoker(MybatisMapperProxy.java:98)
+	at com.baomidou.mybatisplus.core.override.MybatisMapperProxy.invoke(MybatisMapperProxy.java:89)
+	at jdk.proxy2/jdk.proxy2.$Proxy92.countByUserIdAndDateRange(Unknown Source)
+	at com.markdown.editor.service.impl.TrendServiceImpl.fetchCommentCountData(TrendServiceImpl.java:177)
+	at com.markdown.editor.service.impl.TrendServiceImpl.lambda$getTrendData$2(TrendServiceImpl.java:74)
+	at java.base/java.util.concurrent.CompletableFuture$AsyncRun.run(CompletableFuture.java:1804)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+	at java.base/java.lang.Thread.run(Thread.java:842)
+2026-05-11 16:58:59.585 [http-nio-8081-exec-4] WARN  com.zaxxer.hikari.pool.PoolBase - MarkdownHikariCP - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@18b1bab0 (No operations allowed after connection closed.). Possibly consider using a shorter maxLifetime value.
+2026-05-11 16:58:59.585 [http-nio-8081-exec-8] WARN  com.zaxxer.hikari.pool.PoolBase - MarkdownHikariCP - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@22c28cb0 (No operations allowed after connection closed.). Possibly consider using a shorter maxLifetime value.
+2026-05-11 16:58:59.600 [http-nio-8081-exec-3] WARN  com.zaxxer.hikari.pool.PoolBase - MarkdownHikariCP - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@44fc4832 (No operations allowed after connection closed.). Possibly consider using a shorter maxLifetime value.
+2026-05-11 16:59:29.993 [trend-data-worker] ERROR c.m.e.service.impl.TrendServiceImpl - 获取评论数数据失败
+org.apache.ibatis.binding.BindingException: Invalid bound statement (not found): com.markdown.editor.mapper.CommentMapper.countByUserIdAndDateRange
+	at org.apache.ibatis.binding.MapperMethod$SqlCommand.<init>(MapperMethod.java:235)
+	at com.baomidou.mybatisplus.core.override.MybatisMapperMethod.<init>(MybatisMapperMethod.java:50)
+	at com.baomidou.mybatisplus.core.override.MybatisMapperProxy.lambda$cachedInvoker$0(MybatisMapperProxy.java:111)
+	at java.base/java.util.concurrent.ConcurrentHashMap.computeIfAbsent(ConcurrentHashMap.java:1708)
+	at com.baomidou.mybatisplus.core.toolkit.CollectionUtils.computeIfAbsent(CollectionUtils.java:115)
+	at com.baomidou.mybatisplus.core.override.MybatisMapperProxy.cachedInvoker(MybatisMapperProxy.java:98)
+	at com.baomidou.mybatisplus.core.override.MybatisMapperProxy.invoke(MybatisMapperProxy.java:89)
+	at jdk.proxy2/jdk.proxy2.$Proxy92.countByUserIdAndDateRange(Unknown Source)
+	at com.markdown.editor.service.impl.TrendServiceImpl.fetchCommentCountData(TrendServiceImpl.java:177)
+	at com.markdown.editor.service.impl.TrendServiceImpl.lambda$getTrendData$2(TrendServiceImpl.java:74)
+	at java.base/java.util.concurrent.CompletableFuture$AsyncRun.run(CompletableFuture.java:1804)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+	at java.base/java.lang.Thread.run(Thread.java:842)
+2026-05-11 16:59:43.975 [trend-data-worker] ERROR c.m.e.service.impl.TrendServiceImpl - 获取评论数数据失败
+org.apache.ibatis.binding.BindingException: Invalid bound statement (not found): com.markdown.editor.mapper.CommentMapper.countByUserIdAndDateRange
+	at org.apache.ibatis.binding.MapperMethod$SqlCommand.<init>(MapperMethod.java:235)
+	at com.baomidou.mybatisplus.core.override.MybatisMapperMethod.<init>(MybatisMapperMethod.java:50)
+	at com.baomidou.mybatisplus.core.override.MybatisMapperProxy.lambda$cachedInvoker$0(MybatisMapperProxy.java:111)
+	at java.base/java.util.concurrent.ConcurrentHashMap.computeIfAbsent(ConcurrentHashMap.java:1708)
+	at com.baomidou.mybatisplus.core.toolkit.CollectionUtils.computeIfAbsent(CollectionUtils.java:115)
+	at com.baomidou.mybatisplus.core.override.MybatisMapperProxy.cachedInvoker(MybatisMapperProxy.java:98)
+	at com.baomidou.mybatisplus.core.override.MybatisMapperProxy.invoke(MybatisMapperProxy.java:89)
+	at jdk.proxy2/jdk.proxy2.$Proxy92.countByUserIdAndDateRange(Unknown Source)
+	at com.markdown.editor.service.impl.TrendServiceImpl.fetchCommentCountData(TrendServiceImpl.java:177)
+	at com.markdown.editor.service.impl.TrendServiceImpl.lambda$getTrendData$2(TrendServiceImpl.java:74)
+	at java.base/java.util.concurrent.CompletableFuture$AsyncRun.run(CompletableFuture.java:1804)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+	at java.base/java.lang.Thread.run(Thread.java:842)
+2026-05-11 16:59:56.481 [trend-data-worker] ERROR c.m.e.service.impl.TrendServiceImpl - 获取评论数数据失败
+org.apache.ibatis.binding.BindingException: Invalid bound statement (not found): com.markdown.editor.mapper.CommentMapper.countByUserIdAndDateRange
+	at org.apache.ibatis.binding.MapperMethod$SqlCommand.<init>(MapperMethod.java:235)
+	at com.baomidou.mybatisplus.core.override.MybatisMapperMethod.<init>(MybatisMapperMethod.java:50)
+	at com.baomidou.mybatisplus.core.override.MybatisMapperProxy.lambda$cachedInvoker$0(MybatisMapperProxy.java:111)
+	at java.base/java.util.concurrent.ConcurrentHashMap.computeIfAbsent(ConcurrentHashMap.java:1708)
+	at com.baomidou.mybatisplus.core.toolkit.CollectionUtils.computeIfAbsent(CollectionUtils.java:115)
+	at com.baomidou.mybatisplus.core.override.MybatisMapperProxy.cachedInvoker(MybatisMapperProxy.java:98)
+	at com.baomidou.mybatisplus.core.override.MybatisMapperProxy.invoke(MybatisMapperProxy.java:89)
+	at jdk.proxy2/jdk.proxy2.$Proxy92.countByUserIdAndDateRange(Unknown Source)
+	at com.markdown.editor.service.impl.TrendServiceImpl.fetchCommentCountData(TrendServiceImpl.java:177)
+	at com.markdown.editor.service.impl.TrendServiceImpl.lambda$getTrendData$2(TrendServiceImpl.java:74)
+	at java.base/java.util.concurrent.CompletableFuture$AsyncRun.run(CompletableFuture.java:1804)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+	at java.base/java.lang.Thread.run(Thread.java:842)
+2026-05-11 17:00:00.658 [trend-data-worker] ERROR c.m.e.service.impl.TrendServiceImpl - 获取评论数数据失败
+org.apache.ibatis.binding.BindingException: Invalid bound statement (not found): com.markdown.editor.mapper.CommentMapper.countByUserIdAndDateRange
+	at org.apache.ibatis.binding.MapperMethod$SqlCommand.<init>(MapperMethod.java:235)
+	at com.baomidou.mybatisplus.core.override.MybatisMapperMethod.<init>(MybatisMapperMethod.java:50)
+	at com.baomidou.mybatisplus.core.override.MybatisMapperProxy.lambda$cachedInvoker$0(MybatisMapperProxy.java:111)
+	at java.base/java.util.concurrent.ConcurrentHashMap.computeIfAbsent(ConcurrentHashMap.java:1708)
+	at com.baomidou.mybatisplus.core.toolkit.CollectionUtils.computeIfAbsent(CollectionUtils.java:115)
+	at com.baomidou.mybatisplus.core.override.MybatisMapperProxy.cachedInvoker(MybatisMapperProxy.java:98)
+	at com.baomidou.mybatisplus.core.override.MybatisMapperProxy.invoke(MybatisMapperProxy.java:89)
+	at jdk.proxy2/jdk.proxy2.$Proxy92.countByUserIdAndDateRange(Unknown Source)
+	at com.markdown.editor.service.impl.TrendServiceImpl.fetchCommentCountData(TrendServiceImpl.java:177)
+	at com.markdown.editor.service.impl.TrendServiceImpl.lambda$getTrendData$2(TrendServiceImpl.java:74)
+	at java.base/java.util.concurrent.CompletableFuture$AsyncRun.run(CompletableFuture.java:1804)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+	at java.base/java.lang.Thread.run(Thread.java:842)
+2026-05-11 17:01:37.071 [trend-data-worker] ERROR c.m.e.service.impl.TrendServiceImpl - 获取评论数数据失败
+org.apache.ibatis.binding.BindingException: Invalid bound statement (not found): com.markdown.editor.mapper.CommentMapper.countByUserIdAndDateRange
+	at org.apache.ibatis.binding.MapperMethod$SqlCommand.<init>(MapperMethod.java:235)
+	at com.baomidou.mybatisplus.core.override.MybatisMapperMethod.<init>(MybatisMapperMethod.java:50)
+	at com.baomidou.mybatisplus.core.override.MybatisMapperProxy.lambda$cachedInvoker$0(MybatisMapperProxy.java:111)
+	at java.base/java.util.concurrent.ConcurrentHashMap.computeIfAbsent(ConcurrentHashMap.java:1708)
+	at com.baomidou.mybatisplus.core.toolkit.CollectionUtils.computeIfAbsent(CollectionUtils.java:115)
+	at com.baomidou.mybatisplus.core.override.MybatisMapperProxy.cachedInvoker(MybatisMapperProxy.java:98)
+	at com.baomidou.mybatisplus.core.override.MybatisMapperProxy.invoke(MybatisMapperProxy.java:89)
+	at jdk.proxy2/jdk.proxy2.$Proxy92.countByUserIdAndDateRange(Unknown Source)
+	at com.markdown.editor.service.impl.TrendServiceImpl.fetchCommentCountData(TrendServiceImpl.java:177)
+	at com.markdown.editor.service.impl.TrendServiceImpl.lambda$getTrendData$2(TrendServiceImpl.java:74)
+	at java.base/java.util.concurrent.CompletableFuture$AsyncRun.run(CompletableFuture.java:1804)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+	at java.base/java.lang.Thread.run(Thread.java:842)
+2026-05-11 17:01:57.187 [trend-data-worker] ERROR c.m.e.service.impl.TrendServiceImpl - 获取评论数数据失败
+org.apache.ibatis.binding.BindingException: Invalid bound statement (not found): com.markdown.editor.mapper.CommentMapper.countByUserIdAndDateRange
+	at org.apache.ibatis.binding.MapperMethod$SqlCommand.<init>(MapperMethod.java:235)
+	at com.baomidou.mybatisplus.core.override.MybatisMapperMethod.<init>(MybatisMapperMethod.java:50)
+	at com.baomidou.mybatisplus.core.override.MybatisMapperProxy.lambda$cachedInvoker$0(MybatisMapperProxy.java:111)
+	at java.base/java.util.concurrent.ConcurrentHashMap.computeIfAbsent(ConcurrentHashMap.java:1708)
+	at com.baomidou.mybatisplus.core.toolkit.CollectionUtils.computeIfAbsent(CollectionUtils.java:115)
+	at com.baomidou.mybatisplus.core.override.MybatisMapperProxy.cachedInvoker(MybatisMapperProxy.java:98)
+	at com.baomidou.mybatisplus.core.override.MybatisMapperProxy.invoke(MybatisMapperProxy.java:89)
+	at jdk.proxy2/jdk.proxy2.$Proxy92.countByUserIdAndDateRange(Unknown Source)
+	at com.markdown.editor.service.impl.TrendServiceImpl.fetchCommentCountData(TrendServiceImpl.java:177)
+	at com.markdown.editor.service.impl.TrendServiceImpl.lambda$getTrendData$2(TrendServiceImpl.java:74)
+	at java.base/java.util.concurrent.CompletableFuture$AsyncRun.run(CompletableFuture.java:1804)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+	at java.base/java.lang.Thread.run(Thread.java:842)
+2026-05-11 17:02:22.807 [trend-data-worker] ERROR c.m.e.service.impl.TrendServiceImpl - 获取评论数数据失败
+org.apache.ibatis.binding.BindingException: Invalid bound statement (not found): com.markdown.editor.mapper.CommentMapper.countByUserIdAndDateRange
+	at org.apache.ibatis.binding.MapperMethod$SqlCommand.<init>(MapperMethod.java:235)
+	at com.baomidou.mybatisplus.core.override.MybatisMapperMethod.<init>(MybatisMapperMethod.java:50)
+	at com.baomidou.mybatisplus.core.override.MybatisMapperProxy.lambda$cachedInvoker$0(MybatisMapperProxy.java:111)
+	at java.base/java.util.concurrent.ConcurrentHashMap.computeIfAbsent(ConcurrentHashMap.java:1708)
+	at com.baomidou.mybatisplus.core.toolkit.CollectionUtils.computeIfAbsent(CollectionUtils.java:115)
+	at com.baomidou.mybatisplus.core.override.MybatisMapperProxy.cachedInvoker(MybatisMapperProxy.java:98)
+	at com.baomidou.mybatisplus.core.override.MybatisMapperProxy.invoke(MybatisMapperProxy.java:89)
+	at jdk.proxy2/jdk.proxy2.$Proxy92.countByUserIdAndDateRange(Unknown Source)
+	at com.markdown.editor.service.impl.TrendServiceImpl.fetchCommentCountData(TrendServiceImpl.java:177)
+	at com.markdown.editor.service.impl.TrendServiceImpl.lambda$getTrendData$2(TrendServiceImpl.java:74)
+	at java.base/java.util.concurrent.CompletableFuture$AsyncRun.run(CompletableFuture.java:1804)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+	at java.base/java.lang.Thread.run(Thread.java:842)
+2026-05-11 17:09:34.580 [http-nio-8081-exec-1] WARN  com.zaxxer.hikari.pool.PoolBase - MarkdownHikariCP - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@23256349 (No operations allowed after connection closed.). Possibly consider using a shorter maxLifetime value.
+2026-05-11 17:09:39.591 [http-nio-8081-exec-1] WARN  com.zaxxer.hikari.pool.PoolBase - MarkdownHikariCP - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@1466d09 (No operations allowed after connection closed.). Possibly consider using a shorter maxLifetime value.
+2026-05-11 17:09:44.600 [http-nio-8081-exec-1] WARN  com.zaxxer.hikari.pool.PoolBase - MarkdownHikariCP - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@105e5a72 (No operations allowed after connection closed.). Possibly consider using a shorter maxLifetime value.
+2026-05-11 17:09:45.943 [http-nio-8081-exec-7] WARN  com.zaxxer.hikari.pool.PoolBase - MarkdownHikariCP - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@7ecdaabf (No operations allowed after connection closed.). Possibly consider using a shorter maxLifetime value.
+2026-05-11 17:09:45.943 [http-nio-8081-exec-9] WARN  com.zaxxer.hikari.pool.PoolBase - MarkdownHikariCP - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@1be01958 (No operations allowed after connection closed.). Possibly consider using a shorter maxLifetime value.
+2026-05-11 17:09:45.943 [http-nio-8081-exec-4] WARN  com.zaxxer.hikari.pool.PoolBase - MarkdownHikariCP - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@47827dc0 (No operations allowed after connection closed.). Possibly consider using a shorter maxLifetime value.
+2026-05-11 17:09:45.943 [http-nio-8081-exec-10] WARN  com.zaxxer.hikari.pool.PoolBase - MarkdownHikariCP - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@80450cd (No operations allowed after connection closed.). Possibly consider using a shorter maxLifetime value.
+2026-05-11 17:09:45.943 [http-nio-8081-exec-2] WARN  com.zaxxer.hikari.pool.PoolBase - MarkdownHikariCP - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@1e272ea6 (No operations allowed after connection closed.). Possibly consider using a shorter maxLifetime value.
+2026-05-11 17:09:46.087 [trend-data-worker] ERROR c.m.e.service.impl.TrendServiceImpl - 获取评论数数据失败
+org.apache.ibatis.binding.BindingException: Invalid bound statement (not found): com.markdown.editor.mapper.CommentMapper.countByUserIdAndDateRange
+	at org.apache.ibatis.binding.MapperMethod$SqlCommand.<init>(MapperMethod.java:235)
+	at com.baomidou.mybatisplus.core.override.MybatisMapperMethod.<init>(MybatisMapperMethod.java:50)
+	at com.baomidou.mybatisplus.core.override.MybatisMapperProxy.lambda$cachedInvoker$0(MybatisMapperProxy.java:111)
+	at java.base/java.util.concurrent.ConcurrentHashMap.computeIfAbsent(ConcurrentHashMap.java:1708)
+	at com.baomidou.mybatisplus.core.toolkit.CollectionUtils.computeIfAbsent(CollectionUtils.java:115)
+	at com.baomidou.mybatisplus.core.override.MybatisMapperProxy.cachedInvoker(MybatisMapperProxy.java:98)
+	at com.baomidou.mybatisplus.core.override.MybatisMapperProxy.invoke(MybatisMapperProxy.java:89)
+	at jdk.proxy2/jdk.proxy2.$Proxy92.countByUserIdAndDateRange(Unknown Source)
+	at com.markdown.editor.service.impl.TrendServiceImpl.fetchCommentCountData(TrendServiceImpl.java:177)
+	at com.markdown.editor.service.impl.TrendServiceImpl.lambda$getTrendData$2(TrendServiceImpl.java:74)
+	at java.base/java.util.concurrent.CompletableFuture$AsyncRun.run(CompletableFuture.java:1804)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+	at java.base/java.lang.Thread.run(Thread.java:842)
+2026-05-11 17:11:55.977 [trend-data-worker] ERROR c.m.e.service.impl.TrendServiceImpl - 获取评论数数据失败
+org.apache.ibatis.binding.BindingException: Invalid bound statement (not found): com.markdown.editor.mapper.CommentMapper.countByUserIdAndDateRange
+	at org.apache.ibatis.binding.MapperMethod$SqlCommand.<init>(MapperMethod.java:235)
+	at com.baomidou.mybatisplus.core.override.MybatisMapperMethod.<init>(MybatisMapperMethod.java:50)
+	at com.baomidou.mybatisplus.core.override.MybatisMapperProxy.lambda$cachedInvoker$0(MybatisMapperProxy.java:111)
+	at java.base/java.util.concurrent.ConcurrentHashMap.computeIfAbsent(ConcurrentHashMap.java:1708)
+	at com.baomidou.mybatisplus.core.toolkit.CollectionUtils.computeIfAbsent(CollectionUtils.java:115)
+	at com.baomidou.mybatisplus.core.override.MybatisMapperProxy.cachedInvoker(MybatisMapperProxy.java:98)
+	at com.baomidou.mybatisplus.core.override.MybatisMapperProxy.invoke(MybatisMapperProxy.java:89)
+	at jdk.proxy2/jdk.proxy2.$Proxy92.countByUserIdAndDateRange(Unknown Source)
+	at com.markdown.editor.service.impl.TrendServiceImpl.fetchCommentCountData(TrendServiceImpl.java:177)
+	at com.markdown.editor.service.impl.TrendServiceImpl.lambda$getTrendData$2(TrendServiceImpl.java:74)
+	at java.base/java.util.concurrent.CompletableFuture$AsyncRun.run(CompletableFuture.java:1804)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+	at java.base/java.lang.Thread.run(Thread.java:842)
+2026-05-11 17:12:07.184 [trend-data-worker] ERROR c.m.e.service.impl.TrendServiceImpl - 获取评论数数据失败
+org.apache.ibatis.binding.BindingException: Invalid bound statement (not found): com.markdown.editor.mapper.CommentMapper.countByUserIdAndDateRange
+	at org.apache.ibatis.binding.MapperMethod$SqlCommand.<init>(MapperMethod.java:235)
+	at com.baomidou.mybatisplus.core.override.MybatisMapperMethod.<init>(MybatisMapperMethod.java:50)
+	at com.baomidou.mybatisplus.core.override.MybatisMapperProxy.lambda$cachedInvoker$0(MybatisMapperProxy.java:111)
+	at java.base/java.util.concurrent.ConcurrentHashMap.computeIfAbsent(ConcurrentHashMap.java:1708)
+	at com.baomidou.mybatisplus.core.toolkit.CollectionUtils.computeIfAbsent(CollectionUtils.java:115)
+	at com.baomidou.mybatisplus.core.override.MybatisMapperProxy.cachedInvoker(MybatisMapperProxy.java:98)
+	at com.baomidou.mybatisplus.core.override.MybatisMapperProxy.invoke(MybatisMapperProxy.java:89)
+	at jdk.proxy2/jdk.proxy2.$Proxy92.countByUserIdAndDateRange(Unknown Source)
+	at com.markdown.editor.service.impl.TrendServiceImpl.fetchCommentCountData(TrendServiceImpl.java:177)
+	at com.markdown.editor.service.impl.TrendServiceImpl.lambda$getTrendData$2(TrendServiceImpl.java:74)
+	at java.base/java.util.concurrent.CompletableFuture$AsyncRun.run(CompletableFuture.java:1804)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+	at java.base/java.lang.Thread.run(Thread.java:842)
+2026-05-11 17:17:03.020 [http-nio-8081-exec-5] WARN  com.zaxxer.hikari.pool.PoolBase - MarkdownHikariCP - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@53b63244 (No operations allowed after connection closed.). Possibly consider using a shorter maxLifetime value.
+2026-05-11 17:17:08.032 [http-nio-8081-exec-5] WARN  com.zaxxer.hikari.pool.PoolBase - MarkdownHikariCP - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@77e87191 (No operations allowed after connection closed.). Possibly consider using a shorter maxLifetime value.
+2026-05-11 17:17:13.045 [http-nio-8081-exec-5] WARN  com.zaxxer.hikari.pool.PoolBase - MarkdownHikariCP - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@237ec003 (No operations allowed after connection closed.). Possibly consider using a shorter maxLifetime value.
+2026-05-11 17:17:18.052 [http-nio-8081-exec-5] WARN  com.zaxxer.hikari.pool.PoolBase - MarkdownHikariCP - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@3f5acf31 (No operations allowed after connection closed.). Possibly consider using a shorter maxLifetime value.
+2026-05-11 17:17:23.055 [http-nio-8081-exec-5] WARN  com.zaxxer.hikari.pool.PoolBase - MarkdownHikariCP - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@6452ff4f (No operations allowed after connection closed.). Possibly consider using a shorter maxLifetime value.
+2026-05-11 17:17:28.060 [http-nio-8081-exec-5] WARN  com.zaxxer.hikari.pool.PoolBase - MarkdownHikariCP - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@f1af18d (No operations allowed after connection closed.). Possibly consider using a shorter maxLifetime value.
+2026-05-11 17:17:28.094 [http-nio-8081-exec-5] ERROR c.m.e.filter.JwtAuthenticationFilter - Cannot set user authentication: {}
+org.mybatis.spring.MyBatisSystemException: nested exception is org.apache.ibatis.exceptions.PersistenceException: 
+### Error querying database.  Cause: org.springframework.jdbc.CannotGetJdbcConnectionException: Failed to obtain JDBC Connection; nested exception is java.sql.SQLTransientConnectionException: MarkdownHikariCP - Connection is not available, request timed out after 30052ms.
+### The error may exist in file [D:\workspace\spring-cloud-center\wechat-mini-backend\markdown-editor\backend\target\classes\mapper\UserMapper.xml]
+### The error may involve com.markdown.editor.mapper.UserMapper.selectByUsername
+### The error occurred while executing a query
+### Cause: org.springframework.jdbc.CannotGetJdbcConnectionException: Failed to obtain JDBC Connection; nested exception is java.sql.SQLTransientConnectionException: MarkdownHikariCP - Connection is not available, request timed out after 30052ms.
+	at org.mybatis.spring.MyBatisExceptionTranslator.translateExceptionIfPossible(MyBatisExceptionTranslator.java:96)
+	at org.mybatis.spring.SqlSessionTemplate$SqlSessionInterceptor.invoke(SqlSessionTemplate.java:441)
+	at jdk.proxy2/jdk.proxy2.$Proxy69.selectOne(Unknown Source)
+	at org.mybatis.spring.SqlSessionTemplate.selectOne(SqlSessionTemplate.java:160)
+	at com.baomidou.mybatisplus.core.override.MybatisMapperMethod.execute(MybatisMapperMethod.java:89)
+	at com.baomidou.mybatisplus.core.override.MybatisMapperProxy$PlainMethodInvoker.invoke(MybatisMapperProxy.java:148)
+	at com.baomidou.mybatisplus.core.override.MybatisMapperProxy.invoke(MybatisMapperProxy.java:89)
+	at jdk.proxy2/jdk.proxy2.$Proxy70.selectByUsername(Unknown Source)
+	at com.markdown.editor.service.impl.UserServiceImpl.selectByUsername(UserServiceImpl.java:25)
+	at com.markdown.editor.security.UserDetailsServiceImpl.loadUserByUsername(UserDetailsServiceImpl.java:20)
+	at com.markdown.editor.filter.JwtAuthenticationFilter.doFilterInternal(JwtAuthenticationFilter.java:41)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:346)
+	at org.springframework.security.web.authentication.logout.LogoutFilter.doFilter(LogoutFilter.java:103)
+	at org.springframework.security.web.authentication.logout.LogoutFilter.doFilter(LogoutFilter.java:89)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:346)
+	at org.springframework.web.filter.CorsFilter.doFilterInternal(CorsFilter.java:91)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:346)
+	at org.springframework.security.web.header.HeaderWriterFilter.doHeadersAfter(HeaderWriterFilter.java:90)
+	at org.springframework.security.web.header.HeaderWriterFilter.doFilterInternal(HeaderWriterFilter.java:75)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:346)
+	at org.springframework.security.web.context.SecurityContextPersistenceFilter.doFilter(SecurityContextPersistenceFilter.java:112)
+	at org.springframework.security.web.context.SecurityContextPersistenceFilter.doFilter(SecurityContextPersistenceFilter.java:82)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:346)
+	at org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter.doFilterInternal(WebAsyncManagerIntegrationFilter.java:55)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:346)
+	at org.springframework.security.web.session.DisableEncodeUrlFilter.doFilterInternal(DisableEncodeUrlFilter.java:42)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:346)
+	at org.springframework.security.web.FilterChainProxy.doFilterInternal(FilterChainProxy.java:221)
+	at org.springframework.security.web.FilterChainProxy.doFilter(FilterChainProxy.java:186)
+	at org.springframework.web.filter.DelegatingFilterProxy.invokeDelegate(DelegatingFilterProxy.java:354)
+	at org.springframework.web.filter.DelegatingFilterProxy.doFilter(DelegatingFilterProxy.java:267)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:178)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:153)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:178)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:153)
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:178)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:153)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:178)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:153)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:167)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:90)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:481)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:130)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:93)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:343)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:390)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:926)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1791)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.base/java.lang.Thread.run(Thread.java:842)
+Caused by: org.apache.ibatis.exceptions.PersistenceException: 
+### Error querying database.  Cause: org.springframework.jdbc.CannotGetJdbcConnectionException: Failed to obtain JDBC Connection; nested exception is java.sql.SQLTransientConnectionException: MarkdownHikariCP - Connection is not available, request timed out after 30052ms.
+### The error may exist in file [D:\workspace\spring-cloud-center\wechat-mini-backend\markdown-editor\backend\target\classes\mapper\UserMapper.xml]
+### The error may involve com.markdown.editor.mapper.UserMapper.selectByUsername
+### The error occurred while executing a query
+### Cause: org.springframework.jdbc.CannotGetJdbcConnectionException: Failed to obtain JDBC Connection; nested exception is java.sql.SQLTransientConnectionException: MarkdownHikariCP - Connection is not available, request timed out after 30052ms.
+	at org.apache.ibatis.exceptions.ExceptionFactory.wrapException(ExceptionFactory.java:30)
+	at org.apache.ibatis.session.defaults.DefaultSqlSession.selectList(DefaultSqlSession.java:153)
+	at org.apache.ibatis.session.defaults.DefaultSqlSession.selectList(DefaultSqlSession.java:145)
+	at org.apache.ibatis.session.defaults.DefaultSqlSession.selectList(DefaultSqlSession.java:140)
+	at org.apache.ibatis.session.defaults.DefaultSqlSession.selectOne(DefaultSqlSession.java:76)
+	at jdk.internal.reflect.GeneratedMethodAccessor59.invoke(Unknown Source)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.mybatis.spring.SqlSessionTemplate$SqlSessionInterceptor.invoke(SqlSessionTemplate.java:427)
+	... 64 common frames omitted
+Caused by: org.springframework.jdbc.CannotGetJdbcConnectionException: Failed to obtain JDBC Connection; nested exception is java.sql.SQLTransientConnectionException: MarkdownHikariCP - Connection is not available, request timed out after 30052ms.
+	at org.springframework.jdbc.datasource.DataSourceUtils.getConnection(DataSourceUtils.java:84)
+	at org.mybatis.spring.transaction.SpringManagedTransaction.openConnection(SpringManagedTransaction.java:80)
+	at org.mybatis.spring.transaction.SpringManagedTransaction.getConnection(SpringManagedTransaction.java:67)
+	at org.apache.ibatis.executor.BaseExecutor.getConnection(BaseExecutor.java:337)
+	at org.apache.ibatis.executor.SimpleExecutor.prepareStatement(SimpleExecutor.java:86)
+	at org.apache.ibatis.executor.SimpleExecutor.doQuery(SimpleExecutor.java:62)
+	at org.apache.ibatis.executor.BaseExecutor.queryFromDatabase(BaseExecutor.java:325)
+	at org.apache.ibatis.executor.BaseExecutor.query(BaseExecutor.java:156)
+	at org.apache.ibatis.executor.CachingExecutor.query(CachingExecutor.java:109)
+	at com.baomidou.mybatisplus.extension.plugins.MybatisPlusInterceptor.intercept(MybatisPlusInterceptor.java:81)
+	at org.apache.ibatis.plugin.Plugin.invoke(Plugin.java:62)
+	at jdk.proxy2/jdk.proxy2.$Proxy140.query(Unknown Source)
+	at org.apache.ibatis.session.defaults.DefaultSqlSession.selectList(DefaultSqlSession.java:151)
+	... 71 common frames omitted
+Caused by: java.sql.SQLTransientConnectionException: MarkdownHikariCP - Connection is not available, request timed out after 30052ms.
+	at com.zaxxer.hikari.pool.HikariPool.createTimeoutException(HikariPool.java:696)
+	at com.zaxxer.hikari.pool.HikariPool.getConnection(HikariPool.java:197)
+	at com.zaxxer.hikari.pool.HikariPool.getConnection(HikariPool.java:162)
+	at com.zaxxer.hikari.HikariDataSource.getConnection(HikariDataSource.java:128)
+	at org.springframework.jdbc.datasource.DataSourceUtils.fetchConnection(DataSourceUtils.java:160)
+	at org.springframework.jdbc.datasource.DataSourceUtils.doGetConnection(DataSourceUtils.java:118)
+	at org.springframework.jdbc.datasource.DataSourceUtils.getConnection(DataSourceUtils.java:81)
+	... 83 common frames omitted
+Caused by: java.sql.SQLNonTransientConnectionException: No operations allowed after connection closed.
+	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:110)
+	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:97)
+	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:89)
+	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:63)
+	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:73)
+	at com.mysql.cj.jdbc.exceptions.SQLExceptionsMapping.translateException(SQLExceptionsMapping.java:73)
+	at com.mysql.cj.jdbc.ConnectionImpl.setNetworkTimeout(ConnectionImpl.java:2485)
+	at com.zaxxer.hikari.pool.PoolBase.setNetworkTimeout(PoolBase.java:566)
+	at com.zaxxer.hikari.pool.PoolBase.isConnectionAlive(PoolBase.java:173)
+	at com.zaxxer.hikari.pool.HikariPool.getConnection(HikariPool.java:186)
+	... 88 common frames omitted
+Caused by: com.mysql.cj.exceptions.ConnectionIsClosedException: No operations allowed after connection closed.
+	at jdk.internal.reflect.GeneratedConstructorAccessor91.newInstance(Unknown Source)
+	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:480)
+	at com.mysql.cj.exceptions.ExceptionFactory.createException(ExceptionFactory.java:61)
+	at com.mysql.cj.exceptions.ExceptionFactory.createException(ExceptionFactory.java:105)
+	at com.mysql.cj.exceptions.ExceptionFactory.createException(ExceptionFactory.java:151)
+	at com.mysql.cj.NativeSession.checkClosed(NativeSession.java:761)
+	at com.mysql.cj.jdbc.ConnectionImpl.checkClosed(ConnectionImpl.java:568)
+	at com.mysql.cj.jdbc.ConnectionImpl.setNetworkTimeout(ConnectionImpl.java:2481)
+	... 91 common frames omitted
+Caused by: com.mysql.cj.exceptions.CJCommunicationsException: Communications link failure
+
+The last packet successfully received from the server was 320,053 milliseconds ago. The last packet sent successfully to the server was 320,065 milliseconds ago.
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:480)
+	at com.mysql.cj.exceptions.ExceptionFactory.createException(ExceptionFactory.java:61)
+	at com.mysql.cj.exceptions.ExceptionFactory.createException(ExceptionFactory.java:105)
+	at com.mysql.cj.exceptions.ExceptionFactory.createException(ExceptionFactory.java:151)
+	at com.mysql.cj.exceptions.ExceptionFactory.createCommunicationsException(ExceptionFactory.java:167)
+	at com.mysql.cj.protocol.a.NativeProtocol.readMessage(NativeProtocol.java:581)
+	at com.mysql.cj.protocol.a.NativeProtocol.checkErrorMessage(NativeProtocol.java:761)
+	at com.mysql.cj.protocol.a.NativeProtocol.sendCommand(NativeProtocol.java:700)
+	at com.mysql.cj.protocol.a.NativeProtocol.sendQueryPacket(NativeProtocol.java:1051)
+	at com.mysql.cj.protocol.a.NativeProtocol.sendQueryString(NativeProtocol.java:997)
+	at com.mysql.cj.NativeSession.execSQL(NativeSession.java:663)
+	at com.mysql.cj.jdbc.StatementImpl.executeInternal(StatementImpl.java:723)
+	at com.mysql.cj.jdbc.StatementImpl.execute(StatementImpl.java:648)
+	at com.zaxxer.hikari.pool.PoolBase.isConnectionAlive(PoolBase.java:169)
+	... 89 common frames omitted
+Caused by: java.net.SocketTimeoutException: Read timed out
+	at java.base/sun.nio.ch.NioSocketImpl.timedRead(NioSocketImpl.java:288)
+	at java.base/sun.nio.ch.NioSocketImpl.implRead(NioSocketImpl.java:314)
+	at java.base/sun.nio.ch.NioSocketImpl.read(NioSocketImpl.java:355)
+	at java.base/sun.nio.ch.NioSocketImpl$1.read(NioSocketImpl.java:808)
+	at java.base/java.net.Socket$SocketInputStream.read(Socket.java:966)
+	at com.mysql.cj.protocol.ReadAheadInputStream.fill(ReadAheadInputStream.java:107)
+	at com.mysql.cj.protocol.ReadAheadInputStream.readFromUnderlyingStreamIfNecessary(ReadAheadInputStream.java:150)
+	at com.mysql.cj.protocol.ReadAheadInputStream.read(ReadAheadInputStream.java:180)
+	at java.base/java.io.FilterInputStream.read(FilterInputStream.java:132)
+	at com.mysql.cj.protocol.FullReadInputStream.readFully(FullReadInputStream.java:64)
+	at com.mysql.cj.protocol.a.SimplePacketReader.readHeaderLocal(SimplePacketReader.java:81)
+	at com.mysql.cj.protocol.a.SimplePacketReader.readHeader(SimplePacketReader.java:63)
+	at com.mysql.cj.protocol.a.SimplePacketReader.readHeader(SimplePacketReader.java:45)
+	at com.mysql.cj.protocol.a.TimeTrackingPacketReader.readHeader(TimeTrackingPacketReader.java:52)
+	at com.mysql.cj.protocol.a.TimeTrackingPacketReader.readHeader(TimeTrackingPacketReader.java:41)
+	at com.mysql.cj.protocol.a.MultiPacketReader.readHeader(MultiPacketReader.java:54)
+	at com.mysql.cj.protocol.a.MultiPacketReader.readHeader(MultiPacketReader.java:44)
+	at com.mysql.cj.protocol.a.NativeProtocol.readMessage(NativeProtocol.java:575)
+	... 97 common frames omitted
+2026-05-11 17:18:45.755 [http-nio-8081-exec-7] WARN  com.zaxxer.hikari.pool.PoolBase - MarkdownHikariCP - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@7aa22413 (No operations allowed after connection closed.). Possibly consider using a shorter maxLifetime value.
+2026-05-11 17:18:45.755 [http-nio-8081-exec-1] WARN  com.zaxxer.hikari.pool.PoolBase - MarkdownHikariCP - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@7ffef060 (No operations allowed after connection closed.). Possibly consider using a shorter maxLifetime value.
+2026-05-11 17:18:45.761 [http-nio-8081-exec-3] WARN  com.zaxxer.hikari.pool.PoolBase - MarkdownHikariCP - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@4e91c41e (No operations allowed after connection closed.). Possibly consider using a shorter maxLifetime value.
+2026-05-11 17:18:46.051 [trend-data-worker] ERROR c.m.e.service.impl.TrendServiceImpl - 获取评论数数据失败
+org.apache.ibatis.binding.BindingException: Invalid bound statement (not found): com.markdown.editor.mapper.CommentMapper.countByUserIdAndDateRange
+	at org.apache.ibatis.binding.MapperMethod$SqlCommand.<init>(MapperMethod.java:235)
+	at com.baomidou.mybatisplus.core.override.MybatisMapperMethod.<init>(MybatisMapperMethod.java:50)
+	at com.baomidou.mybatisplus.core.override.MybatisMapperProxy.lambda$cachedInvoker$0(MybatisMapperProxy.java:111)
+	at java.base/java.util.concurrent.ConcurrentHashMap.computeIfAbsent(ConcurrentHashMap.java:1708)
+	at com.baomidou.mybatisplus.core.toolkit.CollectionUtils.computeIfAbsent(CollectionUtils.java:115)
+	at com.baomidou.mybatisplus.core.override.MybatisMapperProxy.cachedInvoker(MybatisMapperProxy.java:98)
+	at com.baomidou.mybatisplus.core.override.MybatisMapperProxy.invoke(MybatisMapperProxy.java:89)
+	at jdk.proxy2/jdk.proxy2.$Proxy92.countByUserIdAndDateRange(Unknown Source)
+	at com.markdown.editor.service.impl.TrendServiceImpl.fetchCommentCountData(TrendServiceImpl.java:177)
+	at com.markdown.editor.service.impl.TrendServiceImpl.lambda$getTrendData$2(TrendServiceImpl.java:74)
+	at java.base/java.util.concurrent.CompletableFuture$AsyncRun.run(CompletableFuture.java:1804)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+	at java.base/java.lang.Thread.run(Thread.java:842)
+2026-05-11 17:21:54.467 [trend-data-worker] ERROR c.m.e.service.impl.TrendServiceImpl - 获取评论数数据失败
+org.apache.ibatis.binding.BindingException: Invalid bound statement (not found): com.markdown.editor.mapper.CommentMapper.countByUserIdAndDateRange
+	at org.apache.ibatis.binding.MapperMethod$SqlCommand.<init>(MapperMethod.java:235)
+	at com.baomidou.mybatisplus.core.override.MybatisMapperMethod.<init>(MybatisMapperMethod.java:50)
+	at com.baomidou.mybatisplus.core.override.MybatisMapperProxy.lambda$cachedInvoker$0(MybatisMapperProxy.java:111)
+	at java.base/java.util.concurrent.ConcurrentHashMap.computeIfAbsent(ConcurrentHashMap.java:1708)
+	at com.baomidou.mybatisplus.core.toolkit.CollectionUtils.computeIfAbsent(CollectionUtils.java:115)
+	at com.baomidou.mybatisplus.core.override.MybatisMapperProxy.cachedInvoker(MybatisMapperProxy.java:98)
+	at com.baomidou.mybatisplus.core.override.MybatisMapperProxy.invoke(MybatisMapperProxy.java:89)
+	at jdk.proxy2/jdk.proxy2.$Proxy92.countByUserIdAndDateRange(Unknown Source)
+	at com.markdown.editor.service.impl.TrendServiceImpl.fetchCommentCountData(TrendServiceImpl.java:177)
+	at com.markdown.editor.service.impl.TrendServiceImpl.lambda$getTrendData$2(TrendServiceImpl.java:74)
+	at java.base/java.util.concurrent.CompletableFuture$AsyncRun.run(CompletableFuture.java:1804)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+	at java.base/java.lang.Thread.run(Thread.java:842)
+2026-05-11 17:25:44.792 [trend-data-worker] ERROR c.m.e.service.impl.TrendServiceImpl - 获取评论数数据失败
+org.apache.ibatis.binding.BindingException: Invalid bound statement (not found): com.markdown.editor.mapper.CommentMapper.countByUserIdAndDateRange
+	at org.apache.ibatis.binding.MapperMethod$SqlCommand.<init>(MapperMethod.java:235)
+	at com.baomidou.mybatisplus.core.override.MybatisMapperMethod.<init>(MybatisMapperMethod.java:50)
+	at com.baomidou.mybatisplus.core.override.MybatisMapperProxy.lambda$cachedInvoker$0(MybatisMapperProxy.java:111)
+	at java.base/java.util.concurrent.ConcurrentHashMap.computeIfAbsent(ConcurrentHashMap.java:1708)
+	at com.baomidou.mybatisplus.core.toolkit.CollectionUtils.computeIfAbsent(CollectionUtils.java:115)
+	at com.baomidou.mybatisplus.core.override.MybatisMapperProxy.cachedInvoker(MybatisMapperProxy.java:98)
+	at com.baomidou.mybatisplus.core.override.MybatisMapperProxy.invoke(MybatisMapperProxy.java:89)
+	at jdk.proxy2/jdk.proxy2.$Proxy92.countByUserIdAndDateRange(Unknown Source)
+	at com.markdown.editor.service.impl.TrendServiceImpl.fetchCommentCountData(TrendServiceImpl.java:177)
+	at com.markdown.editor.service.impl.TrendServiceImpl.lambda$getTrendData$2(TrendServiceImpl.java:74)
+	at java.base/java.util.concurrent.CompletableFuture$AsyncRun.run(CompletableFuture.java:1804)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+	at java.base/java.lang.Thread.run(Thread.java:842)
+2026-05-11 17:34:47.063 [http-nio-8081-exec-9] WARN  com.zaxxer.hikari.pool.PoolBase - MarkdownHikariCP - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@63f208c4 (No operations allowed after connection closed.). Possibly consider using a shorter maxLifetime value.
+2026-05-11 17:34:47.063 [http-nio-8081-exec-4] WARN  com.zaxxer.hikari.pool.PoolBase - MarkdownHikariCP - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@4c7ecd53 (No operations allowed after connection closed.). Possibly consider using a shorter maxLifetime value.
+2026-05-11 17:34:47.063 [http-nio-8081-exec-2] WARN  com.zaxxer.hikari.pool.PoolBase - MarkdownHikariCP - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@18d07689 (No operations allowed after connection closed.). Possibly consider using a shorter maxLifetime value.
+2026-05-11 17:34:47.063 [http-nio-8081-exec-7] WARN  com.zaxxer.hikari.pool.PoolBase - MarkdownHikariCP - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@64e7c43c (No operations allowed after connection closed.). Possibly consider using a shorter maxLifetime value.
+2026-05-11 17:34:47.063 [http-nio-8081-exec-8] WARN  com.zaxxer.hikari.pool.PoolBase - MarkdownHikariCP - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@1843b5ab (No operations allowed after connection closed.). Possibly consider using a shorter maxLifetime value.
+2026-05-11 17:34:52.086 [http-nio-8081-exec-9] WARN  com.zaxxer.hikari.pool.PoolBase - MarkdownHikariCP - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@745c6672 (No operations allowed after connection closed.). Possibly consider using a shorter maxLifetime value.
+2026-05-11 17:34:52.087 [http-nio-8081-exec-4] WARN  com.zaxxer.hikari.pool.PoolBase - MarkdownHikariCP - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@37081b31 (No operations allowed after connection closed.). Possibly consider using a shorter maxLifetime value.
+2026-05-11 17:34:52.089 [http-nio-8081-exec-2] WARN  com.zaxxer.hikari.pool.PoolBase - MarkdownHikariCP - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@61026366 (No operations allowed after connection closed.). Possibly consider using a shorter maxLifetime value.
+2026-05-11 17:34:52.090 [http-nio-8081-exec-8] WARN  com.zaxxer.hikari.pool.PoolBase - MarkdownHikariCP - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@76b9057d (No operations allowed after connection closed.). Possibly consider using a shorter maxLifetime value.
+2026-05-11 17:34:52.335 [trend-data-worker] ERROR c.m.e.service.impl.TrendServiceImpl - 获取评论数数据失败
+org.apache.ibatis.binding.BindingException: Invalid bound statement (not found): com.markdown.editor.mapper.CommentMapper.countByUserIdAndDateRange
+	at org.apache.ibatis.binding.MapperMethod$SqlCommand.<init>(MapperMethod.java:235)
+	at com.baomidou.mybatisplus.core.override.MybatisMapperMethod.<init>(MybatisMapperMethod.java:50)
+	at com.baomidou.mybatisplus.core.override.MybatisMapperProxy.lambda$cachedInvoker$0(MybatisMapperProxy.java:111)
+	at java.base/java.util.concurrent.ConcurrentHashMap.computeIfAbsent(ConcurrentHashMap.java:1708)
+	at com.baomidou.mybatisplus.core.toolkit.CollectionUtils.computeIfAbsent(CollectionUtils.java:115)
+	at com.baomidou.mybatisplus.core.override.MybatisMapperProxy.cachedInvoker(MybatisMapperProxy.java:98)
+	at com.baomidou.mybatisplus.core.override.MybatisMapperProxy.invoke(MybatisMapperProxy.java:89)
+	at jdk.proxy2/jdk.proxy2.$Proxy92.countByUserIdAndDateRange(Unknown Source)
+	at com.markdown.editor.service.impl.TrendServiceImpl.fetchCommentCountData(TrendServiceImpl.java:177)
+	at com.markdown.editor.service.impl.TrendServiceImpl.lambda$getTrendData$2(TrendServiceImpl.java:74)
+	at java.base/java.util.concurrent.CompletableFuture$AsyncRun.run(CompletableFuture.java:1804)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+	at java.base/java.lang.Thread.run(Thread.java:842)
+2026-05-11 17:35:07.313 [trend-data-worker] ERROR c.m.e.service.impl.TrendServiceImpl - 获取评论数数据失败
+org.apache.ibatis.binding.BindingException: Invalid bound statement (not found): com.markdown.editor.mapper.CommentMapper.countByUserIdAndDateRange
+	at org.apache.ibatis.binding.MapperMethod$SqlCommand.<init>(MapperMethod.java:235)
+	at com.baomidou.mybatisplus.core.override.MybatisMapperMethod.<init>(MybatisMapperMethod.java:50)
+	at com.baomidou.mybatisplus.core.override.MybatisMapperProxy.lambda$cachedInvoker$0(MybatisMapperProxy.java:111)
+	at java.base/java.util.concurrent.ConcurrentHashMap.computeIfAbsent(ConcurrentHashMap.java:1708)
+	at com.baomidou.mybatisplus.core.toolkit.CollectionUtils.computeIfAbsent(CollectionUtils.java:115)
+	at com.baomidou.mybatisplus.core.override.MybatisMapperProxy.cachedInvoker(MybatisMapperProxy.java:98)
+	at com.baomidou.mybatisplus.core.override.MybatisMapperProxy.invoke(MybatisMapperProxy.java:89)
+	at jdk.proxy2/jdk.proxy2.$Proxy92.countByUserIdAndDateRange(Unknown Source)
+	at com.markdown.editor.service.impl.TrendServiceImpl.fetchCommentCountData(TrendServiceImpl.java:177)
+	at com.markdown.editor.service.impl.TrendServiceImpl.lambda$getTrendData$2(TrendServiceImpl.java:74)
+	at java.base/java.util.concurrent.CompletableFuture$AsyncRun.run(CompletableFuture.java:1804)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+	at java.base/java.lang.Thread.run(Thread.java:842)
+2026-05-11 17:35:51.959 [trend-data-worker] ERROR c.m.e.service.impl.TrendServiceImpl - 获取评论数数据失败
+org.apache.ibatis.binding.BindingException: Invalid bound statement (not found): com.markdown.editor.mapper.CommentMapper.countByUserIdAndDateRange
+	at org.apache.ibatis.binding.MapperMethod$SqlCommand.<init>(MapperMethod.java:235)
+	at com.baomidou.mybatisplus.core.override.MybatisMapperMethod.<init>(MybatisMapperMethod.java:50)
+	at com.baomidou.mybatisplus.core.override.MybatisMapperProxy.lambda$cachedInvoker$0(MybatisMapperProxy.java:111)
+	at java.base/java.util.concurrent.ConcurrentHashMap.computeIfAbsent(ConcurrentHashMap.java:1708)
+	at com.baomidou.mybatisplus.core.toolkit.CollectionUtils.computeIfAbsent(CollectionUtils.java:115)
+	at com.baomidou.mybatisplus.core.override.MybatisMapperProxy.cachedInvoker(MybatisMapperProxy.java:98)
+	at com.baomidou.mybatisplus.core.override.MybatisMapperProxy.invoke(MybatisMapperProxy.java:89)
+	at jdk.proxy2/jdk.proxy2.$Proxy92.countByUserIdAndDateRange(Unknown Source)
+	at com.markdown.editor.service.impl.TrendServiceImpl.fetchCommentCountData(TrendServiceImpl.java:177)
+	at com.markdown.editor.service.impl.TrendServiceImpl.lambda$getTrendData$2(TrendServiceImpl.java:74)
+	at java.base/java.util.concurrent.CompletableFuture$AsyncRun.run(CompletableFuture.java:1804)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+	at java.base/java.lang.Thread.run(Thread.java:842)
+2026-05-11 17:43:12.117 [http-nio-8081-exec-1] WARN  com.zaxxer.hikari.pool.PoolBase - MarkdownHikariCP - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@50d04e81 (No operations allowed after connection closed.). Possibly consider using a shorter maxLifetime value.
+2026-05-11 17:43:17.125 [http-nio-8081-exec-1] WARN  com.zaxxer.hikari.pool.PoolBase - MarkdownHikariCP - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@40c959f9 (No operations allowed after connection closed.). Possibly consider using a shorter maxLifetime value.
+2026-05-11 17:43:22.141 [http-nio-8081-exec-1] WARN  com.zaxxer.hikari.pool.PoolBase - MarkdownHikariCP - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@373d9d6a (No operations allowed after connection closed.). Possibly consider using a shorter maxLifetime value.
+2026-05-11 17:43:27.160 [http-nio-8081-exec-1] WARN  com.zaxxer.hikari.pool.PoolBase - MarkdownHikariCP - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@25454be3 (No operations allowed after connection closed.). Possibly consider using a shorter maxLifetime value.
+2026-05-11 17:43:32.178 [http-nio-8081-exec-1] WARN  com.zaxxer.hikari.pool.PoolBase - MarkdownHikariCP - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@2d3e8ac6 (No operations allowed after connection closed.). Possibly consider using a shorter maxLifetime value.
+2026-05-11 17:43:32.594 [http-nio-8081-exec-4] WARN  com.zaxxer.hikari.pool.PoolBase - MarkdownHikariCP - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@3c8ceaaf (No operations allowed after connection closed.). Possibly consider using a shorter maxLifetime value.
+2026-05-11 17:43:34.558 [http-nio-8081-exec-9] WARN  com.zaxxer.hikari.pool.PoolBase - MarkdownHikariCP - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@3859ef45 (No operations allowed after connection closed.). Possibly consider using a shorter maxLifetime value.
+2026-05-11 17:43:37.182 [http-nio-8081-exec-1] WARN  com.zaxxer.hikari.pool.PoolBase - MarkdownHikariCP - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@b93790 (No operations allowed after connection closed.). Possibly consider using a shorter maxLifetime value.
+2026-05-11 17:43:37.202 [http-nio-8081-exec-1] ERROR c.m.e.filter.JwtAuthenticationFilter - Cannot set user authentication: {}
+org.mybatis.spring.MyBatisSystemException: nested exception is org.apache.ibatis.exceptions.PersistenceException: 
+### Error querying database.  Cause: org.springframework.jdbc.CannotGetJdbcConnectionException: Failed to obtain JDBC Connection; nested exception is java.sql.SQLTransientConnectionException: MarkdownHikariCP - Connection is not available, request timed out after 30080ms.
+### The error may exist in file [D:\workspace\spring-cloud-center\wechat-mini-backend\markdown-editor\backend\target\classes\mapper\UserMapper.xml]
+### The error may involve com.markdown.editor.mapper.UserMapper.selectByUsername
+### The error occurred while executing a query
+### Cause: org.springframework.jdbc.CannotGetJdbcConnectionException: Failed to obtain JDBC Connection; nested exception is java.sql.SQLTransientConnectionException: MarkdownHikariCP - Connection is not available, request timed out after 30080ms.
+	at org.mybatis.spring.MyBatisExceptionTranslator.translateExceptionIfPossible(MyBatisExceptionTranslator.java:96)
+	at org.mybatis.spring.SqlSessionTemplate$SqlSessionInterceptor.invoke(SqlSessionTemplate.java:441)
+	at jdk.proxy2/jdk.proxy2.$Proxy69.selectOne(Unknown Source)
+	at org.mybatis.spring.SqlSessionTemplate.selectOne(SqlSessionTemplate.java:160)
+	at com.baomidou.mybatisplus.core.override.MybatisMapperMethod.execute(MybatisMapperMethod.java:89)
+	at com.baomidou.mybatisplus.core.override.MybatisMapperProxy$PlainMethodInvoker.invoke(MybatisMapperProxy.java:148)
+	at com.baomidou.mybatisplus.core.override.MybatisMapperProxy.invoke(MybatisMapperProxy.java:89)
+	at jdk.proxy2/jdk.proxy2.$Proxy70.selectByUsername(Unknown Source)
+	at com.markdown.editor.service.impl.UserServiceImpl.selectByUsername(UserServiceImpl.java:25)
+	at com.markdown.editor.security.UserDetailsServiceImpl.loadUserByUsername(UserDetailsServiceImpl.java:20)
+	at com.markdown.editor.filter.JwtAuthenticationFilter.doFilterInternal(JwtAuthenticationFilter.java:41)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:346)
+	at org.springframework.security.web.authentication.logout.LogoutFilter.doFilter(LogoutFilter.java:103)
+	at org.springframework.security.web.authentication.logout.LogoutFilter.doFilter(LogoutFilter.java:89)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:346)
+	at org.springframework.web.filter.CorsFilter.doFilterInternal(CorsFilter.java:91)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:346)
+	at org.springframework.security.web.header.HeaderWriterFilter.doHeadersAfter(HeaderWriterFilter.java:90)
+	at org.springframework.security.web.header.HeaderWriterFilter.doFilterInternal(HeaderWriterFilter.java:75)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:346)
+	at org.springframework.security.web.context.SecurityContextPersistenceFilter.doFilter(SecurityContextPersistenceFilter.java:112)
+	at org.springframework.security.web.context.SecurityContextPersistenceFilter.doFilter(SecurityContextPersistenceFilter.java:82)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:346)
+	at org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter.doFilterInternal(WebAsyncManagerIntegrationFilter.java:55)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:346)
+	at org.springframework.security.web.session.DisableEncodeUrlFilter.doFilterInternal(DisableEncodeUrlFilter.java:42)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:346)
+	at org.springframework.security.web.FilterChainProxy.doFilterInternal(FilterChainProxy.java:221)
+	at org.springframework.security.web.FilterChainProxy.doFilter(FilterChainProxy.java:186)
+	at org.springframework.web.filter.DelegatingFilterProxy.invokeDelegate(DelegatingFilterProxy.java:354)
+	at org.springframework.web.filter.DelegatingFilterProxy.doFilter(DelegatingFilterProxy.java:267)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:178)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:153)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:178)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:153)
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:178)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:153)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:178)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:153)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:167)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:90)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:481)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:130)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:93)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:343)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:390)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:926)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1791)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.base/java.lang.Thread.run(Thread.java:842)
+Caused by: org.apache.ibatis.exceptions.PersistenceException: 
+### Error querying database.  Cause: org.springframework.jdbc.CannotGetJdbcConnectionException: Failed to obtain JDBC Connection; nested exception is java.sql.SQLTransientConnectionException: MarkdownHikariCP - Connection is not available, request timed out after 30080ms.
+### The error may exist in file [D:\workspace\spring-cloud-center\wechat-mini-backend\markdown-editor\backend\target\classes\mapper\UserMapper.xml]
+### The error may involve com.markdown.editor.mapper.UserMapper.selectByUsername
+### The error occurred while executing a query
+### Cause: org.springframework.jdbc.CannotGetJdbcConnectionException: Failed to obtain JDBC Connection; nested exception is java.sql.SQLTransientConnectionException: MarkdownHikariCP - Connection is not available, request timed out after 30080ms.
+	at org.apache.ibatis.exceptions.ExceptionFactory.wrapException(ExceptionFactory.java:30)
+	at org.apache.ibatis.session.defaults.DefaultSqlSession.selectList(DefaultSqlSession.java:153)
+	at org.apache.ibatis.session.defaults.DefaultSqlSession.selectList(DefaultSqlSession.java:145)
+	at org.apache.ibatis.session.defaults.DefaultSqlSession.selectList(DefaultSqlSession.java:140)
+	at org.apache.ibatis.session.defaults.DefaultSqlSession.selectOne(DefaultSqlSession.java:76)
+	at jdk.internal.reflect.GeneratedMethodAccessor59.invoke(Unknown Source)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.mybatis.spring.SqlSessionTemplate$SqlSessionInterceptor.invoke(SqlSessionTemplate.java:427)
+	... 64 common frames omitted
+Caused by: org.springframework.jdbc.CannotGetJdbcConnectionException: Failed to obtain JDBC Connection; nested exception is java.sql.SQLTransientConnectionException: MarkdownHikariCP - Connection is not available, request timed out after 30080ms.
+	at org.springframework.jdbc.datasource.DataSourceUtils.getConnection(DataSourceUtils.java:84)
+	at org.mybatis.spring.transaction.SpringManagedTransaction.openConnection(SpringManagedTransaction.java:80)
+	at org.mybatis.spring.transaction.SpringManagedTransaction.getConnection(SpringManagedTransaction.java:67)
+	at org.apache.ibatis.executor.BaseExecutor.getConnection(BaseExecutor.java:337)
+	at org.apache.ibatis.executor.SimpleExecutor.prepareStatement(SimpleExecutor.java:86)
+	at org.apache.ibatis.executor.SimpleExecutor.doQuery(SimpleExecutor.java:62)
+	at org.apache.ibatis.executor.BaseExecutor.queryFromDatabase(BaseExecutor.java:325)
+	at org.apache.ibatis.executor.BaseExecutor.query(BaseExecutor.java:156)
+	at org.apache.ibatis.executor.CachingExecutor.query(CachingExecutor.java:109)
+	at com.baomidou.mybatisplus.extension.plugins.MybatisPlusInterceptor.intercept(MybatisPlusInterceptor.java:81)
+	at org.apache.ibatis.plugin.Plugin.invoke(Plugin.java:62)
+	at jdk.proxy2/jdk.proxy2.$Proxy140.query(Unknown Source)
+	at org.apache.ibatis.session.defaults.DefaultSqlSession.selectList(DefaultSqlSession.java:151)
+	... 71 common frames omitted
+Caused by: java.sql.SQLTransientConnectionException: MarkdownHikariCP - Connection is not available, request timed out after 30080ms.
+	at com.zaxxer.hikari.pool.HikariPool.createTimeoutException(HikariPool.java:696)
+	at com.zaxxer.hikari.pool.HikariPool.getConnection(HikariPool.java:197)
+	at com.zaxxer.hikari.pool.HikariPool.getConnection(HikariPool.java:162)
+	at com.zaxxer.hikari.HikariDataSource.getConnection(HikariDataSource.java:128)
+	at org.springframework.jdbc.datasource.DataSourceUtils.fetchConnection(DataSourceUtils.java:160)
+	at org.springframework.jdbc.datasource.DataSourceUtils.doGetConnection(DataSourceUtils.java:118)
+	at org.springframework.jdbc.datasource.DataSourceUtils.getConnection(DataSourceUtils.java:81)
+	... 83 common frames omitted
+Caused by: java.sql.SQLNonTransientConnectionException: No operations allowed after connection closed.
+	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:110)
+	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:97)
+	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:89)
+	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:63)
+	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:73)
+	at com.mysql.cj.jdbc.exceptions.SQLExceptionsMapping.translateException(SQLExceptionsMapping.java:73)
+	at com.mysql.cj.jdbc.ConnectionImpl.setNetworkTimeout(ConnectionImpl.java:2485)
+	at com.zaxxer.hikari.pool.PoolBase.setNetworkTimeout(PoolBase.java:566)
+	at com.zaxxer.hikari.pool.PoolBase.isConnectionAlive(PoolBase.java:173)
+	at com.zaxxer.hikari.pool.HikariPool.getConnection(HikariPool.java:186)
+	... 88 common frames omitted
+Caused by: com.mysql.cj.exceptions.ConnectionIsClosedException: No operations allowed after connection closed.
+	at jdk.internal.reflect.GeneratedConstructorAccessor91.newInstance(Unknown Source)
+	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:480)
+	at com.mysql.cj.exceptions.ExceptionFactory.createException(ExceptionFactory.java:61)
+	at com.mysql.cj.exceptions.ExceptionFactory.createException(ExceptionFactory.java:105)
+	at com.mysql.cj.exceptions.ExceptionFactory.createException(ExceptionFactory.java:151)
+	at com.mysql.cj.NativeSession.checkClosed(NativeSession.java:761)
+	at com.mysql.cj.jdbc.ConnectionImpl.checkClosed(ConnectionImpl.java:568)
+	at com.mysql.cj.jdbc.ConnectionImpl.setNetworkTimeout(ConnectionImpl.java:2481)
+	... 91 common frames omitted
+Caused by: com.mysql.cj.exceptions.CJCommunicationsException: Communications link failure
+
+The last packet successfully received from the server was 465,194 milliseconds ago. The last packet sent successfully to the server was 465,203 milliseconds ago.
+	at jdk.internal.reflect.GeneratedConstructorAccessor92.newInstance(Unknown Source)
+	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:480)
+	at com.mysql.cj.exceptions.ExceptionFactory.createException(ExceptionFactory.java:61)
+	at com.mysql.cj.exceptions.ExceptionFactory.createException(ExceptionFactory.java:105)
+	at com.mysql.cj.exceptions.ExceptionFactory.createException(ExceptionFactory.java:151)
+	at com.mysql.cj.exceptions.ExceptionFactory.createCommunicationsException(ExceptionFactory.java:167)
+	at com.mysql.cj.protocol.a.NativeProtocol.readMessage(NativeProtocol.java:581)
+	at com.mysql.cj.protocol.a.NativeProtocol.checkErrorMessage(NativeProtocol.java:761)
+	at com.mysql.cj.protocol.a.NativeProtocol.sendCommand(NativeProtocol.java:700)
+	at com.mysql.cj.protocol.a.NativeProtocol.sendQueryPacket(NativeProtocol.java:1051)
+	at com.mysql.cj.protocol.a.NativeProtocol.sendQueryString(NativeProtocol.java:997)
+	at com.mysql.cj.NativeSession.execSQL(NativeSession.java:663)
+	at com.mysql.cj.jdbc.StatementImpl.executeInternal(StatementImpl.java:723)
+	at com.mysql.cj.jdbc.StatementImpl.execute(StatementImpl.java:648)
+	at com.zaxxer.hikari.pool.PoolBase.isConnectionAlive(PoolBase.java:169)
+	... 89 common frames omitted
+Caused by: java.net.SocketTimeoutException: Read timed out
+	at java.base/sun.nio.ch.NioSocketImpl.timedRead(NioSocketImpl.java:288)
+	at java.base/sun.nio.ch.NioSocketImpl.implRead(NioSocketImpl.java:314)
+	at java.base/sun.nio.ch.NioSocketImpl.read(NioSocketImpl.java:355)
+	at java.base/sun.nio.ch.NioSocketImpl$1.read(NioSocketImpl.java:808)
+	at java.base/java.net.Socket$SocketInputStream.read(Socket.java:966)
+	at com.mysql.cj.protocol.ReadAheadInputStream.fill(ReadAheadInputStream.java:107)
+	at com.mysql.cj.protocol.ReadAheadInputStream.readFromUnderlyingStreamIfNecessary(ReadAheadInputStream.java:150)
+	at com.mysql.cj.protocol.ReadAheadInputStream.read(ReadAheadInputStream.java:180)
+	at java.base/java.io.FilterInputStream.read(FilterInputStream.java:132)
+	at com.mysql.cj.protocol.FullReadInputStream.readFully(FullReadInputStream.java:64)
+	at com.mysql.cj.protocol.a.SimplePacketReader.readHeaderLocal(SimplePacketReader.java:81)
+	at com.mysql.cj.protocol.a.SimplePacketReader.readHeader(SimplePacketReader.java:63)
+	at com.mysql.cj.protocol.a.SimplePacketReader.readHeader(SimplePacketReader.java:45)
+	at com.mysql.cj.protocol.a.TimeTrackingPacketReader.readHeader(TimeTrackingPacketReader.java:52)
+	at com.mysql.cj.protocol.a.TimeTrackingPacketReader.readHeader(TimeTrackingPacketReader.java:41)
+	at com.mysql.cj.protocol.a.MultiPacketReader.readHeader(MultiPacketReader.java:54)
+	at com.mysql.cj.protocol.a.MultiPacketReader.readHeader(MultiPacketReader.java:44)
+	at com.mysql.cj.protocol.a.NativeProtocol.readMessage(NativeProtocol.java:575)
+	... 97 common frames omitted
+2026-05-11 17:43:37.598 [http-nio-8081-exec-4] WARN  com.zaxxer.hikari.pool.PoolBase - MarkdownHikariCP - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@449816f9 (No operations allowed after connection closed.). Possibly consider using a shorter maxLifetime value.
+2026-05-11 17:45:51.069 [trend-data-worker] ERROR c.m.e.service.impl.TrendServiceImpl - 获取评论数数据失败
+org.apache.ibatis.binding.BindingException: Invalid bound statement (not found): com.markdown.editor.mapper.CommentMapper.countByUserIdAndDateRange
+	at org.apache.ibatis.binding.MapperMethod$SqlCommand.<init>(MapperMethod.java:235)
+	at com.baomidou.mybatisplus.core.override.MybatisMapperMethod.<init>(MybatisMapperMethod.java:50)
+	at com.baomidou.mybatisplus.core.override.MybatisMapperProxy.lambda$cachedInvoker$0(MybatisMapperProxy.java:111)
+	at java.base/java.util.concurrent.ConcurrentHashMap.computeIfAbsent(ConcurrentHashMap.java:1708)
+	at com.baomidou.mybatisplus.core.toolkit.CollectionUtils.computeIfAbsent(CollectionUtils.java:115)
+	at com.baomidou.mybatisplus.core.override.MybatisMapperProxy.cachedInvoker(MybatisMapperProxy.java:98)
+	at com.baomidou.mybatisplus.core.override.MybatisMapperProxy.invoke(MybatisMapperProxy.java:89)
+	at jdk.proxy2/jdk.proxy2.$Proxy92.countByUserIdAndDateRange(Unknown Source)
+	at com.markdown.editor.service.impl.TrendServiceImpl.fetchCommentCountData(TrendServiceImpl.java:177)
+	at com.markdown.editor.service.impl.TrendServiceImpl.lambda$getTrendData$2(TrendServiceImpl.java:74)
+	at java.base/java.util.concurrent.CompletableFuture$AsyncRun.run(CompletableFuture.java:1804)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+	at java.base/java.lang.Thread.run(Thread.java:842)
+2026-05-11 17:46:26.830 [trend-data-worker] ERROR c.m.e.service.impl.TrendServiceImpl - 获取评论数数据失败
+org.apache.ibatis.binding.BindingException: Invalid bound statement (not found): com.markdown.editor.mapper.CommentMapper.countByUserIdAndDateRange
+	at org.apache.ibatis.binding.MapperMethod$SqlCommand.<init>(MapperMethod.java:235)
+	at com.baomidou.mybatisplus.core.override.MybatisMapperMethod.<init>(MybatisMapperMethod.java:50)
+	at com.baomidou.mybatisplus.core.override.MybatisMapperProxy.lambda$cachedInvoker$0(MybatisMapperProxy.java:111)
+	at java.base/java.util.concurrent.ConcurrentHashMap.computeIfAbsent(ConcurrentHashMap.java:1708)
+	at com.baomidou.mybatisplus.core.toolkit.CollectionUtils.computeIfAbsent(CollectionUtils.java:115)
+	at com.baomidou.mybatisplus.core.override.MybatisMapperProxy.cachedInvoker(MybatisMapperProxy.java:98)
+	at com.baomidou.mybatisplus.core.override.MybatisMapperProxy.invoke(MybatisMapperProxy.java:89)
+	at jdk.proxy2/jdk.proxy2.$Proxy92.countByUserIdAndDateRange(Unknown Source)
+	at com.markdown.editor.service.impl.TrendServiceImpl.fetchCommentCountData(TrendServiceImpl.java:177)
+	at com.markdown.editor.service.impl.TrendServiceImpl.lambda$getTrendData$2(TrendServiceImpl.java:74)
+	at java.base/java.util.concurrent.CompletableFuture$AsyncRun.run(CompletableFuture.java:1804)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+	at java.base/java.lang.Thread.run(Thread.java:842)
+2026-05-11 17:49:28.557 [trend-data-worker] ERROR c.m.e.service.impl.TrendServiceImpl - 获取评论数数据失败
+org.apache.ibatis.binding.BindingException: Invalid bound statement (not found): com.markdown.editor.mapper.CommentMapper.countByUserIdAndDateRange
+	at org.apache.ibatis.binding.MapperMethod$SqlCommand.<init>(MapperMethod.java:235)
+	at com.baomidou.mybatisplus.core.override.MybatisMapperMethod.<init>(MybatisMapperMethod.java:50)
+	at com.baomidou.mybatisplus.core.override.MybatisMapperProxy.lambda$cachedInvoker$0(MybatisMapperProxy.java:111)
+	at java.base/java.util.concurrent.ConcurrentHashMap.computeIfAbsent(ConcurrentHashMap.java:1708)
+	at com.baomidou.mybatisplus.core.toolkit.CollectionUtils.computeIfAbsent(CollectionUtils.java:115)
+	at com.baomidou.mybatisplus.core.override.MybatisMapperProxy.cachedInvoker(MybatisMapperProxy.java:98)
+	at com.baomidou.mybatisplus.core.override.MybatisMapperProxy.invoke(MybatisMapperProxy.java:89)
+	at jdk.proxy2/jdk.proxy2.$Proxy92.countByUserIdAndDateRange(Unknown Source)
+	at com.markdown.editor.service.impl.TrendServiceImpl.fetchCommentCountData(TrendServiceImpl.java:177)
+	at com.markdown.editor.service.impl.TrendServiceImpl.lambda$getTrendData$2(TrendServiceImpl.java:74)
+	at java.base/java.util.concurrent.CompletableFuture$AsyncRun.run(CompletableFuture.java:1804)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+	at java.base/java.lang.Thread.run(Thread.java:842)
+2026-05-11 17:52:38.656 [trend-data-worker] ERROR c.m.e.service.impl.TrendServiceImpl - 获取评论数数据失败
+org.apache.ibatis.binding.BindingException: Invalid bound statement (not found): com.markdown.editor.mapper.CommentMapper.countByUserIdAndDateRange
+	at org.apache.ibatis.binding.MapperMethod$SqlCommand.<init>(MapperMethod.java:235)
+	at com.baomidou.mybatisplus.core.override.MybatisMapperMethod.<init>(MybatisMapperMethod.java:50)
+	at com.baomidou.mybatisplus.core.override.MybatisMapperProxy.lambda$cachedInvoker$0(MybatisMapperProxy.java:111)
+	at java.base/java.util.concurrent.ConcurrentHashMap.computeIfAbsent(ConcurrentHashMap.java:1708)
+	at com.baomidou.mybatisplus.core.toolkit.CollectionUtils.computeIfAbsent(CollectionUtils.java:115)
+	at com.baomidou.mybatisplus.core.override.MybatisMapperProxy.cachedInvoker(MybatisMapperProxy.java:98)
+	at com.baomidou.mybatisplus.core.override.MybatisMapperProxy.invoke(MybatisMapperProxy.java:89)
+	at jdk.proxy2/jdk.proxy2.$Proxy92.countByUserIdAndDateRange(Unknown Source)
+	at com.markdown.editor.service.impl.TrendServiceImpl.fetchCommentCountData(TrendServiceImpl.java:177)
+	at com.markdown.editor.service.impl.TrendServiceImpl.lambda$getTrendData$2(TrendServiceImpl.java:74)
+	at java.base/java.util.concurrent.CompletableFuture$AsyncRun.run(CompletableFuture.java:1804)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+	at java.base/java.lang.Thread.run(Thread.java:842)
+2026-05-11 17:52:45.780 [trend-data-worker] ERROR c.m.e.service.impl.TrendServiceImpl - 获取评论数数据失败
+org.apache.ibatis.binding.BindingException: Invalid bound statement (not found): com.markdown.editor.mapper.CommentMapper.countByUserIdAndDateRange
+	at org.apache.ibatis.binding.MapperMethod$SqlCommand.<init>(MapperMethod.java:235)
+	at com.baomidou.mybatisplus.core.override.MybatisMapperMethod.<init>(MybatisMapperMethod.java:50)
+	at com.baomidou.mybatisplus.core.override.MybatisMapperProxy.lambda$cachedInvoker$0(MybatisMapperProxy.java:111)
+	at java.base/java.util.concurrent.ConcurrentHashMap.computeIfAbsent(ConcurrentHashMap.java:1708)
+	at com.baomidou.mybatisplus.core.toolkit.CollectionUtils.computeIfAbsent(CollectionUtils.java:115)
+	at com.baomidou.mybatisplus.core.override.MybatisMapperProxy.cachedInvoker(MybatisMapperProxy.java:98)
+	at com.baomidou.mybatisplus.core.override.MybatisMapperProxy.invoke(MybatisMapperProxy.java:89)
+	at jdk.proxy2/jdk.proxy2.$Proxy92.countByUserIdAndDateRange(Unknown Source)
+	at com.markdown.editor.service.impl.TrendServiceImpl.fetchCommentCountData(TrendServiceImpl.java:177)
+	at com.markdown.editor.service.impl.TrendServiceImpl.lambda$getTrendData$2(TrendServiceImpl.java:74)
+	at java.base/java.util.concurrent.CompletableFuture$AsyncRun.run(CompletableFuture.java:1804)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+	at java.base/java.lang.Thread.run(Thread.java:842)
+2026-05-11 17:52:56.560 [trend-data-worker] ERROR c.m.e.service.impl.TrendServiceImpl - 获取评论数数据失败
+org.apache.ibatis.binding.BindingException: Invalid bound statement (not found): com.markdown.editor.mapper.CommentMapper.countByUserIdAndDateRange
+	at org.apache.ibatis.binding.MapperMethod$SqlCommand.<init>(MapperMethod.java:235)
+	at com.baomidou.mybatisplus.core.override.MybatisMapperMethod.<init>(MybatisMapperMethod.java:50)
+	at com.baomidou.mybatisplus.core.override.MybatisMapperProxy.lambda$cachedInvoker$0(MybatisMapperProxy.java:111)
+	at java.base/java.util.concurrent.ConcurrentHashMap.computeIfAbsent(ConcurrentHashMap.java:1708)
+	at com.baomidou.mybatisplus.core.toolkit.CollectionUtils.computeIfAbsent(CollectionUtils.java:115)
+	at com.baomidou.mybatisplus.core.override.MybatisMapperProxy.cachedInvoker(MybatisMapperProxy.java:98)
+	at com.baomidou.mybatisplus.core.override.MybatisMapperProxy.invoke(MybatisMapperProxy.java:89)
+	at jdk.proxy2/jdk.proxy2.$Proxy92.countByUserIdAndDateRange(Unknown Source)
+	at com.markdown.editor.service.impl.TrendServiceImpl.fetchCommentCountData(TrendServiceImpl.java:177)
+	at com.markdown.editor.service.impl.TrendServiceImpl.lambda$getTrendData$2(TrendServiceImpl.java:74)
+	at java.base/java.util.concurrent.CompletableFuture$AsyncRun.run(CompletableFuture.java:1804)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+	at java.base/java.lang.Thread.run(Thread.java:842)
+2026-05-11 17:58:49.731 [http-nio-8081-exec-8] WARN  com.zaxxer.hikari.pool.PoolBase - MarkdownHikariCP - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@4f1454be (No operations allowed after connection closed.). Possibly consider using a shorter maxLifetime value.
+2026-05-11 17:58:49.731 [http-nio-8081-exec-1] WARN  com.zaxxer.hikari.pool.PoolBase - MarkdownHikariCP - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@1f30eddc (No operations allowed after connection closed.). Possibly consider using a shorter maxLifetime value.
+2026-05-11 17:58:50.068 [trend-data-worker] ERROR c.m.e.service.impl.TrendServiceImpl - 获取评论数数据失败
+org.apache.ibatis.binding.BindingException: Invalid bound statement (not found): com.markdown.editor.mapper.CommentMapper.countByUserIdAndDateRange
+	at org.apache.ibatis.binding.MapperMethod$SqlCommand.<init>(MapperMethod.java:235)
+	at com.baomidou.mybatisplus.core.override.MybatisMapperMethod.<init>(MybatisMapperMethod.java:50)
+	at com.baomidou.mybatisplus.core.override.MybatisMapperProxy.lambda$cachedInvoker$0(MybatisMapperProxy.java:111)
+	at java.base/java.util.concurrent.ConcurrentHashMap.computeIfAbsent(ConcurrentHashMap.java:1708)
+	at com.baomidou.mybatisplus.core.toolkit.CollectionUtils.computeIfAbsent(CollectionUtils.java:115)
+	at com.baomidou.mybatisplus.core.override.MybatisMapperProxy.cachedInvoker(MybatisMapperProxy.java:98)
+	at com.baomidou.mybatisplus.core.override.MybatisMapperProxy.invoke(MybatisMapperProxy.java:89)
+	at jdk.proxy2/jdk.proxy2.$Proxy92.countByUserIdAndDateRange(Unknown Source)
+	at com.markdown.editor.service.impl.TrendServiceImpl.fetchCommentCountData(TrendServiceImpl.java:177)
+	at com.markdown.editor.service.impl.TrendServiceImpl.lambda$getTrendData$2(TrendServiceImpl.java:74)
+	at java.base/java.util.concurrent.CompletableFuture$AsyncRun.run(CompletableFuture.java:1804)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+	at java.base/java.lang.Thread.run(Thread.java:842)
+2026-05-11 17:58:54.812 [http-nio-8081-exec-7] WARN  com.zaxxer.hikari.pool.PoolBase - MarkdownHikariCP - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@314c4ae9 (No operations allowed after connection closed.). Possibly consider using a shorter maxLifetime value.
+2026-05-11 17:58:54.812 [http-nio-8081-exec-9] WARN  com.zaxxer.hikari.pool.PoolBase - MarkdownHikariCP - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@5488b2e7 (No operations allowed after connection closed.). Possibly consider using a shorter maxLifetime value.
+2026-05-11 17:58:54.814 [http-nio-8081-exec-10] WARN  com.zaxxer.hikari.pool.PoolBase - MarkdownHikariCP - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@3125feb5 (No operations allowed after connection closed.). Possibly consider using a shorter maxLifetime value.
+2026-05-11 17:59:25.355 [trend-data-worker] ERROR c.m.e.service.impl.TrendServiceImpl - 获取评论数数据失败
+org.apache.ibatis.binding.BindingException: Invalid bound statement (not found): com.markdown.editor.mapper.CommentMapper.countByUserIdAndDateRange
+	at org.apache.ibatis.binding.MapperMethod$SqlCommand.<init>(MapperMethod.java:235)
+	at com.baomidou.mybatisplus.core.override.MybatisMapperMethod.<init>(MybatisMapperMethod.java:50)
+	at com.baomidou.mybatisplus.core.override.MybatisMapperProxy.lambda$cachedInvoker$0(MybatisMapperProxy.java:111)
+	at java.base/java.util.concurrent.ConcurrentHashMap.computeIfAbsent(ConcurrentHashMap.java:1708)
+	at com.baomidou.mybatisplus.core.toolkit.CollectionUtils.computeIfAbsent(CollectionUtils.java:115)
+	at com.baomidou.mybatisplus.core.override.MybatisMapperProxy.cachedInvoker(MybatisMapperProxy.java:98)
+	at com.baomidou.mybatisplus.core.override.MybatisMapperProxy.invoke(MybatisMapperProxy.java:89)
+	at jdk.proxy2/jdk.proxy2.$Proxy92.countByUserIdAndDateRange(Unknown Source)
+	at com.markdown.editor.service.impl.TrendServiceImpl.fetchCommentCountData(TrendServiceImpl.java:177)
+	at com.markdown.editor.service.impl.TrendServiceImpl.lambda$getTrendData$2(TrendServiceImpl.java:74)
+	at java.base/java.util.concurrent.CompletableFuture$AsyncRun.run(CompletableFuture.java:1804)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+	at java.base/java.lang.Thread.run(Thread.java:842)
+2026-05-11 18:02:55.672 [trend-data-worker] ERROR c.m.e.service.impl.TrendServiceImpl - 获取评论数数据失败
+org.apache.ibatis.binding.BindingException: Invalid bound statement (not found): com.markdown.editor.mapper.CommentMapper.countByUserIdAndDateRange
+	at org.apache.ibatis.binding.MapperMethod$SqlCommand.<init>(MapperMethod.java:235)
+	at com.baomidou.mybatisplus.core.override.MybatisMapperMethod.<init>(MybatisMapperMethod.java:50)
+	at com.baomidou.mybatisplus.core.override.MybatisMapperProxy.lambda$cachedInvoker$0(MybatisMapperProxy.java:111)
+	at java.base/java.util.concurrent.ConcurrentHashMap.computeIfAbsent(ConcurrentHashMap.java:1708)
+	at com.baomidou.mybatisplus.core.toolkit.CollectionUtils.computeIfAbsent(CollectionUtils.java:115)
+	at com.baomidou.mybatisplus.core.override.MybatisMapperProxy.cachedInvoker(MybatisMapperProxy.java:98)
+	at com.baomidou.mybatisplus.core.override.MybatisMapperProxy.invoke(MybatisMapperProxy.java:89)
+	at jdk.proxy2/jdk.proxy2.$Proxy92.countByUserIdAndDateRange(Unknown Source)
+	at com.markdown.editor.service.impl.TrendServiceImpl.fetchCommentCountData(TrendServiceImpl.java:177)
+	at com.markdown.editor.service.impl.TrendServiceImpl.lambda$getTrendData$2(TrendServiceImpl.java:74)
+	at java.base/java.util.concurrent.CompletableFuture$AsyncRun.run(CompletableFuture.java:1804)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+	at java.base/java.lang.Thread.run(Thread.java:842)
+2026-05-11 18:03:29.398 [trend-data-worker] ERROR c.m.e.service.impl.TrendServiceImpl - 获取评论数数据失败
+org.apache.ibatis.binding.BindingException: Invalid bound statement (not found): com.markdown.editor.mapper.CommentMapper.countByUserIdAndDateRange
+	at org.apache.ibatis.binding.MapperMethod$SqlCommand.<init>(MapperMethod.java:235)
+	at com.baomidou.mybatisplus.core.override.MybatisMapperMethod.<init>(MybatisMapperMethod.java:50)
+	at com.baomidou.mybatisplus.core.override.MybatisMapperProxy.lambda$cachedInvoker$0(MybatisMapperProxy.java:111)
+	at java.base/java.util.concurrent.ConcurrentHashMap.computeIfAbsent(ConcurrentHashMap.java:1708)
+	at com.baomidou.mybatisplus.core.toolkit.CollectionUtils.computeIfAbsent(CollectionUtils.java:115)
+	at com.baomidou.mybatisplus.core.override.MybatisMapperProxy.cachedInvoker(MybatisMapperProxy.java:98)
+	at com.baomidou.mybatisplus.core.override.MybatisMapperProxy.invoke(MybatisMapperProxy.java:89)
+	at jdk.proxy2/jdk.proxy2.$Proxy92.countByUserIdAndDateRange(Unknown Source)
+	at com.markdown.editor.service.impl.TrendServiceImpl.fetchCommentCountData(TrendServiceImpl.java:177)
+	at com.markdown.editor.service.impl.TrendServiceImpl.lambda$getTrendData$2(TrendServiceImpl.java:74)
+	at java.base/java.util.concurrent.CompletableFuture$AsyncRun.run(CompletableFuture.java:1804)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+	at java.base/java.lang.Thread.run(Thread.java:842)
+2026-05-11 18:03:57.617 [trend-data-worker] ERROR c.m.e.service.impl.TrendServiceImpl - 获取评论数数据失败
+org.apache.ibatis.binding.BindingException: Invalid bound statement (not found): com.markdown.editor.mapper.CommentMapper.countByUserIdAndDateRange
+	at org.apache.ibatis.binding.MapperMethod$SqlCommand.<init>(MapperMethod.java:235)
+	at com.baomidou.mybatisplus.core.override.MybatisMapperMethod.<init>(MybatisMapperMethod.java:50)
+	at com.baomidou.mybatisplus.core.override.MybatisMapperProxy.lambda$cachedInvoker$0(MybatisMapperProxy.java:111)
+	at java.base/java.util.concurrent.ConcurrentHashMap.computeIfAbsent(ConcurrentHashMap.java:1708)
+	at com.baomidou.mybatisplus.core.toolkit.CollectionUtils.computeIfAbsent(CollectionUtils.java:115)
+	at com.baomidou.mybatisplus.core.override.MybatisMapperProxy.cachedInvoker(MybatisMapperProxy.java:98)
+	at com.baomidou.mybatisplus.core.override.MybatisMapperProxy.invoke(MybatisMapperProxy.java:89)
+	at jdk.proxy2/jdk.proxy2.$Proxy92.countByUserIdAndDateRange(Unknown Source)
+	at com.markdown.editor.service.impl.TrendServiceImpl.fetchCommentCountData(TrendServiceImpl.java:177)
+	at com.markdown.editor.service.impl.TrendServiceImpl.lambda$getTrendData$2(TrendServiceImpl.java:74)
+	at java.base/java.util.concurrent.CompletableFuture$AsyncRun.run(CompletableFuture.java:1804)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+	at java.base/java.lang.Thread.run(Thread.java:842)
+2026-05-11 18:09:29.358 [http-nio-8081-exec-5] WARN  com.zaxxer.hikari.pool.PoolBase - MarkdownHikariCP - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@22aae229 (No operations allowed after connection closed.). Possibly consider using a shorter maxLifetime value.
+2026-05-11 18:09:29.358 [http-nio-8081-exec-9] WARN  com.zaxxer.hikari.pool.PoolBase - MarkdownHikariCP - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@66c54015 (No operations allowed after connection closed.). Possibly consider using a shorter maxLifetime value.
+2026-05-11 18:09:29.358 [http-nio-8081-exec-10] WARN  com.zaxxer.hikari.pool.PoolBase - MarkdownHikariCP - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@2767e204 (No operations allowed after connection closed.). Possibly consider using a shorter maxLifetime value.
+2026-05-11 18:09:29.358 [http-nio-8081-exec-7] WARN  com.zaxxer.hikari.pool.PoolBase - MarkdownHikariCP - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@183ca2b6 (No operations allowed after connection closed.). Possibly consider using a shorter maxLifetime value.
+2026-05-11 18:09:29.358 [http-nio-8081-exec-4] WARN  com.zaxxer.hikari.pool.PoolBase - MarkdownHikariCP - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@5bccce46 (No operations allowed after connection closed.). Possibly consider using a shorter maxLifetime value.
+2026-05-11 18:09:34.361 [http-nio-8081-exec-10] WARN  com.zaxxer.hikari.pool.PoolBase - MarkdownHikariCP - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@7f9f2afa (No operations allowed after connection closed.). Possibly consider using a shorter maxLifetime value.
+2026-05-11 18:09:34.361 [http-nio-8081-exec-5] WARN  com.zaxxer.hikari.pool.PoolBase - MarkdownHikariCP - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@6a2b3109 (No operations allowed after connection closed.). Possibly consider using a shorter maxLifetime value.
+2026-05-11 18:09:34.361 [http-nio-8081-exec-9] WARN  com.zaxxer.hikari.pool.PoolBase - MarkdownHikariCP - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@7f880e7 (No operations allowed after connection closed.). Possibly consider using a shorter maxLifetime value.
+2026-05-11 18:09:34.527 [trend-data-worker] ERROR c.m.e.service.impl.TrendServiceImpl - 获取评论数数据失败
+org.apache.ibatis.binding.BindingException: Invalid bound statement (not found): com.markdown.editor.mapper.CommentMapper.countByUserIdAndDateRange
+	at org.apache.ibatis.binding.MapperMethod$SqlCommand.<init>(MapperMethod.java:235)
+	at com.baomidou.mybatisplus.core.override.MybatisMapperMethod.<init>(MybatisMapperMethod.java:50)
+	at com.baomidou.mybatisplus.core.override.MybatisMapperProxy.lambda$cachedInvoker$0(MybatisMapperProxy.java:111)
+	at java.base/java.util.concurrent.ConcurrentHashMap.computeIfAbsent(ConcurrentHashMap.java:1708)
+	at com.baomidou.mybatisplus.core.toolkit.CollectionUtils.computeIfAbsent(CollectionUtils.java:115)
+	at com.baomidou.mybatisplus.core.override.MybatisMapperProxy.cachedInvoker(MybatisMapperProxy.java:98)
+	at com.baomidou.mybatisplus.core.override.MybatisMapperProxy.invoke(MybatisMapperProxy.java:89)
+	at jdk.proxy2/jdk.proxy2.$Proxy92.countByUserIdAndDateRange(Unknown Source)
+	at com.markdown.editor.service.impl.TrendServiceImpl.fetchCommentCountData(TrendServiceImpl.java:177)
+	at com.markdown.editor.service.impl.TrendServiceImpl.lambda$getTrendData$2(TrendServiceImpl.java:74)
+	at java.base/java.util.concurrent.CompletableFuture$AsyncRun.run(CompletableFuture.java:1804)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+	at java.base/java.lang.Thread.run(Thread.java:842)
+2026-05-11 18:09:39.373 [http-nio-8081-exec-9] WARN  com.zaxxer.hikari.pool.PoolBase - MarkdownHikariCP - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@2c7ce73f (No operations allowed after connection closed.). Possibly consider using a shorter maxLifetime value.
+2026-05-11 18:09:51.369 [trend-data-worker] ERROR c.m.e.service.impl.TrendServiceImpl - 获取评论数数据失败
+org.apache.ibatis.binding.BindingException: Invalid bound statement (not found): com.markdown.editor.mapper.CommentMapper.countByUserIdAndDateRange
+	at org.apache.ibatis.binding.MapperMethod$SqlCommand.<init>(MapperMethod.java:235)
+	at com.baomidou.mybatisplus.core.override.MybatisMapperMethod.<init>(MybatisMapperMethod.java:50)
+	at com.baomidou.mybatisplus.core.override.MybatisMapperProxy.lambda$cachedInvoker$0(MybatisMapperProxy.java:111)
+	at java.base/java.util.concurrent.ConcurrentHashMap.computeIfAbsent(ConcurrentHashMap.java:1708)
+	at com.baomidou.mybatisplus.core.toolkit.CollectionUtils.computeIfAbsent(CollectionUtils.java:115)
+	at com.baomidou.mybatisplus.core.override.MybatisMapperProxy.cachedInvoker(MybatisMapperProxy.java:98)
+	at com.baomidou.mybatisplus.core.override.MybatisMapperProxy.invoke(MybatisMapperProxy.java:89)
+	at jdk.proxy2/jdk.proxy2.$Proxy92.countByUserIdAndDateRange(Unknown Source)
+	at com.markdown.editor.service.impl.TrendServiceImpl.fetchCommentCountData(TrendServiceImpl.java:177)
+	at com.markdown.editor.service.impl.TrendServiceImpl.lambda$getTrendData$2(TrendServiceImpl.java:74)
+	at java.base/java.util.concurrent.CompletableFuture$AsyncRun.run(CompletableFuture.java:1804)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+	at java.base/java.lang.Thread.run(Thread.java:842)
+2026-05-11 18:10:21.734 [trend-data-worker] ERROR c.m.e.service.impl.TrendServiceImpl - 获取评论数数据失败
+org.apache.ibatis.binding.BindingException: Invalid bound statement (not found): com.markdown.editor.mapper.CommentMapper.countByUserIdAndDateRange
+	at org.apache.ibatis.binding.MapperMethod$SqlCommand.<init>(MapperMethod.java:235)
+	at com.baomidou.mybatisplus.core.override.MybatisMapperMethod.<init>(MybatisMapperMethod.java:50)
+	at com.baomidou.mybatisplus.core.override.MybatisMapperProxy.lambda$cachedInvoker$0(MybatisMapperProxy.java:111)
+	at java.base/java.util.concurrent.ConcurrentHashMap.computeIfAbsent(ConcurrentHashMap.java:1708)
+	at com.baomidou.mybatisplus.core.toolkit.CollectionUtils.computeIfAbsent(CollectionUtils.java:115)
+	at com.baomidou.mybatisplus.core.override.MybatisMapperProxy.cachedInvoker(MybatisMapperProxy.java:98)
+	at com.baomidou.mybatisplus.core.override.MybatisMapperProxy.invoke(MybatisMapperProxy.java:89)
+	at jdk.proxy2/jdk.proxy2.$Proxy92.countByUserIdAndDateRange(Unknown Source)
+	at com.markdown.editor.service.impl.TrendServiceImpl.fetchCommentCountData(TrendServiceImpl.java:177)
+	at com.markdown.editor.service.impl.TrendServiceImpl.lambda$getTrendData$2(TrendServiceImpl.java:74)
+	at java.base/java.util.concurrent.CompletableFuture$AsyncRun.run(CompletableFuture.java:1804)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+	at java.base/java.lang.Thread.run(Thread.java:842)
+2026-05-11 18:14:12.274 [trend-data-worker] ERROR c.m.e.service.impl.TrendServiceImpl - 获取评论数数据失败
+org.apache.ibatis.binding.BindingException: Invalid bound statement (not found): com.markdown.editor.mapper.CommentMapper.countByUserIdAndDateRange
+	at org.apache.ibatis.binding.MapperMethod$SqlCommand.<init>(MapperMethod.java:235)
+	at com.baomidou.mybatisplus.core.override.MybatisMapperMethod.<init>(MybatisMapperMethod.java:50)
+	at com.baomidou.mybatisplus.core.override.MybatisMapperProxy.lambda$cachedInvoker$0(MybatisMapperProxy.java:111)
+	at java.base/java.util.concurrent.ConcurrentHashMap.computeIfAbsent(ConcurrentHashMap.java:1708)
+	at com.baomidou.mybatisplus.core.toolkit.CollectionUtils.computeIfAbsent(CollectionUtils.java:115)
+	at com.baomidou.mybatisplus.core.override.MybatisMapperProxy.cachedInvoker(MybatisMapperProxy.java:98)
+	at com.baomidou.mybatisplus.core.override.MybatisMapperProxy.invoke(MybatisMapperProxy.java:89)
+	at jdk.proxy2/jdk.proxy2.$Proxy92.countByUserIdAndDateRange(Unknown Source)
+	at com.markdown.editor.service.impl.TrendServiceImpl.fetchCommentCountData(TrendServiceImpl.java:177)
+	at com.markdown.editor.service.impl.TrendServiceImpl.lambda$getTrendData$2(TrendServiceImpl.java:74)
+	at java.base/java.util.concurrent.CompletableFuture$AsyncRun.run(CompletableFuture.java:1804)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+	at java.base/java.lang.Thread.run(Thread.java:842)
+2026-05-11 18:14:17.309 [http-nio-8081-exec-5] WARN  com.zaxxer.hikari.pool.PoolBase - MarkdownHikariCP - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@825b741 (No operations allowed after connection closed.). Possibly consider using a shorter maxLifetime value.
+2026-05-11 18:16:13.169 [trend-data-worker] ERROR c.m.e.service.impl.TrendServiceImpl - 获取评论数数据失败
+org.apache.ibatis.binding.BindingException: Invalid bound statement (not found): com.markdown.editor.mapper.CommentMapper.countByUserIdAndDateRange
+	at org.apache.ibatis.binding.MapperMethod$SqlCommand.<init>(MapperMethod.java:235)
+	at com.baomidou.mybatisplus.core.override.MybatisMapperMethod.<init>(MybatisMapperMethod.java:50)
+	at com.baomidou.mybatisplus.core.override.MybatisMapperProxy.lambda$cachedInvoker$0(MybatisMapperProxy.java:111)
+	at java.base/java.util.concurrent.ConcurrentHashMap.computeIfAbsent(ConcurrentHashMap.java:1708)
+	at com.baomidou.mybatisplus.core.toolkit.CollectionUtils.computeIfAbsent(CollectionUtils.java:115)
+	at com.baomidou.mybatisplus.core.override.MybatisMapperProxy.cachedInvoker(MybatisMapperProxy.java:98)
+	at com.baomidou.mybatisplus.core.override.MybatisMapperProxy.invoke(MybatisMapperProxy.java:89)
+	at jdk.proxy2/jdk.proxy2.$Proxy92.countByUserIdAndDateRange(Unknown Source)
+	at com.markdown.editor.service.impl.TrendServiceImpl.fetchCommentCountData(TrendServiceImpl.java:177)
+	at com.markdown.editor.service.impl.TrendServiceImpl.lambda$getTrendData$2(TrendServiceImpl.java:74)
+	at java.base/java.util.concurrent.CompletableFuture$AsyncRun.run(CompletableFuture.java:1804)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+	at java.base/java.lang.Thread.run(Thread.java:842)
+2026-05-11 18:16:18.179 [trend-data-worker] WARN  com.zaxxer.hikari.pool.PoolBase - MarkdownHikariCP - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@6885cd85 (No operations allowed after connection closed.). Possibly consider using a shorter maxLifetime value.
+2026-05-11 18:18:43.390 [trend-data-worker] ERROR c.m.e.service.impl.TrendServiceImpl - 获取评论数数据失败
+org.apache.ibatis.binding.BindingException: Invalid bound statement (not found): com.markdown.editor.mapper.CommentMapper.countByUserIdAndDateRange
+	at org.apache.ibatis.binding.MapperMethod$SqlCommand.<init>(MapperMethod.java:235)
+	at com.baomidou.mybatisplus.core.override.MybatisMapperMethod.<init>(MybatisMapperMethod.java:50)
+	at com.baomidou.mybatisplus.core.override.MybatisMapperProxy.lambda$cachedInvoker$0(MybatisMapperProxy.java:111)
+	at java.base/java.util.concurrent.ConcurrentHashMap.computeIfAbsent(ConcurrentHashMap.java:1708)
+	at com.baomidou.mybatisplus.core.toolkit.CollectionUtils.computeIfAbsent(CollectionUtils.java:115)
+	at com.baomidou.mybatisplus.core.override.MybatisMapperProxy.cachedInvoker(MybatisMapperProxy.java:98)
+	at com.baomidou.mybatisplus.core.override.MybatisMapperProxy.invoke(MybatisMapperProxy.java:89)
+	at jdk.proxy2/jdk.proxy2.$Proxy92.countByUserIdAndDateRange(Unknown Source)
+	at com.markdown.editor.service.impl.TrendServiceImpl.fetchCommentCountData(TrendServiceImpl.java:177)
+	at com.markdown.editor.service.impl.TrendServiceImpl.lambda$getTrendData$2(TrendServiceImpl.java:74)
+	at java.base/java.util.concurrent.CompletableFuture$AsyncRun.run(CompletableFuture.java:1804)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+	at java.base/java.lang.Thread.run(Thread.java:842)
+2026-05-11 18:18:48.394 [trend-data-worker] WARN  com.zaxxer.hikari.pool.PoolBase - MarkdownHikariCP - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@1adf45ac (No operations allowed after connection closed.). Possibly consider using a shorter maxLifetime value.
+2026-05-11 18:21:37.352 [trend-data-worker] ERROR c.m.e.service.impl.TrendServiceImpl - 获取评论数数据失败
+org.apache.ibatis.binding.BindingException: Invalid bound statement (not found): com.markdown.editor.mapper.CommentMapper.countByUserIdAndDateRange
+	at org.apache.ibatis.binding.MapperMethod$SqlCommand.<init>(MapperMethod.java:235)
+	at com.baomidou.mybatisplus.core.override.MybatisMapperMethod.<init>(MybatisMapperMethod.java:50)
+	at com.baomidou.mybatisplus.core.override.MybatisMapperProxy.lambda$cachedInvoker$0(MybatisMapperProxy.java:111)
+	at java.base/java.util.concurrent.ConcurrentHashMap.computeIfAbsent(ConcurrentHashMap.java:1708)
+	at com.baomidou.mybatisplus.core.toolkit.CollectionUtils.computeIfAbsent(CollectionUtils.java:115)
+	at com.baomidou.mybatisplus.core.override.MybatisMapperProxy.cachedInvoker(MybatisMapperProxy.java:98)
+	at com.baomidou.mybatisplus.core.override.MybatisMapperProxy.invoke(MybatisMapperProxy.java:89)
+	at jdk.proxy2/jdk.proxy2.$Proxy92.countByUserIdAndDateRange(Unknown Source)
+	at com.markdown.editor.service.impl.TrendServiceImpl.fetchCommentCountData(TrendServiceImpl.java:177)
+	at com.markdown.editor.service.impl.TrendServiceImpl.lambda$getTrendData$2(TrendServiceImpl.java:74)
+	at java.base/java.util.concurrent.CompletableFuture$AsyncRun.run(CompletableFuture.java:1804)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+	at java.base/java.lang.Thread.run(Thread.java:842)
+2026-05-11 18:21:42.389 [trend-data-worker] WARN  com.zaxxer.hikari.pool.PoolBase - MarkdownHikariCP - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@2dd6b731 (No operations allowed after connection closed.). Possibly consider using a shorter maxLifetime value.
+2026-05-11 18:24:55.308 [http-nio-8081-exec-7] ERROR c.markdown.editor.security.JwtUtils - JWT token is expired: JWT expired at 2026-05-11T18:24:53Z. Current time: 2026-05-11T18:24:55Z, a difference of 2294 milliseconds.  Allowed clock skew: 0 milliseconds.
+2026-05-11 18:25:17.934 [trend-data-worker] ERROR c.m.e.service.impl.TrendServiceImpl - 获取评论数数据失败
+org.apache.ibatis.binding.BindingException: Invalid bound statement (not found): com.markdown.editor.mapper.CommentMapper.countByUserIdAndDateRange
+	at org.apache.ibatis.binding.MapperMethod$SqlCommand.<init>(MapperMethod.java:235)
+	at com.baomidou.mybatisplus.core.override.MybatisMapperMethod.<init>(MybatisMapperMethod.java:50)
+	at com.baomidou.mybatisplus.core.override.MybatisMapperProxy.lambda$cachedInvoker$0(MybatisMapperProxy.java:111)
+	at java.base/java.util.concurrent.ConcurrentHashMap.computeIfAbsent(ConcurrentHashMap.java:1708)
+	at com.baomidou.mybatisplus.core.toolkit.CollectionUtils.computeIfAbsent(CollectionUtils.java:115)
+	at com.baomidou.mybatisplus.core.override.MybatisMapperProxy.cachedInvoker(MybatisMapperProxy.java:98)
+	at com.baomidou.mybatisplus.core.override.MybatisMapperProxy.invoke(MybatisMapperProxy.java:89)
+	at jdk.proxy2/jdk.proxy2.$Proxy92.countByUserIdAndDateRange(Unknown Source)
+	at com.markdown.editor.service.impl.TrendServiceImpl.fetchCommentCountData(TrendServiceImpl.java:177)
+	at com.markdown.editor.service.impl.TrendServiceImpl.lambda$getTrendData$2(TrendServiceImpl.java:74)
+	at java.base/java.util.concurrent.CompletableFuture$AsyncRun.run(CompletableFuture.java:1804)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+	at java.base/java.lang.Thread.run(Thread.java:842)
+2026-05-11 18:28:07.573 [main] DEBUG c.m.editor.MarkdownEditorApplication - Running with Spring Boot v2.7.14, Spring v5.3.29
+2026-05-11 18:28:09.712 [main] DEBUG c.m.e.filter.JwtAuthenticationFilter - Filter 'jwtAuthenticationFilter' configured for use
+2026-05-11 18:28:38.884 [trend-data-worker] ERROR c.m.e.service.impl.TrendServiceImpl - 获取评论数数据失败
+org.apache.ibatis.binding.BindingException: Invalid bound statement (not found): com.markdown.editor.mapper.CommentMapper.countByUserIdAndDateRange
+	at org.apache.ibatis.binding.MapperMethod$SqlCommand.<init>(MapperMethod.java:235)
+	at com.baomidou.mybatisplus.core.override.MybatisMapperMethod.<init>(MybatisMapperMethod.java:50)
+	at com.baomidou.mybatisplus.core.override.MybatisMapperProxy.lambda$cachedInvoker$0(MybatisMapperProxy.java:111)
+	at java.base/java.util.concurrent.ConcurrentHashMap.computeIfAbsent(ConcurrentHashMap.java:1708)
+	at com.baomidou.mybatisplus.core.toolkit.CollectionUtils.computeIfAbsent(CollectionUtils.java:115)
+	at com.baomidou.mybatisplus.core.override.MybatisMapperProxy.cachedInvoker(MybatisMapperProxy.java:98)
+	at com.baomidou.mybatisplus.core.override.MybatisMapperProxy.invoke(MybatisMapperProxy.java:89)
+	at jdk.proxy2/jdk.proxy2.$Proxy92.countByUserIdAndDateRange(Unknown Source)
+	at com.markdown.editor.service.impl.TrendServiceImpl.fetchCommentCountData(TrendServiceImpl.java:177)
+	at com.markdown.editor.service.impl.TrendServiceImpl.lambda$getTrendData$2(TrendServiceImpl.java:74)
+	at java.base/java.util.concurrent.CompletableFuture$AsyncRun.run(CompletableFuture.java:1804)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+	at java.base/java.lang.Thread.run(Thread.java:842)
+2026-05-11 18:30:23.394 [trend-data-worker] ERROR c.m.e.service.impl.TrendServiceImpl - 获取评论数数据失败
+org.apache.ibatis.binding.BindingException: Invalid bound statement (not found): com.markdown.editor.mapper.CommentMapper.countByUserIdAndDateRange
+	at org.apache.ibatis.binding.MapperMethod$SqlCommand.<init>(MapperMethod.java:235)
+	at com.baomidou.mybatisplus.core.override.MybatisMapperMethod.<init>(MybatisMapperMethod.java:50)
+	at com.baomidou.mybatisplus.core.override.MybatisMapperProxy.lambda$cachedInvoker$0(MybatisMapperProxy.java:111)
+	at java.base/java.util.concurrent.ConcurrentHashMap.computeIfAbsent(ConcurrentHashMap.java:1708)
+	at com.baomidou.mybatisplus.core.toolkit.CollectionUtils.computeIfAbsent(CollectionUtils.java:115)
+	at com.baomidou.mybatisplus.core.override.MybatisMapperProxy.cachedInvoker(MybatisMapperProxy.java:98)
+	at com.baomidou.mybatisplus.core.override.MybatisMapperProxy.invoke(MybatisMapperProxy.java:89)
+	at jdk.proxy2/jdk.proxy2.$Proxy92.countByUserIdAndDateRange(Unknown Source)
+	at com.markdown.editor.service.impl.TrendServiceImpl.fetchCommentCountData(TrendServiceImpl.java:177)
+	at com.markdown.editor.service.impl.TrendServiceImpl.lambda$getTrendData$2(TrendServiceImpl.java:74)
+	at java.base/java.util.concurrent.CompletableFuture$AsyncRun.run(CompletableFuture.java:1804)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+	at java.base/java.lang.Thread.run(Thread.java:842)
+2026-05-11 18:37:06.604 [http-nio-8081-exec-4] WARN  com.zaxxer.hikari.pool.PoolBase - MarkdownHikariCP - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@7fae07b5 (No operations allowed after connection closed.). Possibly consider using a shorter maxLifetime value.
+2026-05-11 18:37:25.707 [http-nio-8081-exec-3] WARN  com.zaxxer.hikari.pool.PoolBase - MarkdownHikariCP - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@1793e381 (No operations allowed after connection closed.). Possibly consider using a shorter maxLifetime value.
+2026-05-11 18:38:51.173 [http-nio-8081-exec-8] WARN  com.zaxxer.hikari.pool.PoolBase - MarkdownHikariCP - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@40d485b6 (No operations allowed after connection closed.). Possibly consider using a shorter maxLifetime value.
+2026-05-11 18:39:34.133 [http-nio-8081-exec-5] WARN  com.zaxxer.hikari.pool.PoolBase - MarkdownHikariCP - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@17190f70 (No operations allowed after connection closed.). Possibly consider using a shorter maxLifetime value.
+2026-05-11 18:40:19.143 [http-nio-8081-exec-7] WARN  com.zaxxer.hikari.pool.PoolBase - MarkdownHikariCP - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@30eea6ce (No operations allowed after connection closed.). Possibly consider using a shorter maxLifetime value.
+2026-05-11 18:40:19.143 [http-nio-8081-exec-4] WARN  com.zaxxer.hikari.pool.PoolBase - MarkdownHikariCP - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@6f29f017 (No operations allowed after connection closed.). Possibly consider using a shorter maxLifetime value.
+2026-05-11 18:40:19.354 [trend-data-worker] ERROR c.m.e.service.impl.TrendServiceImpl - 获取评论数数据失败
+org.apache.ibatis.binding.BindingException: Invalid bound statement (not found): com.markdown.editor.mapper.CommentMapper.countByUserIdAndDateRange
+	at org.apache.ibatis.binding.MapperMethod$SqlCommand.<init>(MapperMethod.java:235)
+	at com.baomidou.mybatisplus.core.override.MybatisMapperMethod.<init>(MybatisMapperMethod.java:50)
+	at com.baomidou.mybatisplus.core.override.MybatisMapperProxy.lambda$cachedInvoker$0(MybatisMapperProxy.java:111)
+	at java.base/java.util.concurrent.ConcurrentHashMap.computeIfAbsent(ConcurrentHashMap.java:1708)
+	at com.baomidou.mybatisplus.core.toolkit.CollectionUtils.computeIfAbsent(CollectionUtils.java:115)
+	at com.baomidou.mybatisplus.core.override.MybatisMapperProxy.cachedInvoker(MybatisMapperProxy.java:98)
+	at com.baomidou.mybatisplus.core.override.MybatisMapperProxy.invoke(MybatisMapperProxy.java:89)
+	at jdk.proxy2/jdk.proxy2.$Proxy92.countByUserIdAndDateRange(Unknown Source)
+	at com.markdown.editor.service.impl.TrendServiceImpl.fetchCommentCountData(TrendServiceImpl.java:177)
+	at com.markdown.editor.service.impl.TrendServiceImpl.lambda$getTrendData$2(TrendServiceImpl.java:74)
+	at java.base/java.util.concurrent.CompletableFuture$AsyncRun.run(CompletableFuture.java:1804)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+	at java.base/java.lang.Thread.run(Thread.java:842)
+2026-05-11 18:40:25.003 [trend-data-worker] ERROR c.m.e.service.impl.TrendServiceImpl - 获取评论数数据失败
+org.apache.ibatis.binding.BindingException: Invalid bound statement (not found): com.markdown.editor.mapper.CommentMapper.countByUserIdAndDateRange
+	at org.apache.ibatis.binding.MapperMethod$SqlCommand.<init>(MapperMethod.java:235)
+	at com.baomidou.mybatisplus.core.override.MybatisMapperMethod.<init>(MybatisMapperMethod.java:50)
+	at com.baomidou.mybatisplus.core.override.MybatisMapperProxy.lambda$cachedInvoker$0(MybatisMapperProxy.java:111)
+	at java.base/java.util.concurrent.ConcurrentHashMap.computeIfAbsent(ConcurrentHashMap.java:1708)
+	at com.baomidou.mybatisplus.core.toolkit.CollectionUtils.computeIfAbsent(CollectionUtils.java:115)
+	at com.baomidou.mybatisplus.core.override.MybatisMapperProxy.cachedInvoker(MybatisMapperProxy.java:98)
+	at com.baomidou.mybatisplus.core.override.MybatisMapperProxy.invoke(MybatisMapperProxy.java:89)
+	at jdk.proxy2/jdk.proxy2.$Proxy92.countByUserIdAndDateRange(Unknown Source)
+	at com.markdown.editor.service.impl.TrendServiceImpl.fetchCommentCountData(TrendServiceImpl.java:177)
+	at com.markdown.editor.service.impl.TrendServiceImpl.lambda$getTrendData$2(TrendServiceImpl.java:74)
+	at java.base/java.util.concurrent.CompletableFuture$AsyncRun.run(CompletableFuture.java:1804)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+	at java.base/java.lang.Thread.run(Thread.java:842)
+2026-05-11 18:40:48.139 [trend-data-worker] ERROR c.m.e.service.impl.TrendServiceImpl - 获取评论数数据失败
+org.apache.ibatis.binding.BindingException: Invalid bound statement (not found): com.markdown.editor.mapper.CommentMapper.countByUserIdAndDateRange
+	at org.apache.ibatis.binding.MapperMethod$SqlCommand.<init>(MapperMethod.java:235)
+	at com.baomidou.mybatisplus.core.override.MybatisMapperMethod.<init>(MybatisMapperMethod.java:50)
+	at com.baomidou.mybatisplus.core.override.MybatisMapperProxy.lambda$cachedInvoker$0(MybatisMapperProxy.java:111)
+	at java.base/java.util.concurrent.ConcurrentHashMap.computeIfAbsent(ConcurrentHashMap.java:1708)
+	at com.baomidou.mybatisplus.core.toolkit.CollectionUtils.computeIfAbsent(CollectionUtils.java:115)
+	at com.baomidou.mybatisplus.core.override.MybatisMapperProxy.cachedInvoker(MybatisMapperProxy.java:98)
+	at com.baomidou.mybatisplus.core.override.MybatisMapperProxy.invoke(MybatisMapperProxy.java:89)
+	at jdk.proxy2/jdk.proxy2.$Proxy92.countByUserIdAndDateRange(Unknown Source)
+	at com.markdown.editor.service.impl.TrendServiceImpl.fetchCommentCountData(TrendServiceImpl.java:177)
+	at com.markdown.editor.service.impl.TrendServiceImpl.lambda$getTrendData$2(TrendServiceImpl.java:74)
+	at java.base/java.util.concurrent.CompletableFuture$AsyncRun.run(CompletableFuture.java:1804)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+	at java.base/java.lang.Thread.run(Thread.java:842)
+2026-05-11 18:45:13.584 [main] DEBUG c.m.editor.MarkdownEditorApplication - Running with Spring Boot v2.7.14, Spring v5.3.29
+2026-05-11 18:45:17.253 [main] DEBUG c.m.e.filter.JwtAuthenticationFilter - Filter 'jwtAuthenticationFilter' configured for use
+2026-05-11 18:45:18.902 [main] WARN  o.s.b.w.s.c.AnnotationConfigServletWebServerApplicationContext - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.context.ApplicationContextException: Failed to start bean 'webServerStartStop'; nested exception is org.springframework.boot.web.server.PortInUseException: Port 8081 is already in use
+2026-05-11 18:45:18.943 [main] ERROR o.s.b.d.LoggingFailureAnalysisReporter - 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+Web server failed to start. Port 8081 was already in use.
+
+Action:
+
+Identify and stop the process that's listening on port 8081 or configure this application to listen on another port.
+
+2026-05-11 18:46:18.926 [http-nio-8081-exec-7] WARN  com.zaxxer.hikari.pool.PoolBase - MarkdownHikariCP - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@44cffefc (No operations allowed after connection closed.). Possibly consider using a shorter maxLifetime value.
+2026-05-11 18:46:18.926 [http-nio-8081-exec-1] WARN  com.zaxxer.hikari.pool.PoolBase - MarkdownHikariCP - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@252405b7 (No operations allowed after connection closed.). Possibly consider using a shorter maxLifetime value.
+2026-05-11 18:46:19.082 [trend-data-worker] ERROR c.m.e.service.impl.TrendServiceImpl - 获取评论数数据失败
+org.apache.ibatis.binding.BindingException: Invalid bound statement (not found): com.markdown.editor.mapper.CommentMapper.countByUserIdAndDateRange
+	at org.apache.ibatis.binding.MapperMethod$SqlCommand.<init>(MapperMethod.java:235)
+	at com.baomidou.mybatisplus.core.override.MybatisMapperMethod.<init>(MybatisMapperMethod.java:50)
+	at com.baomidou.mybatisplus.core.override.MybatisMapperProxy.lambda$cachedInvoker$0(MybatisMapperProxy.java:111)
+	at java.base/java.util.concurrent.ConcurrentHashMap.computeIfAbsent(ConcurrentHashMap.java:1708)
+	at com.baomidou.mybatisplus.core.toolkit.CollectionUtils.computeIfAbsent(CollectionUtils.java:115)
+	at com.baomidou.mybatisplus.core.override.MybatisMapperProxy.cachedInvoker(MybatisMapperProxy.java:98)
+	at com.baomidou.mybatisplus.core.override.MybatisMapperProxy.invoke(MybatisMapperProxy.java:89)
+	at jdk.proxy2/jdk.proxy2.$Proxy92.countByUserIdAndDateRange(Unknown Source)
+	at com.markdown.editor.service.impl.TrendServiceImpl.fetchCommentCountData(TrendServiceImpl.java:177)
+	at com.markdown.editor.service.impl.TrendServiceImpl.lambda$getTrendData$2(TrendServiceImpl.java:74)
+	at java.base/java.util.concurrent.CompletableFuture$AsyncRun.run(CompletableFuture.java:1804)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+	at java.base/java.lang.Thread.run(Thread.java:842)
+2026-05-11 18:46:24.006 [http-nio-8081-exec-8] WARN  com.zaxxer.hikari.pool.PoolBase - MarkdownHikariCP - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@21a3f3ae (No operations allowed after connection closed.). Possibly consider using a shorter maxLifetime value.
+2026-05-11 18:49:31.240 [main] DEBUG c.m.editor.MarkdownEditorApplication - Running with Spring Boot v2.7.14, Spring v5.3.29
+2026-05-11 18:49:33.701 [main] DEBUG c.m.e.filter.JwtAuthenticationFilter - Filter 'jwtAuthenticationFilter' configured for use
+2026-05-11 18:57:04.755 [main] DEBUG c.m.editor.MarkdownEditorApplication - Running with Spring Boot v2.7.14, Spring v5.3.29
+2026-05-11 18:57:07.977 [main] DEBUG c.m.e.filter.JwtAuthenticationFilter - Filter 'jwtAuthenticationFilter' configured for use
+2026-05-11 18:57:56.111 [trend-data-worker] ERROR c.m.e.service.impl.TrendServiceImpl - 获取评论数数据失败
+org.apache.ibatis.binding.BindingException: Invalid bound statement (not found): com.markdown.editor.mapper.CommentMapper.countByUserIdAndDateRange
+	at org.apache.ibatis.binding.MapperMethod$SqlCommand.<init>(MapperMethod.java:235)
+	at com.baomidou.mybatisplus.core.override.MybatisMapperMethod.<init>(MybatisMapperMethod.java:50)
+	at com.baomidou.mybatisplus.core.override.MybatisMapperProxy.lambda$cachedInvoker$0(MybatisMapperProxy.java:111)
+	at java.base/java.util.concurrent.ConcurrentHashMap.computeIfAbsent(ConcurrentHashMap.java:1708)
+	at com.baomidou.mybatisplus.core.toolkit.CollectionUtils.computeIfAbsent(CollectionUtils.java:115)
+	at com.baomidou.mybatisplus.core.override.MybatisMapperProxy.cachedInvoker(MybatisMapperProxy.java:98)
+	at com.baomidou.mybatisplus.core.override.MybatisMapperProxy.invoke(MybatisMapperProxy.java:89)
+	at jdk.proxy2/jdk.proxy2.$Proxy92.countByUserIdAndDateRange(Unknown Source)
+	at com.markdown.editor.service.impl.TrendServiceImpl.fetchCommentCountData(TrendServiceImpl.java:177)
+	at com.markdown.editor.service.impl.TrendServiceImpl.lambda$getTrendData$2(TrendServiceImpl.java:74)
+	at java.base/java.util.concurrent.CompletableFuture$AsyncRun.run(CompletableFuture.java:1804)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+	at java.base/java.lang.Thread.run(Thread.java:842)

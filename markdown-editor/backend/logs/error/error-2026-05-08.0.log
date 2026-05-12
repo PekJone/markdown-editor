@@ -1,0 +1,94 @@
+2026-05-08 08:20:32.348 [http-nio-0.0.0.0-8081-exec-1] ERROR c.markdown.editor.security.JwtUtils - JWT token is expired: JWT expired at 2026-05-01T11:42:16Z. Current time: 2026-05-08T08:20:32Z, a difference of 592696348 milliseconds.  Allowed clock skew: 0 milliseconds.
+2026-05-08 09:36:41.223 [main] ERROR o.s.b.d.LoggingFailureAnalysisReporter - 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+Web server failed to start. Port 8081 was already in use.
+
+Action:
+
+Identify and stop the process that's listening on port 8081 or configure this application to listen on another port.
+
+2026-05-08 09:37:11.159 [main] ERROR o.s.b.d.LoggingFailureAnalysisReporter - 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+Web server failed to start. Port 8081 was already in use.
+
+Action:
+
+Identify and stop the process that's listening on port 8081 or configure this application to listen on another port.
+
+2026-05-08 17:20:09.759 [trend-data-worker] ERROR c.m.e.service.impl.TrendServiceImpl - 获取评论数数据失败
+org.apache.ibatis.binding.BindingException: Invalid bound statement (not found): com.markdown.editor.mapper.CommentMapper.countByUserIdAndDateRange
+	at org.apache.ibatis.binding.MapperMethod$SqlCommand.<init>(MapperMethod.java:235)
+	at com.baomidou.mybatisplus.core.override.MybatisMapperMethod.<init>(MybatisMapperMethod.java:50)
+	at com.baomidou.mybatisplus.core.override.MybatisMapperProxy.lambda$cachedInvoker$0(MybatisMapperProxy.java:111)
+	at java.base/java.util.concurrent.ConcurrentHashMap.computeIfAbsent(ConcurrentHashMap.java:1708)
+	at com.baomidou.mybatisplus.core.toolkit.CollectionUtils.computeIfAbsent(CollectionUtils.java:115)
+	at com.baomidou.mybatisplus.core.override.MybatisMapperProxy.cachedInvoker(MybatisMapperProxy.java:98)
+	at com.baomidou.mybatisplus.core.override.MybatisMapperProxy.invoke(MybatisMapperProxy.java:89)
+	at jdk.proxy2/jdk.proxy2.$Proxy91.countByUserIdAndDateRange(Unknown Source)
+	at com.markdown.editor.service.impl.TrendServiceImpl.fetchCommentCountData(TrendServiceImpl.java:177)
+	at com.markdown.editor.service.impl.TrendServiceImpl.lambda$getTrendData$2(TrendServiceImpl.java:74)
+	at java.base/java.util.concurrent.CompletableFuture$AsyncRun.run(CompletableFuture.java:1804)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+	at java.base/java.lang.Thread.run(Thread.java:842)
+2026-05-08 17:31:52.452 [http-nio-8081-exec-7] ERROR c.markdown.editor.security.JwtUtils - JWT token is expired: JWT expired at 2026-04-22T16:41:10Z. Current time: 2026-05-08T17:31:52Z, a difference of 1385442446 milliseconds.  Allowed clock skew: 0 milliseconds.
+2026-05-08 17:32:07.969 [trend-data-worker] ERROR c.m.e.service.impl.TrendServiceImpl - 获取评论数数据失败
+org.apache.ibatis.binding.BindingException: Invalid bound statement (not found): com.markdown.editor.mapper.CommentMapper.countByUserIdAndDateRange
+	at org.apache.ibatis.binding.MapperMethod$SqlCommand.<init>(MapperMethod.java:235)
+	at com.baomidou.mybatisplus.core.override.MybatisMapperMethod.<init>(MybatisMapperMethod.java:50)
+	at com.baomidou.mybatisplus.core.override.MybatisMapperProxy.lambda$cachedInvoker$0(MybatisMapperProxy.java:111)
+	at java.base/java.util.concurrent.ConcurrentHashMap.computeIfAbsent(ConcurrentHashMap.java:1708)
+	at com.baomidou.mybatisplus.core.toolkit.CollectionUtils.computeIfAbsent(CollectionUtils.java:115)
+	at com.baomidou.mybatisplus.core.override.MybatisMapperProxy.cachedInvoker(MybatisMapperProxy.java:98)
+	at com.baomidou.mybatisplus.core.override.MybatisMapperProxy.invoke(MybatisMapperProxy.java:89)
+	at jdk.proxy2/jdk.proxy2.$Proxy91.countByUserIdAndDateRange(Unknown Source)
+	at com.markdown.editor.service.impl.TrendServiceImpl.fetchCommentCountData(TrendServiceImpl.java:177)
+	at com.markdown.editor.service.impl.TrendServiceImpl.lambda$getTrendData$2(TrendServiceImpl.java:74)
+	at java.base/java.util.concurrent.CompletableFuture$AsyncRun.run(CompletableFuture.java:1804)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+	at java.base/java.lang.Thread.run(Thread.java:842)
+2026-05-08 18:08:33.631 [trend-data-worker] ERROR c.m.e.service.impl.TrendServiceImpl - 获取评论数数据失败
+org.apache.ibatis.binding.BindingException: Invalid bound statement (not found): com.markdown.editor.mapper.CommentMapper.countByUserIdAndDateRange
+	at org.apache.ibatis.binding.MapperMethod$SqlCommand.<init>(MapperMethod.java:235)
+	at com.baomidou.mybatisplus.core.override.MybatisMapperMethod.<init>(MybatisMapperMethod.java:50)
+	at com.baomidou.mybatisplus.core.override.MybatisMapperProxy.lambda$cachedInvoker$0(MybatisMapperProxy.java:111)
+	at java.base/java.util.concurrent.ConcurrentHashMap.computeIfAbsent(ConcurrentHashMap.java:1708)
+	at com.baomidou.mybatisplus.core.toolkit.CollectionUtils.computeIfAbsent(CollectionUtils.java:115)
+	at com.baomidou.mybatisplus.core.override.MybatisMapperProxy.cachedInvoker(MybatisMapperProxy.java:98)
+	at com.baomidou.mybatisplus.core.override.MybatisMapperProxy.invoke(MybatisMapperProxy.java:89)
+	at jdk.proxy2/jdk.proxy2.$Proxy91.countByUserIdAndDateRange(Unknown Source)
+	at com.markdown.editor.service.impl.TrendServiceImpl.fetchCommentCountData(TrendServiceImpl.java:177)
+	at com.markdown.editor.service.impl.TrendServiceImpl.lambda$getTrendData$2(TrendServiceImpl.java:74)
+	at java.base/java.util.concurrent.CompletableFuture$AsyncRun.run(CompletableFuture.java:1804)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+	at java.base/java.lang.Thread.run(Thread.java:842)
+2026-05-08 18:15:33.753 [trend-data-worker] ERROR c.m.e.service.impl.TrendServiceImpl - 获取评论数数据失败
+org.apache.ibatis.binding.BindingException: Invalid bound statement (not found): com.markdown.editor.mapper.CommentMapper.countByUserIdAndDateRange
+	at org.apache.ibatis.binding.MapperMethod$SqlCommand.<init>(MapperMethod.java:235)
+	at com.baomidou.mybatisplus.core.override.MybatisMapperMethod.<init>(MybatisMapperMethod.java:50)
+	at com.baomidou.mybatisplus.core.override.MybatisMapperProxy.lambda$cachedInvoker$0(MybatisMapperProxy.java:111)
+	at java.base/java.util.concurrent.ConcurrentHashMap.computeIfAbsent(ConcurrentHashMap.java:1708)
+	at com.baomidou.mybatisplus.core.toolkit.CollectionUtils.computeIfAbsent(CollectionUtils.java:115)
+	at com.baomidou.mybatisplus.core.override.MybatisMapperProxy.cachedInvoker(MybatisMapperProxy.java:98)
+	at com.baomidou.mybatisplus.core.override.MybatisMapperProxy.invoke(MybatisMapperProxy.java:89)
+	at jdk.proxy2/jdk.proxy2.$Proxy91.countByUserIdAndDateRange(Unknown Source)
+	at com.markdown.editor.service.impl.TrendServiceImpl.fetchCommentCountData(TrendServiceImpl.java:177)
+	at com.markdown.editor.service.impl.TrendServiceImpl.lambda$getTrendData$2(TrendServiceImpl.java:74)
+	at java.base/java.util.concurrent.CompletableFuture$AsyncRun.run(CompletableFuture.java:1804)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+	at java.base/java.lang.Thread.run(Thread.java:842)

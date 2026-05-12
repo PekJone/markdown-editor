@@ -1,0 +1,255 @@
+2026-04-20 14:51:24.188 [http-nio-8080-exec-4] WARN  com.zaxxer.hikari.pool.PoolBase - HikariPool-1 - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@6aabfae4 (No operations allowed after connection closed.). Possibly consider using a shorter maxLifetime value.
+2026-04-20 14:51:29.235 [http-nio-8080-exec-4] WARN  com.zaxxer.hikari.pool.PoolBase - HikariPool-1 - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@26c72fef (No operations allowed after connection closed.). Possibly consider using a shorter maxLifetime value.
+2026-04-20 14:51:34.246 [http-nio-8080-exec-4] WARN  com.zaxxer.hikari.pool.PoolBase - HikariPool-1 - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@3182d6e8 (No operations allowed after connection closed.). Possibly consider using a shorter maxLifetime value.
+2026-04-20 14:51:35.431 [http-nio-8080-exec-5] WARN  com.zaxxer.hikari.pool.PoolBase - HikariPool-1 - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@11751ff1 (No operations allowed after connection closed.). Possibly consider using a shorter maxLifetime value.
+2026-04-20 14:51:39.260 [http-nio-8080-exec-4] WARN  com.zaxxer.hikari.pool.PoolBase - HikariPool-1 - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@69b8d26c (No operations allowed after connection closed.). Possibly consider using a shorter maxLifetime value.
+2026-04-20 14:51:40.437 [http-nio-8080-exec-5] WARN  com.zaxxer.hikari.pool.PoolBase - HikariPool-1 - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@51d3cb6a (No operations allowed after connection closed.). Possibly consider using a shorter maxLifetime value.
+2026-04-20 14:51:44.272 [http-nio-8080-exec-4] WARN  com.zaxxer.hikari.pool.PoolBase - HikariPool-1 - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@6f47c9bb (No operations allowed after connection closed.). Possibly consider using a shorter maxLifetime value.
+2026-04-20 14:51:45.440 [http-nio-8080-exec-5] WARN  com.zaxxer.hikari.pool.PoolBase - HikariPool-1 - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@2afa4fc8 (No operations allowed after connection closed.). Possibly consider using a shorter maxLifetime value.
+2026-04-20 14:51:49.288 [http-nio-8080-exec-4] WARN  com.zaxxer.hikari.pool.PoolBase - HikariPool-1 - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@48d5772d (No operations allowed after connection closed.). Possibly consider using a shorter maxLifetime value.
+2026-04-20 14:51:49.376 [http-nio-8080-exec-4] ERROR c.m.e.filter.JwtAuthenticationFilter - Cannot set user authentication: {}
+org.springframework.transaction.CannotCreateTransactionException: Could not open JDBC Connection for transaction; nested exception is java.sql.SQLTransientConnectionException: HikariPool-1 - Connection is not available, request timed out after 30527ms.
+	at org.springframework.jdbc.datasource.DataSourceTransactionManager.doBegin(DataSourceTransactionManager.java:313)
+	at org.springframework.transaction.support.AbstractPlatformTransactionManager.startTransaction(AbstractPlatformTransactionManager.java:400)
+	at org.springframework.transaction.support.AbstractPlatformTransactionManager.getTransaction(AbstractPlatformTransactionManager.java:373)
+	at org.springframework.transaction.interceptor.TransactionAspectSupport.createTransactionIfNecessary(TransactionAspectSupport.java:595)
+	at org.springframework.transaction.interceptor.TransactionAspectSupport.invokeWithinTransaction(TransactionAspectSupport.java:382)
+	at org.springframework.transaction.interceptor.TransactionInterceptor.invoke(TransactionInterceptor.java:119)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186)
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:763)
+	at org.springframework.aop.framework.CglibAopProxy$DynamicAdvisedInterceptor.intercept(CglibAopProxy.java:708)
+	at com.markdown.editor.security.UserDetailsServiceImpl$$EnhancerBySpringCGLIB$$8a6d93c1.loadUserByUsername(<generated>)
+	at com.markdown.editor.filter.JwtAuthenticationFilter.doFilterInternal(JwtAuthenticationFilter.java:41)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:346)
+	at org.springframework.security.web.authentication.logout.LogoutFilter.doFilter(LogoutFilter.java:103)
+	at org.springframework.security.web.authentication.logout.LogoutFilter.doFilter(LogoutFilter.java:89)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:346)
+	at org.springframework.web.filter.CorsFilter.doFilterInternal(CorsFilter.java:91)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:346)
+	at org.springframework.security.web.header.HeaderWriterFilter.doHeadersAfter(HeaderWriterFilter.java:90)
+	at org.springframework.security.web.header.HeaderWriterFilter.doFilterInternal(HeaderWriterFilter.java:75)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:346)
+	at org.springframework.security.web.context.SecurityContextPersistenceFilter.doFilter(SecurityContextPersistenceFilter.java:112)
+	at org.springframework.security.web.context.SecurityContextPersistenceFilter.doFilter(SecurityContextPersistenceFilter.java:82)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:346)
+	at org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter.doFilterInternal(WebAsyncManagerIntegrationFilter.java:55)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:346)
+	at org.springframework.security.web.session.DisableEncodeUrlFilter.doFilterInternal(DisableEncodeUrlFilter.java:42)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:346)
+	at org.springframework.security.web.FilterChainProxy.doFilterInternal(FilterChainProxy.java:221)
+	at org.springframework.security.web.FilterChainProxy.doFilter(FilterChainProxy.java:186)
+	at org.springframework.web.filter.DelegatingFilterProxy.invokeDelegate(DelegatingFilterProxy.java:354)
+	at org.springframework.web.filter.DelegatingFilterProxy.doFilter(DelegatingFilterProxy.java:267)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:178)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:153)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:178)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:153)
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:178)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:153)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:178)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:153)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:167)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:90)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:481)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:130)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:93)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:343)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:390)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:926)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1791)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.base/java.lang.Thread.run(Thread.java:842)
+Caused by: java.sql.SQLTransientConnectionException: HikariPool-1 - Connection is not available, request timed out after 30527ms.
+	at com.zaxxer.hikari.pool.HikariPool.createTimeoutException(HikariPool.java:696)
+	at com.zaxxer.hikari.pool.HikariPool.getConnection(HikariPool.java:197)
+	at com.zaxxer.hikari.pool.HikariPool.getConnection(HikariPool.java:162)
+	at com.zaxxer.hikari.HikariDataSource.getConnection(HikariDataSource.java:128)
+	at org.springframework.jdbc.datasource.DataSourceTransactionManager.doBegin(DataSourceTransactionManager.java:269)
+	... 65 common frames omitted
+Caused by: java.sql.SQLNonTransientConnectionException: No operations allowed after connection closed.
+	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:110)
+	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:97)
+	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:89)
+	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:63)
+	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:73)
+	at com.mysql.cj.jdbc.exceptions.SQLExceptionsMapping.translateException(SQLExceptionsMapping.java:73)
+	at com.mysql.cj.jdbc.ConnectionImpl.setNetworkTimeout(ConnectionImpl.java:2485)
+	at com.zaxxer.hikari.pool.PoolBase.setNetworkTimeout(PoolBase.java:566)
+	at com.zaxxer.hikari.pool.PoolBase.isConnectionAlive(PoolBase.java:173)
+	at com.zaxxer.hikari.pool.HikariPool.getConnection(HikariPool.java:186)
+	... 68 common frames omitted
+Caused by: com.mysql.cj.exceptions.ConnectionIsClosedException: No operations allowed after connection closed.
+	at jdk.internal.reflect.GeneratedConstructorAccessor72.newInstance(Unknown Source)
+	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:480)
+	at com.mysql.cj.exceptions.ExceptionFactory.createException(ExceptionFactory.java:61)
+	at com.mysql.cj.exceptions.ExceptionFactory.createException(ExceptionFactory.java:105)
+	at com.mysql.cj.exceptions.ExceptionFactory.createException(ExceptionFactory.java:151)
+	at com.mysql.cj.NativeSession.checkClosed(NativeSession.java:761)
+	at com.mysql.cj.jdbc.ConnectionImpl.checkClosed(ConnectionImpl.java:568)
+	at com.mysql.cj.jdbc.ConnectionImpl.setNetworkTimeout(ConnectionImpl.java:2481)
+	... 71 common frames omitted
+2026-04-20 14:51:50.454 [http-nio-8080-exec-5] WARN  com.zaxxer.hikari.pool.PoolBase - HikariPool-1 - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@6105ce5c (No operations allowed after connection closed.). Possibly consider using a shorter maxLifetime value.
+2026-04-20 14:54:37.633 [main] DEBUG c.m.editor.MarkdownEditorApplication - Running with Spring Boot v2.7.14, Spring v5.3.29
+2026-04-20 14:54:39.614 [main] DEBUG c.m.e.filter.JwtAuthenticationFilter - Filter 'jwtAuthenticationFilter' configured for use
+2026-04-20 15:00:35.868 [http-nio-8080-exec-5] ERROR c.markdown.editor.security.JwtUtils - JWT token is expired: JWT expired at 2026-04-19T18:00:18Z. Current time: 2026-04-20T15:00:35Z, a difference of 75617868 milliseconds.  Allowed clock skew: 0 milliseconds.
+2026-04-20 15:00:35.894 [http-nio-8080-exec-8] ERROR c.markdown.editor.security.JwtUtils - JWT token is expired: JWT expired at 2026-04-19T18:00:18Z. Current time: 2026-04-20T15:00:35Z, a difference of 75617894 milliseconds.  Allowed clock skew: 0 milliseconds.
+2026-04-20 15:00:35.894 [http-nio-8080-exec-7] ERROR c.markdown.editor.security.JwtUtils - JWT token is expired: JWT expired at 2026-04-19T18:00:18Z. Current time: 2026-04-20T15:00:35Z, a difference of 75617894 milliseconds.  Allowed clock skew: 0 milliseconds.
+2026-04-20 15:00:35.894 [http-nio-8080-exec-10] ERROR c.markdown.editor.security.JwtUtils - JWT token is expired: JWT expired at 2026-04-19T18:00:18Z. Current time: 2026-04-20T15:00:35Z, a difference of 75617894 milliseconds.  Allowed clock skew: 0 milliseconds.
+2026-04-20 15:00:40.261 [http-nio-8080-exec-2] ERROR c.markdown.editor.security.JwtUtils - JWT token is expired: JWT expired at 2026-04-19T18:00:18Z. Current time: 2026-04-20T15:00:40Z, a difference of 75622261 milliseconds.  Allowed clock skew: 0 milliseconds.
+2026-04-20 15:00:41.788 [http-nio-8080-exec-3] ERROR c.markdown.editor.security.JwtUtils - JWT token is expired: JWT expired at 2026-04-19T18:00:18Z. Current time: 2026-04-20T15:00:41Z, a difference of 75623788 milliseconds.  Allowed clock skew: 0 milliseconds.
+2026-04-20 15:02:04.686 [http-nio-8080-exec-9] ERROR c.markdown.editor.security.JwtUtils - JWT token is expired: JWT expired at 2026-04-19T18:00:18Z. Current time: 2026-04-20T15:02:04Z, a difference of 75706686 milliseconds.  Allowed clock skew: 0 milliseconds.
+2026-04-20 15:02:09.292 [http-nio-8080-exec-1] ERROR c.markdown.editor.security.JwtUtils - JWT token is expired: JWT expired at 2026-04-19T18:00:18Z. Current time: 2026-04-20T15:02:09Z, a difference of 75711292 milliseconds.  Allowed clock skew: 0 milliseconds.
+2026-04-20 15:02:09.292 [http-nio-8080-exec-6] ERROR c.markdown.editor.security.JwtUtils - JWT token is expired: JWT expired at 2026-04-19T18:00:18Z. Current time: 2026-04-20T15:02:09Z, a difference of 75711292 milliseconds.  Allowed clock skew: 0 milliseconds.
+2026-04-20 15:02:24.607 [http-nio-8080-exec-4] ERROR c.markdown.editor.security.JwtUtils - JWT token is expired: JWT expired at 2026-04-19T18:00:18Z. Current time: 2026-04-20T15:02:24Z, a difference of 75726607 milliseconds.  Allowed clock skew: 0 milliseconds.
+2026-04-20 15:02:51.861 [http-nio-8080-exec-5] ERROR c.markdown.editor.security.JwtUtils - JWT token is expired: JWT expired at 2026-04-19T18:00:18Z. Current time: 2026-04-20T15:02:51Z, a difference of 75753861 milliseconds.  Allowed clock skew: 0 milliseconds.
+2026-04-20 15:02:51.884 [http-nio-8080-exec-8] ERROR c.markdown.editor.security.JwtUtils - JWT token is expired: JWT expired at 2026-04-19T18:00:18Z. Current time: 2026-04-20T15:02:51Z, a difference of 75753884 milliseconds.  Allowed clock skew: 0 milliseconds.
+2026-04-20 15:02:51.884 [http-nio-8080-exec-7] ERROR c.markdown.editor.security.JwtUtils - JWT token is expired: JWT expired at 2026-04-19T18:00:18Z. Current time: 2026-04-20T15:02:51Z, a difference of 75753884 milliseconds.  Allowed clock skew: 0 milliseconds.
+2026-04-20 15:02:51.884 [http-nio-8080-exec-10] ERROR c.markdown.editor.security.JwtUtils - JWT token is expired: JWT expired at 2026-04-19T18:00:18Z. Current time: 2026-04-20T15:02:51Z, a difference of 75753884 milliseconds.  Allowed clock skew: 0 milliseconds.
+2026-04-20 15:02:57.632 [http-nio-8080-exec-2] WARN  com.zaxxer.hikari.pool.PoolBase - HikariPool-1 - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@11c178a6 (No operations allowed after connection closed.). Possibly consider using a shorter maxLifetime value.
+2026-04-20 15:06:47.939 [http-nio-8080-exec-5] WARN  com.zaxxer.hikari.pool.PoolBase - HikariPool-1 - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@3478dfb4 (No operations allowed after connection closed.). Possibly consider using a shorter maxLifetime value.
+2026-04-20 15:10:03.704 [http-nio-8080-exec-1] WARN  com.zaxxer.hikari.pool.PoolBase - HikariPool-1 - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@1bae582 (No operations allowed after connection closed.). Possibly consider using a shorter maxLifetime value.
+2026-04-20 15:11:57.635 [http-nio-8080-exec-6] WARN  com.zaxxer.hikari.pool.PoolBase - HikariPool-1 - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@3ea178c4 (No operations allowed after connection closed.). Possibly consider using a shorter maxLifetime value.
+2026-04-20 15:11:57.651 [http-nio-8080-exec-5] WARN  com.zaxxer.hikari.pool.PoolBase - HikariPool-1 - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@47033d6e (No operations allowed after connection closed.). Possibly consider using a shorter maxLifetime value.
+2026-04-20 15:12:02.741 [http-nio-8080-exec-10] WARN  com.zaxxer.hikari.pool.PoolBase - HikariPool-1 - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@462ae44a (No operations allowed after connection closed.). Possibly consider using a shorter maxLifetime value.
+2026-04-20 15:13:06.333 [http-nio-8080-exec-4] WARN  com.zaxxer.hikari.pool.PoolBase - HikariPool-1 - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@14abcf61 (No operations allowed after connection closed.). Possibly consider using a shorter maxLifetime value.
+2026-04-20 15:13:32.975 [http-nio-8080-exec-10] WARN  com.zaxxer.hikari.pool.PoolBase - HikariPool-1 - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@309609ee (No operations allowed after connection closed.). Possibly consider using a shorter maxLifetime value.
+2026-04-20 15:13:38.752 [http-nio-8080-exec-10] WARN  com.zaxxer.hikari.pool.PoolBase - HikariPool-1 - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@7a24ab51 (No operations allowed after connection closed.). Possibly consider using a shorter maxLifetime value.
+2026-04-20 15:13:38.752 [http-nio-8080-exec-6] WARN  com.zaxxer.hikari.pool.PoolBase - HikariPool-1 - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@26daeda7 (No operations allowed after connection closed.). Possibly consider using a shorter maxLifetime value.
+2026-04-20 15:18:15.631 [http-nio-8080-exec-10] WARN  com.zaxxer.hikari.pool.PoolBase - HikariPool-1 - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@3f84d9a2 (No operations allowed after connection closed.). Possibly consider using a shorter maxLifetime value.
+2026-04-20 15:18:15.631 [http-nio-8080-exec-4] WARN  com.zaxxer.hikari.pool.PoolBase - HikariPool-1 - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@499541a7 (No operations allowed after connection closed.). Possibly consider using a shorter maxLifetime value.
+2026-04-20 15:18:15.631 [http-nio-8080-exec-7] WARN  com.zaxxer.hikari.pool.PoolBase - HikariPool-1 - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@3ba5de74 (No operations allowed after connection closed.). Possibly consider using a shorter maxLifetime value.
+2026-04-20 15:18:15.631 [http-nio-8080-exec-9] WARN  com.zaxxer.hikari.pool.PoolBase - HikariPool-1 - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@4000e2ec (No operations allowed after connection closed.). Possibly consider using a shorter maxLifetime value.
+2026-04-20 15:18:15.631 [http-nio-8080-exec-8] WARN  com.zaxxer.hikari.pool.PoolBase - HikariPool-1 - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@7119f067 (No operations allowed after connection closed.). Possibly consider using a shorter maxLifetime value.
+2026-04-20 15:18:15.631 [http-nio-8080-exec-5] WARN  com.zaxxer.hikari.pool.PoolBase - HikariPool-1 - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@41891ada (No operations allowed after connection closed.). Possibly consider using a shorter maxLifetime value.
+2026-04-20 15:18:20.635 [http-nio-8080-exec-8] WARN  com.zaxxer.hikari.pool.PoolBase - HikariPool-1 - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@ecea97f (No operations allowed after connection closed.). Possibly consider using a shorter maxLifetime value.
+2026-04-20 15:18:20.635 [http-nio-8080-exec-4] WARN  com.zaxxer.hikari.pool.PoolBase - HikariPool-1 - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@54cf071c (No operations allowed after connection closed.). Possibly consider using a shorter maxLifetime value.
+2026-04-20 15:18:20.635 [http-nio-8080-exec-7] WARN  com.zaxxer.hikari.pool.PoolBase - HikariPool-1 - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@1f8229af (No operations allowed after connection closed.). Possibly consider using a shorter maxLifetime value.
+2026-04-20 15:18:20.635 [http-nio-8080-exec-9] WARN  com.zaxxer.hikari.pool.PoolBase - HikariPool-1 - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@481f236d (No operations allowed after connection closed.). Possibly consider using a shorter maxLifetime value.
+2026-04-20 15:24:47.786 [http-nio-8080-exec-5] WARN  com.zaxxer.hikari.pool.PoolBase - HikariPool-1 - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@1358aeec (No operations allowed after connection closed.). Possibly consider using a shorter maxLifetime value.
+2026-04-20 15:24:52.787 [http-nio-8080-exec-5] WARN  com.zaxxer.hikari.pool.PoolBase - HikariPool-1 - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@120900b5 (No operations allowed after connection closed.). Possibly consider using a shorter maxLifetime value.
+2026-04-20 15:24:56.247 [http-nio-8080-exec-9] WARN  com.zaxxer.hikari.pool.PoolBase - HikariPool-1 - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@656438b (No operations allowed after connection closed.). Possibly consider using a shorter maxLifetime value.
+2026-04-20 15:24:57.791 [http-nio-8080-exec-5] WARN  com.zaxxer.hikari.pool.PoolBase - HikariPool-1 - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@7a076dae (No operations allowed after connection closed.). Possibly consider using a shorter maxLifetime value.
+2026-04-20 15:25:01.251 [http-nio-8080-exec-9] WARN  com.zaxxer.hikari.pool.PoolBase - HikariPool-1 - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@79ec8196 (No operations allowed after connection closed.). Possibly consider using a shorter maxLifetime value.
+2026-04-20 15:25:02.797 [http-nio-8080-exec-5] WARN  com.zaxxer.hikari.pool.PoolBase - HikariPool-1 - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@3f4a1b39 (No operations allowed after connection closed.). Possibly consider using a shorter maxLifetime value.
+2026-04-20 15:25:06.254 [http-nio-8080-exec-7] WARN  com.zaxxer.hikari.pool.PoolBase - HikariPool-1 - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@34ca071f (No operations allowed after connection closed.). Possibly consider using a shorter maxLifetime value.
+2026-04-20 15:25:06.254 [http-nio-8080-exec-6] WARN  com.zaxxer.hikari.pool.PoolBase - HikariPool-1 - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@1ea1cf4d (No operations allowed after connection closed.). Possibly consider using a shorter maxLifetime value.
+2026-04-20 15:25:06.254 [http-nio-8080-exec-9] WARN  com.zaxxer.hikari.pool.PoolBase - HikariPool-1 - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@1327281d (No operations allowed after connection closed.). Possibly consider using a shorter maxLifetime value.
+2026-04-20 15:25:06.254 [http-nio-8080-exec-8] WARN  com.zaxxer.hikari.pool.PoolBase - HikariPool-1 - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@589151f7 (No operations allowed after connection closed.). Possibly consider using a shorter maxLifetime value.
+2026-04-20 15:29:47.893 [http-nio-8080-exec-5] WARN  com.zaxxer.hikari.pool.PoolBase - HikariPool-1 - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@7a276d0c (No operations allowed after connection closed.). Possibly consider using a shorter maxLifetime value.
+2026-04-20 15:29:47.893 [http-nio-8080-exec-1] WARN  com.zaxxer.hikari.pool.PoolBase - HikariPool-1 - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@399bcd42 (No operations allowed after connection closed.). Possibly consider using a shorter maxLifetime value.
+2026-04-20 15:34:58.699 [http-nio-8080-exec-8] WARN  com.zaxxer.hikari.pool.PoolBase - HikariPool-1 - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@22a96a9e (No operations allowed after connection closed.). Possibly consider using a shorter maxLifetime value.
+2026-04-20 15:38:05.082 [http-nio-8080-exec-9] WARN  com.zaxxer.hikari.pool.PoolBase - HikariPool-1 - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@d433ee9 (No operations allowed after connection closed.). Possibly consider using a shorter maxLifetime value.
+2026-04-20 15:38:05.082 [http-nio-8080-exec-7] WARN  com.zaxxer.hikari.pool.PoolBase - HikariPool-1 - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@3b9363bf (No operations allowed after connection closed.). Possibly consider using a shorter maxLifetime value.
+2026-04-20 15:38:05.082 [http-nio-8080-exec-6] WARN  com.zaxxer.hikari.pool.PoolBase - HikariPool-1 - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@21c7b7c8 (No operations allowed after connection closed.). Possibly consider using a shorter maxLifetime value.
+2026-04-20 15:38:10.087 [http-nio-8080-exec-9] WARN  com.zaxxer.hikari.pool.PoolBase - HikariPool-1 - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@3af912bc (No operations allowed after connection closed.). Possibly consider using a shorter maxLifetime value.
+2026-04-20 15:38:46.173 [http-nio-8080-exec-10] WARN  com.zaxxer.hikari.pool.PoolBase - HikariPool-1 - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@17da8bfa (No operations allowed after connection closed.). Possibly consider using a shorter maxLifetime value.
+2026-04-20 15:38:46.173 [http-nio-8080-exec-5] WARN  com.zaxxer.hikari.pool.PoolBase - HikariPool-1 - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@3b0c867e (No operations allowed after connection closed.). Possibly consider using a shorter maxLifetime value.
+2026-04-20 15:44:39.151 [http-nio-8080-exec-7] WARN  com.zaxxer.hikari.pool.PoolBase - HikariPool-1 - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@8aeb9c0 (No operations allowed after connection closed.). Possibly consider using a shorter maxLifetime value.
+2026-04-20 15:44:44.157 [http-nio-8080-exec-7] WARN  com.zaxxer.hikari.pool.PoolBase - HikariPool-1 - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@5dcd6459 (No operations allowed after connection closed.). Possibly consider using a shorter maxLifetime value.
+2026-04-20 15:47:08.664 [http-nio-8080-exec-9] WARN  com.zaxxer.hikari.pool.PoolBase - HikariPool-1 - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@4e9f0097 (No operations allowed after connection closed.). Possibly consider using a shorter maxLifetime value.
+2026-04-20 15:47:08.710 [http-nio-8080-exec-10] WARN  com.zaxxer.hikari.pool.PoolBase - HikariPool-1 - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@75e9fa9d (No operations allowed after connection closed.). Possibly consider using a shorter maxLifetime value.
+2026-04-20 15:47:08.710 [http-nio-8080-exec-6] WARN  com.zaxxer.hikari.pool.PoolBase - HikariPool-1 - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@14258e6d (No operations allowed after connection closed.). Possibly consider using a shorter maxLifetime value.
+2026-04-20 15:47:08.710 [http-nio-8080-exec-5] WARN  com.zaxxer.hikari.pool.PoolBase - HikariPool-1 - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@5d3cc8cc (No operations allowed after connection closed.). Possibly consider using a shorter maxLifetime value.
+2026-04-20 15:47:08.710 [http-nio-8080-exec-1] WARN  com.zaxxer.hikari.pool.PoolBase - HikariPool-1 - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@270e3b24 (No operations allowed after connection closed.). Possibly consider using a shorter maxLifetime value.
+2026-04-20 15:47:08.710 [http-nio-8080-exec-2] WARN  com.zaxxer.hikari.pool.PoolBase - HikariPool-1 - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@57663088 (No operations allowed after connection closed.). Possibly consider using a shorter maxLifetime value.
+2026-04-20 15:47:08.755 [http-nio-8080-exec-3] WARN  com.zaxxer.hikari.pool.PoolBase - HikariPool-1 - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@4bd610e6 (No operations allowed after connection closed.). Possibly consider using a shorter maxLifetime value.
+2026-04-20 15:53:31.942 [http-nio-8080-exec-1] WARN  com.zaxxer.hikari.pool.PoolBase - HikariPool-1 - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@34e343c8 (No operations allowed after connection closed.). Possibly consider using a shorter maxLifetime value.
+2026-04-20 15:54:31.734 [http-nio-8080-exec-2] WARN  com.zaxxer.hikari.pool.PoolBase - HikariPool-1 - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@662e8507 (No operations allowed after connection closed.). Possibly consider using a shorter maxLifetime value.
+2026-04-20 15:54:51.390 [http-nio-8080-exec-8] WARN  com.zaxxer.hikari.pool.PoolBase - HikariPool-1 - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@14e0ffcc (No operations allowed after connection closed.). Possibly consider using a shorter maxLifetime value.
+2026-04-20 15:56:35.479 [http-nio-8080-exec-2] WARN  com.zaxxer.hikari.pool.PoolBase - HikariPool-1 - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@4c0ef9fa (No operations allowed after connection closed.). Possibly consider using a shorter maxLifetime value.
+2026-04-20 15:59:12.929 [http-nio-8080-exec-6] WARN  com.zaxxer.hikari.pool.PoolBase - HikariPool-1 - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@47e076a6 (No operations allowed after connection closed.). Possibly consider using a shorter maxLifetime value.
+2026-04-20 15:59:32.028 [http-nio-8080-exec-4] WARN  com.zaxxer.hikari.pool.PoolBase - HikariPool-1 - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@57ceef7d (No operations allowed after connection closed.). Possibly consider using a shorter maxLifetime value.
+2026-04-20 16:02:34.000 [http-nio-8080-exec-8] WARN  com.zaxxer.hikari.pool.PoolBase - HikariPool-1 - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@3a24f22d (No operations allowed after connection closed.). Possibly consider using a shorter maxLifetime value.
+2026-04-20 16:02:41.394 [http-nio-8080-exec-5] WARN  com.zaxxer.hikari.pool.PoolBase - HikariPool-1 - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@621d83c4 (No operations allowed after connection closed.). Possibly consider using a shorter maxLifetime value.
+2026-04-20 16:02:41.410 [http-nio-8080-exec-11] WARN  com.zaxxer.hikari.pool.PoolBase - HikariPool-1 - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@4fd19d4c (No operations allowed after connection closed.). Possibly consider using a shorter maxLifetime value.
+2026-04-20 16:07:44.987 [http-nio-8080-exec-3] WARN  com.zaxxer.hikari.pool.PoolBase - HikariPool-1 - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@ef9b7 (No operations allowed after connection closed.). Possibly consider using a shorter maxLifetime value.
+2026-04-20 16:07:49.031 [http-nio-8080-exec-10] WARN  com.zaxxer.hikari.pool.PoolBase - HikariPool-1 - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@4f9f408f (No operations allowed after connection closed.). Possibly consider using a shorter maxLifetime value.
+2026-04-20 16:08:29.752 [http-nio-8080-exec-1] WARN  com.zaxxer.hikari.pool.PoolBase - HikariPool-1 - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@35dd0690 (No operations allowed after connection closed.). Possibly consider using a shorter maxLifetime value.
+2026-04-20 16:09:26.647 [http-nio-8080-exec-4] WARN  com.zaxxer.hikari.pool.PoolBase - HikariPool-1 - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@1a0ff1e5 (No operations allowed after connection closed.). Possibly consider using a shorter maxLifetime value.
+2026-04-20 16:09:49.486 [http-nio-8080-exec-3] WARN  com.zaxxer.hikari.pool.PoolBase - HikariPool-1 - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@5cbfa289 (No operations allowed after connection closed.). Possibly consider using a shorter maxLifetime value.
+2026-04-20 16:09:49.486 [http-nio-8080-exec-8] WARN  com.zaxxer.hikari.pool.PoolBase - HikariPool-1 - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@47d18000 (No operations allowed after connection closed.). Possibly consider using a shorter maxLifetime value.
+2026-04-20 16:09:49.486 [http-nio-8080-exec-10] WARN  com.zaxxer.hikari.pool.PoolBase - HikariPool-1 - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@5c9625b5 (No operations allowed after connection closed.). Possibly consider using a shorter maxLifetime value.
+2026-04-20 16:09:49.501 [http-nio-8080-exec-4] WARN  com.zaxxer.hikari.pool.PoolBase - HikariPool-1 - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@452cf98e (No operations allowed after connection closed.). Possibly consider using a shorter maxLifetime value.
+2026-04-20 16:15:36.865 [http-nio-8080-exec-8] WARN  com.zaxxer.hikari.pool.PoolBase - HikariPool-1 - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@4a1effb9 (No operations allowed after connection closed.). Possibly consider using a shorter maxLifetime value.
+2026-04-20 16:15:47.379 [http-nio-8080-exec-3] WARN  com.zaxxer.hikari.pool.PoolBase - HikariPool-1 - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@1a6aef26 (No operations allowed after connection closed.). Possibly consider using a shorter maxLifetime value.
+2026-04-20 16:15:52.805 [http-nio-8080-exec-5] WARN  com.zaxxer.hikari.pool.PoolBase - HikariPool-1 - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@25285730 (No operations allowed after connection closed.). Possibly consider using a shorter maxLifetime value.
+2026-04-20 16:15:56.639 [http-nio-8080-exec-10] DEBUG c.m.e.controller.DocumentController - 文档ID: 191 浏览次数增加
+2026-04-20 16:15:57.818 [http-nio-8080-exec-1] DEBUG c.m.e.controller.DocumentController - 文档ID: 191 浏览次数增加
+2026-04-20 16:16:15.033 [http-nio-8080-exec-2] DEBUG c.m.e.controller.DocumentController - 文档ID: 191 浏览次数增加
+2026-04-20 16:16:43.522 [http-nio-8080-exec-11] WARN  c.m.e.controller.DocumentController - 用户[admin]尝试取消未点赞的文档，文档ID: 113
+2026-04-20 16:16:45.640 [http-nio-8080-exec-2] DEBUG c.m.e.controller.DocumentController - 文档ID: 191 浏览次数增加
+2026-04-20 16:17:02.934 [http-nio-8080-exec-8] DEBUG c.m.e.controller.DocumentController - 文档ID: 191 浏览次数增加
+2026-04-20 16:18:05.449 [http-nio-8080-exec-8] WARN  c.m.e.controller.DocumentController - 用户[admin]尝试取消未点赞的文档，文档ID: 231
+2026-04-20 16:18:16.137 [http-nio-8080-exec-1] WARN  com.zaxxer.hikari.pool.PoolBase - HikariPool-1 - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@1eef5f2b (No operations allowed after connection closed.). Possibly consider using a shorter maxLifetime value.
+2026-04-20 16:19:13.565 [http-nio-8080-exec-10] WARN  c.m.e.controller.DocumentController - 用户[admin]尝试获取不存在的文档，文档ID: 1
+2026-04-20 16:19:51.597 [http-nio-8080-exec-6] DEBUG c.m.e.controller.DocumentController - 文档ID: 191 浏览次数增加
+2026-04-20 16:25:48.283 [http-nio-8080-exec-11] WARN  com.zaxxer.hikari.pool.PoolBase - HikariPool-1 - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@5973f413 (No operations allowed after connection closed.). Possibly consider using a shorter maxLifetime value.
+2026-04-20 16:25:48.284 [http-nio-8080-exec-6] WARN  com.zaxxer.hikari.pool.PoolBase - HikariPool-1 - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@15c407d7 (No operations allowed after connection closed.). Possibly consider using a shorter maxLifetime value.
+2026-04-20 16:25:48.284 [http-nio-8080-exec-1] WARN  com.zaxxer.hikari.pool.PoolBase - HikariPool-1 - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@2a45c25e (No operations allowed after connection closed.). Possibly consider using a shorter maxLifetime value.
+2026-04-20 16:25:48.283 [http-nio-8080-exec-8] WARN  com.zaxxer.hikari.pool.PoolBase - HikariPool-1 - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@64cc5b71 (No operations allowed after connection closed.). Possibly consider using a shorter maxLifetime value.
+2026-04-20 16:25:48.284 [http-nio-8080-exec-10] WARN  com.zaxxer.hikari.pool.PoolBase - HikariPool-1 - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@4da7ee3a (No operations allowed after connection closed.). Possibly consider using a shorter maxLifetime value.
+2026-04-20 16:25:53.290 [http-nio-8080-exec-8] WARN  com.zaxxer.hikari.pool.PoolBase - HikariPool-1 - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@594cc06f (No operations allowed after connection closed.). Possibly consider using a shorter maxLifetime value.
+2026-04-20 16:25:53.290 [http-nio-8080-exec-1] WARN  com.zaxxer.hikari.pool.PoolBase - HikariPool-1 - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@37abf848 (No operations allowed after connection closed.). Possibly consider using a shorter maxLifetime value.
+2026-04-20 16:25:53.290 [http-nio-8080-exec-11] WARN  com.zaxxer.hikari.pool.PoolBase - HikariPool-1 - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@54d96de4 (No operations allowed after connection closed.). Possibly consider using a shorter maxLifetime value.
+2026-04-20 16:25:53.290 [http-nio-8080-exec-10] WARN  com.zaxxer.hikari.pool.PoolBase - HikariPool-1 - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@1eaa5e60 (No operations allowed after connection closed.). Possibly consider using a shorter maxLifetime value.
+2026-04-20 16:29:46.364 [http-nio-8080-exec-8] DEBUG c.m.e.controller.DocumentController - 文档ID: 191 浏览次数增加
+2026-04-20 16:30:04.843 [http-nio-8080-exec-7] DEBUG c.m.e.controller.DocumentController - 文档ID: 191 浏览次数增加
+2026-04-20 16:31:01.631 [http-nio-8080-exec-3] DEBUG c.m.e.controller.DocumentController - 文档ID: 191 浏览次数增加
+2026-04-20 16:44:31.514 [http-nio-8080-exec-2] WARN  com.zaxxer.hikari.pool.PoolBase - HikariPool-1 - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@4a4011da (No operations allowed after connection closed.). Possibly consider using a shorter maxLifetime value.
+2026-04-20 16:44:36.529 [http-nio-8080-exec-2] WARN  com.zaxxer.hikari.pool.PoolBase - HikariPool-1 - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@7903b023 (No operations allowed after connection closed.). Possibly consider using a shorter maxLifetime value.
+2026-04-20 16:44:41.536 [http-nio-8080-exec-2] WARN  com.zaxxer.hikari.pool.PoolBase - HikariPool-1 - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@2e7a65c2 (No operations allowed after connection closed.). Possibly consider using a shorter maxLifetime value.
+2026-04-20 16:44:43.050 [http-nio-8080-exec-5] WARN  com.zaxxer.hikari.pool.PoolBase - HikariPool-1 - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@3ea0b03 (No operations allowed after connection closed.). Possibly consider using a shorter maxLifetime value.
+2026-04-20 16:44:46.204 [http-nio-8080-exec-10] WARN  com.zaxxer.hikari.pool.PoolBase - HikariPool-1 - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@47d3616c (No operations allowed after connection closed.). Possibly consider using a shorter maxLifetime value.
+2026-04-20 16:44:46.542 [http-nio-8080-exec-2] WARN  com.zaxxer.hikari.pool.PoolBase - HikariPool-1 - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@3f27efbf (No operations allowed after connection closed.). Possibly consider using a shorter maxLifetime value.
+2026-04-20 16:44:48.054 [http-nio-8080-exec-5] WARN  com.zaxxer.hikari.pool.PoolBase - HikariPool-1 - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@2df47470 (No operations allowed after connection closed.). Possibly consider using a shorter maxLifetime value.
+2026-04-20 16:44:51.217 [http-nio-8080-exec-10] WARN  com.zaxxer.hikari.pool.PoolBase - HikariPool-1 - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@2aece401 (No operations allowed after connection closed.). Possibly consider using a shorter maxLifetime value.
+2026-04-20 16:44:51.555 [http-nio-8080-exec-2] WARN  com.zaxxer.hikari.pool.PoolBase - HikariPool-1 - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@3267a898 (No operations allowed after connection closed.). Possibly consider using a shorter maxLifetime value.
+2026-04-20 16:44:53.061 [http-nio-8080-exec-5] WARN  com.zaxxer.hikari.pool.PoolBase - HikariPool-1 - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@5c3d89a7 (No operations allowed after connection closed.). Possibly consider using a shorter maxLifetime value.
+2026-04-20 16:44:53.130 [http-nio-8080-exec-7] ERROR c.markdown.editor.security.JwtUtils - JWT token is expired: JWT expired at 2026-04-20T16:44:48Z. Current time: 2026-04-20T16:44:53Z, a difference of 5126 milliseconds.  Allowed clock skew: 0 milliseconds.
+2026-04-20 16:44:53.130 [http-nio-8080-exec-1] ERROR c.markdown.editor.security.JwtUtils - JWT token is expired: JWT expired at 2026-04-20T16:44:48Z. Current time: 2026-04-20T16:44:53Z, a difference of 5126 milliseconds.  Allowed clock skew: 0 milliseconds.
+2026-04-20 16:44:53.130 [http-nio-8080-exec-11] ERROR c.markdown.editor.security.JwtUtils - JWT token is expired: JWT expired at 2026-04-20T16:44:48Z. Current time: 2026-04-20T16:44:53Z, a difference of 5126 milliseconds.  Allowed clock skew: 0 milliseconds.
+2026-04-20 16:45:11.665 [http-nio-8080-exec-4] ERROR c.markdown.editor.security.JwtUtils - JWT token is expired: JWT expired at 2026-04-20T16:44:48Z. Current time: 2026-04-20T16:45:11Z, a difference of 23665 milliseconds.  Allowed clock skew: 0 milliseconds.
+2026-04-20 16:45:11.685 [http-nio-8080-exec-8] ERROR c.markdown.editor.security.JwtUtils - JWT token is expired: JWT expired at 2026-04-20T16:44:48Z. Current time: 2026-04-20T16:45:11Z, a difference of 23685 milliseconds.  Allowed clock skew: 0 milliseconds.
+2026-04-20 16:45:11.685 [http-nio-8080-exec-6] ERROR c.markdown.editor.security.JwtUtils - JWT token is expired: JWT expired at 2026-04-20T16:44:48Z. Current time: 2026-04-20T16:45:11Z, a difference of 23685 milliseconds.  Allowed clock skew: 0 milliseconds.
+2026-04-20 16:45:11.685 [http-nio-8080-exec-3] ERROR c.markdown.editor.security.JwtUtils - JWT token is expired: JWT expired at 2026-04-20T16:44:48Z. Current time: 2026-04-20T16:45:11Z, a difference of 23685 milliseconds.  Allowed clock skew: 0 milliseconds.
+2026-04-20 16:45:14.215 [http-nio-8080-exec-10] ERROR c.markdown.editor.security.JwtUtils - JWT token is expired: JWT expired at 2026-04-20T16:44:48Z. Current time: 2026-04-20T16:45:14Z, a difference of 26214 milliseconds.  Allowed clock skew: 0 milliseconds.
+2026-04-20 16:45:14.519 [http-nio-8080-exec-2] ERROR c.markdown.editor.security.JwtUtils - JWT token is expired: JWT expired at 2026-04-20T16:44:48Z. Current time: 2026-04-20T16:45:14Z, a difference of 26519 milliseconds.  Allowed clock skew: 0 milliseconds.
+2026-04-20 16:52:44.240 [http-nio-8080-exec-10] WARN  com.zaxxer.hikari.pool.PoolBase - HikariPool-1 - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@4f4716e6 (No operations allowed after connection closed.). Possibly consider using a shorter maxLifetime value.
+2026-04-20 16:52:44.242 [http-nio-8080-exec-6] WARN  com.zaxxer.hikari.pool.PoolBase - HikariPool-1 - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@112b213a (No operations allowed after connection closed.). Possibly consider using a shorter maxLifetime value.
+2026-04-20 16:52:45.051 [http-nio-8080-exec-5] WARN  com.zaxxer.hikari.pool.PoolBase - HikariPool-1 - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@387facb (No operations allowed after connection closed.). Possibly consider using a shorter maxLifetime value.
+2026-04-20 16:52:45.051 [http-nio-8080-exec-2] WARN  com.zaxxer.hikari.pool.PoolBase - HikariPool-1 - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@5559e1b0 (No operations allowed after connection closed.). Possibly consider using a shorter maxLifetime value.
+2026-04-20 16:52:45.051 [http-nio-8080-exec-4] WARN  com.zaxxer.hikari.pool.PoolBase - HikariPool-1 - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@7b3bd445 (No operations allowed after connection closed.). Possibly consider using a shorter maxLifetime value.
+2026-04-20 16:52:45.066 [http-nio-8080-exec-11] WARN  com.zaxxer.hikari.pool.PoolBase - HikariPool-1 - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@699969b0 (No operations allowed after connection closed.). Possibly consider using a shorter maxLifetime value.
+2026-04-20 16:52:45.066 [http-nio-8080-exec-1] WARN  com.zaxxer.hikari.pool.PoolBase - HikariPool-1 - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@1ceb416a (No operations allowed after connection closed.). Possibly consider using a shorter maxLifetime value.
+2026-04-20 16:52:45.069 [http-nio-8080-exec-8] WARN  com.zaxxer.hikari.pool.PoolBase - HikariPool-1 - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@224632e3 (No operations allowed after connection closed.). Possibly consider using a shorter maxLifetime value.
+2026-04-20 16:52:45.356 [http-nio-8080-exec-7] WARN  com.zaxxer.hikari.pool.PoolBase - HikariPool-1 - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@19fd4262 (No operations allowed after connection closed.). Possibly consider using a shorter maxLifetime value.
+2026-04-20 16:52:49.263 [http-nio-8080-exec-6] WARN  com.zaxxer.hikari.pool.PoolBase - HikariPool-1 - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@45b0d717 (No operations allowed after connection closed.). Possibly consider using a shorter maxLifetime value.
+2026-04-20 17:47:44.142 [http-nio-8080-exec-3] WARN  com.zaxxer.hikari.pool.PoolBase - HikariPool-1 - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@289eb8c2 (No operations allowed after connection closed.). Possibly consider using a shorter maxLifetime value.
+2026-04-20 17:47:49.177 [http-nio-8080-exec-3] WARN  com.zaxxer.hikari.pool.PoolBase - HikariPool-1 - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@48bb4c24 (No operations allowed after connection closed.). Possibly consider using a shorter maxLifetime value.
+2026-04-20 17:47:49.578 [http-nio-8080-exec-7] WARN  com.zaxxer.hikari.pool.PoolBase - HikariPool-1 - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@1153bf86 (No operations allowed after connection closed.). Possibly consider using a shorter maxLifetime value.
+2026-04-20 17:47:50.946 [http-nio-8080-exec-6] WARN  com.zaxxer.hikari.pool.PoolBase - HikariPool-1 - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@76b1f574 (No operations allowed after connection closed.). Possibly consider using a shorter maxLifetime value.
+2026-04-20 17:47:54.128 [http-nio-8080-exec-5] WARN  com.zaxxer.hikari.pool.PoolBase - HikariPool-1 - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@409e3c10 (No operations allowed after connection closed.). Possibly consider using a shorter maxLifetime value.
+2026-04-20 17:47:54.192 [http-nio-8080-exec-3] WARN  com.zaxxer.hikari.pool.PoolBase - HikariPool-1 - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@20f9e2cf (No operations allowed after connection closed.). Possibly consider using a shorter maxLifetime value.
+2026-04-20 17:47:54.589 [http-nio-8080-exec-7] WARN  com.zaxxer.hikari.pool.PoolBase - HikariPool-1 - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@3070aea3 (No operations allowed after connection closed.). Possibly consider using a shorter maxLifetime value.
+2026-04-20 17:47:55.949 [http-nio-8080-exec-6] WARN  com.zaxxer.hikari.pool.PoolBase - HikariPool-1 - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@297d4b6 (No operations allowed after connection closed.). Possibly consider using a shorter maxLifetime value.
+2026-04-20 17:47:59.134 [http-nio-8080-exec-5] WARN  com.zaxxer.hikari.pool.PoolBase - HikariPool-1 - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@1eca2714 (No operations allowed after connection closed.). Possibly consider using a shorter maxLifetime value.
+2026-04-20 17:47:59.195 [http-nio-8080-exec-3] WARN  com.zaxxer.hikari.pool.PoolBase - HikariPool-1 - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@2d605a1 (No operations allowed after connection closed.). Possibly consider using a shorter maxLifetime value.
+2026-04-20 17:47:59.332 [http-nio-8080-exec-4] DEBUG c.m.e.controller.DocumentController - 文档ID: 191 浏览次数增加

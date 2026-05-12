@@ -1,0 +1,23 @@
+2026-05-05 08:29:54.814 [main] DEBUG c.m.editor.MarkdownEditorApplication - Running with Spring Boot v2.7.14, Spring v5.3.29
+2026-05-05 08:29:56.523 [main] DEBUG c.m.e.filter.JwtAuthenticationFilter - Filter 'jwtAuthenticationFilter' configured for use
+2026-05-05 11:24:43.204 [trend-data-worker] ERROR c.m.e.service.impl.TrendServiceImpl - 获取评论数数据失败
+org.apache.ibatis.binding.BindingException: Invalid bound statement (not found): com.markdown.editor.mapper.CommentMapper.countByUserIdAndDateRange
+	at org.apache.ibatis.binding.MapperMethod$SqlCommand.<init>(MapperMethod.java:235)
+	at com.baomidou.mybatisplus.core.override.MybatisMapperMethod.<init>(MybatisMapperMethod.java:50)
+	at com.baomidou.mybatisplus.core.override.MybatisMapperProxy.lambda$cachedInvoker$0(MybatisMapperProxy.java:111)
+	at java.base/java.util.concurrent.ConcurrentHashMap.computeIfAbsent(ConcurrentHashMap.java:1708)
+	at com.baomidou.mybatisplus.core.toolkit.CollectionUtils.computeIfAbsent(CollectionUtils.java:115)
+	at com.baomidou.mybatisplus.core.override.MybatisMapperProxy.cachedInvoker(MybatisMapperProxy.java:98)
+	at com.baomidou.mybatisplus.core.override.MybatisMapperProxy.invoke(MybatisMapperProxy.java:89)
+	at jdk.proxy2/jdk.proxy2.$Proxy91.countByUserIdAndDateRange(Unknown Source)
+	at com.markdown.editor.service.impl.TrendServiceImpl.fetchCommentCountData(TrendServiceImpl.java:177)
+	at com.markdown.editor.service.impl.TrendServiceImpl.lambda$getTrendData$2(TrendServiceImpl.java:74)
+	at java.base/java.util.concurrent.CompletableFuture$AsyncRun.run(CompletableFuture.java:1804)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+	at java.base/java.lang.Thread.run(Thread.java:842)
+2026-05-05 11:28:10.374 [main] DEBUG c.m.editor.MarkdownEditorApplication - Running with Spring Boot v2.7.14, Spring v5.3.29
+2026-05-05 11:28:12.300 [main] DEBUG c.m.e.filter.JwtAuthenticationFilter - Filter 'jwtAuthenticationFilter' configured for use
+2026-05-05 11:29:17.041 [http-nio-8081-exec-1] ERROR c.markdown.editor.security.JwtUtils - JWT token is expired: JWT expired at 2026-05-02T17:47:12Z. Current time: 2026-05-05T11:29:17Z, a difference of 236525040 milliseconds.  Allowed clock skew: 0 milliseconds.
+2026-05-05 11:33:36.749 [main] DEBUG c.m.editor.MarkdownEditorApplication - Running with Spring Boot v2.7.14, Spring v5.3.29
+2026-05-05 11:33:38.975 [main] DEBUG c.m.e.filter.JwtAuthenticationFilter - Filter 'jwtAuthenticationFilter' configured for use

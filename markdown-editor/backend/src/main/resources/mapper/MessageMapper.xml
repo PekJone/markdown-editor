@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.markdown.editor.mapper.MessageMapper">
+    <!-- 根据接收者ID和消息类型查询消息 -->
+    <select id="selectByReceiverIdAndType" resultType="com.markdown.editor.entity.Message">
+        SELECT *
+        FROM messages
+        WHERE receiver_id = #{receiverId} AND type = #{type}
+        ORDER BY created_at DESC
+    </select>
+    
+    <!-- 根据接收者ID查询未读消息数量 -->
+    <select id="countUnreadByReceiverId" resultType="int">
+        SELECT COUNT(*)
+        FROM messages
+        WHERE receiver_id = #{receiverId} AND is_read = 0
+    </select>
+    
+    <!-- 将消息标记为已读 -->
+    <update id="updateToReadByReceiverId">
+        UPDATE messages
+        SET is_read = 1, updated_at = NOW()
+        WHERE receiver_id = #{receiverId} AND is_read = 0
+    </update>
+</mapper>

@@ -1,0 +1,1108 @@
+2026-05-06 17:44:33.454 [main] INFO  c.m.editor.MarkdownEditorApplication - Starting MarkdownEditorApplication using Java 17.0.12 on DESKTOP-THE2ARB with PID 34744 (D:\workspace\spring-cloud-center\wechat-mini-backend\markdown-editor\backend\target\classes started by Murphy in D:\workspace\spring-cloud-center\wechat-mini-backend\markdown-editor\backend)
+2026-05-06 17:44:33.459 [main] INFO  c.m.editor.MarkdownEditorApplication - No active profile set, falling back to 1 default profile: "default"
+2026-05-06 17:44:35.956 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8081"]
+2026-05-06 17:44:35.959 [main] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2026-05-06 17:44:35.960 [main] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.78]
+2026-05-06 17:44:36.092 [main] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2026-05-06 17:44:38.495 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8081"]
+2026-05-06 17:44:39.489 [main] INFO  c.m.editor.MarkdownEditorApplication - Started MarkdownEditorApplication in 6.707 seconds (JVM running for 7.259)
+2026-05-06 17:45:38.862 [http-nio-8081-exec-1] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2026-05-06 17:45:38.930 [http-nio-8081-exec-1] ERROR c.markdown.editor.security.JwtUtils - JWT token is expired: JWT expired at 2026-05-05T18:07:00Z. Current time: 2026-05-06T17:45:38Z, a difference of 85118930 milliseconds.  Allowed clock skew: 0 milliseconds.
+2026-05-06 17:45:54.989 [http-nio-8081-exec-6] INFO  c.m.editor.controller.AuthController - Login attempt for user: admin
+2026-05-06 17:45:56.521 [http-nio-8081-exec-8] INFO  c.m.e.controller.DocumentController - 用户[admin]获取所有文档列表，页码: 0, 每页大小: 10
+2026-05-06 17:45:56.654 [http-nio-8081-exec-9] INFO  c.m.e.s.impl.StatisticsServiceImpl - 获取到121篇文档
+2026-05-06 17:45:56.654 [http-nio-8081-exec-9] INFO  c.m.e.s.impl.StatisticsServiceImpl - 文档ID: 238, 浏览量: 47
+2026-05-06 17:45:56.654 [http-nio-8081-exec-9] INFO  c.m.e.s.impl.StatisticsServiceImpl - 文档ID: 180, 浏览量: 110
+2026-05-06 17:45:56.654 [http-nio-8081-exec-9] INFO  c.m.e.s.impl.StatisticsServiceImpl - 文档ID: 237, 浏览量: 14
+2026-05-06 17:45:56.654 [http-nio-8081-exec-9] INFO  c.m.e.s.impl.StatisticsServiceImpl - 文档ID: 236, 浏览量: 5
+2026-05-06 17:45:56.654 [http-nio-8081-exec-9] INFO  c.m.e.s.impl.StatisticsServiceImpl - 文档ID: 234, 浏览量: 1
+2026-05-06 17:45:56.654 [http-nio-8081-exec-9] INFO  c.m.e.s.impl.StatisticsServiceImpl - 文档ID: 233, 浏览量: 2
+2026-05-06 17:45:56.654 [http-nio-8081-exec-9] INFO  c.m.e.s.impl.StatisticsServiceImpl - 文档ID: 182, 浏览量: 108
+2026-05-06 17:45:56.654 [http-nio-8081-exec-9] INFO  c.m.e.s.impl.StatisticsServiceImpl - 文档ID: 181, 浏览量: 77
+2026-05-06 17:45:56.654 [http-nio-8081-exec-9] INFO  c.m.e.s.impl.StatisticsServiceImpl - 文档ID: 179, 浏览量: 68
+2026-05-06 17:45:56.655 [http-nio-8081-exec-9] INFO  c.m.e.s.impl.StatisticsServiceImpl - 文档ID: 178, 浏览量: 85
+2026-05-06 17:45:56.655 [http-nio-8081-exec-9] INFO  c.m.e.s.impl.StatisticsServiceImpl - 文档ID: 177, 浏览量: 75
+2026-05-06 17:45:56.655 [http-nio-8081-exec-9] INFO  c.m.e.s.impl.StatisticsServiceImpl - 文档ID: 176, 浏览量: 77
+2026-05-06 17:45:56.655 [http-nio-8081-exec-9] INFO  c.m.e.s.impl.StatisticsServiceImpl - 文档ID: 175, 浏览量: 74
+2026-05-06 17:45:56.655 [http-nio-8081-exec-9] INFO  c.m.e.s.impl.StatisticsServiceImpl - 文档ID: 232, 浏览量: 0
+2026-05-06 17:45:56.655 [http-nio-8081-exec-9] INFO  c.m.e.s.impl.StatisticsServiceImpl - 文档ID: 253, 浏览量: 0
+2026-05-06 17:45:56.655 [http-nio-8081-exec-9] INFO  c.m.e.s.impl.StatisticsServiceImpl - 文档ID: 252, 浏览量: 0
+2026-05-06 17:45:56.655 [http-nio-8081-exec-9] INFO  c.m.e.s.impl.StatisticsServiceImpl - 文档ID: 251, 浏览量: 0
+2026-05-06 17:45:56.655 [http-nio-8081-exec-9] INFO  c.m.e.s.impl.StatisticsServiceImpl - 文档ID: 243, 浏览量: 3
+2026-05-06 17:45:56.655 [http-nio-8081-exec-8] INFO  c.m.e.controller.DocumentController - 用户[admin]获取所有文档列表成功，共138个文档
+2026-05-06 17:45:56.656 [http-nio-8081-exec-9] INFO  c.m.e.s.impl.StatisticsServiceImpl - 文档ID: 242, 浏览量: 1
+2026-05-06 17:45:56.656 [http-nio-8081-exec-9] INFO  c.m.e.s.impl.StatisticsServiceImpl - 文档ID: 241, 浏览量: 3
+2026-05-06 17:45:56.656 [http-nio-8081-exec-9] INFO  c.m.e.s.impl.StatisticsServiceImpl - 文档ID: 240, 浏览量: 0
+2026-05-06 17:45:56.656 [http-nio-8081-exec-9] INFO  c.m.e.s.impl.StatisticsServiceImpl - 文档ID: 239, 浏览量: 0
+2026-05-06 17:45:56.657 [http-nio-8081-exec-9] INFO  c.m.e.s.impl.StatisticsServiceImpl - 文档ID: 231, 浏览量: 30
+2026-05-06 17:45:56.657 [http-nio-8081-exec-9] INFO  c.m.e.s.impl.StatisticsServiceImpl - 文档ID: 249, 浏览量: 0
+2026-05-06 17:45:56.657 [http-nio-8081-exec-9] INFO  c.m.e.s.impl.StatisticsServiceImpl - 文档ID: 244, 浏览量: 0
+2026-05-06 17:45:56.657 [http-nio-8081-exec-9] INFO  c.m.e.s.impl.StatisticsServiceImpl - 文档ID: 248, 浏览量: 0
+2026-05-06 17:45:56.657 [http-nio-8081-exec-9] INFO  c.m.e.s.impl.StatisticsServiceImpl - 文档ID: 235, 浏览量: 0
+2026-05-06 17:45:56.657 [http-nio-8081-exec-9] INFO  c.m.e.s.impl.StatisticsServiceImpl - 文档ID: 191, 浏览量: 187
+2026-05-06 17:45:56.657 [http-nio-8081-exec-9] INFO  c.m.e.s.impl.StatisticsServiceImpl - 文档ID: 112, 浏览量: 177
+2026-05-06 17:45:56.657 [http-nio-8081-exec-9] INFO  c.m.e.s.impl.StatisticsServiceImpl - 文档ID: 151, 浏览量: 118
+2026-05-06 17:45:56.657 [http-nio-8081-exec-9] INFO  c.m.e.s.impl.StatisticsServiceImpl - 文档ID: 215, 浏览量: 80
+2026-05-06 17:45:56.658 [http-nio-8081-exec-9] INFO  c.m.e.s.impl.StatisticsServiceImpl - 文档ID: 115, 浏览量: 112
+2026-05-06 17:45:56.658 [http-nio-8081-exec-9] INFO  c.m.e.s.impl.StatisticsServiceImpl - 文档ID: 114, 浏览量: 90
+2026-05-06 17:45:56.658 [http-nio-8081-exec-9] INFO  c.m.e.s.impl.StatisticsServiceImpl - 文档ID: 117, 浏览量: 68
+2026-05-06 17:45:56.658 [http-nio-8081-exec-9] INFO  c.m.e.s.impl.StatisticsServiceImpl - 文档ID: 118, 浏览量: 89
+2026-05-06 17:45:56.658 [http-nio-8081-exec-9] INFO  c.m.e.s.impl.StatisticsServiceImpl - 文档ID: 119, 浏览量: 103
+2026-05-06 17:45:56.658 [http-nio-8081-exec-9] INFO  c.m.e.s.impl.StatisticsServiceImpl - 文档ID: 121, 浏览量: 78
+2026-05-06 17:45:56.659 [http-nio-8081-exec-9] INFO  c.m.e.s.impl.StatisticsServiceImpl - 文档ID: 122, 浏览量: 85
+2026-05-06 17:45:56.659 [http-nio-8081-exec-9] INFO  c.m.e.s.impl.StatisticsServiceImpl - 文档ID: 124, 浏览量: 69
+2026-05-06 17:45:56.659 [http-nio-8081-exec-9] INFO  c.m.e.s.impl.StatisticsServiceImpl - 文档ID: 125, 浏览量: 82
+2026-05-06 17:45:56.659 [http-nio-8081-exec-9] INFO  c.m.e.s.impl.StatisticsServiceImpl - 文档ID: 126, 浏览量: 75
+2026-05-06 17:45:56.659 [http-nio-8081-exec-9] INFO  c.m.e.s.impl.StatisticsServiceImpl - 文档ID: 128, 浏览量: 94
+2026-05-06 17:45:56.659 [http-nio-8081-exec-9] INFO  c.m.e.s.impl.StatisticsServiceImpl - 文档ID: 129, 浏览量: 81
+2026-05-06 17:45:56.659 [http-nio-8081-exec-9] INFO  c.m.e.s.impl.StatisticsServiceImpl - 文档ID: 130, 浏览量: 77
+2026-05-06 17:45:56.659 [http-nio-8081-exec-9] INFO  c.m.e.s.impl.StatisticsServiceImpl - 文档ID: 131, 浏览量: 86
+2026-05-06 17:45:56.659 [http-nio-8081-exec-9] INFO  c.m.e.s.impl.StatisticsServiceImpl - 文档ID: 133, 浏览量: 92
+2026-05-06 17:45:56.659 [http-nio-8081-exec-9] INFO  c.m.e.s.impl.StatisticsServiceImpl - 文档ID: 134, 浏览量: 83
+2026-05-06 17:45:56.660 [http-nio-8081-exec-9] INFO  c.m.e.s.impl.StatisticsServiceImpl - 文档ID: 135, 浏览量: 79
+2026-05-06 17:45:56.660 [http-nio-8081-exec-9] INFO  c.m.e.s.impl.StatisticsServiceImpl - 文档ID: 136, 浏览量: 84
+2026-05-06 17:45:56.660 [http-nio-8081-exec-9] INFO  c.m.e.s.impl.StatisticsServiceImpl - 文档ID: 137, 浏览量: 72
+2026-05-06 17:45:56.660 [http-nio-8081-exec-9] INFO  c.m.e.s.impl.StatisticsServiceImpl - 文档ID: 138, 浏览量: 88
+2026-05-06 17:45:56.660 [http-nio-8081-exec-9] INFO  c.m.e.s.impl.StatisticsServiceImpl - 文档ID: 139, 浏览量: 76
+2026-05-06 17:45:56.660 [http-nio-8081-exec-9] INFO  c.m.e.s.impl.StatisticsServiceImpl - 文档ID: 140, 浏览量: 67
+2026-05-06 17:45:56.660 [http-nio-8081-exec-9] INFO  c.m.e.s.impl.StatisticsServiceImpl - 文档ID: 141, 浏览量: 71
+2026-05-06 17:45:56.660 [http-nio-8081-exec-9] INFO  c.m.e.s.impl.StatisticsServiceImpl - 文档ID: 142, 浏览量: 80
+2026-05-06 17:45:56.660 [http-nio-8081-exec-9] INFO  c.m.e.s.impl.StatisticsServiceImpl - 文档ID: 143, 浏览量: 74
+2026-05-06 17:45:56.660 [http-nio-8081-exec-9] INFO  c.m.e.s.impl.StatisticsServiceImpl - 文档ID: 146, 浏览量: 73
+2026-05-06 17:45:56.660 [http-nio-8081-exec-9] INFO  c.m.e.s.impl.StatisticsServiceImpl - 文档ID: 147, 浏览量: 69
+2026-05-06 17:45:56.660 [http-nio-8081-exec-9] INFO  c.m.e.s.impl.StatisticsServiceImpl - 文档ID: 149, 浏览量: 70
+2026-05-06 17:45:56.660 [http-nio-8081-exec-9] INFO  c.m.e.s.impl.StatisticsServiceImpl - 文档ID: 150, 浏览量: 78
+2026-05-06 17:45:56.660 [http-nio-8081-exec-9] INFO  c.m.e.s.impl.StatisticsServiceImpl - 文档ID: 152, 浏览量: 76
+2026-05-06 17:45:56.661 [http-nio-8081-exec-9] INFO  c.m.e.s.impl.StatisticsServiceImpl - 文档ID: 153, 浏览量: 82
+2026-05-06 17:45:56.661 [http-nio-8081-exec-9] INFO  c.m.e.s.impl.StatisticsServiceImpl - 文档ID: 154, 浏览量: 73
+2026-05-06 17:45:56.661 [http-nio-8081-exec-9] INFO  c.m.e.s.impl.StatisticsServiceImpl - 文档ID: 155, 浏览量: 77
+2026-05-06 17:45:56.661 [http-nio-8081-exec-9] INFO  c.m.e.s.impl.StatisticsServiceImpl - 文档ID: 156, 浏览量: 71
+2026-05-06 17:45:56.661 [http-nio-8081-exec-9] INFO  c.m.e.s.impl.StatisticsServiceImpl - 文档ID: 157, 浏览量: 79
+2026-05-06 17:45:56.661 [http-nio-8081-exec-9] INFO  c.m.e.s.impl.StatisticsServiceImpl - 文档ID: 158, 浏览量: 83
+2026-05-06 17:45:56.661 [http-nio-8081-exec-9] INFO  c.m.e.s.impl.StatisticsServiceImpl - 文档ID: 159, 浏览量: 75
+2026-05-06 17:45:56.661 [http-nio-8081-exec-9] INFO  c.m.e.s.impl.StatisticsServiceImpl - 文档ID: 160, 浏览量: 78
+2026-05-06 17:45:56.661 [http-nio-8081-exec-9] INFO  c.m.e.s.impl.StatisticsServiceImpl - 文档ID: 161, 浏览量: 72
+2026-05-06 17:45:56.661 [http-nio-8081-exec-9] INFO  c.m.e.s.impl.StatisticsServiceImpl - 文档ID: 162, 浏览量: 70
+2026-05-06 17:45:56.661 [http-nio-8081-exec-9] INFO  c.m.e.s.impl.StatisticsServiceImpl - 文档ID: 163, 浏览量: 81
+2026-05-06 17:45:56.661 [http-nio-8081-exec-9] INFO  c.m.e.s.impl.StatisticsServiceImpl - 文档ID: 164, 浏览量: 74
+2026-05-06 17:45:56.661 [http-nio-8081-exec-9] INFO  c.m.e.s.impl.StatisticsServiceImpl - 文档ID: 165, 浏览量: 70
+2026-05-06 17:45:56.662 [http-nio-8081-exec-9] INFO  c.m.e.s.impl.StatisticsServiceImpl - 文档ID: 166, 浏览量: 68
+2026-05-06 17:45:56.662 [http-nio-8081-exec-9] INFO  c.m.e.s.impl.StatisticsServiceImpl - 文档ID: 167, 浏览量: 76
+2026-05-06 17:45:56.662 [http-nio-8081-exec-9] INFO  c.m.e.s.impl.StatisticsServiceImpl - 文档ID: 168, 浏览量: 73
+2026-05-06 17:45:56.662 [http-nio-8081-exec-9] INFO  c.m.e.s.impl.StatisticsServiceImpl - 文档ID: 169, 浏览量: 67
+2026-05-06 17:45:56.662 [http-nio-8081-exec-9] INFO  c.m.e.s.impl.StatisticsServiceImpl - 文档ID: 170, 浏览量: 80
+2026-05-06 17:45:56.662 [http-nio-8081-exec-9] INFO  c.m.e.s.impl.StatisticsServiceImpl - 文档ID: 171, 浏览量: 78
+2026-05-06 17:45:56.662 [http-nio-8081-exec-9] INFO  c.m.e.s.impl.StatisticsServiceImpl - 文档ID: 172, 浏览量: 72
+2026-05-06 17:45:56.662 [http-nio-8081-exec-9] INFO  c.m.e.s.impl.StatisticsServiceImpl - 文档ID: 173, 浏览量: 75
+2026-05-06 17:45:56.662 [http-nio-8081-exec-9] INFO  c.m.e.s.impl.StatisticsServiceImpl - 文档ID: 174, 浏览量: 84
+2026-05-06 17:45:56.662 [http-nio-8081-exec-9] INFO  c.m.e.s.impl.StatisticsServiceImpl - 文档ID: 183, 浏览量: 76
+2026-05-06 17:45:56.662 [http-nio-8081-exec-9] INFO  c.m.e.s.impl.StatisticsServiceImpl - 文档ID: 184, 浏览量: 72
+2026-05-06 17:45:56.662 [http-nio-8081-exec-9] INFO  c.m.e.s.impl.StatisticsServiceImpl - 文档ID: 185, 浏览量: 78
+2026-05-06 17:45:56.662 [http-nio-8081-exec-9] INFO  c.m.e.s.impl.StatisticsServiceImpl - 文档ID: 186, 浏览量: 71
+2026-05-06 17:45:56.662 [http-nio-8081-exec-9] INFO  c.m.e.s.impl.StatisticsServiceImpl - 文档ID: 187, 浏览量: 68
+2026-05-06 17:45:56.662 [http-nio-8081-exec-9] INFO  c.m.e.s.impl.StatisticsServiceImpl - 文档ID: 188, 浏览量: 73
+2026-05-06 17:45:56.662 [http-nio-8081-exec-9] INFO  c.m.e.s.impl.StatisticsServiceImpl - 文档ID: 189, 浏览量: 80
+2026-05-06 17:45:56.662 [http-nio-8081-exec-9] INFO  c.m.e.s.impl.StatisticsServiceImpl - 文档ID: 190, 浏览量: 75
+2026-05-06 17:45:56.662 [http-nio-8081-exec-9] INFO  c.m.e.s.impl.StatisticsServiceImpl - 文档ID: 192, 浏览量: 76
+2026-05-06 17:45:56.662 [http-nio-8081-exec-9] INFO  c.m.e.s.impl.StatisticsServiceImpl - 文档ID: 193, 浏览量: 72
+2026-05-06 17:45:56.662 [http-nio-8081-exec-9] INFO  c.m.e.s.impl.StatisticsServiceImpl - 文档ID: 194, 浏览量: 79
+2026-05-06 17:45:56.662 [http-nio-8081-exec-9] INFO  c.m.e.s.impl.StatisticsServiceImpl - 文档ID: 195, 浏览量: 74
+2026-05-06 17:45:56.662 [http-nio-8081-exec-9] INFO  c.m.e.s.impl.StatisticsServiceImpl - 文档ID: 196, 浏览量: 81
+2026-05-06 17:45:56.663 [http-nio-8081-exec-9] INFO  c.m.e.s.impl.StatisticsServiceImpl - 文档ID: 197, 浏览量: 77
+2026-05-06 17:45:56.663 [http-nio-8081-exec-9] INFO  c.m.e.s.impl.StatisticsServiceImpl - 文档ID: 198, 浏览量: 70
+2026-05-06 17:45:56.663 [http-nio-8081-exec-9] INFO  c.m.e.s.impl.StatisticsServiceImpl - 文档ID: 199, 浏览量: 75
+2026-05-06 17:45:56.663 [http-nio-8081-exec-9] INFO  c.m.e.s.impl.StatisticsServiceImpl - 文档ID: 200, 浏览量: 85
+2026-05-06 17:45:56.663 [http-nio-8081-exec-9] INFO  c.m.e.s.impl.StatisticsServiceImpl - 文档ID: 201, 浏览量: 71
+2026-05-06 17:45:56.663 [http-nio-8081-exec-9] INFO  c.m.e.s.impl.StatisticsServiceImpl - 文档ID: 202, 浏览量: 78
+2026-05-06 17:45:56.663 [http-nio-8081-exec-9] INFO  c.m.e.s.impl.StatisticsServiceImpl - 文档ID: 203, 浏览量: 73
+2026-05-06 17:45:56.663 [http-nio-8081-exec-9] INFO  c.m.e.s.impl.StatisticsServiceImpl - 文档ID: 204, 浏览量: 69
+2026-05-06 17:45:56.663 [http-nio-8081-exec-9] INFO  c.m.e.s.impl.StatisticsServiceImpl - 文档ID: 205, 浏览量: 74
+2026-05-06 17:45:56.663 [http-nio-8081-exec-9] INFO  c.m.e.s.impl.StatisticsServiceImpl - 文档ID: 206, 浏览量: 77
+2026-05-06 17:45:56.663 [http-nio-8081-exec-9] INFO  c.m.e.s.impl.StatisticsServiceImpl - 文档ID: 207, 浏览量: 74
+2026-05-06 17:45:56.677 [http-nio-8081-exec-9] INFO  c.m.e.s.impl.StatisticsServiceImpl - 文档ID: 208, 浏览量: 79
+2026-05-06 17:45:56.678 [http-nio-8081-exec-9] INFO  c.m.e.s.impl.StatisticsServiceImpl - 文档ID: 209, 浏览量: 75
+2026-05-06 17:45:56.678 [http-nio-8081-exec-9] INFO  c.m.e.s.impl.StatisticsServiceImpl - 文档ID: 210, 浏览量: 81
+2026-05-06 17:45:56.678 [http-nio-8081-exec-9] INFO  c.m.e.s.impl.StatisticsServiceImpl - 文档ID: 211, 浏览量: 76
+2026-05-06 17:45:56.678 [http-nio-8081-exec-9] INFO  c.m.e.s.impl.StatisticsServiceImpl - 文档ID: 212, 浏览量: 73
+2026-05-06 17:45:56.678 [http-nio-8081-exec-9] INFO  c.m.e.s.impl.StatisticsServiceImpl - 文档ID: 213, 浏览量: 70
+2026-05-06 17:45:56.678 [http-nio-8081-exec-9] INFO  c.m.e.s.impl.StatisticsServiceImpl - 文档ID: 214, 浏览量: 68
+2026-05-06 17:45:56.678 [http-nio-8081-exec-9] INFO  c.m.e.s.impl.StatisticsServiceImpl - 文档ID: 216, 浏览量: 78
+2026-05-06 17:45:56.678 [http-nio-8081-exec-9] INFO  c.m.e.s.impl.StatisticsServiceImpl - 文档ID: 217, 浏览量: 71
+2026-05-06 17:45:56.678 [http-nio-8081-exec-9] INFO  c.m.e.s.impl.StatisticsServiceImpl - 文档ID: 218, 浏览量: 67
+2026-05-06 17:45:56.678 [http-nio-8081-exec-9] INFO  c.m.e.s.impl.StatisticsServiceImpl - 文档ID: 219, 浏览量: 75
+2026-05-06 17:45:56.678 [http-nio-8081-exec-9] INFO  c.m.e.s.impl.StatisticsServiceImpl - 文档ID: 220, 浏览量: 72
+2026-05-06 17:45:56.678 [http-nio-8081-exec-9] INFO  c.m.e.s.impl.StatisticsServiceImpl - 文档ID: 221, 浏览量: 77
+2026-05-06 17:45:56.678 [http-nio-8081-exec-9] INFO  c.m.e.s.impl.StatisticsServiceImpl - 文档ID: 222, 浏览量: 70
+2026-05-06 17:45:56.678 [http-nio-8081-exec-9] INFO  c.m.e.s.impl.StatisticsServiceImpl - 总浏览量: 8251
+2026-05-06 17:45:56.950 [http-nio-8081-exec-9] INFO  c.m.e.s.impl.StatisticsServiceImpl - 开始计算当前连续创作天数，userId: 4
+2026-05-06 17:45:56.998 [http-nio-8081-exec-9] INFO  c.m.e.s.impl.StatisticsServiceImpl - 获取到用户4的文章数量: 121
+2026-05-06 17:45:56.998 [http-nio-8081-exec-9] INFO  c.m.e.s.impl.StatisticsServiceImpl - 文章ID: 238, 创建日期: 2026-04-24
+2026-05-06 17:45:56.999 [http-nio-8081-exec-9] INFO  c.m.e.s.impl.StatisticsServiceImpl - 文章ID: 180, 创建日期: 2026-04-24
+2026-05-06 17:45:56.999 [http-nio-8081-exec-9] INFO  c.m.e.s.impl.StatisticsServiceImpl - 文章ID: 237, 创建日期: 2026-04-30
+2026-05-06 17:45:56.999 [http-nio-8081-exec-9] INFO  c.m.e.s.impl.StatisticsServiceImpl - 文章ID: 236, 创建日期: 2026-04-29
+2026-05-06 17:45:56.999 [http-nio-8081-exec-9] INFO  c.m.e.s.impl.StatisticsServiceImpl - 文章ID: 234, 创建日期: 2026-04-27
+2026-05-06 17:45:56.999 [http-nio-8081-exec-9] INFO  c.m.e.s.impl.StatisticsServiceImpl - 文章ID: 233, 创建日期: 2026-04-26
+2026-05-06 17:45:56.999 [http-nio-8081-exec-9] INFO  c.m.e.s.impl.StatisticsServiceImpl - 文章ID: 182, 创建日期: 2026-04-25
+2026-05-06 17:45:57.000 [http-nio-8081-exec-9] INFO  c.m.e.s.impl.StatisticsServiceImpl - 文章ID: 181, 创建日期: 2026-04-24
+2026-05-06 17:45:57.000 [http-nio-8081-exec-9] INFO  c.m.e.s.impl.StatisticsServiceImpl - 文章ID: 179, 创建日期: 2026-04-22
+2026-05-06 17:45:57.000 [http-nio-8081-exec-9] INFO  c.m.e.s.impl.StatisticsServiceImpl - 文章ID: 178, 创建日期: 2026-04-21
+2026-05-06 17:45:57.000 [http-nio-8081-exec-9] INFO  c.m.e.s.impl.StatisticsServiceImpl - 文章ID: 177, 创建日期: 2026-04-20
+2026-05-06 17:45:57.000 [http-nio-8081-exec-9] INFO  c.m.e.s.impl.StatisticsServiceImpl - 文章ID: 176, 创建日期: 2026-04-19
+2026-05-06 17:45:57.000 [http-nio-8081-exec-9] INFO  c.m.e.s.impl.StatisticsServiceImpl - 文章ID: 175, 创建日期: 2026-04-17
+2026-05-06 17:45:57.000 [http-nio-8081-exec-9] INFO  c.m.e.s.impl.StatisticsServiceImpl - 文章ID: 232, 创建日期: 2026-04-25
+2026-05-06 17:45:57.000 [http-nio-8081-exec-9] INFO  c.m.e.s.impl.StatisticsServiceImpl - 文章ID: 253, 创建日期: 2026-04-24
+2026-05-06 17:45:57.000 [http-nio-8081-exec-9] INFO  c.m.e.s.impl.StatisticsServiceImpl - 文章ID: 252, 创建日期: 2026-04-24
+2026-05-06 17:45:57.000 [http-nio-8081-exec-9] INFO  c.m.e.s.impl.StatisticsServiceImpl - 文章ID: 251, 创建日期: 2026-04-24
+2026-05-06 17:45:57.000 [http-nio-8081-exec-9] INFO  c.m.e.s.impl.StatisticsServiceImpl - 文章ID: 243, 创建日期: 2026-04-24
+2026-05-06 17:45:57.000 [http-nio-8081-exec-9] INFO  c.m.e.s.impl.StatisticsServiceImpl - 文章ID: 242, 创建日期: 2026-04-24
+2026-05-06 17:45:57.000 [http-nio-8081-exec-9] INFO  c.m.e.s.impl.StatisticsServiceImpl - 文章ID: 241, 创建日期: 2026-04-24
+2026-05-06 17:45:57.000 [http-nio-8081-exec-9] INFO  c.m.e.s.impl.StatisticsServiceImpl - 文章ID: 240, 创建日期: 2026-04-24
+2026-05-06 17:45:57.000 [http-nio-8081-exec-9] INFO  c.m.e.s.impl.StatisticsServiceImpl - 文章ID: 239, 创建日期: 2026-04-24
+2026-05-06 17:45:57.000 [http-nio-8081-exec-9] INFO  c.m.e.s.impl.StatisticsServiceImpl - 文章ID: 231, 创建日期: 2026-04-20
+2026-05-06 17:45:57.000 [http-nio-8081-exec-9] INFO  c.m.e.s.impl.StatisticsServiceImpl - 文章ID: 249, 创建日期: 2026-04-24
+2026-05-06 17:45:57.000 [http-nio-8081-exec-9] INFO  c.m.e.s.impl.StatisticsServiceImpl - 文章ID: 244, 创建日期: 2026-04-24
+2026-05-06 17:45:57.000 [http-nio-8081-exec-9] INFO  c.m.e.s.impl.StatisticsServiceImpl - 文章ID: 248, 创建日期: 2026-04-24
+2026-05-06 17:45:57.000 [http-nio-8081-exec-9] INFO  c.m.e.s.impl.StatisticsServiceImpl - 文章ID: 235, 创建日期: 2026-04-28
+2026-05-06 17:45:57.000 [http-nio-8081-exec-9] INFO  c.m.e.s.impl.StatisticsServiceImpl - 文章ID: 191, 创建日期: 2026-04-18
+2026-05-06 17:45:57.000 [http-nio-8081-exec-9] INFO  c.m.e.s.impl.StatisticsServiceImpl - 文章ID: 112, 创建日期: 2026-04-18
+2026-05-06 17:45:57.000 [http-nio-8081-exec-9] INFO  c.m.e.s.impl.StatisticsServiceImpl - 文章ID: 151, 创建日期: 2026-04-18
+2026-05-06 17:45:57.000 [http-nio-8081-exec-9] INFO  c.m.e.s.impl.StatisticsServiceImpl - 文章ID: 215, 创建日期: 2026-04-18
+2026-05-06 17:45:57.000 [http-nio-8081-exec-9] INFO  c.m.e.s.impl.StatisticsServiceImpl - 文章ID: 115, 创建日期: 2026-04-18
+2026-05-06 17:45:57.000 [http-nio-8081-exec-9] INFO  c.m.e.s.impl.StatisticsServiceImpl - 文章ID: 114, 创建日期: 2026-04-18
+2026-05-06 17:45:57.000 [http-nio-8081-exec-9] INFO  c.m.e.s.impl.StatisticsServiceImpl - 文章ID: 117, 创建日期: 2026-04-18
+2026-05-06 17:45:57.000 [http-nio-8081-exec-9] INFO  c.m.e.s.impl.StatisticsServiceImpl - 文章ID: 118, 创建日期: 2026-04-18
+2026-05-06 17:45:57.000 [http-nio-8081-exec-9] INFO  c.m.e.s.impl.StatisticsServiceImpl - 文章ID: 119, 创建日期: 2026-04-18
+2026-05-06 17:45:57.000 [http-nio-8081-exec-9] INFO  c.m.e.s.impl.StatisticsServiceImpl - 文章ID: 121, 创建日期: 2026-04-18
+2026-05-06 17:45:57.000 [http-nio-8081-exec-9] INFO  c.m.e.s.impl.StatisticsServiceImpl - 文章ID: 122, 创建日期: 2026-04-18
+2026-05-06 17:45:57.000 [http-nio-8081-exec-9] INFO  c.m.e.s.impl.StatisticsServiceImpl - 文章ID: 124, 创建日期: 2026-04-18
+2026-05-06 17:45:57.000 [http-nio-8081-exec-9] INFO  c.m.e.s.impl.StatisticsServiceImpl - 文章ID: 125, 创建日期: 2026-04-18
+2026-05-06 17:45:57.000 [http-nio-8081-exec-9] INFO  c.m.e.s.impl.StatisticsServiceImpl - 文章ID: 126, 创建日期: 2026-04-18
+2026-05-06 17:45:57.000 [http-nio-8081-exec-9] INFO  c.m.e.s.impl.StatisticsServiceImpl - 文章ID: 128, 创建日期: 2026-04-18
+2026-05-06 17:45:57.000 [http-nio-8081-exec-9] INFO  c.m.e.s.impl.StatisticsServiceImpl - 文章ID: 129, 创建日期: 2026-04-18
+2026-05-06 17:45:57.000 [http-nio-8081-exec-9] INFO  c.m.e.s.impl.StatisticsServiceImpl - 文章ID: 130, 创建日期: 2026-04-18
+2026-05-06 17:45:57.000 [http-nio-8081-exec-9] INFO  c.m.e.s.impl.StatisticsServiceImpl - 文章ID: 131, 创建日期: 2026-04-18
+2026-05-06 17:45:57.000 [http-nio-8081-exec-9] INFO  c.m.e.s.impl.StatisticsServiceImpl - 文章ID: 133, 创建日期: 2026-04-18
+2026-05-06 17:45:57.000 [http-nio-8081-exec-9] INFO  c.m.e.s.impl.StatisticsServiceImpl - 文章ID: 134, 创建日期: 2026-04-18
+2026-05-06 17:45:57.001 [http-nio-8081-exec-9] INFO  c.m.e.s.impl.StatisticsServiceImpl - 文章ID: 135, 创建日期: 2026-04-18
+2026-05-06 17:45:57.001 [http-nio-8081-exec-9] INFO  c.m.e.s.impl.StatisticsServiceImpl - 文章ID: 136, 创建日期: 2026-04-18
+2026-05-06 17:45:57.001 [http-nio-8081-exec-9] INFO  c.m.e.s.impl.StatisticsServiceImpl - 文章ID: 137, 创建日期: 2026-04-18
+2026-05-06 17:45:57.001 [http-nio-8081-exec-9] INFO  c.m.e.s.impl.StatisticsServiceImpl - 文章ID: 138, 创建日期: 2026-04-18
+2026-05-06 17:45:57.002 [http-nio-8081-exec-9] INFO  c.m.e.s.impl.StatisticsServiceImpl - 文章ID: 139, 创建日期: 2026-04-18
+2026-05-06 17:45:57.002 [http-nio-8081-exec-9] INFO  c.m.e.s.impl.StatisticsServiceImpl - 文章ID: 140, 创建日期: 2026-04-18
+2026-05-06 17:45:57.002 [http-nio-8081-exec-9] INFO  c.m.e.s.impl.StatisticsServiceImpl - 文章ID: 141, 创建日期: 2026-04-18
+2026-05-06 17:45:57.002 [http-nio-8081-exec-9] INFO  c.m.e.s.impl.StatisticsServiceImpl - 文章ID: 142, 创建日期: 2026-04-18
+2026-05-06 17:45:57.004 [http-nio-8081-exec-9] INFO  c.m.e.s.impl.StatisticsServiceImpl - 文章ID: 143, 创建日期: 2026-04-18
+2026-05-06 17:45:57.004 [http-nio-8081-exec-9] INFO  c.m.e.s.impl.StatisticsServiceImpl - 文章ID: 146, 创建日期: 2026-04-18
+2026-05-06 17:45:57.004 [http-nio-8081-exec-9] INFO  c.m.e.s.impl.StatisticsServiceImpl - 文章ID: 147, 创建日期: 2026-04-18
+2026-05-06 17:45:57.004 [http-nio-8081-exec-9] INFO  c.m.e.s.impl.StatisticsServiceImpl - 文章ID: 149, 创建日期: 2026-04-18
+2026-05-06 17:45:57.004 [http-nio-8081-exec-9] INFO  c.m.e.s.impl.StatisticsServiceImpl - 文章ID: 150, 创建日期: 2026-04-18
+2026-05-06 17:45:57.004 [http-nio-8081-exec-9] INFO  c.m.e.s.impl.StatisticsServiceImpl - 文章ID: 152, 创建日期: 2026-04-18
+2026-05-06 17:45:57.004 [http-nio-8081-exec-9] INFO  c.m.e.s.impl.StatisticsServiceImpl - 文章ID: 153, 创建日期: 2026-04-18
+2026-05-06 17:45:57.004 [http-nio-8081-exec-9] INFO  c.m.e.s.impl.StatisticsServiceImpl - 文章ID: 154, 创建日期: 2026-04-18
+2026-05-06 17:45:57.004 [http-nio-8081-exec-9] INFO  c.m.e.s.impl.StatisticsServiceImpl - 文章ID: 155, 创建日期: 2026-04-18
+2026-05-06 17:45:57.004 [http-nio-8081-exec-9] INFO  c.m.e.s.impl.StatisticsServiceImpl - 文章ID: 156, 创建日期: 2026-04-18
+2026-05-06 17:45:57.004 [http-nio-8081-exec-9] INFO  c.m.e.s.impl.StatisticsServiceImpl - 文章ID: 157, 创建日期: 2026-04-18
+2026-05-06 17:45:57.004 [http-nio-8081-exec-9] INFO  c.m.e.s.impl.StatisticsServiceImpl - 文章ID: 158, 创建日期: 2026-04-18
+2026-05-06 17:45:57.004 [http-nio-8081-exec-9] INFO  c.m.e.s.impl.StatisticsServiceImpl - 文章ID: 159, 创建日期: 2026-04-18
+2026-05-06 17:45:57.004 [http-nio-8081-exec-9] INFO  c.m.e.s.impl.StatisticsServiceImpl - 文章ID: 160, 创建日期: 2026-04-18
+2026-05-06 17:45:57.005 [http-nio-8081-exec-9] INFO  c.m.e.s.impl.StatisticsServiceImpl - 文章ID: 161, 创建日期: 2026-04-18
+2026-05-06 17:45:57.005 [http-nio-8081-exec-9] INFO  c.m.e.s.impl.StatisticsServiceImpl - 文章ID: 162, 创建日期: 2026-04-18
+2026-05-06 17:45:57.005 [http-nio-8081-exec-9] INFO  c.m.e.s.impl.StatisticsServiceImpl - 文章ID: 163, 创建日期: 2026-04-18
+2026-05-06 17:45:57.005 [http-nio-8081-exec-9] INFO  c.m.e.s.impl.StatisticsServiceImpl - 文章ID: 164, 创建日期: 2026-04-18
+2026-05-06 17:45:57.005 [http-nio-8081-exec-9] INFO  c.m.e.s.impl.StatisticsServiceImpl - 文章ID: 165, 创建日期: 2026-04-18
+2026-05-06 17:45:57.005 [http-nio-8081-exec-9] INFO  c.m.e.s.impl.StatisticsServiceImpl - 文章ID: 166, 创建日期: 2026-04-18
+2026-05-06 17:45:57.005 [http-nio-8081-exec-9] INFO  c.m.e.s.impl.StatisticsServiceImpl - 文章ID: 167, 创建日期: 2026-04-18
+2026-05-06 17:45:57.005 [http-nio-8081-exec-9] INFO  c.m.e.s.impl.StatisticsServiceImpl - 文章ID: 168, 创建日期: 2026-04-18
+2026-05-06 17:45:57.005 [http-nio-8081-exec-9] INFO  c.m.e.s.impl.StatisticsServiceImpl - 文章ID: 169, 创建日期: 2026-04-18
+2026-05-06 17:45:57.005 [http-nio-8081-exec-9] INFO  c.m.e.s.impl.StatisticsServiceImpl - 文章ID: 170, 创建日期: 2026-04-18
+2026-05-06 17:45:57.005 [http-nio-8081-exec-9] INFO  c.m.e.s.impl.StatisticsServiceImpl - 文章ID: 171, 创建日期: 2026-04-18
+2026-05-06 17:45:57.005 [http-nio-8081-exec-9] INFO  c.m.e.s.impl.StatisticsServiceImpl - 文章ID: 172, 创建日期: 2026-04-18
+2026-05-06 17:45:57.005 [http-nio-8081-exec-9] INFO  c.m.e.s.impl.StatisticsServiceImpl - 文章ID: 173, 创建日期: 2026-04-18
+2026-05-06 17:45:57.005 [http-nio-8081-exec-9] INFO  c.m.e.s.impl.StatisticsServiceImpl - 文章ID: 174, 创建日期: 2026-04-18
+2026-05-06 17:45:57.005 [http-nio-8081-exec-9] INFO  c.m.e.s.impl.StatisticsServiceImpl - 文章ID: 183, 创建日期: 2026-04-18
+2026-05-06 17:45:57.005 [http-nio-8081-exec-9] INFO  c.m.e.s.impl.StatisticsServiceImpl - 文章ID: 184, 创建日期: 2026-04-18
+2026-05-06 17:45:57.005 [http-nio-8081-exec-9] INFO  c.m.e.s.impl.StatisticsServiceImpl - 文章ID: 185, 创建日期: 2026-04-18
+2026-05-06 17:45:57.014 [http-nio-8081-exec-9] INFO  c.m.e.s.impl.StatisticsServiceImpl - 文章ID: 186, 创建日期: 2026-04-18
+2026-05-06 17:45:57.015 [http-nio-8081-exec-9] INFO  c.m.e.s.impl.StatisticsServiceImpl - 文章ID: 187, 创建日期: 2026-04-18
+2026-05-06 17:45:57.015 [http-nio-8081-exec-9] INFO  c.m.e.s.impl.StatisticsServiceImpl - 文章ID: 188, 创建日期: 2026-04-18
+2026-05-06 17:45:57.015 [http-nio-8081-exec-9] INFO  c.m.e.s.impl.StatisticsServiceImpl - 文章ID: 189, 创建日期: 2026-04-18
+2026-05-06 17:45:57.015 [http-nio-8081-exec-9] INFO  c.m.e.s.impl.StatisticsServiceImpl - 文章ID: 190, 创建日期: 2026-04-18
+2026-05-06 17:45:57.015 [http-nio-8081-exec-9] INFO  c.m.e.s.impl.StatisticsServiceImpl - 文章ID: 192, 创建日期: 2026-04-18
+2026-05-06 17:45:57.015 [http-nio-8081-exec-9] INFO  c.m.e.s.impl.StatisticsServiceImpl - 文章ID: 193, 创建日期: 2026-04-18
+2026-05-06 17:45:57.015 [http-nio-8081-exec-9] INFO  c.m.e.s.impl.StatisticsServiceImpl - 文章ID: 194, 创建日期: 2026-04-18
+2026-05-06 17:45:57.015 [http-nio-8081-exec-9] INFO  c.m.e.s.impl.StatisticsServiceImpl - 文章ID: 195, 创建日期: 2026-04-18
+2026-05-06 17:45:57.015 [http-nio-8081-exec-9] INFO  c.m.e.s.impl.StatisticsServiceImpl - 文章ID: 196, 创建日期: 2026-04-18
+2026-05-06 17:45:57.015 [http-nio-8081-exec-9] INFO  c.m.e.s.impl.StatisticsServiceImpl - 文章ID: 197, 创建日期: 2026-04-18
+2026-05-06 17:45:57.015 [http-nio-8081-exec-9] INFO  c.m.e.s.impl.StatisticsServiceImpl - 文章ID: 198, 创建日期: 2026-04-18
+2026-05-06 17:45:57.015 [http-nio-8081-exec-9] INFO  c.m.e.s.impl.StatisticsServiceImpl - 文章ID: 199, 创建日期: 2026-04-18
+2026-05-06 17:45:57.015 [http-nio-8081-exec-9] INFO  c.m.e.s.impl.StatisticsServiceImpl - 文章ID: 200, 创建日期: 2026-04-18
+2026-05-06 17:45:57.015 [http-nio-8081-exec-9] INFO  c.m.e.s.impl.StatisticsServiceImpl - 文章ID: 201, 创建日期: 2026-04-18
+2026-05-06 17:45:57.015 [http-nio-8081-exec-9] INFO  c.m.e.s.impl.StatisticsServiceImpl - 文章ID: 202, 创建日期: 2026-04-18
+2026-05-06 17:45:57.015 [http-nio-8081-exec-9] INFO  c.m.e.s.impl.StatisticsServiceImpl - 文章ID: 203, 创建日期: 2026-04-18
+2026-05-06 17:45:57.015 [http-nio-8081-exec-9] INFO  c.m.e.s.impl.StatisticsServiceImpl - 文章ID: 204, 创建日期: 2026-04-18
+2026-05-06 17:45:57.015 [http-nio-8081-exec-9] INFO  c.m.e.s.impl.StatisticsServiceImpl - 文章ID: 205, 创建日期: 2026-04-18
+2026-05-06 17:45:57.015 [http-nio-8081-exec-9] INFO  c.m.e.s.impl.StatisticsServiceImpl - 文章ID: 206, 创建日期: 2026-04-18
+2026-05-06 17:45:57.015 [http-nio-8081-exec-9] INFO  c.m.e.s.impl.StatisticsServiceImpl - 文章ID: 207, 创建日期: 2026-04-18
+2026-05-06 17:45:57.015 [http-nio-8081-exec-9] INFO  c.m.e.s.impl.StatisticsServiceImpl - 文章ID: 208, 创建日期: 2026-04-18
+2026-05-06 17:45:57.015 [http-nio-8081-exec-9] INFO  c.m.e.s.impl.StatisticsServiceImpl - 文章ID: 209, 创建日期: 2026-04-18
+2026-05-06 17:45:57.015 [http-nio-8081-exec-9] INFO  c.m.e.s.impl.StatisticsServiceImpl - 文章ID: 210, 创建日期: 2026-04-18
+2026-05-06 17:45:57.015 [http-nio-8081-exec-9] INFO  c.m.e.s.impl.StatisticsServiceImpl - 文章ID: 211, 创建日期: 2026-04-18
+2026-05-06 17:45:57.015 [http-nio-8081-exec-9] INFO  c.m.e.s.impl.StatisticsServiceImpl - 文章ID: 212, 创建日期: 2026-04-18
+2026-05-06 17:45:57.015 [http-nio-8081-exec-9] INFO  c.m.e.s.impl.StatisticsServiceImpl - 文章ID: 213, 创建日期: 2026-04-18
+2026-05-06 17:45:57.015 [http-nio-8081-exec-9] INFO  c.m.e.s.impl.StatisticsServiceImpl - 文章ID: 214, 创建日期: 2026-04-18
+2026-05-06 17:45:57.015 [http-nio-8081-exec-9] INFO  c.m.e.s.impl.StatisticsServiceImpl - 文章ID: 216, 创建日期: 2026-04-18
+2026-05-06 17:45:57.015 [http-nio-8081-exec-9] INFO  c.m.e.s.impl.StatisticsServiceImpl - 文章ID: 217, 创建日期: 2026-04-18
+2026-05-06 17:45:57.016 [http-nio-8081-exec-9] INFO  c.m.e.s.impl.StatisticsServiceImpl - 文章ID: 218, 创建日期: 2026-04-18
+2026-05-06 17:45:57.025 [http-nio-8081-exec-9] INFO  c.m.e.s.impl.StatisticsServiceImpl - 文章ID: 219, 创建日期: 2026-04-18
+2026-05-06 17:45:57.025 [http-nio-8081-exec-9] INFO  c.m.e.s.impl.StatisticsServiceImpl - 文章ID: 220, 创建日期: 2026-04-18
+2026-05-06 17:45:57.025 [http-nio-8081-exec-9] INFO  c.m.e.s.impl.StatisticsServiceImpl - 文章ID: 221, 创建日期: 2026-04-18
+2026-05-06 17:45:57.025 [http-nio-8081-exec-9] INFO  c.m.e.s.impl.StatisticsServiceImpl - 文章ID: 222, 创建日期: 2026-04-18
+2026-05-06 17:45:57.025 [http-nio-8081-exec-9] INFO  c.m.e.s.impl.StatisticsServiceImpl - 今天日期: 2026-05-06
+2026-05-06 17:45:57.025 [http-nio-8081-exec-9] INFO  c.m.e.s.impl.StatisticsServiceImpl - 文章日期集合: [2026-04-30, 2026-04-29, 2026-04-28, 2026-04-27, 2026-04-26, 2026-04-25, 2026-04-24, 2026-04-22, 2026-04-21, 2026-04-20, 2026-04-19, 2026-04-18, 2026-04-17]
+2026-05-06 17:45:57.025 [http-nio-8081-exec-9] INFO  c.m.e.s.impl.StatisticsServiceImpl - 当前连续创作天数: 0
+2026-05-06 17:45:57.025 [http-nio-8081-exec-9] INFO  c.m.e.s.impl.StatisticsServiceImpl - 连续创作天数计算完成: 0, 显示值: 0
+2026-05-06 17:45:57.025 [http-nio-8081-exec-9] INFO  c.m.e.s.impl.StatisticsServiceImpl - UserStatsDTO: UserStatsDTO{userId=4, username='admin', nickname='管理员', avatar='https://api.dicebear.com/7.x/pixel-art/svg?seed=4', original=121, likes=42, collections=40, comments=45, views=8251, blogRank=1, followers=5, following=4, continuousDays=0, continuousDaysDisplay='0'}
+2026-05-06 17:45:57.025 [http-nio-8081-exec-9] INFO  c.m.e.s.impl.StatisticsServiceImpl - userId: 4
+2026-05-06 17:45:57.025 [http-nio-8081-exec-9] INFO  c.m.e.s.impl.StatisticsServiceImpl - username: admin
+2026-05-06 17:45:57.025 [http-nio-8081-exec-9] INFO  c.m.e.s.impl.StatisticsServiceImpl - nickname: 管理员
+2026-05-06 17:45:57.025 [http-nio-8081-exec-9] INFO  c.m.e.s.impl.StatisticsServiceImpl - original: 121
+2026-05-06 17:45:57.025 [http-nio-8081-exec-9] INFO  c.m.e.s.impl.StatisticsServiceImpl - likes: 42
+2026-05-06 17:45:57.025 [http-nio-8081-exec-9] INFO  c.m.e.s.impl.StatisticsServiceImpl - collections: 40
+2026-05-06 17:45:57.025 [http-nio-8081-exec-9] INFO  c.m.e.s.impl.StatisticsServiceImpl - comments: 45
+2026-05-06 17:45:57.025 [http-nio-8081-exec-9] INFO  c.m.e.s.impl.StatisticsServiceImpl - views: 8251
+2026-05-06 17:45:57.025 [http-nio-8081-exec-9] INFO  c.m.e.s.impl.StatisticsServiceImpl - blogRank: 1
+2026-05-06 17:45:57.025 [http-nio-8081-exec-9] INFO  c.m.e.s.impl.StatisticsServiceImpl - followers: 5
+2026-05-06 17:45:57.025 [http-nio-8081-exec-9] INFO  c.m.e.s.impl.StatisticsServiceImpl - following: 4
+2026-05-06 17:45:57.025 [http-nio-8081-exec-9] INFO  c.m.e.s.impl.StatisticsServiceImpl - continuousDays: 0
+2026-05-06 17:45:57.025 [http-nio-8081-exec-9] INFO  c.m.e.s.impl.StatisticsServiceImpl - continuousDaysDisplay: 0
+2026-05-06 17:46:00.753 [http-nio-8081-exec-3] INFO  c.m.editor.controller.TagController - 用户[admin]获取所有标签
+2026-05-06 17:46:00.754 [http-nio-8081-exec-5] INFO  c.m.e.controller.DocumentController - 用户[admin]获取自己的文档列表，页码: 0, 每页大小: 10
+2026-05-06 17:46:00.786 [http-nio-8081-exec-3] INFO  c.m.editor.controller.TagController - 用户[admin]获取所有标签成功，找到5个标签
+2026-05-06 17:46:00.795 [http-nio-8081-exec-5] INFO  c.m.e.controller.DocumentController - 用户[admin]获取自己的文档列表成功，共121个文档
+2026-05-06 17:46:00.823 [http-nio-8081-exec-10] INFO  c.m.e.controller.FollowController - 获取当前用户[4]的粉丝列表
+2026-05-06 17:46:00.824 [http-nio-8081-exec-9] INFO  c.m.e.controller.FollowController - 获取当前用户[4]的好友列表
+2026-05-06 17:46:00.824 [http-nio-8081-exec-8] INFO  c.m.e.controller.FollowController - 获取当前用户[4]的关注列表
+2026-05-06 17:46:00.886 [http-nio-8081-exec-9] INFO  c.m.e.controller.FollowController - 当前用户[4]的粉丝数: 5, 关注数: 4
+2026-05-06 17:46:00.886 [http-nio-8081-exec-9] INFO  c.m.e.controller.FollowController - 检查粉丝[14]是否在关注列表中
+2026-05-06 17:46:00.887 [http-nio-8081-exec-9] INFO  c.m.e.controller.FollowController - 粉丝[14]在关注列表中，是好友
+2026-05-06 17:46:00.892 [http-nio-8081-exec-2] INFO  c.m.e.controller.TrendController - 获取趋势数据请求(按天数) - 用户ID: 4, 天数: 7, 日期范围: 2026-04-30 至 2026-05-06
+2026-05-06 17:46:00.892 [http-nio-8081-exec-2] INFO  c.m.e.service.impl.TrendServiceImpl - 开始获取趋势数据，用户ID: 4, 开始日期: 2026-04-30, 结束日期: 2026-05-06
+2026-05-06 17:46:00.892 [http-nio-8081-exec-2] INFO  c.m.e.service.impl.TrendServiceImpl - 生成日期范围: 7 天
+2026-05-06 17:46:00.897 [trend-data-worker] INFO  c.m.e.service.impl.TrendServiceImpl - 开始获取浏览量数据...
+2026-05-06 17:46:00.898 [trend-data-worker] INFO  c.m.e.service.impl.TrendServiceImpl - 开始获取评论数数据...
+2026-05-06 17:46:00.898 [trend-data-worker] INFO  c.m.e.service.impl.TrendServiceImpl - 开始获取收藏数数据...
+2026-05-06 17:46:00.898 [trend-data-worker] INFO  c.m.e.service.impl.TrendServiceImpl - 开始获取粉丝增长数据...
+2026-05-06 17:46:00.929 [trend-data-worker] INFO  c.m.e.service.impl.TrendServiceImpl - 评论数数据获取完成
+2026-05-06 17:46:00.929 [trend-data-worker] INFO  c.m.e.service.impl.TrendServiceImpl - 浏览量数据获取完成
+2026-05-06 17:46:00.929 [trend-data-worker] INFO  c.m.e.service.impl.TrendServiceImpl - 收藏数数据获取完成
+2026-05-06 17:46:00.931 [http-nio-8081-exec-7] INFO  c.m.e.s.impl.StatisticsServiceImpl - 获取到121篇文档
+2026-05-06 17:46:00.932 [http-nio-8081-exec-7] INFO  c.m.e.s.impl.StatisticsServiceImpl - 文档ID: 238, 浏览量: 47
+2026-05-06 17:46:00.932 [http-nio-8081-exec-7] INFO  c.m.e.s.impl.StatisticsServiceImpl - 文档ID: 180, 浏览量: 110
+2026-05-06 17:46:00.932 [http-nio-8081-exec-7] INFO  c.m.e.s.impl.StatisticsServiceImpl - 文档ID: 237, 浏览量: 14
+2026-05-06 17:46:00.932 [http-nio-8081-exec-7] INFO  c.m.e.s.impl.StatisticsServiceImpl - 文档ID: 236, 浏览量: 5
+2026-05-06 17:46:00.932 [http-nio-8081-exec-7] INFO  c.m.e.s.impl.StatisticsServiceImpl - 文档ID: 234, 浏览量: 1
+2026-05-06 17:46:00.932 [http-nio-8081-exec-7] INFO  c.m.e.s.impl.StatisticsServiceImpl - 文档ID: 233, 浏览量: 2
+2026-05-06 17:46:00.932 [http-nio-8081-exec-7] INFO  c.m.e.s.impl.StatisticsServiceImpl - 文档ID: 182, 浏览量: 108
+2026-05-06 17:46:00.932 [http-nio-8081-exec-7] INFO  c.m.e.s.impl.StatisticsServiceImpl - 文档ID: 181, 浏览量: 77
+2026-05-06 17:46:00.932 [http-nio-8081-exec-7] INFO  c.m.e.s.impl.StatisticsServiceImpl - 文档ID: 179, 浏览量: 68
+2026-05-06 17:46:00.940 [http-nio-8081-exec-7] INFO  c.m.e.s.impl.StatisticsServiceImpl - 文档ID: 178, 浏览量: 85
+2026-05-06 17:46:00.940 [http-nio-8081-exec-7] INFO  c.m.e.s.impl.StatisticsServiceImpl - 文档ID: 177, 浏览量: 75
+2026-05-06 17:46:00.940 [http-nio-8081-exec-7] INFO  c.m.e.s.impl.StatisticsServiceImpl - 文档ID: 176, 浏览量: 77
+2026-05-06 17:46:00.940 [http-nio-8081-exec-7] INFO  c.m.e.s.impl.StatisticsServiceImpl - 文档ID: 175, 浏览量: 74
+2026-05-06 17:46:00.940 [http-nio-8081-exec-7] INFO  c.m.e.s.impl.StatisticsServiceImpl - 文档ID: 232, 浏览量: 0
+2026-05-06 17:46:00.940 [http-nio-8081-exec-7] INFO  c.m.e.s.impl.StatisticsServiceImpl - 文档ID: 253, 浏览量: 0
+2026-05-06 17:46:00.940 [http-nio-8081-exec-7] INFO  c.m.e.s.impl.StatisticsServiceImpl - 文档ID: 252, 浏览量: 0
+2026-05-06 17:46:00.940 [http-nio-8081-exec-7] INFO  c.m.e.s.impl.StatisticsServiceImpl - 文档ID: 251, 浏览量: 0
+2026-05-06 17:46:00.940 [http-nio-8081-exec-7] INFO  c.m.e.s.impl.StatisticsServiceImpl - 文档ID: 243, 浏览量: 3
+2026-05-06 17:46:00.940 [http-nio-8081-exec-7] INFO  c.m.e.s.impl.StatisticsServiceImpl - 文档ID: 242, 浏览量: 1
+2026-05-06 17:46:00.940 [http-nio-8081-exec-7] INFO  c.m.e.s.impl.StatisticsServiceImpl - 文档ID: 241, 浏览量: 3
+2026-05-06 17:46:00.940 [http-nio-8081-exec-7] INFO  c.m.e.s.impl.StatisticsServiceImpl - 文档ID: 240, 浏览量: 0
+2026-05-06 17:46:00.940 [http-nio-8081-exec-7] INFO  c.m.e.s.impl.StatisticsServiceImpl - 文档ID: 239, 浏览量: 0
+2026-05-06 17:46:00.940 [http-nio-8081-exec-7] INFO  c.m.e.s.impl.StatisticsServiceImpl - 文档ID: 231, 浏览量: 30
+2026-05-06 17:46:00.940 [http-nio-8081-exec-7] INFO  c.m.e.s.impl.StatisticsServiceImpl - 文档ID: 249, 浏览量: 0
+2026-05-06 17:46:00.940 [http-nio-8081-exec-7] INFO  c.m.e.s.impl.StatisticsServiceImpl - 文档ID: 244, 浏览量: 0
+2026-05-06 17:46:00.940 [http-nio-8081-exec-7] INFO  c.m.e.s.impl.StatisticsServiceImpl - 文档ID: 248, 浏览量: 0
+2026-05-06 17:46:00.940 [http-nio-8081-exec-7] INFO  c.m.e.s.impl.StatisticsServiceImpl - 文档ID: 235, 浏览量: 0
+2026-05-06 17:46:00.940 [http-nio-8081-exec-7] INFO  c.m.e.s.impl.StatisticsServiceImpl - 文档ID: 191, 浏览量: 187
+2026-05-06 17:46:00.940 [http-nio-8081-exec-7] INFO  c.m.e.s.impl.StatisticsServiceImpl - 文档ID: 112, 浏览量: 177
+2026-05-06 17:46:00.940 [http-nio-8081-exec-7] INFO  c.m.e.s.impl.StatisticsServiceImpl - 文档ID: 151, 浏览量: 118
+2026-05-06 17:46:00.940 [http-nio-8081-exec-7] INFO  c.m.e.s.impl.StatisticsServiceImpl - 文档ID: 215, 浏览量: 80
+2026-05-06 17:46:00.940 [http-nio-8081-exec-7] INFO  c.m.e.s.impl.StatisticsServiceImpl - 文档ID: 115, 浏览量: 112
+2026-05-06 17:46:00.941 [http-nio-8081-exec-4] INFO  c.m.e.controller.FollowController - 获取用户[4]的粉丝统计数据
+2026-05-06 17:46:00.948 [http-nio-8081-exec-7] INFO  c.m.e.s.impl.StatisticsServiceImpl - 文档ID: 114, 浏览量: 90
+2026-05-06 17:46:00.948 [http-nio-8081-exec-7] INFO  c.m.e.s.impl.StatisticsServiceImpl - 文档ID: 117, 浏览量: 68
+2026-05-06 17:46:00.948 [http-nio-8081-exec-7] INFO  c.m.e.s.impl.StatisticsServiceImpl - 文档ID: 118, 浏览量: 89
+2026-05-06 17:46:00.948 [http-nio-8081-exec-7] INFO  c.m.e.s.impl.StatisticsServiceImpl - 文档ID: 119, 浏览量: 103
+2026-05-06 17:46:00.948 [http-nio-8081-exec-7] INFO  c.m.e.s.impl.StatisticsServiceImpl - 文档ID: 121, 浏览量: 78
+2026-05-06 17:46:00.948 [http-nio-8081-exec-7] INFO  c.m.e.s.impl.StatisticsServiceImpl - 文档ID: 122, 浏览量: 85
+2026-05-06 17:46:00.948 [http-nio-8081-exec-7] INFO  c.m.e.s.impl.StatisticsServiceImpl - 文档ID: 124, 浏览量: 69
+2026-05-06 17:46:00.948 [http-nio-8081-exec-7] INFO  c.m.e.s.impl.StatisticsServiceImpl - 文档ID: 125, 浏览量: 82
+2026-05-06 17:46:00.948 [http-nio-8081-exec-7] INFO  c.m.e.s.impl.StatisticsServiceImpl - 文档ID: 126, 浏览量: 75
+2026-05-06 17:46:00.948 [http-nio-8081-exec-7] INFO  c.m.e.s.impl.StatisticsServiceImpl - 文档ID: 128, 浏览量: 94
+2026-05-06 17:46:00.948 [http-nio-8081-exec-7] INFO  c.m.e.s.impl.StatisticsServiceImpl - 文档ID: 129, 浏览量: 81
+2026-05-06 17:46:00.948 [http-nio-8081-exec-7] INFO  c.m.e.s.impl.StatisticsServiceImpl - 文档ID: 130, 浏览量: 77
+2026-05-06 17:46:00.948 [http-nio-8081-exec-7] INFO  c.m.e.s.impl.StatisticsServiceImpl - 文档ID: 131, 浏览量: 86
+2026-05-06 17:46:00.949 [http-nio-8081-exec-7] INFO  c.m.e.s.impl.StatisticsServiceImpl - 文档ID: 133, 浏览量: 92
+2026-05-06 17:46:00.949 [http-nio-8081-exec-7] INFO  c.m.e.s.impl.StatisticsServiceImpl - 文档ID: 134, 浏览量: 83
+2026-05-06 17:46:00.949 [http-nio-8081-exec-7] INFO  c.m.e.s.impl.StatisticsServiceImpl - 文档ID: 135, 浏览量: 79
+2026-05-06 17:46:00.949 [http-nio-8081-exec-7] INFO  c.m.e.s.impl.StatisticsServiceImpl - 文档ID: 136, 浏览量: 84
+2026-05-06 17:46:00.949 [http-nio-8081-exec-7] INFO  c.m.e.s.impl.StatisticsServiceImpl - 文档ID: 137, 浏览量: 72
+2026-05-06 17:46:00.949 [http-nio-8081-exec-7] INFO  c.m.e.s.impl.StatisticsServiceImpl - 文档ID: 138, 浏览量: 88
+2026-05-06 17:46:00.949 [http-nio-8081-exec-7] INFO  c.m.e.s.impl.StatisticsServiceImpl - 文档ID: 139, 浏览量: 76
+2026-05-06 17:46:00.949 [http-nio-8081-exec-7] INFO  c.m.e.s.impl.StatisticsServiceImpl - 文档ID: 140, 浏览量: 67
+2026-05-06 17:46:00.949 [http-nio-8081-exec-7] INFO  c.m.e.s.impl.StatisticsServiceImpl - 文档ID: 141, 浏览量: 71
+2026-05-06 17:46:00.949 [http-nio-8081-exec-7] INFO  c.m.e.s.impl.StatisticsServiceImpl - 文档ID: 142, 浏览量: 80
+2026-05-06 17:46:00.949 [http-nio-8081-exec-7] INFO  c.m.e.s.impl.StatisticsServiceImpl - 文档ID: 143, 浏览量: 74
+2026-05-06 17:46:00.949 [http-nio-8081-exec-7] INFO  c.m.e.s.impl.StatisticsServiceImpl - 文档ID: 146, 浏览量: 73
+2026-05-06 17:46:00.949 [http-nio-8081-exec-7] INFO  c.m.e.s.impl.StatisticsServiceImpl - 文档ID: 147, 浏览量: 69
+2026-05-06 17:46:00.949 [http-nio-8081-exec-7] INFO  c.m.e.s.impl.StatisticsServiceImpl - 文档ID: 149, 浏览量: 70
+2026-05-06 17:46:00.949 [http-nio-8081-exec-7] INFO  c.m.e.s.impl.StatisticsServiceImpl - 文档ID: 150, 浏览量: 78
+2026-05-06 17:46:00.959 [http-nio-8081-exec-7] INFO  c.m.e.s.impl.StatisticsServiceImpl - 文档ID: 152, 浏览量: 76
+2026-05-06 17:46:00.959 [http-nio-8081-exec-7] INFO  c.m.e.s.impl.StatisticsServiceImpl - 文档ID: 153, 浏览量: 82
+2026-05-06 17:46:00.959 [http-nio-8081-exec-7] INFO  c.m.e.s.impl.StatisticsServiceImpl - 文档ID: 154, 浏览量: 73
+2026-05-06 17:46:00.959 [http-nio-8081-exec-7] INFO  c.m.e.s.impl.StatisticsServiceImpl - 文档ID: 155, 浏览量: 77
+2026-05-06 17:46:00.959 [http-nio-8081-exec-7] INFO  c.m.e.s.impl.StatisticsServiceImpl - 文档ID: 156, 浏览量: 71
+2026-05-06 17:46:00.959 [http-nio-8081-exec-7] INFO  c.m.e.s.impl.StatisticsServiceImpl - 文档ID: 157, 浏览量: 79
+2026-05-06 17:46:00.959 [trend-data-worker] INFO  c.m.e.service.impl.TrendServiceImpl - 粉丝增长数据获取完成
+2026-05-06 17:46:00.959 [http-nio-8081-exec-7] INFO  c.m.e.s.impl.StatisticsServiceImpl - 文档ID: 158, 浏览量: 83
+2026-05-06 17:46:00.960 [http-nio-8081-exec-7] INFO  c.m.e.s.impl.StatisticsServiceImpl - 文档ID: 159, 浏览量: 75
+2026-05-06 17:46:00.960 [http-nio-8081-exec-7] INFO  c.m.e.s.impl.StatisticsServiceImpl - 文档ID: 160, 浏览量: 78
+2026-05-06 17:46:00.960 [http-nio-8081-exec-7] INFO  c.m.e.s.impl.StatisticsServiceImpl - 文档ID: 161, 浏览量: 72
+2026-05-06 17:46:00.960 [http-nio-8081-exec-7] INFO  c.m.e.s.impl.StatisticsServiceImpl - 文档ID: 162, 浏览量: 70
+2026-05-06 17:46:00.960 [http-nio-8081-exec-7] INFO  c.m.e.s.impl.StatisticsServiceImpl - 文档ID: 163, 浏览量: 81
+2026-05-06 17:46:00.960 [http-nio-8081-exec-7] INFO  c.m.e.s.impl.StatisticsServiceImpl - 文档ID: 164, 浏览量: 74
+2026-05-06 17:46:00.960 [http-nio-8081-exec-7] INFO  c.m.e.s.impl.StatisticsServiceImpl - 文档ID: 165, 浏览量: 70
+2026-05-06 17:46:00.960 [http-nio-8081-exec-7] INFO  c.m.e.s.impl.StatisticsServiceImpl - 文档ID: 166, 浏览量: 68
+2026-05-06 17:46:00.960 [http-nio-8081-exec-7] INFO  c.m.e.s.impl.StatisticsServiceImpl - 文档ID: 167, 浏览量: 76
+2026-05-06 17:46:00.960 [http-nio-8081-exec-7] INFO  c.m.e.s.impl.StatisticsServiceImpl - 文档ID: 168, 浏览量: 73
+2026-05-06 17:46:00.960 [http-nio-8081-exec-7] INFO  c.m.e.s.impl.StatisticsServiceImpl - 文档ID: 169, 浏览量: 67
+2026-05-06 17:46:00.960 [http-nio-8081-exec-7] INFO  c.m.e.s.impl.StatisticsServiceImpl - 文档ID: 170, 浏览量: 80
+2026-05-06 17:46:00.960 [http-nio-8081-exec-7] INFO  c.m.e.s.impl.StatisticsServiceImpl - 文档ID: 171, 浏览量: 78
+2026-05-06 17:46:00.960 [http-nio-8081-exec-7] INFO  c.m.e.s.impl.StatisticsServiceImpl - 文档ID: 172, 浏览量: 72
+2026-05-06 17:46:00.960 [http-nio-8081-exec-7] INFO  c.m.e.s.impl.StatisticsServiceImpl - 文档ID: 173, 浏览量: 75
+2026-05-06 17:46:00.960 [http-nio-8081-exec-7] INFO  c.m.e.s.impl.StatisticsServiceImpl - 文档ID: 174, 浏览量: 84
+2026-05-06 17:46:00.960 [http-nio-8081-exec-2] INFO  c.m.e.service.impl.TrendServiceImpl - 趋势数据获取完成，共 7 条记录
+2026-05-06 17:46:00.967 [http-nio-8081-exec-7] INFO  c.m.e.s.impl.StatisticsServiceImpl - 文档ID: 183, 浏览量: 76
+2026-05-06 17:46:00.967 [http-nio-8081-exec-7] INFO  c.m.e.s.impl.StatisticsServiceImpl - 文档ID: 184, 浏览量: 72
+2026-05-06 17:46:00.967 [http-nio-8081-exec-7] INFO  c.m.e.s.impl.StatisticsServiceImpl - 文档ID: 185, 浏览量: 78
+2026-05-06 17:46:00.967 [http-nio-8081-exec-7] INFO  c.m.e.s.impl.StatisticsServiceImpl - 文档ID: 186, 浏览量: 71
+2026-05-06 17:46:00.967 [http-nio-8081-exec-2] INFO  c.m.e.controller.TrendController - 趋势数据获取成功 - 返回 7 条记录
+2026-05-06 17:46:00.967 [http-nio-8081-exec-7] INFO  c.m.e.s.impl.StatisticsServiceImpl - 文档ID: 187, 浏览量: 68
+2026-05-06 17:46:00.967 [http-nio-8081-exec-7] INFO  c.m.e.s.impl.StatisticsServiceImpl - 文档ID: 188, 浏览量: 73
+2026-05-06 17:46:00.967 [http-nio-8081-exec-7] INFO  c.m.e.s.impl.StatisticsServiceImpl - 文档ID: 189, 浏览量: 80
+2026-05-06 17:46:00.967 [http-nio-8081-exec-7] INFO  c.m.e.s.impl.StatisticsServiceImpl - 文档ID: 190, 浏览量: 75
+2026-05-06 17:46:00.967 [http-nio-8081-exec-7] INFO  c.m.e.s.impl.StatisticsServiceImpl - 文档ID: 192, 浏览量: 76
+2026-05-06 17:46:00.967 [http-nio-8081-exec-7] INFO  c.m.e.s.impl.StatisticsServiceImpl - 文档ID: 193, 浏览量: 72
+2026-05-06 17:46:00.967 [http-nio-8081-exec-7] INFO  c.m.e.s.impl.StatisticsServiceImpl - 文档ID: 194, 浏览量: 79
+2026-05-06 17:46:00.967 [http-nio-8081-exec-7] INFO  c.m.e.s.impl.StatisticsServiceImpl - 文档ID: 195, 浏览量: 74
+2026-05-06 17:46:00.967 [http-nio-8081-exec-7] INFO  c.m.e.s.impl.StatisticsServiceImpl - 文档ID: 196, 浏览量: 81
+2026-05-06 17:46:00.967 [http-nio-8081-exec-7] INFO  c.m.e.s.impl.StatisticsServiceImpl - 文档ID: 197, 浏览量: 77
+2026-05-06 17:46:00.967 [http-nio-8081-exec-7] INFO  c.m.e.s.impl.StatisticsServiceImpl - 文档ID: 198, 浏览量: 70
+2026-05-06 17:46:00.967 [http-nio-8081-exec-7] INFO  c.m.e.s.impl.StatisticsServiceImpl - 文档ID: 199, 浏览量: 75
+2026-05-06 17:46:00.967 [http-nio-8081-exec-7] INFO  c.m.e.s.impl.StatisticsServiceImpl - 文档ID: 200, 浏览量: 85
+2026-05-06 17:46:00.967 [http-nio-8081-exec-7] INFO  c.m.e.s.impl.StatisticsServiceImpl - 文档ID: 201, 浏览量: 71
+2026-05-06 17:46:00.967 [http-nio-8081-exec-7] INFO  c.m.e.s.impl.StatisticsServiceImpl - 文档ID: 202, 浏览量: 78
+2026-05-06 17:46:00.967 [http-nio-8081-exec-7] INFO  c.m.e.s.impl.StatisticsServiceImpl - 文档ID: 203, 浏览量: 73
+2026-05-06 17:46:00.967 [http-nio-8081-exec-7] INFO  c.m.e.s.impl.StatisticsServiceImpl - 文档ID: 204, 浏览量: 69
+2026-05-06 17:46:00.967 [http-nio-8081-exec-7] INFO  c.m.e.s.impl.StatisticsServiceImpl - 文档ID: 205, 浏览量: 74
+2026-05-06 17:46:00.967 [http-nio-8081-exec-7] INFO  c.m.e.s.impl.StatisticsServiceImpl - 文档ID: 206, 浏览量: 77
+2026-05-06 17:46:00.967 [http-nio-8081-exec-7] INFO  c.m.e.s.impl.StatisticsServiceImpl - 文档ID: 207, 浏览量: 74
+2026-05-06 17:46:00.967 [http-nio-8081-exec-7] INFO  c.m.e.s.impl.StatisticsServiceImpl - 文档ID: 208, 浏览量: 79
+2026-05-06 17:46:00.967 [http-nio-8081-exec-7] INFO  c.m.e.s.impl.StatisticsServiceImpl - 文档ID: 209, 浏览量: 75
+2026-05-06 17:46:00.967 [http-nio-8081-exec-7] INFO  c.m.e.s.impl.StatisticsServiceImpl - 文档ID: 210, 浏览量: 81
+2026-05-06 17:46:00.967 [http-nio-8081-exec-7] INFO  c.m.e.s.impl.StatisticsServiceImpl - 文档ID: 211, 浏览量: 76
+2026-05-06 17:46:00.967 [http-nio-8081-exec-7] INFO  c.m.e.s.impl.StatisticsServiceImpl - 文档ID: 212, 浏览量: 73
+2026-05-06 17:46:00.967 [http-nio-8081-exec-7] INFO  c.m.e.s.impl.StatisticsServiceImpl - 文档ID: 213, 浏览量: 70
+2026-05-06 17:46:00.967 [http-nio-8081-exec-7] INFO  c.m.e.s.impl.StatisticsServiceImpl - 文档ID: 214, 浏览量: 68
+2026-05-06 17:46:00.988 [http-nio-8081-exec-7] INFO  c.m.e.s.impl.StatisticsServiceImpl - 文档ID: 216, 浏览量: 78
+2026-05-06 17:46:00.989 [http-nio-8081-exec-7] INFO  c.m.e.s.impl.StatisticsServiceImpl - 文档ID: 217, 浏览量: 71
+2026-05-06 17:46:00.989 [http-nio-8081-exec-7] INFO  c.m.e.s.impl.StatisticsServiceImpl - 文档ID: 218, 浏览量: 67
+2026-05-06 17:46:00.989 [http-nio-8081-exec-7] INFO  c.m.e.s.impl.StatisticsServiceImpl - 文档ID: 219, 浏览量: 75
+2026-05-06 17:46:00.989 [http-nio-8081-exec-7] INFO  c.m.e.s.impl.StatisticsServiceImpl - 文档ID: 220, 浏览量: 72
+2026-05-06 17:46:00.989 [http-nio-8081-exec-7] INFO  c.m.e.s.impl.StatisticsServiceImpl - 文档ID: 221, 浏览量: 77
+2026-05-06 17:46:00.989 [http-nio-8081-exec-7] INFO  c.m.e.s.impl.StatisticsServiceImpl - 文档ID: 222, 浏览量: 70
+2026-05-06 17:46:00.989 [http-nio-8081-exec-7] INFO  c.m.e.s.impl.StatisticsServiceImpl - 总浏览量: 8251
+2026-05-06 17:46:01.013 [http-nio-8081-exec-9] INFO  c.m.e.controller.FollowController - 添加好友[bbb]到列表
+2026-05-06 17:46:01.013 [http-nio-8081-exec-9] INFO  c.m.e.controller.FollowController - 检查粉丝[5]是否在关注列表中
+2026-05-06 17:46:01.013 [http-nio-8081-exec-9] INFO  c.m.e.controller.FollowController - 粉丝[5]在关注列表中，是好友
+2026-05-06 17:46:01.013 [http-nio-8081-exec-3] INFO  c.m.e.controller.FollowController - 获取用户[4]的一周小结数据
+2026-05-06 17:46:01.053 [http-nio-8081-exec-4] INFO  c.m.e.controller.FollowController - 获取用户[4]的粉丝统计数据成功 - 总粉丝数: 5, 本月增长: 0, 今日增长: 0
+2026-05-06 17:46:01.097 [http-nio-8081-exec-9] INFO  c.m.e.controller.FollowController - 添加好友[test]到列表
+2026-05-06 17:46:01.097 [http-nio-8081-exec-9] INFO  c.m.e.controller.FollowController - 检查粉丝[12]是否在关注列表中
+2026-05-06 17:46:01.097 [http-nio-8081-exec-9] INFO  c.m.e.controller.FollowController - 粉丝[12]在关注列表中，是好友
+2026-05-06 17:46:01.106 [http-nio-8081-exec-8] INFO  c.m.e.controller.FollowController - 获取当前用户[4]的关注列表成功，共关注4个用户
+2026-05-06 17:46:01.129 [http-nio-8081-exec-3] INFO  c.m.e.controller.FollowController - 获取用户[4]的一周小结数据成功 - 本周发文: 1, 本周浏览: 115, 本周点赞: 10, 本周新增粉丝: 2
+2026-05-06 17:46:01.168 [http-nio-8081-exec-10] INFO  c.m.e.controller.FollowController - 获取当前用户[4]的粉丝列表成功，共5个粉丝
+2026-05-06 17:46:01.178 [http-nio-8081-exec-9] INFO  c.m.e.controller.FollowController - 添加好友[ppp]到列表
+2026-05-06 17:46:01.178 [http-nio-8081-exec-9] INFO  c.m.e.controller.FollowController - 检查粉丝[13]是否在关注列表中
+2026-05-06 17:46:01.178 [http-nio-8081-exec-9] INFO  c.m.e.controller.FollowController - 检查粉丝[10]是否在关注列表中
+2026-05-06 17:46:01.178 [http-nio-8081-exec-9] INFO  c.m.e.controller.FollowController - 获取当前用户[4]的好友列表成功，共3个好友
+2026-05-06 17:46:01.253 [http-nio-8081-exec-7] INFO  c.m.e.s.impl.StatisticsServiceImpl - 开始计算当前连续创作天数，userId: 4
+2026-05-06 17:46:01.287 [http-nio-8081-exec-7] INFO  c.m.e.s.impl.StatisticsServiceImpl - 获取到用户4的文章数量: 121
+2026-05-06 17:46:01.288 [http-nio-8081-exec-7] INFO  c.m.e.s.impl.StatisticsServiceImpl - 文章ID: 238, 创建日期: 2026-04-24
+2026-05-06 17:46:01.288 [http-nio-8081-exec-7] INFO  c.m.e.s.impl.StatisticsServiceImpl - 文章ID: 180, 创建日期: 2026-04-24
+2026-05-06 17:46:01.288 [http-nio-8081-exec-7] INFO  c.m.e.s.impl.StatisticsServiceImpl - 文章ID: 237, 创建日期: 2026-04-30
+2026-05-06 17:46:01.288 [http-nio-8081-exec-7] INFO  c.m.e.s.impl.StatisticsServiceImpl - 文章ID: 236, 创建日期: 2026-04-29
+2026-05-06 17:46:01.288 [http-nio-8081-exec-7] INFO  c.m.e.s.impl.StatisticsServiceImpl - 文章ID: 234, 创建日期: 2026-04-27
+2026-05-06 17:46:01.288 [http-nio-8081-exec-7] INFO  c.m.e.s.impl.StatisticsServiceImpl - 文章ID: 233, 创建日期: 2026-04-26
+2026-05-06 17:46:01.289 [http-nio-8081-exec-7] INFO  c.m.e.s.impl.StatisticsServiceImpl - 文章ID: 182, 创建日期: 2026-04-25
+2026-05-06 17:46:01.289 [http-nio-8081-exec-7] INFO  c.m.e.s.impl.StatisticsServiceImpl - 文章ID: 181, 创建日期: 2026-04-24
+2026-05-06 17:46:01.289 [http-nio-8081-exec-7] INFO  c.m.e.s.impl.StatisticsServiceImpl - 文章ID: 179, 创建日期: 2026-04-22
+2026-05-06 17:46:01.289 [http-nio-8081-exec-7] INFO  c.m.e.s.impl.StatisticsServiceImpl - 文章ID: 178, 创建日期: 2026-04-21
+2026-05-06 17:46:01.289 [http-nio-8081-exec-7] INFO  c.m.e.s.impl.StatisticsServiceImpl - 文章ID: 177, 创建日期: 2026-04-20
+2026-05-06 17:46:01.289 [http-nio-8081-exec-7] INFO  c.m.e.s.impl.StatisticsServiceImpl - 文章ID: 176, 创建日期: 2026-04-19
+2026-05-06 17:46:01.289 [http-nio-8081-exec-7] INFO  c.m.e.s.impl.StatisticsServiceImpl - 文章ID: 175, 创建日期: 2026-04-17
+2026-05-06 17:46:01.289 [http-nio-8081-exec-7] INFO  c.m.e.s.impl.StatisticsServiceImpl - 文章ID: 232, 创建日期: 2026-04-25
+2026-05-06 17:46:01.289 [http-nio-8081-exec-7] INFO  c.m.e.s.impl.StatisticsServiceImpl - 文章ID: 253, 创建日期: 2026-04-24
+2026-05-06 17:46:01.289 [http-nio-8081-exec-7] INFO  c.m.e.s.impl.StatisticsServiceImpl - 文章ID: 252, 创建日期: 2026-04-24
+2026-05-06 17:46:01.289 [http-nio-8081-exec-7] INFO  c.m.e.s.impl.StatisticsServiceImpl - 文章ID: 251, 创建日期: 2026-04-24
+2026-05-06 17:46:01.289 [http-nio-8081-exec-7] INFO  c.m.e.s.impl.StatisticsServiceImpl - 文章ID: 243, 创建日期: 2026-04-24
+2026-05-06 17:46:01.289 [http-nio-8081-exec-7] INFO  c.m.e.s.impl.StatisticsServiceImpl - 文章ID: 242, 创建日期: 2026-04-24
+2026-05-06 17:46:01.289 [http-nio-8081-exec-7] INFO  c.m.e.s.impl.StatisticsServiceImpl - 文章ID: 241, 创建日期: 2026-04-24
+2026-05-06 17:46:01.289 [http-nio-8081-exec-7] INFO  c.m.e.s.impl.StatisticsServiceImpl - 文章ID: 240, 创建日期: 2026-04-24
+2026-05-06 17:46:01.289 [http-nio-8081-exec-7] INFO  c.m.e.s.impl.StatisticsServiceImpl - 文章ID: 239, 创建日期: 2026-04-24
+2026-05-06 17:46:01.289 [http-nio-8081-exec-7] INFO  c.m.e.s.impl.StatisticsServiceImpl - 文章ID: 231, 创建日期: 2026-04-20
+2026-05-06 17:46:01.289 [http-nio-8081-exec-7] INFO  c.m.e.s.impl.StatisticsServiceImpl - 文章ID: 249, 创建日期: 2026-04-24
+2026-05-06 17:46:01.289 [http-nio-8081-exec-7] INFO  c.m.e.s.impl.StatisticsServiceImpl - 文章ID: 244, 创建日期: 2026-04-24
+2026-05-06 17:46:01.289 [http-nio-8081-exec-7] INFO  c.m.e.s.impl.StatisticsServiceImpl - 文章ID: 248, 创建日期: 2026-04-24
+2026-05-06 17:46:01.289 [http-nio-8081-exec-7] INFO  c.m.e.s.impl.StatisticsServiceImpl - 文章ID: 235, 创建日期: 2026-04-28
+2026-05-06 17:46:01.289 [http-nio-8081-exec-7] INFO  c.m.e.s.impl.StatisticsServiceImpl - 文章ID: 191, 创建日期: 2026-04-18
+2026-05-06 17:46:01.289 [http-nio-8081-exec-7] INFO  c.m.e.s.impl.StatisticsServiceImpl - 文章ID: 112, 创建日期: 2026-04-18
+2026-05-06 17:46:01.290 [http-nio-8081-exec-7] INFO  c.m.e.s.impl.StatisticsServiceImpl - 文章ID: 151, 创建日期: 2026-04-18
+2026-05-06 17:46:01.292 [http-nio-8081-exec-7] INFO  c.m.e.s.impl.StatisticsServiceImpl - 文章ID: 215, 创建日期: 2026-04-18
+2026-05-06 17:46:01.292 [http-nio-8081-exec-7] INFO  c.m.e.s.impl.StatisticsServiceImpl - 文章ID: 115, 创建日期: 2026-04-18
+2026-05-06 17:46:01.292 [http-nio-8081-exec-7] INFO  c.m.e.s.impl.StatisticsServiceImpl - 文章ID: 114, 创建日期: 2026-04-18
+2026-05-06 17:46:01.292 [http-nio-8081-exec-7] INFO  c.m.e.s.impl.StatisticsServiceImpl - 文章ID: 117, 创建日期: 2026-04-18
+2026-05-06 17:46:01.292 [http-nio-8081-exec-7] INFO  c.m.e.s.impl.StatisticsServiceImpl - 文章ID: 118, 创建日期: 2026-04-18
+2026-05-06 17:46:01.292 [http-nio-8081-exec-7] INFO  c.m.e.s.impl.StatisticsServiceImpl - 文章ID: 119, 创建日期: 2026-04-18
+2026-05-06 17:46:01.292 [http-nio-8081-exec-7] INFO  c.m.e.s.impl.StatisticsServiceImpl - 文章ID: 121, 创建日期: 2026-04-18
+2026-05-06 17:46:01.292 [http-nio-8081-exec-7] INFO  c.m.e.s.impl.StatisticsServiceImpl - 文章ID: 122, 创建日期: 2026-04-18
+2026-05-06 17:46:01.292 [http-nio-8081-exec-7] INFO  c.m.e.s.impl.StatisticsServiceImpl - 文章ID: 124, 创建日期: 2026-04-18
+2026-05-06 17:46:01.292 [http-nio-8081-exec-7] INFO  c.m.e.s.impl.StatisticsServiceImpl - 文章ID: 125, 创建日期: 2026-04-18
+2026-05-06 17:46:01.292 [http-nio-8081-exec-7] INFO  c.m.e.s.impl.StatisticsServiceImpl - 文章ID: 126, 创建日期: 2026-04-18
+2026-05-06 17:46:01.292 [http-nio-8081-exec-7] INFO  c.m.e.s.impl.StatisticsServiceImpl - 文章ID: 128, 创建日期: 2026-04-18
+2026-05-06 17:46:01.292 [http-nio-8081-exec-7] INFO  c.m.e.s.impl.StatisticsServiceImpl - 文章ID: 129, 创建日期: 2026-04-18
+2026-05-06 17:46:01.292 [http-nio-8081-exec-7] INFO  c.m.e.s.impl.StatisticsServiceImpl - 文章ID: 130, 创建日期: 2026-04-18
+2026-05-06 17:46:01.292 [http-nio-8081-exec-7] INFO  c.m.e.s.impl.StatisticsServiceImpl - 文章ID: 131, 创建日期: 2026-04-18
+2026-05-06 17:46:01.292 [http-nio-8081-exec-7] INFO  c.m.e.s.impl.StatisticsServiceImpl - 文章ID: 133, 创建日期: 2026-04-18
+2026-05-06 17:46:01.292 [http-nio-8081-exec-7] INFO  c.m.e.s.impl.StatisticsServiceImpl - 文章ID: 134, 创建日期: 2026-04-18
+2026-05-06 17:46:01.292 [http-nio-8081-exec-7] INFO  c.m.e.s.impl.StatisticsServiceImpl - 文章ID: 135, 创建日期: 2026-04-18
+2026-05-06 17:46:01.292 [http-nio-8081-exec-7] INFO  c.m.e.s.impl.StatisticsServiceImpl - 文章ID: 136, 创建日期: 2026-04-18
+2026-05-06 17:46:01.292 [http-nio-8081-exec-7] INFO  c.m.e.s.impl.StatisticsServiceImpl - 文章ID: 137, 创建日期: 2026-04-18
+2026-05-06 17:46:01.292 [http-nio-8081-exec-7] INFO  c.m.e.s.impl.StatisticsServiceImpl - 文章ID: 138, 创建日期: 2026-04-18
+2026-05-06 17:46:01.292 [http-nio-8081-exec-7] INFO  c.m.e.s.impl.StatisticsServiceImpl - 文章ID: 139, 创建日期: 2026-04-18
+2026-05-06 17:46:01.292 [http-nio-8081-exec-7] INFO  c.m.e.s.impl.StatisticsServiceImpl - 文章ID: 140, 创建日期: 2026-04-18
+2026-05-06 17:46:01.292 [http-nio-8081-exec-7] INFO  c.m.e.s.impl.StatisticsServiceImpl - 文章ID: 141, 创建日期: 2026-04-18
+2026-05-06 17:46:01.292 [http-nio-8081-exec-7] INFO  c.m.e.s.impl.StatisticsServiceImpl - 文章ID: 142, 创建日期: 2026-04-18
+2026-05-06 17:46:01.292 [http-nio-8081-exec-7] INFO  c.m.e.s.impl.StatisticsServiceImpl - 文章ID: 143, 创建日期: 2026-04-18
+2026-05-06 17:46:01.292 [http-nio-8081-exec-7] INFO  c.m.e.s.impl.StatisticsServiceImpl - 文章ID: 146, 创建日期: 2026-04-18
+2026-05-06 17:46:01.292 [http-nio-8081-exec-7] INFO  c.m.e.s.impl.StatisticsServiceImpl - 文章ID: 147, 创建日期: 2026-04-18
+2026-05-06 17:46:01.292 [http-nio-8081-exec-7] INFO  c.m.e.s.impl.StatisticsServiceImpl - 文章ID: 149, 创建日期: 2026-04-18
+2026-05-06 17:46:01.292 [http-nio-8081-exec-7] INFO  c.m.e.s.impl.StatisticsServiceImpl - 文章ID: 150, 创建日期: 2026-04-18
+2026-05-06 17:46:01.292 [http-nio-8081-exec-7] INFO  c.m.e.s.impl.StatisticsServiceImpl - 文章ID: 152, 创建日期: 2026-04-18
+2026-05-06 17:46:01.301 [http-nio-8081-exec-7] INFO  c.m.e.s.impl.StatisticsServiceImpl - 文章ID: 153, 创建日期: 2026-04-18
+2026-05-06 17:46:01.301 [http-nio-8081-exec-7] INFO  c.m.e.s.impl.StatisticsServiceImpl - 文章ID: 154, 创建日期: 2026-04-18
+2026-05-06 17:46:01.301 [http-nio-8081-exec-7] INFO  c.m.e.s.impl.StatisticsServiceImpl - 文章ID: 155, 创建日期: 2026-04-18
+2026-05-06 17:46:01.301 [http-nio-8081-exec-7] INFO  c.m.e.s.impl.StatisticsServiceImpl - 文章ID: 156, 创建日期: 2026-04-18
+2026-05-06 17:46:01.301 [http-nio-8081-exec-7] INFO  c.m.e.s.impl.StatisticsServiceImpl - 文章ID: 157, 创建日期: 2026-04-18
+2026-05-06 17:46:01.301 [http-nio-8081-exec-7] INFO  c.m.e.s.impl.StatisticsServiceImpl - 文章ID: 158, 创建日期: 2026-04-18
+2026-05-06 17:46:01.301 [http-nio-8081-exec-7] INFO  c.m.e.s.impl.StatisticsServiceImpl - 文章ID: 159, 创建日期: 2026-04-18
+2026-05-06 17:46:01.301 [http-nio-8081-exec-7] INFO  c.m.e.s.impl.StatisticsServiceImpl - 文章ID: 160, 创建日期: 2026-04-18
+2026-05-06 17:46:01.302 [http-nio-8081-exec-7] INFO  c.m.e.s.impl.StatisticsServiceImpl - 文章ID: 161, 创建日期: 2026-04-18
+2026-05-06 17:46:01.302 [http-nio-8081-exec-7] INFO  c.m.e.s.impl.StatisticsServiceImpl - 文章ID: 162, 创建日期: 2026-04-18
+2026-05-06 17:46:01.302 [http-nio-8081-exec-7] INFO  c.m.e.s.impl.StatisticsServiceImpl - 文章ID: 163, 创建日期: 2026-04-18
+2026-05-06 17:46:01.302 [http-nio-8081-exec-7] INFO  c.m.e.s.impl.StatisticsServiceImpl - 文章ID: 164, 创建日期: 2026-04-18
+2026-05-06 17:46:01.302 [http-nio-8081-exec-7] INFO  c.m.e.s.impl.StatisticsServiceImpl - 文章ID: 165, 创建日期: 2026-04-18
+2026-05-06 17:46:01.302 [http-nio-8081-exec-7] INFO  c.m.e.s.impl.StatisticsServiceImpl - 文章ID: 166, 创建日期: 2026-04-18
+2026-05-06 17:46:01.302 [http-nio-8081-exec-7] INFO  c.m.e.s.impl.StatisticsServiceImpl - 文章ID: 167, 创建日期: 2026-04-18
+2026-05-06 17:46:01.302 [http-nio-8081-exec-7] INFO  c.m.e.s.impl.StatisticsServiceImpl - 文章ID: 168, 创建日期: 2026-04-18
+2026-05-06 17:46:01.302 [http-nio-8081-exec-7] INFO  c.m.e.s.impl.StatisticsServiceImpl - 文章ID: 169, 创建日期: 2026-04-18
+2026-05-06 17:46:01.302 [http-nio-8081-exec-7] INFO  c.m.e.s.impl.StatisticsServiceImpl - 文章ID: 170, 创建日期: 2026-04-18
+2026-05-06 17:46:01.302 [http-nio-8081-exec-7] INFO  c.m.e.s.impl.StatisticsServiceImpl - 文章ID: 171, 创建日期: 2026-04-18
+2026-05-06 17:46:01.302 [http-nio-8081-exec-7] INFO  c.m.e.s.impl.StatisticsServiceImpl - 文章ID: 172, 创建日期: 2026-04-18
+2026-05-06 17:46:01.302 [http-nio-8081-exec-7] INFO  c.m.e.s.impl.StatisticsServiceImpl - 文章ID: 173, 创建日期: 2026-04-18
+2026-05-06 17:46:01.302 [http-nio-8081-exec-7] INFO  c.m.e.s.impl.StatisticsServiceImpl - 文章ID: 174, 创建日期: 2026-04-18
+2026-05-06 17:46:01.302 [http-nio-8081-exec-7] INFO  c.m.e.s.impl.StatisticsServiceImpl - 文章ID: 183, 创建日期: 2026-04-18
+2026-05-06 17:46:01.302 [http-nio-8081-exec-7] INFO  c.m.e.s.impl.StatisticsServiceImpl - 文章ID: 184, 创建日期: 2026-04-18
+2026-05-06 17:46:01.302 [http-nio-8081-exec-7] INFO  c.m.e.s.impl.StatisticsServiceImpl - 文章ID: 185, 创建日期: 2026-04-18
+2026-05-06 17:46:01.302 [http-nio-8081-exec-7] INFO  c.m.e.s.impl.StatisticsServiceImpl - 文章ID: 186, 创建日期: 2026-04-18
+2026-05-06 17:46:01.302 [http-nio-8081-exec-7] INFO  c.m.e.s.impl.StatisticsServiceImpl - 文章ID: 187, 创建日期: 2026-04-18
+2026-05-06 17:46:01.302 [http-nio-8081-exec-7] INFO  c.m.e.s.impl.StatisticsServiceImpl - 文章ID: 188, 创建日期: 2026-04-18
+2026-05-06 17:46:01.302 [http-nio-8081-exec-7] INFO  c.m.e.s.impl.StatisticsServiceImpl - 文章ID: 189, 创建日期: 2026-04-18
+2026-05-06 17:46:01.302 [http-nio-8081-exec-7] INFO  c.m.e.s.impl.StatisticsServiceImpl - 文章ID: 190, 创建日期: 2026-04-18
+2026-05-06 17:46:01.302 [http-nio-8081-exec-7] INFO  c.m.e.s.impl.StatisticsServiceImpl - 文章ID: 192, 创建日期: 2026-04-18
+2026-05-06 17:46:01.312 [http-nio-8081-exec-7] INFO  c.m.e.s.impl.StatisticsServiceImpl - 文章ID: 193, 创建日期: 2026-04-18
+2026-05-06 17:46:01.312 [http-nio-8081-exec-7] INFO  c.m.e.s.impl.StatisticsServiceImpl - 文章ID: 194, 创建日期: 2026-04-18
+2026-05-06 17:46:01.312 [http-nio-8081-exec-7] INFO  c.m.e.s.impl.StatisticsServiceImpl - 文章ID: 195, 创建日期: 2026-04-18
+2026-05-06 17:46:01.312 [http-nio-8081-exec-7] INFO  c.m.e.s.impl.StatisticsServiceImpl - 文章ID: 196, 创建日期: 2026-04-18
+2026-05-06 17:46:01.312 [http-nio-8081-exec-7] INFO  c.m.e.s.impl.StatisticsServiceImpl - 文章ID: 197, 创建日期: 2026-04-18
+2026-05-06 17:46:01.312 [http-nio-8081-exec-7] INFO  c.m.e.s.impl.StatisticsServiceImpl - 文章ID: 198, 创建日期: 2026-04-18
+2026-05-06 17:46:01.312 [http-nio-8081-exec-7] INFO  c.m.e.s.impl.StatisticsServiceImpl - 文章ID: 199, 创建日期: 2026-04-18
+2026-05-06 17:46:01.312 [http-nio-8081-exec-7] INFO  c.m.e.s.impl.StatisticsServiceImpl - 文章ID: 200, 创建日期: 2026-04-18
+2026-05-06 17:46:01.312 [http-nio-8081-exec-7] INFO  c.m.e.s.impl.StatisticsServiceImpl - 文章ID: 201, 创建日期: 2026-04-18
+2026-05-06 17:46:01.312 [http-nio-8081-exec-7] INFO  c.m.e.s.impl.StatisticsServiceImpl - 文章ID: 202, 创建日期: 2026-04-18
+2026-05-06 17:46:01.312 [http-nio-8081-exec-7] INFO  c.m.e.s.impl.StatisticsServiceImpl - 文章ID: 203, 创建日期: 2026-04-18
+2026-05-06 17:46:01.312 [http-nio-8081-exec-7] INFO  c.m.e.s.impl.StatisticsServiceImpl - 文章ID: 204, 创建日期: 2026-04-18
+2026-05-06 17:46:01.312 [http-nio-8081-exec-7] INFO  c.m.e.s.impl.StatisticsServiceImpl - 文章ID: 205, 创建日期: 2026-04-18
+2026-05-06 17:46:01.312 [http-nio-8081-exec-7] INFO  c.m.e.s.impl.StatisticsServiceImpl - 文章ID: 206, 创建日期: 2026-04-18
+2026-05-06 17:46:01.312 [http-nio-8081-exec-7] INFO  c.m.e.s.impl.StatisticsServiceImpl - 文章ID: 207, 创建日期: 2026-04-18
+2026-05-06 17:46:01.312 [http-nio-8081-exec-7] INFO  c.m.e.s.impl.StatisticsServiceImpl - 文章ID: 208, 创建日期: 2026-04-18
+2026-05-06 17:46:01.312 [http-nio-8081-exec-7] INFO  c.m.e.s.impl.StatisticsServiceImpl - 文章ID: 209, 创建日期: 2026-04-18
+2026-05-06 17:46:01.312 [http-nio-8081-exec-7] INFO  c.m.e.s.impl.StatisticsServiceImpl - 文章ID: 210, 创建日期: 2026-04-18
+2026-05-06 17:46:01.312 [http-nio-8081-exec-7] INFO  c.m.e.s.impl.StatisticsServiceImpl - 文章ID: 211, 创建日期: 2026-04-18
+2026-05-06 17:46:01.312 [http-nio-8081-exec-7] INFO  c.m.e.s.impl.StatisticsServiceImpl - 文章ID: 212, 创建日期: 2026-04-18
+2026-05-06 17:46:01.312 [http-nio-8081-exec-7] INFO  c.m.e.s.impl.StatisticsServiceImpl - 文章ID: 213, 创建日期: 2026-04-18
+2026-05-06 17:46:01.312 [http-nio-8081-exec-7] INFO  c.m.e.s.impl.StatisticsServiceImpl - 文章ID: 214, 创建日期: 2026-04-18
+2026-05-06 17:46:01.320 [http-nio-8081-exec-7] INFO  c.m.e.s.impl.StatisticsServiceImpl - 文章ID: 216, 创建日期: 2026-04-18
+2026-05-06 17:46:01.320 [http-nio-8081-exec-7] INFO  c.m.e.s.impl.StatisticsServiceImpl - 文章ID: 217, 创建日期: 2026-04-18
+2026-05-06 17:46:01.320 [http-nio-8081-exec-7] INFO  c.m.e.s.impl.StatisticsServiceImpl - 文章ID: 218, 创建日期: 2026-04-18
+2026-05-06 17:46:01.320 [http-nio-8081-exec-7] INFO  c.m.e.s.impl.StatisticsServiceImpl - 文章ID: 219, 创建日期: 2026-04-18
+2026-05-06 17:46:01.320 [http-nio-8081-exec-7] INFO  c.m.e.s.impl.StatisticsServiceImpl - 文章ID: 220, 创建日期: 2026-04-18
+2026-05-06 17:46:01.320 [http-nio-8081-exec-7] INFO  c.m.e.s.impl.StatisticsServiceImpl - 文章ID: 221, 创建日期: 2026-04-18
+2026-05-06 17:46:01.320 [http-nio-8081-exec-7] INFO  c.m.e.s.impl.StatisticsServiceImpl - 文章ID: 222, 创建日期: 2026-04-18
+2026-05-06 17:46:01.320 [http-nio-8081-exec-7] INFO  c.m.e.s.impl.StatisticsServiceImpl - 今天日期: 2026-05-06
+2026-05-06 17:46:01.320 [http-nio-8081-exec-7] INFO  c.m.e.s.impl.StatisticsServiceImpl - 文章日期集合: [2026-04-30, 2026-04-29, 2026-04-28, 2026-04-27, 2026-04-26, 2026-04-25, 2026-04-24, 2026-04-22, 2026-04-21, 2026-04-20, 2026-04-19, 2026-04-18, 2026-04-17]
+2026-05-06 17:46:01.320 [http-nio-8081-exec-7] INFO  c.m.e.s.impl.StatisticsServiceImpl - 当前连续创作天数: 0
+2026-05-06 17:46:01.320 [http-nio-8081-exec-7] INFO  c.m.e.s.impl.StatisticsServiceImpl - 连续创作天数计算完成: 0, 显示值: 0
+2026-05-06 17:46:01.320 [http-nio-8081-exec-7] INFO  c.m.e.s.impl.StatisticsServiceImpl - UserStatsDTO: UserStatsDTO{userId=4, username='admin', nickname='管理员', avatar='https://api.dicebear.com/7.x/pixel-art/svg?seed=4', original=121, likes=42, collections=40, comments=45, views=8251, blogRank=1, followers=5, following=4, continuousDays=0, continuousDaysDisplay='0'}
+2026-05-06 17:46:01.320 [http-nio-8081-exec-7] INFO  c.m.e.s.impl.StatisticsServiceImpl - userId: 4
+2026-05-06 17:46:01.320 [http-nio-8081-exec-7] INFO  c.m.e.s.impl.StatisticsServiceImpl - username: admin
+2026-05-06 17:46:01.320 [http-nio-8081-exec-7] INFO  c.m.e.s.impl.StatisticsServiceImpl - nickname: 管理员
+2026-05-06 17:46:01.320 [http-nio-8081-exec-7] INFO  c.m.e.s.impl.StatisticsServiceImpl - original: 121
+2026-05-06 17:46:01.320 [http-nio-8081-exec-7] INFO  c.m.e.s.impl.StatisticsServiceImpl - likes: 42
+2026-05-06 17:46:01.320 [http-nio-8081-exec-7] INFO  c.m.e.s.impl.StatisticsServiceImpl - collections: 40
+2026-05-06 17:46:01.320 [http-nio-8081-exec-7] INFO  c.m.e.s.impl.StatisticsServiceImpl - comments: 45
+2026-05-06 17:46:01.320 [http-nio-8081-exec-7] INFO  c.m.e.s.impl.StatisticsServiceImpl - views: 8251
+2026-05-06 17:46:01.320 [http-nio-8081-exec-7] INFO  c.m.e.s.impl.StatisticsServiceImpl - blogRank: 1
+2026-05-06 17:46:01.320 [http-nio-8081-exec-7] INFO  c.m.e.s.impl.StatisticsServiceImpl - followers: 5
+2026-05-06 17:46:01.320 [http-nio-8081-exec-7] INFO  c.m.e.s.impl.StatisticsServiceImpl - following: 4
+2026-05-06 17:46:01.320 [http-nio-8081-exec-7] INFO  c.m.e.s.impl.StatisticsServiceImpl - continuousDays: 0
+2026-05-06 17:46:01.320 [http-nio-8081-exec-7] INFO  c.m.e.s.impl.StatisticsServiceImpl - continuousDaysDisplay: 0
+2026-05-06 17:46:01.447 [http-nio-8081-exec-2] INFO  c.m.e.s.impl.StatisticsServiceImpl - 获取到121篇文档
+2026-05-06 17:46:01.447 [http-nio-8081-exec-2] INFO  c.m.e.s.impl.StatisticsServiceImpl - 文档ID: 238, 浏览量: 47
+2026-05-06 17:46:01.447 [http-nio-8081-exec-2] INFO  c.m.e.s.impl.StatisticsServiceImpl - 文档ID: 180, 浏览量: 110
+2026-05-06 17:46:01.447 [http-nio-8081-exec-2] INFO  c.m.e.s.impl.StatisticsServiceImpl - 文档ID: 237, 浏览量: 14
+2026-05-06 17:46:01.447 [http-nio-8081-exec-2] INFO  c.m.e.s.impl.StatisticsServiceImpl - 文档ID: 236, 浏览量: 5
+2026-05-06 17:46:01.447 [http-nio-8081-exec-2] INFO  c.m.e.s.impl.StatisticsServiceImpl - 文档ID: 234, 浏览量: 1
+2026-05-06 17:46:01.447 [http-nio-8081-exec-2] INFO  c.m.e.s.impl.StatisticsServiceImpl - 文档ID: 233, 浏览量: 2
+2026-05-06 17:46:01.447 [http-nio-8081-exec-2] INFO  c.m.e.s.impl.StatisticsServiceImpl - 文档ID: 182, 浏览量: 108
+2026-05-06 17:46:01.447 [http-nio-8081-exec-2] INFO  c.m.e.s.impl.StatisticsServiceImpl - 文档ID: 181, 浏览量: 77
+2026-05-06 17:46:01.447 [http-nio-8081-exec-2] INFO  c.m.e.s.impl.StatisticsServiceImpl - 文档ID: 179, 浏览量: 68
+2026-05-06 17:46:01.447 [http-nio-8081-exec-2] INFO  c.m.e.s.impl.StatisticsServiceImpl - 文档ID: 178, 浏览量: 85
+2026-05-06 17:46:01.447 [http-nio-8081-exec-2] INFO  c.m.e.s.impl.StatisticsServiceImpl - 文档ID: 177, 浏览量: 75
+2026-05-06 17:46:01.447 [http-nio-8081-exec-2] INFO  c.m.e.s.impl.StatisticsServiceImpl - 文档ID: 176, 浏览量: 77
+2026-05-06 17:46:01.447 [http-nio-8081-exec-2] INFO  c.m.e.s.impl.StatisticsServiceImpl - 文档ID: 175, 浏览量: 74
+2026-05-06 17:46:01.447 [http-nio-8081-exec-2] INFO  c.m.e.s.impl.StatisticsServiceImpl - 文档ID: 232, 浏览量: 0
+2026-05-06 17:46:01.447 [http-nio-8081-exec-2] INFO  c.m.e.s.impl.StatisticsServiceImpl - 文档ID: 253, 浏览量: 0
+2026-05-06 17:46:01.447 [http-nio-8081-exec-2] INFO  c.m.e.s.impl.StatisticsServiceImpl - 文档ID: 252, 浏览量: 0
+2026-05-06 17:46:01.447 [http-nio-8081-exec-2] INFO  c.m.e.s.impl.StatisticsServiceImpl - 文档ID: 251, 浏览量: 0
+2026-05-06 17:46:01.447 [http-nio-8081-exec-2] INFO  c.m.e.s.impl.StatisticsServiceImpl - 文档ID: 243, 浏览量: 3
+2026-05-06 17:46:01.447 [http-nio-8081-exec-2] INFO  c.m.e.s.impl.StatisticsServiceImpl - 文档ID: 242, 浏览量: 1
+2026-05-06 17:46:01.447 [http-nio-8081-exec-2] INFO  c.m.e.s.impl.StatisticsServiceImpl - 文档ID: 241, 浏览量: 3
+2026-05-06 17:46:01.447 [http-nio-8081-exec-2] INFO  c.m.e.s.impl.StatisticsServiceImpl - 文档ID: 240, 浏览量: 0
+2026-05-06 17:46:01.448 [http-nio-8081-exec-2] INFO  c.m.e.s.impl.StatisticsServiceImpl - 文档ID: 239, 浏览量: 0
+2026-05-06 17:46:01.448 [http-nio-8081-exec-2] INFO  c.m.e.s.impl.StatisticsServiceImpl - 文档ID: 231, 浏览量: 30
+2026-05-06 17:46:01.448 [http-nio-8081-exec-2] INFO  c.m.e.s.impl.StatisticsServiceImpl - 文档ID: 249, 浏览量: 0
+2026-05-06 17:46:01.448 [http-nio-8081-exec-2] INFO  c.m.e.s.impl.StatisticsServiceImpl - 文档ID: 244, 浏览量: 0
+2026-05-06 17:46:01.448 [http-nio-8081-exec-2] INFO  c.m.e.s.impl.StatisticsServiceImpl - 文档ID: 248, 浏览量: 0
+2026-05-06 17:46:01.448 [http-nio-8081-exec-2] INFO  c.m.e.s.impl.StatisticsServiceImpl - 文档ID: 235, 浏览量: 0
+2026-05-06 17:46:01.448 [http-nio-8081-exec-2] INFO  c.m.e.s.impl.StatisticsServiceImpl - 文档ID: 191, 浏览量: 187
+2026-05-06 17:46:01.448 [http-nio-8081-exec-2] INFO  c.m.e.s.impl.StatisticsServiceImpl - 文档ID: 112, 浏览量: 177
+2026-05-06 17:46:01.448 [http-nio-8081-exec-2] INFO  c.m.e.s.impl.StatisticsServiceImpl - 文档ID: 151, 浏览量: 118
+2026-05-06 17:46:01.448 [http-nio-8081-exec-2] INFO  c.m.e.s.impl.StatisticsServiceImpl - 文档ID: 215, 浏览量: 80
+2026-05-06 17:46:01.448 [http-nio-8081-exec-2] INFO  c.m.e.s.impl.StatisticsServiceImpl - 文档ID: 115, 浏览量: 112
+2026-05-06 17:46:01.448 [http-nio-8081-exec-2] INFO  c.m.e.s.impl.StatisticsServiceImpl - 文档ID: 114, 浏览量: 90
+2026-05-06 17:46:01.448 [http-nio-8081-exec-2] INFO  c.m.e.s.impl.StatisticsServiceImpl - 文档ID: 117, 浏览量: 68
+2026-05-06 17:46:01.448 [http-nio-8081-exec-2] INFO  c.m.e.s.impl.StatisticsServiceImpl - 文档ID: 118, 浏览量: 89
+2026-05-06 17:46:01.448 [http-nio-8081-exec-2] INFO  c.m.e.s.impl.StatisticsServiceImpl - 文档ID: 119, 浏览量: 103
+2026-05-06 17:46:01.448 [http-nio-8081-exec-2] INFO  c.m.e.s.impl.StatisticsServiceImpl - 文档ID: 121, 浏览量: 78
+2026-05-06 17:46:01.448 [http-nio-8081-exec-2] INFO  c.m.e.s.impl.StatisticsServiceImpl - 文档ID: 122, 浏览量: 85
+2026-05-06 17:46:01.448 [http-nio-8081-exec-2] INFO  c.m.e.s.impl.StatisticsServiceImpl - 文档ID: 124, 浏览量: 69
+2026-05-06 17:46:01.448 [http-nio-8081-exec-2] INFO  c.m.e.s.impl.StatisticsServiceImpl - 文档ID: 125, 浏览量: 82
+2026-05-06 17:46:01.448 [http-nio-8081-exec-2] INFO  c.m.e.s.impl.StatisticsServiceImpl - 文档ID: 126, 浏览量: 75
+2026-05-06 17:46:01.448 [http-nio-8081-exec-2] INFO  c.m.e.s.impl.StatisticsServiceImpl - 文档ID: 128, 浏览量: 94
+2026-05-06 17:46:01.448 [http-nio-8081-exec-2] INFO  c.m.e.s.impl.StatisticsServiceImpl - 文档ID: 129, 浏览量: 81
+2026-05-06 17:46:01.448 [http-nio-8081-exec-2] INFO  c.m.e.s.impl.StatisticsServiceImpl - 文档ID: 130, 浏览量: 77
+2026-05-06 17:46:01.448 [http-nio-8081-exec-2] INFO  c.m.e.s.impl.StatisticsServiceImpl - 文档ID: 131, 浏览量: 86
+2026-05-06 17:46:01.448 [http-nio-8081-exec-2] INFO  c.m.e.s.impl.StatisticsServiceImpl - 文档ID: 133, 浏览量: 92
+2026-05-06 17:46:01.448 [http-nio-8081-exec-2] INFO  c.m.e.s.impl.StatisticsServiceImpl - 文档ID: 134, 浏览量: 83
+2026-05-06 17:46:01.448 [http-nio-8081-exec-2] INFO  c.m.e.s.impl.StatisticsServiceImpl - 文档ID: 135, 浏览量: 79
+2026-05-06 17:46:01.448 [http-nio-8081-exec-2] INFO  c.m.e.s.impl.StatisticsServiceImpl - 文档ID: 136, 浏览量: 84
+2026-05-06 17:46:01.449 [http-nio-8081-exec-2] INFO  c.m.e.s.impl.StatisticsServiceImpl - 文档ID: 137, 浏览量: 72
+2026-05-06 17:46:01.449 [http-nio-8081-exec-2] INFO  c.m.e.s.impl.StatisticsServiceImpl - 文档ID: 138, 浏览量: 88
+2026-05-06 17:46:01.449 [http-nio-8081-exec-2] INFO  c.m.e.s.impl.StatisticsServiceImpl - 文档ID: 139, 浏览量: 76
+2026-05-06 17:46:01.449 [http-nio-8081-exec-2] INFO  c.m.e.s.impl.StatisticsServiceImpl - 文档ID: 140, 浏览量: 67
+2026-05-06 17:46:01.449 [http-nio-8081-exec-2] INFO  c.m.e.s.impl.StatisticsServiceImpl - 文档ID: 141, 浏览量: 71
+2026-05-06 17:46:01.449 [http-nio-8081-exec-2] INFO  c.m.e.s.impl.StatisticsServiceImpl - 文档ID: 142, 浏览量: 80
+2026-05-06 17:46:01.449 [http-nio-8081-exec-2] INFO  c.m.e.s.impl.StatisticsServiceImpl - 文档ID: 143, 浏览量: 74
+2026-05-06 17:46:01.449 [http-nio-8081-exec-2] INFO  c.m.e.s.impl.StatisticsServiceImpl - 文档ID: 146, 浏览量: 73
+2026-05-06 17:46:01.449 [http-nio-8081-exec-2] INFO  c.m.e.s.impl.StatisticsServiceImpl - 文档ID: 147, 浏览量: 69
+2026-05-06 17:46:01.449 [http-nio-8081-exec-2] INFO  c.m.e.s.impl.StatisticsServiceImpl - 文档ID: 149, 浏览量: 70
+2026-05-06 17:46:01.449 [http-nio-8081-exec-2] INFO  c.m.e.s.impl.StatisticsServiceImpl - 文档ID: 150, 浏览量: 78
+2026-05-06 17:46:01.449 [http-nio-8081-exec-2] INFO  c.m.e.s.impl.StatisticsServiceImpl - 文档ID: 152, 浏览量: 76
+2026-05-06 17:46:01.449 [http-nio-8081-exec-2] INFO  c.m.e.s.impl.StatisticsServiceImpl - 文档ID: 153, 浏览量: 82
+2026-05-06 17:46:01.449 [http-nio-8081-exec-2] INFO  c.m.e.s.impl.StatisticsServiceImpl - 文档ID: 154, 浏览量: 73
+2026-05-06 17:46:01.449 [http-nio-8081-exec-2] INFO  c.m.e.s.impl.StatisticsServiceImpl - 文档ID: 155, 浏览量: 77
+2026-05-06 17:46:01.449 [http-nio-8081-exec-2] INFO  c.m.e.s.impl.StatisticsServiceImpl - 文档ID: 156, 浏览量: 71
+2026-05-06 17:46:01.449 [http-nio-8081-exec-2] INFO  c.m.e.s.impl.StatisticsServiceImpl - 文档ID: 157, 浏览量: 79
+2026-05-06 17:46:01.449 [http-nio-8081-exec-2] INFO  c.m.e.s.impl.StatisticsServiceImpl - 文档ID: 158, 浏览量: 83
+2026-05-06 17:46:01.449 [http-nio-8081-exec-2] INFO  c.m.e.s.impl.StatisticsServiceImpl - 文档ID: 159, 浏览量: 75
+2026-05-06 17:46:01.449 [http-nio-8081-exec-2] INFO  c.m.e.s.impl.StatisticsServiceImpl - 文档ID: 160, 浏览量: 78
+2026-05-06 17:46:01.449 [http-nio-8081-exec-2] INFO  c.m.e.s.impl.StatisticsServiceImpl - 文档ID: 161, 浏览量: 72
+2026-05-06 17:46:01.449 [http-nio-8081-exec-2] INFO  c.m.e.s.impl.StatisticsServiceImpl - 文档ID: 162, 浏览量: 70
+2026-05-06 17:46:01.449 [http-nio-8081-exec-2] INFO  c.m.e.s.impl.StatisticsServiceImpl - 文档ID: 163, 浏览量: 81
+2026-05-06 17:46:01.449 [http-nio-8081-exec-2] INFO  c.m.e.s.impl.StatisticsServiceImpl - 文档ID: 164, 浏览量: 74
+2026-05-06 17:46:01.449 [http-nio-8081-exec-2] INFO  c.m.e.s.impl.StatisticsServiceImpl - 文档ID: 165, 浏览量: 70
+2026-05-06 17:46:01.449 [http-nio-8081-exec-2] INFO  c.m.e.s.impl.StatisticsServiceImpl - 文档ID: 166, 浏览量: 68
+2026-05-06 17:46:01.449 [http-nio-8081-exec-2] INFO  c.m.e.s.impl.StatisticsServiceImpl - 文档ID: 167, 浏览量: 76
+2026-05-06 17:46:01.449 [http-nio-8081-exec-2] INFO  c.m.e.s.impl.StatisticsServiceImpl - 文档ID: 168, 浏览量: 73
+2026-05-06 17:46:01.449 [http-nio-8081-exec-2] INFO  c.m.e.s.impl.StatisticsServiceImpl - 文档ID: 169, 浏览量: 67
+2026-05-06 17:46:01.449 [http-nio-8081-exec-2] INFO  c.m.e.s.impl.StatisticsServiceImpl - 文档ID: 170, 浏览量: 80
+2026-05-06 17:46:01.449 [http-nio-8081-exec-2] INFO  c.m.e.s.impl.StatisticsServiceImpl - 文档ID: 171, 浏览量: 78
+2026-05-06 17:46:01.449 [http-nio-8081-exec-2] INFO  c.m.e.s.impl.StatisticsServiceImpl - 文档ID: 172, 浏览量: 72
+2026-05-06 17:46:01.449 [http-nio-8081-exec-2] INFO  c.m.e.s.impl.StatisticsServiceImpl - 文档ID: 173, 浏览量: 75
+2026-05-06 17:46:01.449 [http-nio-8081-exec-2] INFO  c.m.e.s.impl.StatisticsServiceImpl - 文档ID: 174, 浏览量: 84
+2026-05-06 17:46:01.449 [http-nio-8081-exec-2] INFO  c.m.e.s.impl.StatisticsServiceImpl - 文档ID: 183, 浏览量: 76
+2026-05-06 17:46:01.449 [http-nio-8081-exec-2] INFO  c.m.e.s.impl.StatisticsServiceImpl - 文档ID: 184, 浏览量: 72
+2026-05-06 17:46:01.449 [http-nio-8081-exec-2] INFO  c.m.e.s.impl.StatisticsServiceImpl - 文档ID: 185, 浏览量: 78
+2026-05-06 17:46:01.449 [http-nio-8081-exec-2] INFO  c.m.e.s.impl.StatisticsServiceImpl - 文档ID: 186, 浏览量: 71
+2026-05-06 17:46:01.449 [http-nio-8081-exec-2] INFO  c.m.e.s.impl.StatisticsServiceImpl - 文档ID: 187, 浏览量: 68
+2026-05-06 17:46:01.449 [http-nio-8081-exec-2] INFO  c.m.e.s.impl.StatisticsServiceImpl - 文档ID: 188, 浏览量: 73
+2026-05-06 17:46:01.449 [http-nio-8081-exec-2] INFO  c.m.e.s.impl.StatisticsServiceImpl - 文档ID: 189, 浏览量: 80
+2026-05-06 17:46:01.449 [http-nio-8081-exec-2] INFO  c.m.e.s.impl.StatisticsServiceImpl - 文档ID: 190, 浏览量: 75
+2026-05-06 17:46:01.449 [http-nio-8081-exec-2] INFO  c.m.e.s.impl.StatisticsServiceImpl - 文档ID: 192, 浏览量: 76
+2026-05-06 17:46:01.449 [http-nio-8081-exec-2] INFO  c.m.e.s.impl.StatisticsServiceImpl - 文档ID: 193, 浏览量: 72
+2026-05-06 17:46:01.449 [http-nio-8081-exec-2] INFO  c.m.e.s.impl.StatisticsServiceImpl - 文档ID: 194, 浏览量: 79
+2026-05-06 17:46:01.449 [http-nio-8081-exec-2] INFO  c.m.e.s.impl.StatisticsServiceImpl - 文档ID: 195, 浏览量: 74
+2026-05-06 17:46:01.449 [http-nio-8081-exec-2] INFO  c.m.e.s.impl.StatisticsServiceImpl - 文档ID: 196, 浏览量: 81
+2026-05-06 17:46:01.449 [http-nio-8081-exec-2] INFO  c.m.e.s.impl.StatisticsServiceImpl - 文档ID: 197, 浏览量: 77
+2026-05-06 17:46:01.449 [http-nio-8081-exec-2] INFO  c.m.e.s.impl.StatisticsServiceImpl - 文档ID: 198, 浏览量: 70
+2026-05-06 17:46:01.449 [http-nio-8081-exec-2] INFO  c.m.e.s.impl.StatisticsServiceImpl - 文档ID: 199, 浏览量: 75
+2026-05-06 17:46:01.449 [http-nio-8081-exec-2] INFO  c.m.e.s.impl.StatisticsServiceImpl - 文档ID: 200, 浏览量: 85
+2026-05-06 17:46:01.449 [http-nio-8081-exec-2] INFO  c.m.e.s.impl.StatisticsServiceImpl - 文档ID: 201, 浏览量: 71
+2026-05-06 17:46:01.449 [http-nio-8081-exec-2] INFO  c.m.e.s.impl.StatisticsServiceImpl - 文档ID: 202, 浏览量: 78
+2026-05-06 17:46:01.449 [http-nio-8081-exec-2] INFO  c.m.e.s.impl.StatisticsServiceImpl - 文档ID: 203, 浏览量: 73
+2026-05-06 17:46:01.449 [http-nio-8081-exec-2] INFO  c.m.e.s.impl.StatisticsServiceImpl - 文档ID: 204, 浏览量: 69
+2026-05-06 17:46:01.449 [http-nio-8081-exec-2] INFO  c.m.e.s.impl.StatisticsServiceImpl - 文档ID: 205, 浏览量: 74
+2026-05-06 17:46:01.449 [http-nio-8081-exec-2] INFO  c.m.e.s.impl.StatisticsServiceImpl - 文档ID: 206, 浏览量: 77
+2026-05-06 17:46:01.449 [http-nio-8081-exec-2] INFO  c.m.e.s.impl.StatisticsServiceImpl - 文档ID: 207, 浏览量: 74
+2026-05-06 17:46:01.449 [http-nio-8081-exec-2] INFO  c.m.e.s.impl.StatisticsServiceImpl - 文档ID: 208, 浏览量: 79
+2026-05-06 17:46:01.449 [http-nio-8081-exec-2] INFO  c.m.e.s.impl.StatisticsServiceImpl - 文档ID: 209, 浏览量: 75
+2026-05-06 17:46:01.449 [http-nio-8081-exec-2] INFO  c.m.e.s.impl.StatisticsServiceImpl - 文档ID: 210, 浏览量: 81
+2026-05-06 17:46:01.449 [http-nio-8081-exec-2] INFO  c.m.e.s.impl.StatisticsServiceImpl - 文档ID: 211, 浏览量: 76
+2026-05-06 17:46:01.460 [http-nio-8081-exec-2] INFO  c.m.e.s.impl.StatisticsServiceImpl - 文档ID: 212, 浏览量: 73
+2026-05-06 17:46:01.460 [http-nio-8081-exec-2] INFO  c.m.e.s.impl.StatisticsServiceImpl - 文档ID: 213, 浏览量: 70
+2026-05-06 17:46:01.461 [http-nio-8081-exec-2] INFO  c.m.e.s.impl.StatisticsServiceImpl - 文档ID: 214, 浏览量: 68
+2026-05-06 17:46:01.461 [http-nio-8081-exec-2] INFO  c.m.e.s.impl.StatisticsServiceImpl - 文档ID: 216, 浏览量: 78
+2026-05-06 17:46:01.461 [http-nio-8081-exec-2] INFO  c.m.e.s.impl.StatisticsServiceImpl - 文档ID: 217, 浏览量: 71
+2026-05-06 17:46:01.461 [http-nio-8081-exec-2] INFO  c.m.e.s.impl.StatisticsServiceImpl - 文档ID: 218, 浏览量: 67
+2026-05-06 17:46:01.461 [http-nio-8081-exec-2] INFO  c.m.e.s.impl.StatisticsServiceImpl - 文档ID: 219, 浏览量: 75
+2026-05-06 17:46:01.461 [http-nio-8081-exec-2] INFO  c.m.e.s.impl.StatisticsServiceImpl - 文档ID: 220, 浏览量: 72
+2026-05-06 17:46:01.461 [http-nio-8081-exec-2] INFO  c.m.e.s.impl.StatisticsServiceImpl - 文档ID: 221, 浏览量: 77
+2026-05-06 17:46:01.461 [http-nio-8081-exec-2] INFO  c.m.e.s.impl.StatisticsServiceImpl - 文档ID: 222, 浏览量: 70
+2026-05-06 17:46:01.461 [http-nio-8081-exec-2] INFO  c.m.e.s.impl.StatisticsServiceImpl - 总浏览量: 8251
+2026-05-06 17:46:01.672 [http-nio-8081-exec-2] INFO  c.m.e.s.impl.StatisticsServiceImpl - 开始计算当前连续创作天数，userId: 4
+2026-05-06 17:46:01.704 [http-nio-8081-exec-2] INFO  c.m.e.s.impl.StatisticsServiceImpl - 获取到用户4的文章数量: 121
+2026-05-06 17:46:01.704 [http-nio-8081-exec-2] INFO  c.m.e.s.impl.StatisticsServiceImpl - 文章ID: 238, 创建日期: 2026-04-24
+2026-05-06 17:46:01.704 [http-nio-8081-exec-2] INFO  c.m.e.s.impl.StatisticsServiceImpl - 文章ID: 180, 创建日期: 2026-04-24
+2026-05-06 17:46:01.704 [http-nio-8081-exec-2] INFO  c.m.e.s.impl.StatisticsServiceImpl - 文章ID: 237, 创建日期: 2026-04-30
+2026-05-06 17:46:01.704 [http-nio-8081-exec-2] INFO  c.m.e.s.impl.StatisticsServiceImpl - 文章ID: 236, 创建日期: 2026-04-29
+2026-05-06 17:46:01.704 [http-nio-8081-exec-2] INFO  c.m.e.s.impl.StatisticsServiceImpl - 文章ID: 234, 创建日期: 2026-04-27
+2026-05-06 17:46:01.704 [http-nio-8081-exec-2] INFO  c.m.e.s.impl.StatisticsServiceImpl - 文章ID: 233, 创建日期: 2026-04-26
+2026-05-06 17:46:01.705 [http-nio-8081-exec-2] INFO  c.m.e.s.impl.StatisticsServiceImpl - 文章ID: 182, 创建日期: 2026-04-25
+2026-05-06 17:46:01.705 [http-nio-8081-exec-2] INFO  c.m.e.s.impl.StatisticsServiceImpl - 文章ID: 181, 创建日期: 2026-04-24
+2026-05-06 17:46:01.705 [http-nio-8081-exec-2] INFO  c.m.e.s.impl.StatisticsServiceImpl - 文章ID: 179, 创建日期: 2026-04-22
+2026-05-06 17:46:01.705 [http-nio-8081-exec-2] INFO  c.m.e.s.impl.StatisticsServiceImpl - 文章ID: 178, 创建日期: 2026-04-21
+2026-05-06 17:46:01.705 [http-nio-8081-exec-2] INFO  c.m.e.s.impl.StatisticsServiceImpl - 文章ID: 177, 创建日期: 2026-04-20
+2026-05-06 17:46:01.705 [http-nio-8081-exec-2] INFO  c.m.e.s.impl.StatisticsServiceImpl - 文章ID: 176, 创建日期: 2026-04-19
+2026-05-06 17:46:01.705 [http-nio-8081-exec-2] INFO  c.m.e.s.impl.StatisticsServiceImpl - 文章ID: 175, 创建日期: 2026-04-17
+2026-05-06 17:46:01.705 [http-nio-8081-exec-2] INFO  c.m.e.s.impl.StatisticsServiceImpl - 文章ID: 232, 创建日期: 2026-04-25
+2026-05-06 17:46:01.706 [http-nio-8081-exec-2] INFO  c.m.e.s.impl.StatisticsServiceImpl - 文章ID: 253, 创建日期: 2026-04-24
+2026-05-06 17:46:01.706 [http-nio-8081-exec-2] INFO  c.m.e.s.impl.StatisticsServiceImpl - 文章ID: 252, 创建日期: 2026-04-24
+2026-05-06 17:46:01.706 [http-nio-8081-exec-2] INFO  c.m.e.s.impl.StatisticsServiceImpl - 文章ID: 251, 创建日期: 2026-04-24
+2026-05-06 17:46:01.706 [http-nio-8081-exec-2] INFO  c.m.e.s.impl.StatisticsServiceImpl - 文章ID: 243, 创建日期: 2026-04-24
+2026-05-06 17:46:01.706 [http-nio-8081-exec-2] INFO  c.m.e.s.impl.StatisticsServiceImpl - 文章ID: 242, 创建日期: 2026-04-24
+2026-05-06 17:46:01.706 [http-nio-8081-exec-2] INFO  c.m.e.s.impl.StatisticsServiceImpl - 文章ID: 241, 创建日期: 2026-04-24
+2026-05-06 17:46:01.706 [http-nio-8081-exec-2] INFO  c.m.e.s.impl.StatisticsServiceImpl - 文章ID: 240, 创建日期: 2026-04-24
+2026-05-06 17:46:01.706 [http-nio-8081-exec-2] INFO  c.m.e.s.impl.StatisticsServiceImpl - 文章ID: 239, 创建日期: 2026-04-24
+2026-05-06 17:46:01.706 [http-nio-8081-exec-2] INFO  c.m.e.s.impl.StatisticsServiceImpl - 文章ID: 231, 创建日期: 2026-04-20
+2026-05-06 17:46:01.706 [http-nio-8081-exec-2] INFO  c.m.e.s.impl.StatisticsServiceImpl - 文章ID: 249, 创建日期: 2026-04-24
+2026-05-06 17:46:01.706 [http-nio-8081-exec-2] INFO  c.m.e.s.impl.StatisticsServiceImpl - 文章ID: 244, 创建日期: 2026-04-24
+2026-05-06 17:46:01.706 [http-nio-8081-exec-2] INFO  c.m.e.s.impl.StatisticsServiceImpl - 文章ID: 248, 创建日期: 2026-04-24
+2026-05-06 17:46:01.706 [http-nio-8081-exec-2] INFO  c.m.e.s.impl.StatisticsServiceImpl - 文章ID: 235, 创建日期: 2026-04-28
+2026-05-06 17:46:01.706 [http-nio-8081-exec-2] INFO  c.m.e.s.impl.StatisticsServiceImpl - 文章ID: 191, 创建日期: 2026-04-18
+2026-05-06 17:46:01.706 [http-nio-8081-exec-2] INFO  c.m.e.s.impl.StatisticsServiceImpl - 文章ID: 112, 创建日期: 2026-04-18
+2026-05-06 17:46:01.706 [http-nio-8081-exec-2] INFO  c.m.e.s.impl.StatisticsServiceImpl - 文章ID: 151, 创建日期: 2026-04-18
+2026-05-06 17:46:01.706 [http-nio-8081-exec-2] INFO  c.m.e.s.impl.StatisticsServiceImpl - 文章ID: 215, 创建日期: 2026-04-18
+2026-05-06 17:46:01.706 [http-nio-8081-exec-2] INFO  c.m.e.s.impl.StatisticsServiceImpl - 文章ID: 115, 创建日期: 2026-04-18
+2026-05-06 17:46:01.706 [http-nio-8081-exec-2] INFO  c.m.e.s.impl.StatisticsServiceImpl - 文章ID: 114, 创建日期: 2026-04-18
+2026-05-06 17:46:01.706 [http-nio-8081-exec-2] INFO  c.m.e.s.impl.StatisticsServiceImpl - 文章ID: 117, 创建日期: 2026-04-18
+2026-05-06 17:46:01.706 [http-nio-8081-exec-2] INFO  c.m.e.s.impl.StatisticsServiceImpl - 文章ID: 118, 创建日期: 2026-04-18
+2026-05-06 17:46:01.706 [http-nio-8081-exec-2] INFO  c.m.e.s.impl.StatisticsServiceImpl - 文章ID: 119, 创建日期: 2026-04-18
+2026-05-06 17:46:01.706 [http-nio-8081-exec-2] INFO  c.m.e.s.impl.StatisticsServiceImpl - 文章ID: 121, 创建日期: 2026-04-18
+2026-05-06 17:46:01.706 [http-nio-8081-exec-2] INFO  c.m.e.s.impl.StatisticsServiceImpl - 文章ID: 122, 创建日期: 2026-04-18
+2026-05-06 17:46:01.706 [http-nio-8081-exec-2] INFO  c.m.e.s.impl.StatisticsServiceImpl - 文章ID: 124, 创建日期: 2026-04-18
+2026-05-06 17:46:01.706 [http-nio-8081-exec-2] INFO  c.m.e.s.impl.StatisticsServiceImpl - 文章ID: 125, 创建日期: 2026-04-18
+2026-05-06 17:46:01.706 [http-nio-8081-exec-2] INFO  c.m.e.s.impl.StatisticsServiceImpl - 文章ID: 126, 创建日期: 2026-04-18
+2026-05-06 17:46:01.706 [http-nio-8081-exec-2] INFO  c.m.e.s.impl.StatisticsServiceImpl - 文章ID: 128, 创建日期: 2026-04-18
+2026-05-06 17:46:01.706 [http-nio-8081-exec-2] INFO  c.m.e.s.impl.StatisticsServiceImpl - 文章ID: 129, 创建日期: 2026-04-18
+2026-05-06 17:46:01.706 [http-nio-8081-exec-2] INFO  c.m.e.s.impl.StatisticsServiceImpl - 文章ID: 130, 创建日期: 2026-04-18
+2026-05-06 17:46:01.706 [http-nio-8081-exec-2] INFO  c.m.e.s.impl.StatisticsServiceImpl - 文章ID: 131, 创建日期: 2026-04-18
+2026-05-06 17:46:01.706 [http-nio-8081-exec-2] INFO  c.m.e.s.impl.StatisticsServiceImpl - 文章ID: 133, 创建日期: 2026-04-18
+2026-05-06 17:46:01.706 [http-nio-8081-exec-2] INFO  c.m.e.s.impl.StatisticsServiceImpl - 文章ID: 134, 创建日期: 2026-04-18
+2026-05-06 17:46:01.706 [http-nio-8081-exec-2] INFO  c.m.e.s.impl.StatisticsServiceImpl - 文章ID: 135, 创建日期: 2026-04-18
+2026-05-06 17:46:01.706 [http-nio-8081-exec-2] INFO  c.m.e.s.impl.StatisticsServiceImpl - 文章ID: 136, 创建日期: 2026-04-18
+2026-05-06 17:46:01.706 [http-nio-8081-exec-2] INFO  c.m.e.s.impl.StatisticsServiceImpl - 文章ID: 137, 创建日期: 2026-04-18
+2026-05-06 17:46:01.706 [http-nio-8081-exec-2] INFO  c.m.e.s.impl.StatisticsServiceImpl - 文章ID: 138, 创建日期: 2026-04-18
+2026-05-06 17:46:01.706 [http-nio-8081-exec-2] INFO  c.m.e.s.impl.StatisticsServiceImpl - 文章ID: 139, 创建日期: 2026-04-18
+2026-05-06 17:46:01.706 [http-nio-8081-exec-2] INFO  c.m.e.s.impl.StatisticsServiceImpl - 文章ID: 140, 创建日期: 2026-04-18
+2026-05-06 17:46:01.706 [http-nio-8081-exec-2] INFO  c.m.e.s.impl.StatisticsServiceImpl - 文章ID: 141, 创建日期: 2026-04-18
+2026-05-06 17:46:01.706 [http-nio-8081-exec-2] INFO  c.m.e.s.impl.StatisticsServiceImpl - 文章ID: 142, 创建日期: 2026-04-18
+2026-05-06 17:46:01.706 [http-nio-8081-exec-2] INFO  c.m.e.s.impl.StatisticsServiceImpl - 文章ID: 143, 创建日期: 2026-04-18
+2026-05-06 17:46:01.706 [http-nio-8081-exec-2] INFO  c.m.e.s.impl.StatisticsServiceImpl - 文章ID: 146, 创建日期: 2026-04-18
+2026-05-06 17:46:01.706 [http-nio-8081-exec-2] INFO  c.m.e.s.impl.StatisticsServiceImpl - 文章ID: 147, 创建日期: 2026-04-18
+2026-05-06 17:46:01.706 [http-nio-8081-exec-2] INFO  c.m.e.s.impl.StatisticsServiceImpl - 文章ID: 149, 创建日期: 2026-04-18
+2026-05-06 17:46:01.706 [http-nio-8081-exec-2] INFO  c.m.e.s.impl.StatisticsServiceImpl - 文章ID: 150, 创建日期: 2026-04-18
+2026-05-06 17:46:01.706 [http-nio-8081-exec-2] INFO  c.m.e.s.impl.StatisticsServiceImpl - 文章ID: 152, 创建日期: 2026-04-18
+2026-05-06 17:46:01.706 [http-nio-8081-exec-2] INFO  c.m.e.s.impl.StatisticsServiceImpl - 文章ID: 153, 创建日期: 2026-04-18
+2026-05-06 17:46:01.706 [http-nio-8081-exec-2] INFO  c.m.e.s.impl.StatisticsServiceImpl - 文章ID: 154, 创建日期: 2026-04-18
+2026-05-06 17:46:01.706 [http-nio-8081-exec-2] INFO  c.m.e.s.impl.StatisticsServiceImpl - 文章ID: 155, 创建日期: 2026-04-18
+2026-05-06 17:46:01.706 [http-nio-8081-exec-2] INFO  c.m.e.s.impl.StatisticsServiceImpl - 文章ID: 156, 创建日期: 2026-04-18
+2026-05-06 17:46:01.706 [http-nio-8081-exec-2] INFO  c.m.e.s.impl.StatisticsServiceImpl - 文章ID: 157, 创建日期: 2026-04-18
+2026-05-06 17:46:01.706 [http-nio-8081-exec-2] INFO  c.m.e.s.impl.StatisticsServiceImpl - 文章ID: 158, 创建日期: 2026-04-18
+2026-05-06 17:46:01.706 [http-nio-8081-exec-2] INFO  c.m.e.s.impl.StatisticsServiceImpl - 文章ID: 159, 创建日期: 2026-04-18
+2026-05-06 17:46:01.706 [http-nio-8081-exec-2] INFO  c.m.e.s.impl.StatisticsServiceImpl - 文章ID: 160, 创建日期: 2026-04-18
+2026-05-06 17:46:01.706 [http-nio-8081-exec-2] INFO  c.m.e.s.impl.StatisticsServiceImpl - 文章ID: 161, 创建日期: 2026-04-18
+2026-05-06 17:46:01.706 [http-nio-8081-exec-2] INFO  c.m.e.s.impl.StatisticsServiceImpl - 文章ID: 162, 创建日期: 2026-04-18
+2026-05-06 17:46:01.706 [http-nio-8081-exec-2] INFO  c.m.e.s.impl.StatisticsServiceImpl - 文章ID: 163, 创建日期: 2026-04-18
+2026-05-06 17:46:01.706 [http-nio-8081-exec-2] INFO  c.m.e.s.impl.StatisticsServiceImpl - 文章ID: 164, 创建日期: 2026-04-18
+2026-05-06 17:46:01.706 [http-nio-8081-exec-2] INFO  c.m.e.s.impl.StatisticsServiceImpl - 文章ID: 165, 创建日期: 2026-04-18
+2026-05-06 17:46:01.706 [http-nio-8081-exec-2] INFO  c.m.e.s.impl.StatisticsServiceImpl - 文章ID: 166, 创建日期: 2026-04-18
+2026-05-06 17:46:01.706 [http-nio-8081-exec-2] INFO  c.m.e.s.impl.StatisticsServiceImpl - 文章ID: 167, 创建日期: 2026-04-18
+2026-05-06 17:46:01.706 [http-nio-8081-exec-2] INFO  c.m.e.s.impl.StatisticsServiceImpl - 文章ID: 168, 创建日期: 2026-04-18
+2026-05-06 17:46:01.706 [http-nio-8081-exec-2] INFO  c.m.e.s.impl.StatisticsServiceImpl - 文章ID: 169, 创建日期: 2026-04-18
+2026-05-06 17:46:01.706 [http-nio-8081-exec-2] INFO  c.m.e.s.impl.StatisticsServiceImpl - 文章ID: 170, 创建日期: 2026-04-18
+2026-05-06 17:46:01.707 [http-nio-8081-exec-2] INFO  c.m.e.s.impl.StatisticsServiceImpl - 文章ID: 171, 创建日期: 2026-04-18
+2026-05-06 17:46:01.707 [http-nio-8081-exec-2] INFO  c.m.e.s.impl.StatisticsServiceImpl - 文章ID: 172, 创建日期: 2026-04-18
+2026-05-06 17:46:01.707 [http-nio-8081-exec-2] INFO  c.m.e.s.impl.StatisticsServiceImpl - 文章ID: 173, 创建日期: 2026-04-18
+2026-05-06 17:46:01.707 [http-nio-8081-exec-2] INFO  c.m.e.s.impl.StatisticsServiceImpl - 文章ID: 174, 创建日期: 2026-04-18
+2026-05-06 17:46:01.707 [http-nio-8081-exec-2] INFO  c.m.e.s.impl.StatisticsServiceImpl - 文章ID: 183, 创建日期: 2026-04-18
+2026-05-06 17:46:01.707 [http-nio-8081-exec-2] INFO  c.m.e.s.impl.StatisticsServiceImpl - 文章ID: 184, 创建日期: 2026-04-18
+2026-05-06 17:46:01.707 [http-nio-8081-exec-2] INFO  c.m.e.s.impl.StatisticsServiceImpl - 文章ID: 185, 创建日期: 2026-04-18
+2026-05-06 17:46:01.707 [http-nio-8081-exec-2] INFO  c.m.e.s.impl.StatisticsServiceImpl - 文章ID: 186, 创建日期: 2026-04-18
+2026-05-06 17:46:01.707 [http-nio-8081-exec-2] INFO  c.m.e.s.impl.StatisticsServiceImpl - 文章ID: 187, 创建日期: 2026-04-18
+2026-05-06 17:46:01.707 [http-nio-8081-exec-2] INFO  c.m.e.s.impl.StatisticsServiceImpl - 文章ID: 188, 创建日期: 2026-04-18
+2026-05-06 17:46:01.707 [http-nio-8081-exec-2] INFO  c.m.e.s.impl.StatisticsServiceImpl - 文章ID: 189, 创建日期: 2026-04-18
+2026-05-06 17:46:01.707 [http-nio-8081-exec-2] INFO  c.m.e.s.impl.StatisticsServiceImpl - 文章ID: 190, 创建日期: 2026-04-18
+2026-05-06 17:46:01.707 [http-nio-8081-exec-2] INFO  c.m.e.s.impl.StatisticsServiceImpl - 文章ID: 192, 创建日期: 2026-04-18
+2026-05-06 17:46:01.707 [http-nio-8081-exec-2] INFO  c.m.e.s.impl.StatisticsServiceImpl - 文章ID: 193, 创建日期: 2026-04-18
+2026-05-06 17:46:01.707 [http-nio-8081-exec-2] INFO  c.m.e.s.impl.StatisticsServiceImpl - 文章ID: 194, 创建日期: 2026-04-18
+2026-05-06 17:46:01.707 [http-nio-8081-exec-2] INFO  c.m.e.s.impl.StatisticsServiceImpl - 文章ID: 195, 创建日期: 2026-04-18
+2026-05-06 17:46:01.707 [http-nio-8081-exec-2] INFO  c.m.e.s.impl.StatisticsServiceImpl - 文章ID: 196, 创建日期: 2026-04-18
+2026-05-06 17:46:01.707 [http-nio-8081-exec-2] INFO  c.m.e.s.impl.StatisticsServiceImpl - 文章ID: 197, 创建日期: 2026-04-18
+2026-05-06 17:46:01.707 [http-nio-8081-exec-2] INFO  c.m.e.s.impl.StatisticsServiceImpl - 文章ID: 198, 创建日期: 2026-04-18
+2026-05-06 17:46:01.707 [http-nio-8081-exec-2] INFO  c.m.e.s.impl.StatisticsServiceImpl - 文章ID: 199, 创建日期: 2026-04-18
+2026-05-06 17:46:01.707 [http-nio-8081-exec-2] INFO  c.m.e.s.impl.StatisticsServiceImpl - 文章ID: 200, 创建日期: 2026-04-18
+2026-05-06 17:46:01.707 [http-nio-8081-exec-2] INFO  c.m.e.s.impl.StatisticsServiceImpl - 文章ID: 201, 创建日期: 2026-04-18
+2026-05-06 17:46:01.707 [http-nio-8081-exec-2] INFO  c.m.e.s.impl.StatisticsServiceImpl - 文章ID: 202, 创建日期: 2026-04-18
+2026-05-06 17:46:01.707 [http-nio-8081-exec-2] INFO  c.m.e.s.impl.StatisticsServiceImpl - 文章ID: 203, 创建日期: 2026-04-18
+2026-05-06 17:46:01.707 [http-nio-8081-exec-2] INFO  c.m.e.s.impl.StatisticsServiceImpl - 文章ID: 204, 创建日期: 2026-04-18
+2026-05-06 17:46:01.707 [http-nio-8081-exec-2] INFO  c.m.e.s.impl.StatisticsServiceImpl - 文章ID: 205, 创建日期: 2026-04-18
+2026-05-06 17:46:01.707 [http-nio-8081-exec-2] INFO  c.m.e.s.impl.StatisticsServiceImpl - 文章ID: 206, 创建日期: 2026-04-18
+2026-05-06 17:46:01.707 [http-nio-8081-exec-2] INFO  c.m.e.s.impl.StatisticsServiceImpl - 文章ID: 207, 创建日期: 2026-04-18
+2026-05-06 17:46:01.707 [http-nio-8081-exec-2] INFO  c.m.e.s.impl.StatisticsServiceImpl - 文章ID: 208, 创建日期: 2026-04-18
+2026-05-06 17:46:01.707 [http-nio-8081-exec-2] INFO  c.m.e.s.impl.StatisticsServiceImpl - 文章ID: 209, 创建日期: 2026-04-18
+2026-05-06 17:46:01.712 [http-nio-8081-exec-2] INFO  c.m.e.s.impl.StatisticsServiceImpl - 文章ID: 210, 创建日期: 2026-04-18
+2026-05-06 17:46:01.712 [http-nio-8081-exec-2] INFO  c.m.e.s.impl.StatisticsServiceImpl - 文章ID: 211, 创建日期: 2026-04-18
+2026-05-06 17:46:01.712 [http-nio-8081-exec-2] INFO  c.m.e.s.impl.StatisticsServiceImpl - 文章ID: 212, 创建日期: 2026-04-18
+2026-05-06 17:46:01.712 [http-nio-8081-exec-2] INFO  c.m.e.s.impl.StatisticsServiceImpl - 文章ID: 213, 创建日期: 2026-04-18
+2026-05-06 17:46:01.712 [http-nio-8081-exec-2] INFO  c.m.e.s.impl.StatisticsServiceImpl - 文章ID: 214, 创建日期: 2026-04-18
+2026-05-06 17:46:01.712 [http-nio-8081-exec-2] INFO  c.m.e.s.impl.StatisticsServiceImpl - 文章ID: 216, 创建日期: 2026-04-18
+2026-05-06 17:46:01.712 [http-nio-8081-exec-2] INFO  c.m.e.s.impl.StatisticsServiceImpl - 文章ID: 217, 创建日期: 2026-04-18
+2026-05-06 17:46:01.712 [http-nio-8081-exec-2] INFO  c.m.e.s.impl.StatisticsServiceImpl - 文章ID: 218, 创建日期: 2026-04-18
+2026-05-06 17:46:01.712 [http-nio-8081-exec-2] INFO  c.m.e.s.impl.StatisticsServiceImpl - 文章ID: 219, 创建日期: 2026-04-18
+2026-05-06 17:46:01.712 [http-nio-8081-exec-2] INFO  c.m.e.s.impl.StatisticsServiceImpl - 文章ID: 220, 创建日期: 2026-04-18
+2026-05-06 17:46:01.712 [http-nio-8081-exec-2] INFO  c.m.e.s.impl.StatisticsServiceImpl - 文章ID: 221, 创建日期: 2026-04-18
+2026-05-06 17:46:01.712 [http-nio-8081-exec-2] INFO  c.m.e.s.impl.StatisticsServiceImpl - 文章ID: 222, 创建日期: 2026-04-18
+2026-05-06 17:46:01.712 [http-nio-8081-exec-2] INFO  c.m.e.s.impl.StatisticsServiceImpl - 今天日期: 2026-05-06
+2026-05-06 17:46:01.712 [http-nio-8081-exec-2] INFO  c.m.e.s.impl.StatisticsServiceImpl - 文章日期集合: [2026-04-30, 2026-04-29, 2026-04-28, 2026-04-27, 2026-04-26, 2026-04-25, 2026-04-24, 2026-04-22, 2026-04-21, 2026-04-20, 2026-04-19, 2026-04-18, 2026-04-17]
+2026-05-06 17:46:01.712 [http-nio-8081-exec-2] INFO  c.m.e.s.impl.StatisticsServiceImpl - 当前连续创作天数: 0
+2026-05-06 17:46:01.712 [http-nio-8081-exec-2] INFO  c.m.e.s.impl.StatisticsServiceImpl - 连续创作天数计算完成: 0, 显示值: 0
+2026-05-06 17:46:01.712 [http-nio-8081-exec-2] INFO  c.m.e.s.impl.StatisticsServiceImpl - UserStatsDTO: UserStatsDTO{userId=4, username='admin', nickname='管理员', avatar='https://api.dicebear.com/7.x/pixel-art/svg?seed=4', original=121, likes=42, collections=40, comments=45, views=8251, blogRank=1, followers=5, following=4, continuousDays=0, continuousDaysDisplay='0'}
+2026-05-06 17:46:01.712 [http-nio-8081-exec-2] INFO  c.m.e.s.impl.StatisticsServiceImpl - userId: 4
+2026-05-06 17:46:01.712 [http-nio-8081-exec-2] INFO  c.m.e.s.impl.StatisticsServiceImpl - username: admin
+2026-05-06 17:46:01.712 [http-nio-8081-exec-2] INFO  c.m.e.s.impl.StatisticsServiceImpl - nickname: 管理员
+2026-05-06 17:46:01.712 [http-nio-8081-exec-2] INFO  c.m.e.s.impl.StatisticsServiceImpl - original: 121
+2026-05-06 17:46:01.712 [http-nio-8081-exec-2] INFO  c.m.e.s.impl.StatisticsServiceImpl - likes: 42
+2026-05-06 17:46:01.712 [http-nio-8081-exec-2] INFO  c.m.e.s.impl.StatisticsServiceImpl - collections: 40
+2026-05-06 17:46:01.712 [http-nio-8081-exec-2] INFO  c.m.e.s.impl.StatisticsServiceImpl - comments: 45
+2026-05-06 17:46:01.712 [http-nio-8081-exec-2] INFO  c.m.e.s.impl.StatisticsServiceImpl - views: 8251
+2026-05-06 17:46:01.712 [http-nio-8081-exec-2] INFO  c.m.e.s.impl.StatisticsServiceImpl - blogRank: 1
+2026-05-06 17:46:01.712 [http-nio-8081-exec-2] INFO  c.m.e.s.impl.StatisticsServiceImpl - followers: 5
+2026-05-06 17:46:01.712 [http-nio-8081-exec-2] INFO  c.m.e.s.impl.StatisticsServiceImpl - following: 4
+2026-05-06 17:46:01.712 [http-nio-8081-exec-2] INFO  c.m.e.s.impl.StatisticsServiceImpl - continuousDays: 0
+2026-05-06 17:46:01.712 [http-nio-8081-exec-2] INFO  c.m.e.s.impl.StatisticsServiceImpl - continuousDaysDisplay: 0
+2026-05-06 17:46:03.593 [http-nio-8081-exec-10] INFO  c.m.e.s.impl.StatisticsServiceImpl - 获取到121篇文档
+2026-05-06 17:46:03.593 [http-nio-8081-exec-10] INFO  c.m.e.s.impl.StatisticsServiceImpl - 文档ID: 238, 浏览量: 47
+2026-05-06 17:46:03.593 [http-nio-8081-exec-10] INFO  c.m.e.s.impl.StatisticsServiceImpl - 文档ID: 180, 浏览量: 110
+2026-05-06 17:46:03.593 [http-nio-8081-exec-10] INFO  c.m.e.s.impl.StatisticsServiceImpl - 文档ID: 237, 浏览量: 14
+2026-05-06 17:46:03.593 [http-nio-8081-exec-10] INFO  c.m.e.s.impl.StatisticsServiceImpl - 文档ID: 236, 浏览量: 5
+2026-05-06 17:46:03.593 [http-nio-8081-exec-10] INFO  c.m.e.s.impl.StatisticsServiceImpl - 文档ID: 234, 浏览量: 1
+2026-05-06 17:46:03.593 [http-nio-8081-exec-10] INFO  c.m.e.s.impl.StatisticsServiceImpl - 文档ID: 233, 浏览量: 2
+2026-05-06 17:46:03.593 [http-nio-8081-exec-10] INFO  c.m.e.s.impl.StatisticsServiceImpl - 文档ID: 182, 浏览量: 108
+2026-05-06 17:46:03.593 [http-nio-8081-exec-10] INFO  c.m.e.s.impl.StatisticsServiceImpl - 文档ID: 181, 浏览量: 77
+2026-05-06 17:46:03.593 [http-nio-8081-exec-10] INFO  c.m.e.s.impl.StatisticsServiceImpl - 文档ID: 179, 浏览量: 68
+2026-05-06 17:46:03.593 [http-nio-8081-exec-10] INFO  c.m.e.s.impl.StatisticsServiceImpl - 文档ID: 178, 浏览量: 85
+2026-05-06 17:46:03.593 [http-nio-8081-exec-10] INFO  c.m.e.s.impl.StatisticsServiceImpl - 文档ID: 177, 浏览量: 75
+2026-05-06 17:46:03.593 [http-nio-8081-exec-10] INFO  c.m.e.s.impl.StatisticsServiceImpl - 文档ID: 176, 浏览量: 77
+2026-05-06 17:46:03.593 [http-nio-8081-exec-10] INFO  c.m.e.s.impl.StatisticsServiceImpl - 文档ID: 175, 浏览量: 74
+2026-05-06 17:46:03.593 [http-nio-8081-exec-10] INFO  c.m.e.s.impl.StatisticsServiceImpl - 文档ID: 232, 浏览量: 0
+2026-05-06 17:46:03.593 [http-nio-8081-exec-10] INFO  c.m.e.s.impl.StatisticsServiceImpl - 文档ID: 253, 浏览量: 0
+2026-05-06 17:46:03.593 [http-nio-8081-exec-10] INFO  c.m.e.s.impl.StatisticsServiceImpl - 文档ID: 252, 浏览量: 0
+2026-05-06 17:46:03.593 [http-nio-8081-exec-10] INFO  c.m.e.s.impl.StatisticsServiceImpl - 文档ID: 251, 浏览量: 0
+2026-05-06 17:46:03.593 [http-nio-8081-exec-10] INFO  c.m.e.s.impl.StatisticsServiceImpl - 文档ID: 243, 浏览量: 3
+2026-05-06 17:46:03.593 [http-nio-8081-exec-10] INFO  c.m.e.s.impl.StatisticsServiceImpl - 文档ID: 242, 浏览量: 1
+2026-05-06 17:46:03.593 [http-nio-8081-exec-10] INFO  c.m.e.s.impl.StatisticsServiceImpl - 文档ID: 241, 浏览量: 3
+2026-05-06 17:46:03.593 [http-nio-8081-exec-10] INFO  c.m.e.s.impl.StatisticsServiceImpl - 文档ID: 240, 浏览量: 0
+2026-05-06 17:46:03.593 [http-nio-8081-exec-10] INFO  c.m.e.s.impl.StatisticsServiceImpl - 文档ID: 239, 浏览量: 0
+2026-05-06 17:46:03.593 [http-nio-8081-exec-10] INFO  c.m.e.s.impl.StatisticsServiceImpl - 文档ID: 231, 浏览量: 30
+2026-05-06 17:46:03.593 [http-nio-8081-exec-10] INFO  c.m.e.s.impl.StatisticsServiceImpl - 文档ID: 249, 浏览量: 0
+2026-05-06 17:46:03.593 [http-nio-8081-exec-10] INFO  c.m.e.s.impl.StatisticsServiceImpl - 文档ID: 244, 浏览量: 0
+2026-05-06 17:46:03.593 [http-nio-8081-exec-10] INFO  c.m.e.s.impl.StatisticsServiceImpl - 文档ID: 248, 浏览量: 0
+2026-05-06 17:46:03.593 [http-nio-8081-exec-10] INFO  c.m.e.s.impl.StatisticsServiceImpl - 文档ID: 235, 浏览量: 0
+2026-05-06 17:46:03.593 [http-nio-8081-exec-10] INFO  c.m.e.s.impl.StatisticsServiceImpl - 文档ID: 191, 浏览量: 187
+2026-05-06 17:46:03.593 [http-nio-8081-exec-10] INFO  c.m.e.s.impl.StatisticsServiceImpl - 文档ID: 112, 浏览量: 177
+2026-05-06 17:46:03.593 [http-nio-8081-exec-10] INFO  c.m.e.s.impl.StatisticsServiceImpl - 文档ID: 151, 浏览量: 118
+2026-05-06 17:46:03.593 [http-nio-8081-exec-10] INFO  c.m.e.s.impl.StatisticsServiceImpl - 文档ID: 215, 浏览量: 80
+2026-05-06 17:46:03.594 [http-nio-8081-exec-10] INFO  c.m.e.s.impl.StatisticsServiceImpl - 文档ID: 115, 浏览量: 112
+2026-05-06 17:46:03.594 [http-nio-8081-exec-10] INFO  c.m.e.s.impl.StatisticsServiceImpl - 文档ID: 114, 浏览量: 90
+2026-05-06 17:46:03.594 [http-nio-8081-exec-10] INFO  c.m.e.s.impl.StatisticsServiceImpl - 文档ID: 117, 浏览量: 68
+2026-05-06 17:46:03.594 [http-nio-8081-exec-10] INFO  c.m.e.s.impl.StatisticsServiceImpl - 文档ID: 118, 浏览量: 89
+2026-05-06 17:46:03.594 [http-nio-8081-exec-10] INFO  c.m.e.s.impl.StatisticsServiceImpl - 文档ID: 119, 浏览量: 103
+2026-05-06 17:46:03.594 [http-nio-8081-exec-10] INFO  c.m.e.s.impl.StatisticsServiceImpl - 文档ID: 121, 浏览量: 78
+2026-05-06 17:46:03.594 [http-nio-8081-exec-10] INFO  c.m.e.s.impl.StatisticsServiceImpl - 文档ID: 122, 浏览量: 85
+2026-05-06 17:46:03.594 [http-nio-8081-exec-10] INFO  c.m.e.s.impl.StatisticsServiceImpl - 文档ID: 124, 浏览量: 69
+2026-05-06 17:46:03.594 [http-nio-8081-exec-10] INFO  c.m.e.s.impl.StatisticsServiceImpl - 文档ID: 125, 浏览量: 82
+2026-05-06 17:46:03.594 [http-nio-8081-exec-10] INFO  c.m.e.s.impl.StatisticsServiceImpl - 文档ID: 126, 浏览量: 75
+2026-05-06 17:46:03.594 [http-nio-8081-exec-10] INFO  c.m.e.s.impl.StatisticsServiceImpl - 文档ID: 128, 浏览量: 94
+2026-05-06 17:46:03.594 [http-nio-8081-exec-10] INFO  c.m.e.s.impl.StatisticsServiceImpl - 文档ID: 129, 浏览量: 81
+2026-05-06 17:46:03.594 [http-nio-8081-exec-10] INFO  c.m.e.s.impl.StatisticsServiceImpl - 文档ID: 130, 浏览量: 77
+2026-05-06 17:46:03.594 [http-nio-8081-exec-10] INFO  c.m.e.s.impl.StatisticsServiceImpl - 文档ID: 131, 浏览量: 86
+2026-05-06 17:46:03.594 [http-nio-8081-exec-10] INFO  c.m.e.s.impl.StatisticsServiceImpl - 文档ID: 133, 浏览量: 92
+2026-05-06 17:46:03.594 [http-nio-8081-exec-10] INFO  c.m.e.s.impl.StatisticsServiceImpl - 文档ID: 134, 浏览量: 83
+2026-05-06 17:46:03.594 [http-nio-8081-exec-10] INFO  c.m.e.s.impl.StatisticsServiceImpl - 文档ID: 135, 浏览量: 79
+2026-05-06 17:46:03.594 [http-nio-8081-exec-10] INFO  c.m.e.s.impl.StatisticsServiceImpl - 文档ID: 136, 浏览量: 84
+2026-05-06 17:46:03.594 [http-nio-8081-exec-10] INFO  c.m.e.s.impl.StatisticsServiceImpl - 文档ID: 137, 浏览量: 72
+2026-05-06 17:46:03.594 [http-nio-8081-exec-10] INFO  c.m.e.s.impl.StatisticsServiceImpl - 文档ID: 138, 浏览量: 88
+2026-05-06 17:46:03.594 [http-nio-8081-exec-10] INFO  c.m.e.s.impl.StatisticsServiceImpl - 文档ID: 139, 浏览量: 76
+2026-05-06 17:46:03.594 [http-nio-8081-exec-10] INFO  c.m.e.s.impl.StatisticsServiceImpl - 文档ID: 140, 浏览量: 67
+2026-05-06 17:46:03.594 [http-nio-8081-exec-10] INFO  c.m.e.s.impl.StatisticsServiceImpl - 文档ID: 141, 浏览量: 71
+2026-05-06 17:46:03.594 [http-nio-8081-exec-10] INFO  c.m.e.s.impl.StatisticsServiceImpl - 文档ID: 142, 浏览量: 80
+2026-05-06 17:46:03.594 [http-nio-8081-exec-10] INFO  c.m.e.s.impl.StatisticsServiceImpl - 文档ID: 143, 浏览量: 74
+2026-05-06 17:46:03.594 [http-nio-8081-exec-10] INFO  c.m.e.s.impl.StatisticsServiceImpl - 文档ID: 146, 浏览量: 73
+2026-05-06 17:46:03.594 [http-nio-8081-exec-10] INFO  c.m.e.s.impl.StatisticsServiceImpl - 文档ID: 147, 浏览量: 69
+2026-05-06 17:46:03.594 [http-nio-8081-exec-10] INFO  c.m.e.s.impl.StatisticsServiceImpl - 文档ID: 149, 浏览量: 70
+2026-05-06 17:46:03.594 [http-nio-8081-exec-10] INFO  c.m.e.s.impl.StatisticsServiceImpl - 文档ID: 150, 浏览量: 78
+2026-05-06 17:46:03.594 [http-nio-8081-exec-10] INFO  c.m.e.s.impl.StatisticsServiceImpl - 文档ID: 152, 浏览量: 76
+2026-05-06 17:46:03.594 [http-nio-8081-exec-10] INFO  c.m.e.s.impl.StatisticsServiceImpl - 文档ID: 153, 浏览量: 82
+2026-05-06 17:46:03.594 [http-nio-8081-exec-10] INFO  c.m.e.s.impl.StatisticsServiceImpl - 文档ID: 154, 浏览量: 73
+2026-05-06 17:46:03.594 [http-nio-8081-exec-10] INFO  c.m.e.s.impl.StatisticsServiceImpl - 文档ID: 155, 浏览量: 77
+2026-05-06 17:46:03.594 [http-nio-8081-exec-10] INFO  c.m.e.s.impl.StatisticsServiceImpl - 文档ID: 156, 浏览量: 71
+2026-05-06 17:46:03.594 [http-nio-8081-exec-10] INFO  c.m.e.s.impl.StatisticsServiceImpl - 文档ID: 157, 浏览量: 79
+2026-05-06 17:46:03.595 [http-nio-8081-exec-10] INFO  c.m.e.s.impl.StatisticsServiceImpl - 文档ID: 158, 浏览量: 83
+2026-05-06 17:46:03.595 [http-nio-8081-exec-10] INFO  c.m.e.s.impl.StatisticsServiceImpl - 文档ID: 159, 浏览量: 75
+2026-05-06 17:46:03.595 [http-nio-8081-exec-10] INFO  c.m.e.s.impl.StatisticsServiceImpl - 文档ID: 160, 浏览量: 78
+2026-05-06 17:46:03.595 [http-nio-8081-exec-10] INFO  c.m.e.s.impl.StatisticsServiceImpl - 文档ID: 161, 浏览量: 72
+2026-05-06 17:46:03.595 [http-nio-8081-exec-10] INFO  c.m.e.s.impl.StatisticsServiceImpl - 文档ID: 162, 浏览量: 70
+2026-05-06 17:46:03.595 [http-nio-8081-exec-10] INFO  c.m.e.s.impl.StatisticsServiceImpl - 文档ID: 163, 浏览量: 81
+2026-05-06 17:46:03.595 [http-nio-8081-exec-10] INFO  c.m.e.s.impl.StatisticsServiceImpl - 文档ID: 164, 浏览量: 74
+2026-05-06 17:46:03.595 [http-nio-8081-exec-10] INFO  c.m.e.s.impl.StatisticsServiceImpl - 文档ID: 165, 浏览量: 70
+2026-05-06 17:46:03.595 [http-nio-8081-exec-10] INFO  c.m.e.s.impl.StatisticsServiceImpl - 文档ID: 166, 浏览量: 68
+2026-05-06 17:46:03.595 [http-nio-8081-exec-10] INFO  c.m.e.s.impl.StatisticsServiceImpl - 文档ID: 167, 浏览量: 76
+2026-05-06 17:46:03.595 [http-nio-8081-exec-10] INFO  c.m.e.s.impl.StatisticsServiceImpl - 文档ID: 168, 浏览量: 73
+2026-05-06 17:46:03.595 [http-nio-8081-exec-10] INFO  c.m.e.s.impl.StatisticsServiceImpl - 文档ID: 169, 浏览量: 67
+2026-05-06 17:46:03.595 [http-nio-8081-exec-10] INFO  c.m.e.s.impl.StatisticsServiceImpl - 文档ID: 170, 浏览量: 80
+2026-05-06 17:46:03.595 [http-nio-8081-exec-10] INFO  c.m.e.s.impl.StatisticsServiceImpl - 文档ID: 171, 浏览量: 78
+2026-05-06 17:46:03.595 [http-nio-8081-exec-10] INFO  c.m.e.s.impl.StatisticsServiceImpl - 文档ID: 172, 浏览量: 72
+2026-05-06 17:46:03.595 [http-nio-8081-exec-10] INFO  c.m.e.s.impl.StatisticsServiceImpl - 文档ID: 173, 浏览量: 75
+2026-05-06 17:46:03.595 [http-nio-8081-exec-10] INFO  c.m.e.s.impl.StatisticsServiceImpl - 文档ID: 174, 浏览量: 84
+2026-05-06 17:46:03.595 [http-nio-8081-exec-10] INFO  c.m.e.s.impl.StatisticsServiceImpl - 文档ID: 183, 浏览量: 76
+2026-05-06 17:46:03.595 [http-nio-8081-exec-10] INFO  c.m.e.s.impl.StatisticsServiceImpl - 文档ID: 184, 浏览量: 72
+2026-05-06 17:46:03.595 [http-nio-8081-exec-10] INFO  c.m.e.s.impl.StatisticsServiceImpl - 文档ID: 185, 浏览量: 78
+2026-05-06 17:46:03.595 [http-nio-8081-exec-10] INFO  c.m.e.s.impl.StatisticsServiceImpl - 文档ID: 186, 浏览量: 71
+2026-05-06 17:46:03.595 [http-nio-8081-exec-10] INFO  c.m.e.s.impl.StatisticsServiceImpl - 文档ID: 187, 浏览量: 68
+2026-05-06 17:46:03.595 [http-nio-8081-exec-10] INFO  c.m.e.s.impl.StatisticsServiceImpl - 文档ID: 188, 浏览量: 73
+2026-05-06 17:46:03.595 [http-nio-8081-exec-10] INFO  c.m.e.s.impl.StatisticsServiceImpl - 文档ID: 189, 浏览量: 80
+2026-05-06 17:46:03.595 [http-nio-8081-exec-10] INFO  c.m.e.s.impl.StatisticsServiceImpl - 文档ID: 190, 浏览量: 75
+2026-05-06 17:46:03.595 [http-nio-8081-exec-10] INFO  c.m.e.s.impl.StatisticsServiceImpl - 文档ID: 192, 浏览量: 76
+2026-05-06 17:46:03.595 [http-nio-8081-exec-10] INFO  c.m.e.s.impl.StatisticsServiceImpl - 文档ID: 193, 浏览量: 72
+2026-05-06 17:46:03.596 [http-nio-8081-exec-10] INFO  c.m.e.s.impl.StatisticsServiceImpl - 文档ID: 194, 浏览量: 79
+2026-05-06 17:46:03.596 [http-nio-8081-exec-10] INFO  c.m.e.s.impl.StatisticsServiceImpl - 文档ID: 195, 浏览量: 74
+2026-05-06 17:46:03.596 [http-nio-8081-exec-10] INFO  c.m.e.s.impl.StatisticsServiceImpl - 文档ID: 196, 浏览量: 81
+2026-05-06 17:46:03.596 [http-nio-8081-exec-10] INFO  c.m.e.s.impl.StatisticsServiceImpl - 文档ID: 197, 浏览量: 77
+2026-05-06 17:46:03.596 [http-nio-8081-exec-10] INFO  c.m.e.s.impl.StatisticsServiceImpl - 文档ID: 198, 浏览量: 70
+2026-05-06 17:46:03.596 [http-nio-8081-exec-10] INFO  c.m.e.s.impl.StatisticsServiceImpl - 文档ID: 199, 浏览量: 75
+2026-05-06 17:46:03.596 [http-nio-8081-exec-10] INFO  c.m.e.s.impl.StatisticsServiceImpl - 文档ID: 200, 浏览量: 85
+2026-05-06 17:46:03.596 [http-nio-8081-exec-10] INFO  c.m.e.s.impl.StatisticsServiceImpl - 文档ID: 201, 浏览量: 71
+2026-05-06 17:46:03.596 [http-nio-8081-exec-10] INFO  c.m.e.s.impl.StatisticsServiceImpl - 文档ID: 202, 浏览量: 78
+2026-05-06 17:46:03.596 [http-nio-8081-exec-10] INFO  c.m.e.s.impl.StatisticsServiceImpl - 文档ID: 203, 浏览量: 73
+2026-05-06 17:46:03.596 [http-nio-8081-exec-10] INFO  c.m.e.s.impl.StatisticsServiceImpl - 文档ID: 204, 浏览量: 69
+2026-05-06 17:46:03.596 [http-nio-8081-exec-10] INFO  c.m.e.s.impl.StatisticsServiceImpl - 文档ID: 205, 浏览量: 74
+2026-05-06 17:46:03.596 [http-nio-8081-exec-10] INFO  c.m.e.s.impl.StatisticsServiceImpl - 文档ID: 206, 浏览量: 77
+2026-05-06 17:46:03.596 [http-nio-8081-exec-10] INFO  c.m.e.s.impl.StatisticsServiceImpl - 文档ID: 207, 浏览量: 74
+2026-05-06 17:46:03.596 [http-nio-8081-exec-10] INFO  c.m.e.s.impl.StatisticsServiceImpl - 文档ID: 208, 浏览量: 79
+2026-05-06 17:46:03.596 [http-nio-8081-exec-10] INFO  c.m.e.s.impl.StatisticsServiceImpl - 文档ID: 209, 浏览量: 75
+2026-05-06 17:46:03.596 [http-nio-8081-exec-10] INFO  c.m.e.s.impl.StatisticsServiceImpl - 文档ID: 210, 浏览量: 81
+2026-05-06 17:46:03.596 [http-nio-8081-exec-10] INFO  c.m.e.s.impl.StatisticsServiceImpl - 文档ID: 211, 浏览量: 76
+2026-05-06 17:46:03.596 [http-nio-8081-exec-10] INFO  c.m.e.s.impl.StatisticsServiceImpl - 文档ID: 212, 浏览量: 73
+2026-05-06 17:46:03.596 [http-nio-8081-exec-10] INFO  c.m.e.s.impl.StatisticsServiceImpl - 文档ID: 213, 浏览量: 70
+2026-05-06 17:46:03.596 [http-nio-8081-exec-10] INFO  c.m.e.s.impl.StatisticsServiceImpl - 文档ID: 214, 浏览量: 68
+2026-05-06 17:46:03.596 [http-nio-8081-exec-10] INFO  c.m.e.s.impl.StatisticsServiceImpl - 文档ID: 216, 浏览量: 78
+2026-05-06 17:46:03.596 [http-nio-8081-exec-10] INFO  c.m.e.s.impl.StatisticsServiceImpl - 文档ID: 217, 浏览量: 71
+2026-05-06 17:46:03.596 [http-nio-8081-exec-10] INFO  c.m.e.s.impl.StatisticsServiceImpl - 文档ID: 218, 浏览量: 67
+2026-05-06 17:46:03.596 [http-nio-8081-exec-10] INFO  c.m.e.s.impl.StatisticsServiceImpl - 文档ID: 219, 浏览量: 75
+2026-05-06 17:46:03.596 [http-nio-8081-exec-10] INFO  c.m.e.s.impl.StatisticsServiceImpl - 文档ID: 220, 浏览量: 72
+2026-05-06 17:46:03.596 [http-nio-8081-exec-10] INFO  c.m.e.s.impl.StatisticsServiceImpl - 文档ID: 221, 浏览量: 77
+2026-05-06 17:46:03.596 [http-nio-8081-exec-10] INFO  c.m.e.s.impl.StatisticsServiceImpl - 文档ID: 222, 浏览量: 70
+2026-05-06 17:46:03.596 [http-nio-8081-exec-10] INFO  c.m.e.s.impl.StatisticsServiceImpl - 总浏览量: 8251
+2026-05-06 17:46:03.824 [http-nio-8081-exec-10] INFO  c.m.e.s.impl.StatisticsServiceImpl - 开始计算当前连续创作天数，userId: 4
+2026-05-06 17:46:03.855 [http-nio-8081-exec-10] INFO  c.m.e.s.impl.StatisticsServiceImpl - 获取到用户4的文章数量: 121
+2026-05-06 17:46:03.855 [http-nio-8081-exec-10] INFO  c.m.e.s.impl.StatisticsServiceImpl - 文章ID: 238, 创建日期: 2026-04-24
+2026-05-06 17:46:03.855 [http-nio-8081-exec-10] INFO  c.m.e.s.impl.StatisticsServiceImpl - 文章ID: 180, 创建日期: 2026-04-24
+2026-05-06 17:46:03.855 [http-nio-8081-exec-10] INFO  c.m.e.s.impl.StatisticsServiceImpl - 文章ID: 237, 创建日期: 2026-04-30
+2026-05-06 17:46:03.855 [http-nio-8081-exec-10] INFO  c.m.e.s.impl.StatisticsServiceImpl - 文章ID: 236, 创建日期: 2026-04-29
+2026-05-06 17:46:03.855 [http-nio-8081-exec-10] INFO  c.m.e.s.impl.StatisticsServiceImpl - 文章ID: 234, 创建日期: 2026-04-27
+2026-05-06 17:46:03.855 [http-nio-8081-exec-10] INFO  c.m.e.s.impl.StatisticsServiceImpl - 文章ID: 233, 创建日期: 2026-04-26
+2026-05-06 17:46:03.855 [http-nio-8081-exec-10] INFO  c.m.e.s.impl.StatisticsServiceImpl - 文章ID: 182, 创建日期: 2026-04-25
+2026-05-06 17:46:03.855 [http-nio-8081-exec-10] INFO  c.m.e.s.impl.StatisticsServiceImpl - 文章ID: 181, 创建日期: 2026-04-24
+2026-05-06 17:46:03.855 [http-nio-8081-exec-10] INFO  c.m.e.s.impl.StatisticsServiceImpl - 文章ID: 179, 创建日期: 2026-04-22
+2026-05-06 17:46:03.855 [http-nio-8081-exec-10] INFO  c.m.e.s.impl.StatisticsServiceImpl - 文章ID: 178, 创建日期: 2026-04-21
+2026-05-06 17:46:03.855 [http-nio-8081-exec-10] INFO  c.m.e.s.impl.StatisticsServiceImpl - 文章ID: 177, 创建日期: 2026-04-20
+2026-05-06 17:46:03.855 [http-nio-8081-exec-10] INFO  c.m.e.s.impl.StatisticsServiceImpl - 文章ID: 176, 创建日期: 2026-04-19
+2026-05-06 17:46:03.855 [http-nio-8081-exec-10] INFO  c.m.e.s.impl.StatisticsServiceImpl - 文章ID: 175, 创建日期: 2026-04-17
+2026-05-06 17:46:03.855 [http-nio-8081-exec-10] INFO  c.m.e.s.impl.StatisticsServiceImpl - 文章ID: 232, 创建日期: 2026-04-25
+2026-05-06 17:46:03.855 [http-nio-8081-exec-10] INFO  c.m.e.s.impl.StatisticsServiceImpl - 文章ID: 253, 创建日期: 2026-04-24
+2026-05-06 17:46:03.855 [http-nio-8081-exec-10] INFO  c.m.e.s.impl.StatisticsServiceImpl - 文章ID: 252, 创建日期: 2026-04-24
+2026-05-06 17:46:03.855 [http-nio-8081-exec-10] INFO  c.m.e.s.impl.StatisticsServiceImpl - 文章ID: 251, 创建日期: 2026-04-24
+2026-05-06 17:46:03.855 [http-nio-8081-exec-10] INFO  c.m.e.s.impl.StatisticsServiceImpl - 文章ID: 243, 创建日期: 2026-04-24
+2026-05-06 17:46:03.855 [http-nio-8081-exec-10] INFO  c.m.e.s.impl.StatisticsServiceImpl - 文章ID: 242, 创建日期: 2026-04-24
+2026-05-06 17:46:03.855 [http-nio-8081-exec-10] INFO  c.m.e.s.impl.StatisticsServiceImpl - 文章ID: 241, 创建日期: 2026-04-24
+2026-05-06 17:46:03.855 [http-nio-8081-exec-10] INFO  c.m.e.s.impl.StatisticsServiceImpl - 文章ID: 240, 创建日期: 2026-04-24
+2026-05-06 17:46:03.855 [http-nio-8081-exec-10] INFO  c.m.e.s.impl.StatisticsServiceImpl - 文章ID: 239, 创建日期: 2026-04-24
+2026-05-06 17:46:03.855 [http-nio-8081-exec-10] INFO  c.m.e.s.impl.StatisticsServiceImpl - 文章ID: 231, 创建日期: 2026-04-20
+2026-05-06 17:46:03.855 [http-nio-8081-exec-10] INFO  c.m.e.s.impl.StatisticsServiceImpl - 文章ID: 249, 创建日期: 2026-04-24
+2026-05-06 17:46:03.855 [http-nio-8081-exec-10] INFO  c.m.e.s.impl.StatisticsServiceImpl - 文章ID: 244, 创建日期: 2026-04-24
+2026-05-06 17:46:03.855 [http-nio-8081-exec-10] INFO  c.m.e.s.impl.StatisticsServiceImpl - 文章ID: 248, 创建日期: 2026-04-24
+2026-05-06 17:46:03.855 [http-nio-8081-exec-10] INFO  c.m.e.s.impl.StatisticsServiceImpl - 文章ID: 235, 创建日期: 2026-04-28
+2026-05-06 17:46:03.855 [http-nio-8081-exec-10] INFO  c.m.e.s.impl.StatisticsServiceImpl - 文章ID: 191, 创建日期: 2026-04-18
+2026-05-06 17:46:03.855 [http-nio-8081-exec-10] INFO  c.m.e.s.impl.StatisticsServiceImpl - 文章ID: 112, 创建日期: 2026-04-18
+2026-05-06 17:46:03.855 [http-nio-8081-exec-10] INFO  c.m.e.s.impl.StatisticsServiceImpl - 文章ID: 151, 创建日期: 2026-04-18
+2026-05-06 17:46:03.855 [http-nio-8081-exec-10] INFO  c.m.e.s.impl.StatisticsServiceImpl - 文章ID: 215, 创建日期: 2026-04-18
+2026-05-06 17:46:03.855 [http-nio-8081-exec-10] INFO  c.m.e.s.impl.StatisticsServiceImpl - 文章ID: 115, 创建日期: 2026-04-18
+2026-05-06 17:46:03.855 [http-nio-8081-exec-10] INFO  c.m.e.s.impl.StatisticsServiceImpl - 文章ID: 114, 创建日期: 2026-04-18
+2026-05-06 17:46:03.855 [http-nio-8081-exec-10] INFO  c.m.e.s.impl.StatisticsServiceImpl - 文章ID: 117, 创建日期: 2026-04-18
+2026-05-06 17:46:03.855 [http-nio-8081-exec-10] INFO  c.m.e.s.impl.StatisticsServiceImpl - 文章ID: 118, 创建日期: 2026-04-18
+2026-05-06 17:46:03.855 [http-nio-8081-exec-10] INFO  c.m.e.s.impl.StatisticsServiceImpl - 文章ID: 119, 创建日期: 2026-04-18
+2026-05-06 17:46:03.855 [http-nio-8081-exec-10] INFO  c.m.e.s.impl.StatisticsServiceImpl - 文章ID: 121, 创建日期: 2026-04-18
+2026-05-06 17:46:03.855 [http-nio-8081-exec-10] INFO  c.m.e.s.impl.StatisticsServiceImpl - 文章ID: 122, 创建日期: 2026-04-18
+2026-05-06 17:46:03.855 [http-nio-8081-exec-10] INFO  c.m.e.s.impl.StatisticsServiceImpl - 文章ID: 124, 创建日期: 2026-04-18
+2026-05-06 17:46:03.855 [http-nio-8081-exec-10] INFO  c.m.e.s.impl.StatisticsServiceImpl - 文章ID: 125, 创建日期: 2026-04-18
+2026-05-06 17:46:03.855 [http-nio-8081-exec-10] INFO  c.m.e.s.impl.StatisticsServiceImpl - 文章ID: 126, 创建日期: 2026-04-18
+2026-05-06 17:46:03.855 [http-nio-8081-exec-10] INFO  c.m.e.s.impl.StatisticsServiceImpl - 文章ID: 128, 创建日期: 2026-04-18
+2026-05-06 17:46:03.855 [http-nio-8081-exec-10] INFO  c.m.e.s.impl.StatisticsServiceImpl - 文章ID: 129, 创建日期: 2026-04-18
+2026-05-06 17:46:03.855 [http-nio-8081-exec-10] INFO  c.m.e.s.impl.StatisticsServiceImpl - 文章ID: 130, 创建日期: 2026-04-18
+2026-05-06 17:46:03.855 [http-nio-8081-exec-10] INFO  c.m.e.s.impl.StatisticsServiceImpl - 文章ID: 131, 创建日期: 2026-04-18
+2026-05-06 17:46:03.855 [http-nio-8081-exec-10] INFO  c.m.e.s.impl.StatisticsServiceImpl - 文章ID: 133, 创建日期: 2026-04-18
+2026-05-06 17:46:03.855 [http-nio-8081-exec-10] INFO  c.m.e.s.impl.StatisticsServiceImpl - 文章ID: 134, 创建日期: 2026-04-18
+2026-05-06 17:46:03.855 [http-nio-8081-exec-10] INFO  c.m.e.s.impl.StatisticsServiceImpl - 文章ID: 135, 创建日期: 2026-04-18
+2026-05-06 17:46:03.855 [http-nio-8081-exec-10] INFO  c.m.e.s.impl.StatisticsServiceImpl - 文章ID: 136, 创建日期: 2026-04-18
+2026-05-06 17:46:03.855 [http-nio-8081-exec-10] INFO  c.m.e.s.impl.StatisticsServiceImpl - 文章ID: 137, 创建日期: 2026-04-18
+2026-05-06 17:46:03.856 [http-nio-8081-exec-10] INFO  c.m.e.s.impl.StatisticsServiceImpl - 文章ID: 138, 创建日期: 2026-04-18
+2026-05-06 17:46:03.856 [http-nio-8081-exec-10] INFO  c.m.e.s.impl.StatisticsServiceImpl - 文章ID: 139, 创建日期: 2026-04-18
+2026-05-06 17:46:03.856 [http-nio-8081-exec-10] INFO  c.m.e.s.impl.StatisticsServiceImpl - 文章ID: 140, 创建日期: 2026-04-18
+2026-05-06 17:46:03.856 [http-nio-8081-exec-10] INFO  c.m.e.s.impl.StatisticsServiceImpl - 文章ID: 141, 创建日期: 2026-04-18
+2026-05-06 17:46:03.856 [http-nio-8081-exec-10] INFO  c.m.e.s.impl.StatisticsServiceImpl - 文章ID: 142, 创建日期: 2026-04-18
+2026-05-06 17:46:03.856 [http-nio-8081-exec-10] INFO  c.m.e.s.impl.StatisticsServiceImpl - 文章ID: 143, 创建日期: 2026-04-18
+2026-05-06 17:46:03.856 [http-nio-8081-exec-10] INFO  c.m.e.s.impl.StatisticsServiceImpl - 文章ID: 146, 创建日期: 2026-04-18
+2026-05-06 17:46:03.856 [http-nio-8081-exec-10] INFO  c.m.e.s.impl.StatisticsServiceImpl - 文章ID: 147, 创建日期: 2026-04-18
+2026-05-06 17:46:03.856 [http-nio-8081-exec-10] INFO  c.m.e.s.impl.StatisticsServiceImpl - 文章ID: 149, 创建日期: 2026-04-18
+2026-05-06 17:46:03.856 [http-nio-8081-exec-10] INFO  c.m.e.s.impl.StatisticsServiceImpl - 文章ID: 150, 创建日期: 2026-04-18
+2026-05-06 17:46:03.856 [http-nio-8081-exec-10] INFO  c.m.e.s.impl.StatisticsServiceImpl - 文章ID: 152, 创建日期: 2026-04-18
+2026-05-06 17:46:03.856 [http-nio-8081-exec-10] INFO  c.m.e.s.impl.StatisticsServiceImpl - 文章ID: 153, 创建日期: 2026-04-18
+2026-05-06 17:46:03.856 [http-nio-8081-exec-10] INFO  c.m.e.s.impl.StatisticsServiceImpl - 文章ID: 154, 创建日期: 2026-04-18
+2026-05-06 17:46:03.856 [http-nio-8081-exec-10] INFO  c.m.e.s.impl.StatisticsServiceImpl - 文章ID: 155, 创建日期: 2026-04-18
+2026-05-06 17:46:03.856 [http-nio-8081-exec-10] INFO  c.m.e.s.impl.StatisticsServiceImpl - 文章ID: 156, 创建日期: 2026-04-18
+2026-05-06 17:46:03.856 [http-nio-8081-exec-10] INFO  c.m.e.s.impl.StatisticsServiceImpl - 文章ID: 157, 创建日期: 2026-04-18
+2026-05-06 17:46:03.856 [http-nio-8081-exec-10] INFO  c.m.e.s.impl.StatisticsServiceImpl - 文章ID: 158, 创建日期: 2026-04-18
+2026-05-06 17:46:03.856 [http-nio-8081-exec-10] INFO  c.m.e.s.impl.StatisticsServiceImpl - 文章ID: 159, 创建日期: 2026-04-18
+2026-05-06 17:46:03.856 [http-nio-8081-exec-10] INFO  c.m.e.s.impl.StatisticsServiceImpl - 文章ID: 160, 创建日期: 2026-04-18
+2026-05-06 17:46:03.856 [http-nio-8081-exec-10] INFO  c.m.e.s.impl.StatisticsServiceImpl - 文章ID: 161, 创建日期: 2026-04-18
+2026-05-06 17:46:03.856 [http-nio-8081-exec-10] INFO  c.m.e.s.impl.StatisticsServiceImpl - 文章ID: 162, 创建日期: 2026-04-18
+2026-05-06 17:46:03.856 [http-nio-8081-exec-10] INFO  c.m.e.s.impl.StatisticsServiceImpl - 文章ID: 163, 创建日期: 2026-04-18
+2026-05-06 17:46:03.856 [http-nio-8081-exec-10] INFO  c.m.e.s.impl.StatisticsServiceImpl - 文章ID: 164, 创建日期: 2026-04-18
+2026-05-06 17:46:03.856 [http-nio-8081-exec-10] INFO  c.m.e.s.impl.StatisticsServiceImpl - 文章ID: 165, 创建日期: 2026-04-18
+2026-05-06 17:46:03.856 [http-nio-8081-exec-10] INFO  c.m.e.s.impl.StatisticsServiceImpl - 文章ID: 166, 创建日期: 2026-04-18
+2026-05-06 17:46:03.856 [http-nio-8081-exec-10] INFO  c.m.e.s.impl.StatisticsServiceImpl - 文章ID: 167, 创建日期: 2026-04-18
+2026-05-06 17:46:03.856 [http-nio-8081-exec-10] INFO  c.m.e.s.impl.StatisticsServiceImpl - 文章ID: 168, 创建日期: 2026-04-18
+2026-05-06 17:46:03.856 [http-nio-8081-exec-10] INFO  c.m.e.s.impl.StatisticsServiceImpl - 文章ID: 169, 创建日期: 2026-04-18
+2026-05-06 17:46:03.856 [http-nio-8081-exec-10] INFO  c.m.e.s.impl.StatisticsServiceImpl - 文章ID: 170, 创建日期: 2026-04-18
+2026-05-06 17:46:03.856 [http-nio-8081-exec-10] INFO  c.m.e.s.impl.StatisticsServiceImpl - 文章ID: 171, 创建日期: 2026-04-18
+2026-05-06 17:46:03.856 [http-nio-8081-exec-10] INFO  c.m.e.s.impl.StatisticsServiceImpl - 文章ID: 172, 创建日期: 2026-04-18
+2026-05-06 17:46:03.856 [http-nio-8081-exec-10] INFO  c.m.e.s.impl.StatisticsServiceImpl - 文章ID: 173, 创建日期: 2026-04-18
+2026-05-06 17:46:03.856 [http-nio-8081-exec-10] INFO  c.m.e.s.impl.StatisticsServiceImpl - 文章ID: 174, 创建日期: 2026-04-18
+2026-05-06 17:46:03.856 [http-nio-8081-exec-10] INFO  c.m.e.s.impl.StatisticsServiceImpl - 文章ID: 183, 创建日期: 2026-04-18
+2026-05-06 17:46:03.856 [http-nio-8081-exec-10] INFO  c.m.e.s.impl.StatisticsServiceImpl - 文章ID: 184, 创建日期: 2026-04-18
+2026-05-06 17:46:03.856 [http-nio-8081-exec-10] INFO  c.m.e.s.impl.StatisticsServiceImpl - 文章ID: 185, 创建日期: 2026-04-18
+2026-05-06 17:46:03.856 [http-nio-8081-exec-10] INFO  c.m.e.s.impl.StatisticsServiceImpl - 文章ID: 186, 创建日期: 2026-04-18
+2026-05-06 17:46:03.856 [http-nio-8081-exec-10] INFO  c.m.e.s.impl.StatisticsServiceImpl - 文章ID: 187, 创建日期: 2026-04-18
+2026-05-06 17:46:03.856 [http-nio-8081-exec-10] INFO  c.m.e.s.impl.StatisticsServiceImpl - 文章ID: 188, 创建日期: 2026-04-18
+2026-05-06 17:46:03.856 [http-nio-8081-exec-10] INFO  c.m.e.s.impl.StatisticsServiceImpl - 文章ID: 189, 创建日期: 2026-04-18
+2026-05-06 17:46:03.856 [http-nio-8081-exec-10] INFO  c.m.e.s.impl.StatisticsServiceImpl - 文章ID: 190, 创建日期: 2026-04-18
+2026-05-06 17:46:03.856 [http-nio-8081-exec-10] INFO  c.m.e.s.impl.StatisticsServiceImpl - 文章ID: 192, 创建日期: 2026-04-18
+2026-05-06 17:46:03.856 [http-nio-8081-exec-10] INFO  c.m.e.s.impl.StatisticsServiceImpl - 文章ID: 193, 创建日期: 2026-04-18
+2026-05-06 17:46:03.856 [http-nio-8081-exec-10] INFO  c.m.e.s.impl.StatisticsServiceImpl - 文章ID: 194, 创建日期: 2026-04-18
+2026-05-06 17:46:03.857 [http-nio-8081-exec-10] INFO  c.m.e.s.impl.StatisticsServiceImpl - 文章ID: 195, 创建日期: 2026-04-18
+2026-05-06 17:46:03.857 [http-nio-8081-exec-10] INFO  c.m.e.s.impl.StatisticsServiceImpl - 文章ID: 196, 创建日期: 2026-04-18
+2026-05-06 17:46:03.857 [http-nio-8081-exec-10] INFO  c.m.e.s.impl.StatisticsServiceImpl - 文章ID: 197, 创建日期: 2026-04-18
+2026-05-06 17:46:03.857 [http-nio-8081-exec-10] INFO  c.m.e.s.impl.StatisticsServiceImpl - 文章ID: 198, 创建日期: 2026-04-18
+2026-05-06 17:46:03.857 [http-nio-8081-exec-10] INFO  c.m.e.s.impl.StatisticsServiceImpl - 文章ID: 199, 创建日期: 2026-04-18
+2026-05-06 17:46:03.857 [http-nio-8081-exec-10] INFO  c.m.e.s.impl.StatisticsServiceImpl - 文章ID: 200, 创建日期: 2026-04-18
+2026-05-06 17:46:03.857 [http-nio-8081-exec-10] INFO  c.m.e.s.impl.StatisticsServiceImpl - 文章ID: 201, 创建日期: 2026-04-18
+2026-05-06 17:46:03.857 [http-nio-8081-exec-10] INFO  c.m.e.s.impl.StatisticsServiceImpl - 文章ID: 202, 创建日期: 2026-04-18
+2026-05-06 17:46:03.857 [http-nio-8081-exec-10] INFO  c.m.e.s.impl.StatisticsServiceImpl - 文章ID: 203, 创建日期: 2026-04-18
+2026-05-06 17:46:03.857 [http-nio-8081-exec-10] INFO  c.m.e.s.impl.StatisticsServiceImpl - 文章ID: 204, 创建日期: 2026-04-18
+2026-05-06 17:46:03.857 [http-nio-8081-exec-10] INFO  c.m.e.s.impl.StatisticsServiceImpl - 文章ID: 205, 创建日期: 2026-04-18
+2026-05-06 17:46:03.857 [http-nio-8081-exec-10] INFO  c.m.e.s.impl.StatisticsServiceImpl - 文章ID: 206, 创建日期: 2026-04-18
+2026-05-06 17:46:03.857 [http-nio-8081-exec-10] INFO  c.m.e.s.impl.StatisticsServiceImpl - 文章ID: 207, 创建日期: 2026-04-18
+2026-05-06 17:46:03.857 [http-nio-8081-exec-10] INFO  c.m.e.s.impl.StatisticsServiceImpl - 文章ID: 208, 创建日期: 2026-04-18
+2026-05-06 17:46:03.857 [http-nio-8081-exec-10] INFO  c.m.e.s.impl.StatisticsServiceImpl - 文章ID: 209, 创建日期: 2026-04-18
+2026-05-06 17:46:03.857 [http-nio-8081-exec-10] INFO  c.m.e.s.impl.StatisticsServiceImpl - 文章ID: 210, 创建日期: 2026-04-18
+2026-05-06 17:46:03.861 [http-nio-8081-exec-10] INFO  c.m.e.s.impl.StatisticsServiceImpl - 文章ID: 211, 创建日期: 2026-04-18
+2026-05-06 17:46:03.861 [http-nio-8081-exec-10] INFO  c.m.e.s.impl.StatisticsServiceImpl - 文章ID: 212, 创建日期: 2026-04-18
+2026-05-06 17:46:03.861 [http-nio-8081-exec-10] INFO  c.m.e.s.impl.StatisticsServiceImpl - 文章ID: 213, 创建日期: 2026-04-18
+2026-05-06 17:46:03.861 [http-nio-8081-exec-10] INFO  c.m.e.s.impl.StatisticsServiceImpl - 文章ID: 214, 创建日期: 2026-04-18
+2026-05-06 17:46:03.861 [http-nio-8081-exec-10] INFO  c.m.e.s.impl.StatisticsServiceImpl - 文章ID: 216, 创建日期: 2026-04-18
+2026-05-06 17:46:03.861 [http-nio-8081-exec-10] INFO  c.m.e.s.impl.StatisticsServiceImpl - 文章ID: 217, 创建日期: 2026-04-18
+2026-05-06 17:46:03.861 [http-nio-8081-exec-10] INFO  c.m.e.s.impl.StatisticsServiceImpl - 文章ID: 218, 创建日期: 2026-04-18
+2026-05-06 17:46:03.861 [http-nio-8081-exec-10] INFO  c.m.e.s.impl.StatisticsServiceImpl - 文章ID: 219, 创建日期: 2026-04-18
+2026-05-06 17:46:03.861 [http-nio-8081-exec-10] INFO  c.m.e.s.impl.StatisticsServiceImpl - 文章ID: 220, 创建日期: 2026-04-18
+2026-05-06 17:46:03.861 [http-nio-8081-exec-10] INFO  c.m.e.s.impl.StatisticsServiceImpl - 文章ID: 221, 创建日期: 2026-04-18
+2026-05-06 17:46:03.861 [http-nio-8081-exec-10] INFO  c.m.e.s.impl.StatisticsServiceImpl - 文章ID: 222, 创建日期: 2026-04-18
+2026-05-06 17:46:03.861 [http-nio-8081-exec-10] INFO  c.m.e.s.impl.StatisticsServiceImpl - 今天日期: 2026-05-06
+2026-05-06 17:46:03.861 [http-nio-8081-exec-10] INFO  c.m.e.s.impl.StatisticsServiceImpl - 文章日期集合: [2026-04-30, 2026-04-29, 2026-04-28, 2026-04-27, 2026-04-26, 2026-04-25, 2026-04-24, 2026-04-22, 2026-04-21, 2026-04-20, 2026-04-19, 2026-04-18, 2026-04-17]
+2026-05-06 17:46:03.861 [http-nio-8081-exec-10] INFO  c.m.e.s.impl.StatisticsServiceImpl - 当前连续创作天数: 0
+2026-05-06 17:46:03.861 [http-nio-8081-exec-10] INFO  c.m.e.s.impl.StatisticsServiceImpl - 连续创作天数计算完成: 0, 显示值: 0
+2026-05-06 17:46:03.861 [http-nio-8081-exec-10] INFO  c.m.e.s.impl.StatisticsServiceImpl - UserStatsDTO: UserStatsDTO{userId=4, username='admin', nickname='管理员', avatar='https://api.dicebear.com/7.x/pixel-art/svg?seed=4', original=121, likes=42, collections=40, comments=45, views=8251, blogRank=1, followers=5, following=4, continuousDays=0, continuousDaysDisplay='0'}
+2026-05-06 17:46:03.861 [http-nio-8081-exec-10] INFO  c.m.e.s.impl.StatisticsServiceImpl - userId: 4
+2026-05-06 17:46:03.861 [http-nio-8081-exec-10] INFO  c.m.e.s.impl.StatisticsServiceImpl - username: admin
+2026-05-06 17:46:03.861 [http-nio-8081-exec-10] INFO  c.m.e.s.impl.StatisticsServiceImpl - nickname: 管理员
+2026-05-06 17:46:03.861 [http-nio-8081-exec-10] INFO  c.m.e.s.impl.StatisticsServiceImpl - original: 121
+2026-05-06 17:46:03.861 [http-nio-8081-exec-10] INFO  c.m.e.s.impl.StatisticsServiceImpl - likes: 42
+2026-05-06 17:46:03.861 [http-nio-8081-exec-10] INFO  c.m.e.s.impl.StatisticsServiceImpl - collections: 40
+2026-05-06 17:46:03.861 [http-nio-8081-exec-10] INFO  c.m.e.s.impl.StatisticsServiceImpl - comments: 45
+2026-05-06 17:46:03.861 [http-nio-8081-exec-10] INFO  c.m.e.s.impl.StatisticsServiceImpl - views: 8251
+2026-05-06 17:46:03.861 [http-nio-8081-exec-10] INFO  c.m.e.s.impl.StatisticsServiceImpl - blogRank: 1
+2026-05-06 17:46:03.861 [http-nio-8081-exec-10] INFO  c.m.e.s.impl.StatisticsServiceImpl - followers: 5
+2026-05-06 17:46:03.861 [http-nio-8081-exec-10] INFO  c.m.e.s.impl.StatisticsServiceImpl - following: 4
+2026-05-06 17:46:03.861 [http-nio-8081-exec-10] INFO  c.m.e.s.impl.StatisticsServiceImpl - continuousDays: 0
+2026-05-06 17:46:03.861 [http-nio-8081-exec-10] INFO  c.m.e.s.impl.StatisticsServiceImpl - continuousDaysDisplay: 0

@@ -1,0 +1,191 @@
+2026-05-08 08:19:36.745 [main] DEBUG c.m.editor.MarkdownEditorApplication - Running with Spring Boot v2.7.14, Spring v5.3.29
+2026-05-08 08:19:39.647 [main] DEBUG c.m.e.filter.JwtAuthenticationFilter - Filter 'jwtAuthenticationFilter' configured for use
+2026-05-08 08:20:32.348 [http-nio-0.0.0.0-8081-exec-1] ERROR c.markdown.editor.security.JwtUtils - JWT token is expired: JWT expired at 2026-05-01T11:42:16Z. Current time: 2026-05-08T08:20:32Z, a difference of 592696348 milliseconds.  Allowed clock skew: 0 milliseconds.
+2026-05-08 09:25:13.671 [http-nio-0.0.0.0-8081-exec-3] WARN  com.zaxxer.hikari.pool.PoolBase - MarkdownHikariCP - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@4a07449d (No operations allowed after connection closed.). Possibly consider using a shorter maxLifetime value.
+2026-05-08 09:29:32.507 [main] DEBUG c.m.editor.MarkdownEditorApplication - Running with Spring Boot v2.7.14, Spring v5.3.29
+2026-05-08 09:29:35.325 [main] DEBUG c.m.e.filter.JwtAuthenticationFilter - Filter 'jwtAuthenticationFilter' configured for use
+2026-05-08 09:34:50.382 [http-nio-0.0.0.0-8081-exec-9] WARN  com.zaxxer.hikari.pool.PoolBase - MarkdownHikariCP - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@d086eb0 (No operations allowed after connection closed.). Possibly consider using a shorter maxLifetime value.
+2026-05-08 09:34:50.383 [http-nio-0.0.0.0-8081-exec-2] WARN  com.zaxxer.hikari.pool.PoolBase - MarkdownHikariCP - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@317595bd (No operations allowed after connection closed.). Possibly consider using a shorter maxLifetime value.
+2026-05-08 09:34:50.393 [http-nio-0.0.0.0-8081-exec-3] WARN  com.zaxxer.hikari.pool.PoolBase - MarkdownHikariCP - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@5c7679b6 (No operations allowed after connection closed.). Possibly consider using a shorter maxLifetime value.
+2026-05-08 09:34:55.402 [http-nio-0.0.0.0-8081-exec-2] WARN  com.zaxxer.hikari.pool.PoolBase - MarkdownHikariCP - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@2a3ecdba (No operations allowed after connection closed.). Possibly consider using a shorter maxLifetime value.
+2026-05-08 09:34:55.402 [http-nio-0.0.0.0-8081-exec-9] WARN  com.zaxxer.hikari.pool.PoolBase - MarkdownHikariCP - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@5fda4b27 (No operations allowed after connection closed.). Possibly consider using a shorter maxLifetime value.
+2026-05-08 09:36:37.862 [main] DEBUG c.m.editor.MarkdownEditorApplication - Running with Spring Boot v2.7.14, Spring v5.3.29
+2026-05-08 09:36:40.189 [main] DEBUG c.m.e.filter.JwtAuthenticationFilter - Filter 'jwtAuthenticationFilter' configured for use
+2026-05-08 09:36:41.191 [main] WARN  o.s.b.w.s.c.AnnotationConfigServletWebServerApplicationContext - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.context.ApplicationContextException: Failed to start bean 'webServerStartStop'; nested exception is org.springframework.boot.web.server.PortInUseException: Port 8081 is already in use
+2026-05-08 09:36:41.223 [main] ERROR o.s.b.d.LoggingFailureAnalysisReporter - 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+Web server failed to start. Port 8081 was already in use.
+
+Action:
+
+Identify and stop the process that's listening on port 8081 or configure this application to listen on another port.
+
+2026-05-08 09:37:07.135 [main] DEBUG c.m.editor.MarkdownEditorApplication - Running with Spring Boot v2.7.14, Spring v5.3.29
+2026-05-08 09:37:09.781 [main] DEBUG c.m.e.filter.JwtAuthenticationFilter - Filter 'jwtAuthenticationFilter' configured for use
+2026-05-08 09:37:11.122 [main] WARN  o.s.b.w.s.c.AnnotationConfigServletWebServerApplicationContext - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.context.ApplicationContextException: Failed to start bean 'webServerStartStop'; nested exception is org.springframework.boot.web.server.PortInUseException: Port 8081 is already in use
+2026-05-08 09:37:11.159 [main] ERROR o.s.b.d.LoggingFailureAnalysisReporter - 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+Web server failed to start. Port 8081 was already in use.
+
+Action:
+
+Identify and stop the process that's listening on port 8081 or configure this application to listen on another port.
+
+2026-05-08 09:38:08.800 [main] DEBUG c.m.editor.MarkdownEditorApplication - Running with Spring Boot v2.7.14, Spring v5.3.29
+2026-05-08 09:38:10.869 [main] DEBUG c.m.e.filter.JwtAuthenticationFilter - Filter 'jwtAuthenticationFilter' configured for use
+2026-05-08 09:50:04.450 [main] DEBUG c.m.editor.MarkdownEditorApplication - Running with Spring Boot v2.7.14, Spring v5.3.29
+2026-05-08 09:50:07.558 [main] DEBUG c.m.e.filter.JwtAuthenticationFilter - Filter 'jwtAuthenticationFilter' configured for use
+2026-05-08 09:58:09.965 [http-nio-0.0.0.0-8081-exec-5] WARN  com.zaxxer.hikari.pool.PoolBase - MarkdownHikariCP - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@28853f0a (No operations allowed after connection closed.). Possibly consider using a shorter maxLifetime value.
+2026-05-08 09:59:09.468 [http-nio-0.0.0.0-8081-exec-10] WARN  com.zaxxer.hikari.pool.PoolBase - MarkdownHikariCP - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@333bb873 (No operations allowed after connection closed.). Possibly consider using a shorter maxLifetime value.
+2026-05-08 10:02:35.730 [main] DEBUG c.m.editor.MarkdownEditorApplication - Running with Spring Boot v2.7.14, Spring v5.3.29
+2026-05-08 10:02:38.074 [main] DEBUG c.m.e.filter.JwtAuthenticationFilter - Filter 'jwtAuthenticationFilter' configured for use
+2026-05-08 10:06:25.395 [main] DEBUG c.m.editor.MarkdownEditorApplication - Running with Spring Boot v2.7.14, Spring v5.3.29
+2026-05-08 10:06:27.667 [main] DEBUG c.m.e.filter.JwtAuthenticationFilter - Filter 'jwtAuthenticationFilter' configured for use
+2026-05-08 10:08:59.580 [main] DEBUG c.m.editor.MarkdownEditorApplication - Running with Spring Boot v2.7.14, Spring v5.3.29
+2026-05-08 10:09:01.809 [main] DEBUG c.m.e.filter.JwtAuthenticationFilter - Filter 'jwtAuthenticationFilter' configured for use
+2026-05-08 10:14:01.471 [http-nio-0.0.0.0-8081-exec-9] WARN  com.zaxxer.hikari.pool.PoolBase - MarkdownHikariCP - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@4ddbbaa8 (No operations allowed after connection closed.). Possibly consider using a shorter maxLifetime value.
+2026-05-08 10:14:01.471 [http-nio-0.0.0.0-8081-exec-8] WARN  com.zaxxer.hikari.pool.PoolBase - MarkdownHikariCP - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@78d28dc6 (No operations allowed after connection closed.). Possibly consider using a shorter maxLifetime value.
+2026-05-08 10:15:56.904 [http-nio-0.0.0.0-8081-exec-10] WARN  com.zaxxer.hikari.pool.PoolBase - MarkdownHikariCP - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@4f86301e (No operations allowed after connection closed.). Possibly consider using a shorter maxLifetime value.
+2026-05-08 10:16:01.978 [http-nio-0.0.0.0-8081-exec-1] WARN  com.zaxxer.hikari.pool.PoolBase - MarkdownHikariCP - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@3e9fcab5 (No operations allowed after connection closed.). Possibly consider using a shorter maxLifetime value.
+2026-05-08 10:16:57.117 [main] DEBUG c.m.editor.MarkdownEditorApplication - Running with Spring Boot v2.7.14, Spring v5.3.29
+2026-05-08 10:16:59.767 [main] DEBUG c.m.e.filter.JwtAuthenticationFilter - Filter 'jwtAuthenticationFilter' configured for use
+2026-05-08 10:21:49.400 [http-nio-0.0.0.0-8081-exec-6] WARN  com.zaxxer.hikari.pool.PoolBase - MarkdownHikariCP - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@514d60de (No operations allowed after connection closed.). Possibly consider using a shorter maxLifetime value.
+2026-05-08 10:21:51.207 [http-nio-0.0.0.0-8081-exec-5] WARN  com.zaxxer.hikari.pool.PoolBase - MarkdownHikariCP - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@37d4e521 (No operations allowed after connection closed.). Possibly consider using a shorter maxLifetime value.
+2026-05-08 10:33:04.897 [main] DEBUG c.m.editor.MarkdownEditorApplication - Running with Spring Boot v2.7.14, Spring v5.3.29
+2026-05-08 10:33:06.985 [main] DEBUG c.m.e.filter.JwtAuthenticationFilter - Filter 'jwtAuthenticationFilter' configured for use
+2026-05-08 10:38:14.636 [http-nio-0.0.0.0-8081-exec-6] WARN  com.zaxxer.hikari.pool.PoolBase - MarkdownHikariCP - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@66f54925 (No operations allowed after connection closed.). Possibly consider using a shorter maxLifetime value.
+2026-05-08 10:38:19.763 [http-nio-0.0.0.0-8081-exec-7] WARN  com.zaxxer.hikari.pool.PoolBase - MarkdownHikariCP - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@1cde2fba (No operations allowed after connection closed.). Possibly consider using a shorter maxLifetime value.
+2026-05-08 10:38:24.776 [http-nio-0.0.0.0-8081-exec-7] WARN  com.zaxxer.hikari.pool.PoolBase - MarkdownHikariCP - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@62756fbf (No operations allowed after connection closed.). Possibly consider using a shorter maxLifetime value.
+2026-05-08 10:38:29.779 [http-nio-0.0.0.0-8081-exec-7] WARN  com.zaxxer.hikari.pool.PoolBase - MarkdownHikariCP - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@644fd825 (No operations allowed after connection closed.). Possibly consider using a shorter maxLifetime value.
+2026-05-08 10:51:10.976 [main] DEBUG c.m.editor.MarkdownEditorApplication - Running with Spring Boot v2.7.14, Spring v5.3.29
+2026-05-08 10:51:13.294 [main] DEBUG c.m.e.filter.JwtAuthenticationFilter - Filter 'jwtAuthenticationFilter' configured for use
+2026-05-08 10:57:19.960 [main] DEBUG c.m.editor.MarkdownEditorApplication - Running with Spring Boot v2.7.14, Spring v5.3.29
+2026-05-08 10:57:21.947 [main] DEBUG c.m.e.filter.JwtAuthenticationFilter - Filter 'jwtAuthenticationFilter' configured for use
+2026-05-08 11:23:00.700 [main] DEBUG c.m.editor.MarkdownEditorApplication - Running with Spring Boot v2.7.14, Spring v5.3.29
+2026-05-08 11:23:02.518 [main] DEBUG c.m.e.filter.JwtAuthenticationFilter - Filter 'jwtAuthenticationFilter' configured for use
+2026-05-08 11:30:09.623 [http-nio-0.0.0.0-8081-exec-4] WARN  com.zaxxer.hikari.pool.PoolBase - MarkdownHikariCP - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@522d7be8 (No operations allowed after connection closed.). Possibly consider using a shorter maxLifetime value.
+2026-05-08 11:30:14.822 [http-nio-0.0.0.0-8081-exec-5] WARN  com.zaxxer.hikari.pool.PoolBase - MarkdownHikariCP - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@495973a6 (No operations allowed after connection closed.). Possibly consider using a shorter maxLifetime value.
+2026-05-08 11:30:20.018 [http-nio-0.0.0.0-8081-exec-1] WARN  com.zaxxer.hikari.pool.PoolBase - MarkdownHikariCP - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@25f5dac9 (No operations allowed after connection closed.). Possibly consider using a shorter maxLifetime value.
+2026-05-08 11:30:20.366 [http-nio-0.0.0.0-8081-exec-6] DEBUG c.m.e.controller.DocumentController - 文档ID: 236 浏览次数增加
+2026-05-08 11:30:29.594 [http-nio-0.0.0.0-8081-exec-10] DEBUG c.m.e.controller.DocumentController - 文档ID: 234 浏览次数增加
+2026-05-08 11:30:37.467 [http-nio-0.0.0.0-8081-exec-2] DEBUG c.m.e.controller.DocumentController - 文档ID: 255 浏览次数增加
+2026-05-08 11:39:59.212 [http-nio-0.0.0.0-8081-exec-9] WARN  com.zaxxer.hikari.pool.PoolBase - MarkdownHikariCP - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@765e6883 (No operations allowed after connection closed.). Possibly consider using a shorter maxLifetime value.
+2026-05-08 12:00:13.024 [http-nio-0.0.0.0-8081-exec-7] WARN  com.zaxxer.hikari.pool.PoolBase - MarkdownHikariCP - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@3a9645a3 (No operations allowed after connection closed.). Possibly consider using a shorter maxLifetime value.
+2026-05-08 12:00:18.033 [http-nio-0.0.0.0-8081-exec-7] WARN  com.zaxxer.hikari.pool.PoolBase - MarkdownHikariCP - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@409d8671 (No operations allowed after connection closed.). Possibly consider using a shorter maxLifetime value.
+2026-05-08 12:00:23.034 [http-nio-0.0.0.0-8081-exec-7] WARN  com.zaxxer.hikari.pool.PoolBase - MarkdownHikariCP - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@289e25cb (No operations allowed after connection closed.). Possibly consider using a shorter maxLifetime value.
+2026-05-08 12:30:10.008 [http-nio-0.0.0.0-8081-exec-10] WARN  com.zaxxer.hikari.pool.PoolBase - MarkdownHikariCP - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@5131010a (No operations allowed after connection closed.). Possibly consider using a shorter maxLifetime value.
+2026-05-08 12:59:34.007 [http-nio-0.0.0.0-8081-exec-2] WARN  com.zaxxer.hikari.pool.PoolBase - MarkdownHikariCP - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@2aa7648f (No operations allowed after connection closed.). Possibly consider using a shorter maxLifetime value.
+2026-05-08 13:28:57.987 [http-nio-0.0.0.0-8081-exec-5] WARN  com.zaxxer.hikari.pool.PoolBase - MarkdownHikariCP - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@ba7fe60 (No operations allowed after connection closed.). Possibly consider using a shorter maxLifetime value.
+2026-05-08 13:29:03.000 [http-nio-0.0.0.0-8081-exec-5] WARN  com.zaxxer.hikari.pool.PoolBase - MarkdownHikariCP - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@3bad372f (No operations allowed after connection closed.). Possibly consider using a shorter maxLifetime value.
+2026-05-08 13:58:39.984 [http-nio-0.0.0.0-8081-exec-1] WARN  com.zaxxer.hikari.pool.PoolBase - MarkdownHikariCP - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@ee94845 (No operations allowed after connection closed.). Possibly consider using a shorter maxLifetime value.
+2026-05-08 14:28:30.966 [http-nio-0.0.0.0-8081-exec-9] WARN  com.zaxxer.hikari.pool.PoolBase - MarkdownHikariCP - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@103efe3a (No operations allowed after connection closed.). Possibly consider using a shorter maxLifetime value.
+2026-05-08 14:47:19.591 [http-nio-0.0.0.0-8081-exec-4] WARN  com.zaxxer.hikari.pool.PoolBase - MarkdownHikariCP - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@5c036395 (No operations allowed after connection closed.). Possibly consider using a shorter maxLifetime value.
+2026-05-08 14:47:24.715 [http-nio-0.0.0.0-8081-exec-3] WARN  com.zaxxer.hikari.pool.PoolBase - MarkdownHikariCP - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@28ff6181 (No operations allowed after connection closed.). Possibly consider using a shorter maxLifetime value.
+2026-05-08 14:47:32.349 [http-nio-0.0.0.0-8081-exec-7] WARN  com.zaxxer.hikari.pool.PoolBase - MarkdownHikariCP - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@51c038ad (No operations allowed after connection closed.). Possibly consider using a shorter maxLifetime value.
+2026-05-08 14:47:32.412 [http-nio-0.0.0.0-8081-exec-8] WARN  com.zaxxer.hikari.pool.PoolBase - MarkdownHikariCP - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@2650beb (No operations allowed after connection closed.). Possibly consider using a shorter maxLifetime value.
+2026-05-08 14:51:53.489 [http-nio-0.0.0.0-8081-exec-2] WARN  com.zaxxer.hikari.pool.PoolBase - MarkdownHikariCP - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@4356a012 (No operations allowed after connection closed.). Possibly consider using a shorter maxLifetime value.
+2026-05-08 14:58:44.846 [http-nio-0.0.0.0-8081-exec-7] DEBUG c.m.e.controller.DocumentController - 文档ID: 250 浏览次数增加
+2026-05-08 15:05:22.106 [http-nio-0.0.0.0-8081-exec-5] WARN  com.zaxxer.hikari.pool.PoolBase - MarkdownHikariCP - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@2c03c559 (No operations allowed after connection closed.). Possibly consider using a shorter maxLifetime value.
+2026-05-08 15:05:26.511 [http-nio-0.0.0.0-8081-exec-7] WARN  com.zaxxer.hikari.pool.PoolBase - MarkdownHikariCP - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@3ff73023 (No operations allowed after connection closed.). Possibly consider using a shorter maxLifetime value.
+2026-05-08 15:05:27.116 [http-nio-0.0.0.0-8081-exec-5] WARN  com.zaxxer.hikari.pool.PoolBase - MarkdownHikariCP - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@44639b9 (No operations allowed after connection closed.). Possibly consider using a shorter maxLifetime value.
+2026-05-08 15:05:31.529 [http-nio-0.0.0.0-8081-exec-7] WARN  com.zaxxer.hikari.pool.PoolBase - MarkdownHikariCP - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@2132b7a2 (No operations allowed after connection closed.). Possibly consider using a shorter maxLifetime value.
+2026-05-08 15:05:31.900 [http-nio-0.0.0.0-8081-exec-1] DEBUG c.m.e.controller.DocumentController - 文档ID: 250 浏览次数增加
+2026-05-08 15:05:32.130 [http-nio-0.0.0.0-8081-exec-5] WARN  com.zaxxer.hikari.pool.PoolBase - MarkdownHikariCP - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@3a265bea (No operations allowed after connection closed.). Possibly consider using a shorter maxLifetime value.
+2026-05-08 15:49:06.393 [main] DEBUG c.m.editor.MarkdownEditorApplication - Running with Spring Boot v2.7.14, Spring v5.3.29
+2026-05-08 15:49:08.700 [main] DEBUG c.m.e.filter.JwtAuthenticationFilter - Filter 'jwtAuthenticationFilter' configured for use
+2026-05-08 17:16:17.991 [http-nio-8081-exec-8] WARN  com.zaxxer.hikari.pool.PoolBase - MarkdownHikariCP - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@639573eb (No operations allowed after connection closed.). Possibly consider using a shorter maxLifetime value.
+2026-05-08 17:16:18.774 [http-nio-8081-exec-9] WARN  com.zaxxer.hikari.pool.PoolBase - MarkdownHikariCP - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@27dcfec0 (No operations allowed after connection closed.). Possibly consider using a shorter maxLifetime value.
+2026-05-08 17:16:20.940 [http-nio-8081-exec-10] WARN  com.zaxxer.hikari.pool.PoolBase - MarkdownHikariCP - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@131ad5a9 (No operations allowed after connection closed.). Possibly consider using a shorter maxLifetime value.
+2026-05-08 17:16:23.019 [http-nio-8081-exec-8] WARN  com.zaxxer.hikari.pool.PoolBase - MarkdownHikariCP - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@151126f7 (No operations allowed after connection closed.). Possibly consider using a shorter maxLifetime value.
+2026-05-08 17:16:23.780 [http-nio-8081-exec-9] WARN  com.zaxxer.hikari.pool.PoolBase - MarkdownHikariCP - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@1828c3a8 (No operations allowed after connection closed.). Possibly consider using a shorter maxLifetime value.
+2026-05-08 17:20:09.759 [trend-data-worker] ERROR c.m.e.service.impl.TrendServiceImpl - 获取评论数数据失败
+org.apache.ibatis.binding.BindingException: Invalid bound statement (not found): com.markdown.editor.mapper.CommentMapper.countByUserIdAndDateRange
+	at org.apache.ibatis.binding.MapperMethod$SqlCommand.<init>(MapperMethod.java:235)
+	at com.baomidou.mybatisplus.core.override.MybatisMapperMethod.<init>(MybatisMapperMethod.java:50)
+	at com.baomidou.mybatisplus.core.override.MybatisMapperProxy.lambda$cachedInvoker$0(MybatisMapperProxy.java:111)
+	at java.base/java.util.concurrent.ConcurrentHashMap.computeIfAbsent(ConcurrentHashMap.java:1708)
+	at com.baomidou.mybatisplus.core.toolkit.CollectionUtils.computeIfAbsent(CollectionUtils.java:115)
+	at com.baomidou.mybatisplus.core.override.MybatisMapperProxy.cachedInvoker(MybatisMapperProxy.java:98)
+	at com.baomidou.mybatisplus.core.override.MybatisMapperProxy.invoke(MybatisMapperProxy.java:89)
+	at jdk.proxy2/jdk.proxy2.$Proxy91.countByUserIdAndDateRange(Unknown Source)
+	at com.markdown.editor.service.impl.TrendServiceImpl.fetchCommentCountData(TrendServiceImpl.java:177)
+	at com.markdown.editor.service.impl.TrendServiceImpl.lambda$getTrendData$2(TrendServiceImpl.java:74)
+	at java.base/java.util.concurrent.CompletableFuture$AsyncRun.run(CompletableFuture.java:1804)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+	at java.base/java.lang.Thread.run(Thread.java:842)
+2026-05-08 17:29:06.897 [http-nio-8081-exec-3] DEBUG c.m.e.controller.DocumentController - 文档ID: 250 浏览次数增加
+2026-05-08 17:30:26.741 [http-nio-8081-exec-4] DEBUG c.m.e.controller.DocumentController - 文档ID: 247 浏览次数增加
+2026-05-08 17:31:52.452 [http-nio-8081-exec-7] ERROR c.markdown.editor.security.JwtUtils - JWT token is expired: JWT expired at 2026-04-22T16:41:10Z. Current time: 2026-05-08T17:31:52Z, a difference of 1385442446 milliseconds.  Allowed clock skew: 0 milliseconds.
+2026-05-08 17:32:07.969 [trend-data-worker] ERROR c.m.e.service.impl.TrendServiceImpl - 获取评论数数据失败
+org.apache.ibatis.binding.BindingException: Invalid bound statement (not found): com.markdown.editor.mapper.CommentMapper.countByUserIdAndDateRange
+	at org.apache.ibatis.binding.MapperMethod$SqlCommand.<init>(MapperMethod.java:235)
+	at com.baomidou.mybatisplus.core.override.MybatisMapperMethod.<init>(MybatisMapperMethod.java:50)
+	at com.baomidou.mybatisplus.core.override.MybatisMapperProxy.lambda$cachedInvoker$0(MybatisMapperProxy.java:111)
+	at java.base/java.util.concurrent.ConcurrentHashMap.computeIfAbsent(ConcurrentHashMap.java:1708)
+	at com.baomidou.mybatisplus.core.toolkit.CollectionUtils.computeIfAbsent(CollectionUtils.java:115)
+	at com.baomidou.mybatisplus.core.override.MybatisMapperProxy.cachedInvoker(MybatisMapperProxy.java:98)
+	at com.baomidou.mybatisplus.core.override.MybatisMapperProxy.invoke(MybatisMapperProxy.java:89)
+	at jdk.proxy2/jdk.proxy2.$Proxy91.countByUserIdAndDateRange(Unknown Source)
+	at com.markdown.editor.service.impl.TrendServiceImpl.fetchCommentCountData(TrendServiceImpl.java:177)
+	at com.markdown.editor.service.impl.TrendServiceImpl.lambda$getTrendData$2(TrendServiceImpl.java:74)
+	at java.base/java.util.concurrent.CompletableFuture$AsyncRun.run(CompletableFuture.java:1804)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+	at java.base/java.lang.Thread.run(Thread.java:842)
+2026-05-08 17:52:37.664 [main] DEBUG c.m.editor.MarkdownEditorApplication - Running with Spring Boot v2.7.14, Spring v5.3.29
+2026-05-08 17:52:39.957 [main] DEBUG c.m.e.filter.JwtAuthenticationFilter - Filter 'jwtAuthenticationFilter' configured for use
+2026-05-08 18:08:33.631 [trend-data-worker] ERROR c.m.e.service.impl.TrendServiceImpl - 获取评论数数据失败
+org.apache.ibatis.binding.BindingException: Invalid bound statement (not found): com.markdown.editor.mapper.CommentMapper.countByUserIdAndDateRange
+	at org.apache.ibatis.binding.MapperMethod$SqlCommand.<init>(MapperMethod.java:235)
+	at com.baomidou.mybatisplus.core.override.MybatisMapperMethod.<init>(MybatisMapperMethod.java:50)
+	at com.baomidou.mybatisplus.core.override.MybatisMapperProxy.lambda$cachedInvoker$0(MybatisMapperProxy.java:111)
+	at java.base/java.util.concurrent.ConcurrentHashMap.computeIfAbsent(ConcurrentHashMap.java:1708)
+	at com.baomidou.mybatisplus.core.toolkit.CollectionUtils.computeIfAbsent(CollectionUtils.java:115)
+	at com.baomidou.mybatisplus.core.override.MybatisMapperProxy.cachedInvoker(MybatisMapperProxy.java:98)
+	at com.baomidou.mybatisplus.core.override.MybatisMapperProxy.invoke(MybatisMapperProxy.java:89)
+	at jdk.proxy2/jdk.proxy2.$Proxy91.countByUserIdAndDateRange(Unknown Source)
+	at com.markdown.editor.service.impl.TrendServiceImpl.fetchCommentCountData(TrendServiceImpl.java:177)
+	at com.markdown.editor.service.impl.TrendServiceImpl.lambda$getTrendData$2(TrendServiceImpl.java:74)
+	at java.base/java.util.concurrent.CompletableFuture$AsyncRun.run(CompletableFuture.java:1804)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+	at java.base/java.lang.Thread.run(Thread.java:842)
+2026-05-08 18:14:45.819 [http-nio-8081-exec-9] WARN  com.zaxxer.hikari.pool.PoolBase - MarkdownHikariCP - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@5cbc8323 (No operations allowed after connection closed.). Possibly consider using a shorter maxLifetime value.
+2026-05-08 18:14:45.820 [http-nio-8081-exec-4] WARN  com.zaxxer.hikari.pool.PoolBase - MarkdownHikariCP - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@62f20b97 (No operations allowed after connection closed.). Possibly consider using a shorter maxLifetime value.
+2026-05-08 18:14:52.774 [http-nio-8081-exec-8] WARN  com.zaxxer.hikari.pool.PoolBase - MarkdownHikariCP - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@1ec3c101 (No operations allowed after connection closed.). Possibly consider using a shorter maxLifetime value.
+2026-05-08 18:14:52.774 [http-nio-8081-exec-3] WARN  com.zaxxer.hikari.pool.PoolBase - MarkdownHikariCP - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@2f6fd0fb (No operations allowed after connection closed.). Possibly consider using a shorter maxLifetime value.
+2026-05-08 18:14:58.009 [http-nio-8081-exec-6] WARN  com.zaxxer.hikari.pool.PoolBase - MarkdownHikariCP - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@418ebe43 (No operations allowed after connection closed.). Possibly consider using a shorter maxLifetime value.
+2026-05-08 18:15:26.312 [http-nio-8081-exec-7] DEBUG c.m.e.controller.DocumentController - 文档ID: 256 浏览次数增加
+2026-05-08 18:15:33.753 [trend-data-worker] ERROR c.m.e.service.impl.TrendServiceImpl - 获取评论数数据失败
+org.apache.ibatis.binding.BindingException: Invalid bound statement (not found): com.markdown.editor.mapper.CommentMapper.countByUserIdAndDateRange
+	at org.apache.ibatis.binding.MapperMethod$SqlCommand.<init>(MapperMethod.java:235)
+	at com.baomidou.mybatisplus.core.override.MybatisMapperMethod.<init>(MybatisMapperMethod.java:50)
+	at com.baomidou.mybatisplus.core.override.MybatisMapperProxy.lambda$cachedInvoker$0(MybatisMapperProxy.java:111)
+	at java.base/java.util.concurrent.ConcurrentHashMap.computeIfAbsent(ConcurrentHashMap.java:1708)
+	at com.baomidou.mybatisplus.core.toolkit.CollectionUtils.computeIfAbsent(CollectionUtils.java:115)
+	at com.baomidou.mybatisplus.core.override.MybatisMapperProxy.cachedInvoker(MybatisMapperProxy.java:98)
+	at com.baomidou.mybatisplus.core.override.MybatisMapperProxy.invoke(MybatisMapperProxy.java:89)
+	at jdk.proxy2/jdk.proxy2.$Proxy91.countByUserIdAndDateRange(Unknown Source)
+	at com.markdown.editor.service.impl.TrendServiceImpl.fetchCommentCountData(TrendServiceImpl.java:177)
+	at com.markdown.editor.service.impl.TrendServiceImpl.lambda$getTrendData$2(TrendServiceImpl.java:74)
+	at java.base/java.util.concurrent.CompletableFuture$AsyncRun.run(CompletableFuture.java:1804)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+	at java.base/java.lang.Thread.run(Thread.java:842)
+2026-05-08 18:15:44.132 [http-nio-8081-exec-4] DEBUG c.m.e.controller.DocumentController - 文档ID: 245 浏览次数增加
+2026-05-08 18:17:58.398 [http-nio-8081-exec-10] DEBUG c.m.e.controller.DocumentController - 文档ID: 256 浏览次数增加
+2026-05-08 18:18:05.519 [http-nio-8081-exec-6] DEBUG c.m.e.controller.DocumentController - 文档ID: 256 浏览次数增加
+2026-05-08 18:19:33.966 [http-nio-8081-exec-5] DEBUG c.m.e.controller.DocumentController - 文档ID: 182 浏览次数增加

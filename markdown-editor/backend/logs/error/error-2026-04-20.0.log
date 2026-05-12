@@ -1,0 +1,122 @@
+2026-04-20 14:51:49.376 [http-nio-8080-exec-4] ERROR c.m.e.filter.JwtAuthenticationFilter - Cannot set user authentication: {}
+org.springframework.transaction.CannotCreateTransactionException: Could not open JDBC Connection for transaction; nested exception is java.sql.SQLTransientConnectionException: HikariPool-1 - Connection is not available, request timed out after 30527ms.
+	at org.springframework.jdbc.datasource.DataSourceTransactionManager.doBegin(DataSourceTransactionManager.java:313)
+	at org.springframework.transaction.support.AbstractPlatformTransactionManager.startTransaction(AbstractPlatformTransactionManager.java:400)
+	at org.springframework.transaction.support.AbstractPlatformTransactionManager.getTransaction(AbstractPlatformTransactionManager.java:373)
+	at org.springframework.transaction.interceptor.TransactionAspectSupport.createTransactionIfNecessary(TransactionAspectSupport.java:595)
+	at org.springframework.transaction.interceptor.TransactionAspectSupport.invokeWithinTransaction(TransactionAspectSupport.java:382)
+	at org.springframework.transaction.interceptor.TransactionInterceptor.invoke(TransactionInterceptor.java:119)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186)
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:763)
+	at org.springframework.aop.framework.CglibAopProxy$DynamicAdvisedInterceptor.intercept(CglibAopProxy.java:708)
+	at com.markdown.editor.security.UserDetailsServiceImpl$$EnhancerBySpringCGLIB$$8a6d93c1.loadUserByUsername(<generated>)
+	at com.markdown.editor.filter.JwtAuthenticationFilter.doFilterInternal(JwtAuthenticationFilter.java:41)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:346)
+	at org.springframework.security.web.authentication.logout.LogoutFilter.doFilter(LogoutFilter.java:103)
+	at org.springframework.security.web.authentication.logout.LogoutFilter.doFilter(LogoutFilter.java:89)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:346)
+	at org.springframework.web.filter.CorsFilter.doFilterInternal(CorsFilter.java:91)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:346)
+	at org.springframework.security.web.header.HeaderWriterFilter.doHeadersAfter(HeaderWriterFilter.java:90)
+	at org.springframework.security.web.header.HeaderWriterFilter.doFilterInternal(HeaderWriterFilter.java:75)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:346)
+	at org.springframework.security.web.context.SecurityContextPersistenceFilter.doFilter(SecurityContextPersistenceFilter.java:112)
+	at org.springframework.security.web.context.SecurityContextPersistenceFilter.doFilter(SecurityContextPersistenceFilter.java:82)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:346)
+	at org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter.doFilterInternal(WebAsyncManagerIntegrationFilter.java:55)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:346)
+	at org.springframework.security.web.session.DisableEncodeUrlFilter.doFilterInternal(DisableEncodeUrlFilter.java:42)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:346)
+	at org.springframework.security.web.FilterChainProxy.doFilterInternal(FilterChainProxy.java:221)
+	at org.springframework.security.web.FilterChainProxy.doFilter(FilterChainProxy.java:186)
+	at org.springframework.web.filter.DelegatingFilterProxy.invokeDelegate(DelegatingFilterProxy.java:354)
+	at org.springframework.web.filter.DelegatingFilterProxy.doFilter(DelegatingFilterProxy.java:267)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:178)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:153)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:178)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:153)
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:178)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:153)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:178)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:153)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:167)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:90)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:481)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:130)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:93)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:343)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:390)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:926)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1791)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.base/java.lang.Thread.run(Thread.java:842)
+Caused by: java.sql.SQLTransientConnectionException: HikariPool-1 - Connection is not available, request timed out after 30527ms.
+	at com.zaxxer.hikari.pool.HikariPool.createTimeoutException(HikariPool.java:696)
+	at com.zaxxer.hikari.pool.HikariPool.getConnection(HikariPool.java:197)
+	at com.zaxxer.hikari.pool.HikariPool.getConnection(HikariPool.java:162)
+	at com.zaxxer.hikari.HikariDataSource.getConnection(HikariDataSource.java:128)
+	at org.springframework.jdbc.datasource.DataSourceTransactionManager.doBegin(DataSourceTransactionManager.java:269)
+	... 65 common frames omitted
+Caused by: java.sql.SQLNonTransientConnectionException: No operations allowed after connection closed.
+	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:110)
+	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:97)
+	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:89)
+	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:63)
+	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:73)
+	at com.mysql.cj.jdbc.exceptions.SQLExceptionsMapping.translateException(SQLExceptionsMapping.java:73)
+	at com.mysql.cj.jdbc.ConnectionImpl.setNetworkTimeout(ConnectionImpl.java:2485)
+	at com.zaxxer.hikari.pool.PoolBase.setNetworkTimeout(PoolBase.java:566)
+	at com.zaxxer.hikari.pool.PoolBase.isConnectionAlive(PoolBase.java:173)
+	at com.zaxxer.hikari.pool.HikariPool.getConnection(HikariPool.java:186)
+	... 68 common frames omitted
+Caused by: com.mysql.cj.exceptions.ConnectionIsClosedException: No operations allowed after connection closed.
+	at jdk.internal.reflect.GeneratedConstructorAccessor72.newInstance(Unknown Source)
+	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:480)
+	at com.mysql.cj.exceptions.ExceptionFactory.createException(ExceptionFactory.java:61)
+	at com.mysql.cj.exceptions.ExceptionFactory.createException(ExceptionFactory.java:105)
+	at com.mysql.cj.exceptions.ExceptionFactory.createException(ExceptionFactory.java:151)
+	at com.mysql.cj.NativeSession.checkClosed(NativeSession.java:761)
+	at com.mysql.cj.jdbc.ConnectionImpl.checkClosed(ConnectionImpl.java:568)
+	at com.mysql.cj.jdbc.ConnectionImpl.setNetworkTimeout(ConnectionImpl.java:2481)
+	... 71 common frames omitted
+2026-04-20 15:00:35.868 [http-nio-8080-exec-5] ERROR c.markdown.editor.security.JwtUtils - JWT token is expired: JWT expired at 2026-04-19T18:00:18Z. Current time: 2026-04-20T15:00:35Z, a difference of 75617868 milliseconds.  Allowed clock skew: 0 milliseconds.
+2026-04-20 15:00:35.894 [http-nio-8080-exec-8] ERROR c.markdown.editor.security.JwtUtils - JWT token is expired: JWT expired at 2026-04-19T18:00:18Z. Current time: 2026-04-20T15:00:35Z, a difference of 75617894 milliseconds.  Allowed clock skew: 0 milliseconds.
+2026-04-20 15:00:35.894 [http-nio-8080-exec-7] ERROR c.markdown.editor.security.JwtUtils - JWT token is expired: JWT expired at 2026-04-19T18:00:18Z. Current time: 2026-04-20T15:00:35Z, a difference of 75617894 milliseconds.  Allowed clock skew: 0 milliseconds.
+2026-04-20 15:00:35.894 [http-nio-8080-exec-10] ERROR c.markdown.editor.security.JwtUtils - JWT token is expired: JWT expired at 2026-04-19T18:00:18Z. Current time: 2026-04-20T15:00:35Z, a difference of 75617894 milliseconds.  Allowed clock skew: 0 milliseconds.
+2026-04-20 15:00:40.261 [http-nio-8080-exec-2] ERROR c.markdown.editor.security.JwtUtils - JWT token is expired: JWT expired at 2026-04-19T18:00:18Z. Current time: 2026-04-20T15:00:40Z, a difference of 75622261 milliseconds.  Allowed clock skew: 0 milliseconds.
+2026-04-20 15:00:41.788 [http-nio-8080-exec-3] ERROR c.markdown.editor.security.JwtUtils - JWT token is expired: JWT expired at 2026-04-19T18:00:18Z. Current time: 2026-04-20T15:00:41Z, a difference of 75623788 milliseconds.  Allowed clock skew: 0 milliseconds.
+2026-04-20 15:02:04.686 [http-nio-8080-exec-9] ERROR c.markdown.editor.security.JwtUtils - JWT token is expired: JWT expired at 2026-04-19T18:00:18Z. Current time: 2026-04-20T15:02:04Z, a difference of 75706686 milliseconds.  Allowed clock skew: 0 milliseconds.
+2026-04-20 15:02:09.292 [http-nio-8080-exec-1] ERROR c.markdown.editor.security.JwtUtils - JWT token is expired: JWT expired at 2026-04-19T18:00:18Z. Current time: 2026-04-20T15:02:09Z, a difference of 75711292 milliseconds.  Allowed clock skew: 0 milliseconds.
+2026-04-20 15:02:09.292 [http-nio-8080-exec-6] ERROR c.markdown.editor.security.JwtUtils - JWT token is expired: JWT expired at 2026-04-19T18:00:18Z. Current time: 2026-04-20T15:02:09Z, a difference of 75711292 milliseconds.  Allowed clock skew: 0 milliseconds.
+2026-04-20 15:02:24.607 [http-nio-8080-exec-4] ERROR c.markdown.editor.security.JwtUtils - JWT token is expired: JWT expired at 2026-04-19T18:00:18Z. Current time: 2026-04-20T15:02:24Z, a difference of 75726607 milliseconds.  Allowed clock skew: 0 milliseconds.
+2026-04-20 15:02:51.861 [http-nio-8080-exec-5] ERROR c.markdown.editor.security.JwtUtils - JWT token is expired: JWT expired at 2026-04-19T18:00:18Z. Current time: 2026-04-20T15:02:51Z, a difference of 75753861 milliseconds.  Allowed clock skew: 0 milliseconds.
+2026-04-20 15:02:51.884 [http-nio-8080-exec-8] ERROR c.markdown.editor.security.JwtUtils - JWT token is expired: JWT expired at 2026-04-19T18:00:18Z. Current time: 2026-04-20T15:02:51Z, a difference of 75753884 milliseconds.  Allowed clock skew: 0 milliseconds.
+2026-04-20 15:02:51.884 [http-nio-8080-exec-7] ERROR c.markdown.editor.security.JwtUtils - JWT token is expired: JWT expired at 2026-04-19T18:00:18Z. Current time: 2026-04-20T15:02:51Z, a difference of 75753884 milliseconds.  Allowed clock skew: 0 milliseconds.
+2026-04-20 15:02:51.884 [http-nio-8080-exec-10] ERROR c.markdown.editor.security.JwtUtils - JWT token is expired: JWT expired at 2026-04-19T18:00:18Z. Current time: 2026-04-20T15:02:51Z, a difference of 75753884 milliseconds.  Allowed clock skew: 0 milliseconds.
+2026-04-20 16:44:53.130 [http-nio-8080-exec-7] ERROR c.markdown.editor.security.JwtUtils - JWT token is expired: JWT expired at 2026-04-20T16:44:48Z. Current time: 2026-04-20T16:44:53Z, a difference of 5126 milliseconds.  Allowed clock skew: 0 milliseconds.
+2026-04-20 16:44:53.130 [http-nio-8080-exec-11] ERROR c.markdown.editor.security.JwtUtils - JWT token is expired: JWT expired at 2026-04-20T16:44:48Z. Current time: 2026-04-20T16:44:53Z, a difference of 5126 milliseconds.  Allowed clock skew: 0 milliseconds.
+2026-04-20 16:44:53.130 [http-nio-8080-exec-1] ERROR c.markdown.editor.security.JwtUtils - JWT token is expired: JWT expired at 2026-04-20T16:44:48Z. Current time: 2026-04-20T16:44:53Z, a difference of 5126 milliseconds.  Allowed clock skew: 0 milliseconds.
+2026-04-20 16:45:11.665 [http-nio-8080-exec-4] ERROR c.markdown.editor.security.JwtUtils - JWT token is expired: JWT expired at 2026-04-20T16:44:48Z. Current time: 2026-04-20T16:45:11Z, a difference of 23665 milliseconds.  Allowed clock skew: 0 milliseconds.
+2026-04-20 16:45:11.685 [http-nio-8080-exec-8] ERROR c.markdown.editor.security.JwtUtils - JWT token is expired: JWT expired at 2026-04-20T16:44:48Z. Current time: 2026-04-20T16:45:11Z, a difference of 23685 milliseconds.  Allowed clock skew: 0 milliseconds.
+2026-04-20 16:45:11.685 [http-nio-8080-exec-6] ERROR c.markdown.editor.security.JwtUtils - JWT token is expired: JWT expired at 2026-04-20T16:44:48Z. Current time: 2026-04-20T16:45:11Z, a difference of 23685 milliseconds.  Allowed clock skew: 0 milliseconds.
+2026-04-20 16:45:11.685 [http-nio-8080-exec-3] ERROR c.markdown.editor.security.JwtUtils - JWT token is expired: JWT expired at 2026-04-20T16:44:48Z. Current time: 2026-04-20T16:45:11Z, a difference of 23685 milliseconds.  Allowed clock skew: 0 milliseconds.
+2026-04-20 16:45:14.215 [http-nio-8080-exec-10] ERROR c.markdown.editor.security.JwtUtils - JWT token is expired: JWT expired at 2026-04-20T16:44:48Z. Current time: 2026-04-20T16:45:14Z, a difference of 26214 milliseconds.  Allowed clock skew: 0 milliseconds.
+2026-04-20 16:45:14.519 [http-nio-8080-exec-2] ERROR c.markdown.editor.security.JwtUtils - JWT token is expired: JWT expired at 2026-04-20T16:44:48Z. Current time: 2026-04-20T16:45:14Z, a difference of 26519 milliseconds.  Allowed clock skew: 0 milliseconds.

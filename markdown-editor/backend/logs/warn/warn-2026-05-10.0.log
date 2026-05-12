@@ -1,0 +1,177 @@
+2026-05-10 10:09:48.734 [http-nio-8081-exec-10] WARN  com.zaxxer.hikari.pool.PoolBase - MarkdownHikariCP - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@53ca4dc5 (No operations allowed after connection closed.). Possibly consider using a shorter maxLifetime value.
+2026-05-10 10:09:48.734 [http-nio-8081-exec-6] WARN  com.zaxxer.hikari.pool.PoolBase - MarkdownHikariCP - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@412211c1 (No operations allowed after connection closed.). Possibly consider using a shorter maxLifetime value.
+2026-05-10 10:09:49.163 [http-nio-8081-exec-1] WARN  com.zaxxer.hikari.pool.PoolBase - MarkdownHikariCP - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@489b78d1 (No operations allowed after connection closed.). Possibly consider using a shorter maxLifetime value.
+2026-05-10 10:09:49.163 [http-nio-8081-exec-9] WARN  com.zaxxer.hikari.pool.PoolBase - MarkdownHikariCP - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@215c70a1 (No operations allowed after connection closed.). Possibly consider using a shorter maxLifetime value.
+2026-05-10 10:40:00.840 [http-nio-8081-exec-4] WARN  com.zaxxer.hikari.pool.PoolBase - MarkdownHikariCP - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@99717f2 (No operations allowed after connection closed.). Possibly consider using a shorter maxLifetime value.
+2026-05-10 10:40:05.849 [http-nio-8081-exec-4] WARN  com.zaxxer.hikari.pool.PoolBase - MarkdownHikariCP - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@56a6906 (No operations allowed after connection closed.). Possibly consider using a shorter maxLifetime value.
+2026-05-10 11:09:00.882 [http-nio-8081-exec-7] WARN  com.zaxxer.hikari.pool.PoolBase - MarkdownHikariCP - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@3ce896c2 (No operations allowed after connection closed.). Possibly consider using a shorter maxLifetime value.
+2026-05-10 11:09:05.904 [http-nio-8081-exec-7] WARN  com.zaxxer.hikari.pool.PoolBase - MarkdownHikariCP - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@650c9d0b (No operations allowed after connection closed.). Possibly consider using a shorter maxLifetime value.
+2026-05-10 11:09:10.907 [http-nio-8081-exec-7] WARN  com.zaxxer.hikari.pool.PoolBase - MarkdownHikariCP - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@7eef0e3e (No operations allowed after connection closed.). Possibly consider using a shorter maxLifetime value.
+2026-05-10 11:09:15.923 [http-nio-8081-exec-7] WARN  com.zaxxer.hikari.pool.PoolBase - MarkdownHikariCP - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@1ffa71fc (No operations allowed after connection closed.). Possibly consider using a shorter maxLifetime value.
+2026-05-10 11:19:06.435 [http-nio-8081-exec-6] WARN  com.zaxxer.hikari.pool.PoolBase - MarkdownHikariCP - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@2a3151d7 (No operations allowed after connection closed.). Possibly consider using a shorter maxLifetime value.
+2026-05-10 11:19:12.365 [http-nio-8081-exec-4] WARN  com.zaxxer.hikari.pool.PoolBase - MarkdownHikariCP - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@6b2beac6 (No operations allowed after connection closed.). Possibly consider using a shorter maxLifetime value.
+2026-05-10 11:19:17.737 [http-nio-8081-exec-2] WARN  com.zaxxer.hikari.pool.PoolBase - MarkdownHikariCP - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@2beb795f (No operations allowed after connection closed.). Possibly consider using a shorter maxLifetime value.
+2026-05-10 11:19:18.369 [http-nio-8081-exec-3] WARN  com.zaxxer.hikari.pool.PoolBase - MarkdownHikariCP - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@54345a1f (No operations allowed after connection closed.). Possibly consider using a shorter maxLifetime value.
+2026-05-10 11:19:23.392 [http-nio-8081-exec-6] WARN  com.zaxxer.hikari.pool.PoolBase - MarkdownHikariCP - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@37fdd8d1 (No operations allowed after connection closed.). Possibly consider using a shorter maxLifetime value.
+2026-05-10 11:27:22.578 [http-nio-8081-exec-5] WARN  com.zaxxer.hikari.pool.PoolBase - MarkdownHikariCP - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@434d14e1 (No operations allowed after connection closed.). Possibly consider using a shorter maxLifetime value.
+2026-05-10 11:27:28.072 [http-nio-8081-exec-10] WARN  com.zaxxer.hikari.pool.PoolBase - MarkdownHikariCP - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@676b3774 (No operations allowed after connection closed.). Possibly consider using a shorter maxLifetime value.
+2026-05-10 11:41:27.707 [http-nio-8081-exec-2] WARN  o.s.w.s.m.m.a.ExceptionHandlerExceptionResolver - Failure in @ExceptionHandler com.markdown.editor.exception.GlobalExceptionHandler#handleException(Exception)
+org.apache.catalina.connector.ClientAbortException: java.io.IOException: Connection reset by peer
+	at org.apache.catalina.connector.OutputBuffer.doFlush(OutputBuffer.java:309)
+	at org.apache.catalina.connector.OutputBuffer.flush(OutputBuffer.java:271)
+	at org.apache.catalina.connector.CoyoteOutputStream.flush(CoyoteOutputStream.java:120)
+	at org.springframework.security.web.util.OnCommittedResponseWrapper$SaveContextServletOutputStream.flush(OnCommittedResponseWrapper.java:523)
+	at java.base/java.io.FilterOutputStream.flush(FilterOutputStream.java:153)
+	at com.fasterxml.jackson.core.json.UTF8JsonGenerator.flush(UTF8JsonGenerator.java:1187)
+	at com.fasterxml.jackson.databind.ObjectWriter.writeValue(ObjectWriter.java:1009)
+	at org.springframework.http.converter.json.AbstractJackson2HttpMessageConverter.writeInternal(AbstractJackson2HttpMessageConverter.java:456)
+	at org.springframework.http.converter.AbstractGenericHttpMessageConverter.write(AbstractGenericHttpMessageConverter.java:104)
+	at org.springframework.web.servlet.mvc.method.annotation.AbstractMessageConverterMethodProcessor.writeWithMessageConverters(AbstractMessageConverterMethodProcessor.java:290)
+	at org.springframework.web.servlet.mvc.method.annotation.HttpEntityMethodProcessor.handleReturnValue(HttpEntityMethodProcessor.java:219)
+	at org.springframework.web.method.support.HandlerMethodReturnValueHandlerComposite.handleReturnValue(HandlerMethodReturnValueHandlerComposite.java:78)
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:135)
+	at org.springframework.web.servlet.mvc.method.annotation.ExceptionHandlerExceptionResolver.doResolveHandlerMethodException(ExceptionHandlerExceptionResolver.java:428)
+	at org.springframework.web.servlet.handler.AbstractHandlerMethodExceptionResolver.doResolveException(AbstractHandlerMethodExceptionResolver.java:75)
+	at org.springframework.web.servlet.handler.AbstractHandlerExceptionResolver.resolveException(AbstractHandlerExceptionResolver.java:142)
+	at org.springframework.web.servlet.handler.HandlerExceptionResolverComposite.resolveException(HandlerExceptionResolverComposite.java:80)
+	at org.springframework.web.servlet.DispatcherServlet.processHandlerException(DispatcherServlet.java:1332)
+	at org.springframework.web.servlet.DispatcherServlet.processDispatchResult(DispatcherServlet.java:1143)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1089)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:965)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1006)
+	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:898)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:529)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:883)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:623)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:209)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:153)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:51)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:178)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:153)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:111)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:178)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:153)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:111)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:178)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:153)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:337)
+	at org.springframework.security.web.access.intercept.FilterSecurityInterceptor.invoke(FilterSecurityInterceptor.java:115)
+	at org.springframework.security.web.access.intercept.FilterSecurityInterceptor.doFilter(FilterSecurityInterceptor.java:81)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:346)
+	at org.springframework.security.web.access.ExceptionTranslationFilter.doFilter(ExceptionTranslationFilter.java:122)
+	at org.springframework.security.web.access.ExceptionTranslationFilter.doFilter(ExceptionTranslationFilter.java:116)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:346)
+	at org.springframework.security.web.session.SessionManagementFilter.doFilter(SessionManagementFilter.java:126)
+	at org.springframework.security.web.session.SessionManagementFilter.doFilter(SessionManagementFilter.java:81)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:346)
+	at org.springframework.security.web.authentication.AnonymousAuthenticationFilter.doFilter(AnonymousAuthenticationFilter.java:109)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:346)
+	at org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter.doFilter(SecurityContextHolderAwareRequestFilter.java:149)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:346)
+	at org.springframework.security.web.savedrequest.RequestCacheAwareFilter.doFilter(RequestCacheAwareFilter.java:63)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:346)
+	at com.markdown.editor.filter.JwtAuthenticationFilter.doFilterInternal(JwtAuthenticationFilter.java:52)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:346)
+	at org.springframework.security.web.authentication.logout.LogoutFilter.doFilter(LogoutFilter.java:103)
+	at org.springframework.security.web.authentication.logout.LogoutFilter.doFilter(LogoutFilter.java:89)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:346)
+	at org.springframework.web.filter.CorsFilter.doFilterInternal(CorsFilter.java:91)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:346)
+	at org.springframework.security.web.header.HeaderWriterFilter.doHeadersAfter(HeaderWriterFilter.java:90)
+	at org.springframework.security.web.header.HeaderWriterFilter.doFilterInternal(HeaderWriterFilter.java:75)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:346)
+	at org.springframework.security.web.context.SecurityContextPersistenceFilter.doFilter(SecurityContextPersistenceFilter.java:112)
+	at org.springframework.security.web.context.SecurityContextPersistenceFilter.doFilter(SecurityContextPersistenceFilter.java:82)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:346)
+	at org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter.doFilterInternal(WebAsyncManagerIntegrationFilter.java:55)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:346)
+	at org.springframework.security.web.session.DisableEncodeUrlFilter.doFilterInternal(DisableEncodeUrlFilter.java:42)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:346)
+	at org.springframework.security.web.FilterChainProxy.doFilterInternal(FilterChainProxy.java:221)
+	at org.springframework.security.web.FilterChainProxy.doFilter(FilterChainProxy.java:186)
+	at org.springframework.web.filter.DelegatingFilterProxy.invokeDelegate(DelegatingFilterProxy.java:354)
+	at org.springframework.web.filter.DelegatingFilterProxy.doFilter(DelegatingFilterProxy.java:267)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:178)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:153)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:178)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:153)
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:178)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:153)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:178)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:153)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:167)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:90)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:481)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:130)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:93)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:343)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:390)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:926)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1791)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.base/java.lang.Thread.run(Thread.java:842)
+Caused by: java.io.IOException: Connection reset by peer
+	at java.base/sun.nio.ch.SocketDispatcher.write0(Native Method)
+	at java.base/sun.nio.ch.SocketDispatcher.write(SocketDispatcher.java:54)
+	at java.base/sun.nio.ch.IOUtil.writeFromNativeBuffer(IOUtil.java:132)
+	at java.base/sun.nio.ch.IOUtil.write(IOUtil.java:97)
+	at java.base/sun.nio.ch.IOUtil.write(IOUtil.java:53)
+	at java.base/sun.nio.ch.SocketChannelImpl.write(SocketChannelImpl.java:532)
+	at org.apache.tomcat.util.net.NioChannel.write(NioChannel.java:136)
+	at org.apache.tomcat.util.net.NioEndpoint$NioSocketWrapper.doWrite(NioEndpoint.java:1431)
+	at org.apache.tomcat.util.net.SocketWrapperBase.doWrite(SocketWrapperBase.java:775)
+	at org.apache.tomcat.util.net.SocketWrapperBase.flushBlocking(SocketWrapperBase.java:739)
+	at org.apache.tomcat.util.net.SocketWrapperBase.flush(SocketWrapperBase.java:723)
+	at org.apache.coyote.http11.Http11OutputBuffer$SocketOutputBuffer.flush(Http11OutputBuffer.java:566)
+	at org.apache.coyote.http11.filters.ChunkedOutputFilter.flush(ChunkedOutputFilter.java:157)
+	at org.apache.coyote.http11.Http11OutputBuffer.flush(Http11OutputBuffer.java:220)
+	at org.apache.coyote.http11.Http11Processor.flush(Http11Processor.java:1246)
+	at org.apache.coyote.AbstractProcessor.action(AbstractProcessor.java:398)
+	at org.apache.coyote.Response.action(Response.java:207)
+	at org.apache.catalina.connector.OutputBuffer.doFlush(OutputBuffer.java:305)
+	... 108 common frames omitted
+2026-05-10 16:53:32.790 [trend-data-worker] WARN  com.zaxxer.hikari.pool.PoolBase - MarkdownHikariCP - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@5c37763f (No operations allowed after connection closed.). Possibly consider using a shorter maxLifetime value.
+2026-05-10 16:56:42.338 [http-nio-8081-exec-6] WARN  com.zaxxer.hikari.pool.PoolBase - MarkdownHikariCP - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@36e24d7a (No operations allowed after connection closed.). Possibly consider using a shorter maxLifetime value.
+2026-05-10 16:56:42.339 [http-nio-8081-exec-8] WARN  com.zaxxer.hikari.pool.PoolBase - MarkdownHikariCP - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@2b13e3d (No operations allowed after connection closed.). Possibly consider using a shorter maxLifetime value.
+2026-05-10 17:51:53.864 [http-nio-8081-exec-5] WARN  com.zaxxer.hikari.pool.PoolBase - MarkdownHikariCP - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@48108a12 (No operations allowed after connection closed.). Possibly consider using a shorter maxLifetime value.
+2026-05-10 17:51:53.864 [http-nio-8081-exec-6] WARN  com.zaxxer.hikari.pool.PoolBase - MarkdownHikariCP - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@3ba41388 (No operations allowed after connection closed.). Possibly consider using a shorter maxLifetime value.
+2026-05-10 17:51:58.869 [http-nio-8081-exec-5] WARN  com.zaxxer.hikari.pool.PoolBase - MarkdownHikariCP - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@153e521c (No operations allowed after connection closed.). Possibly consider using a shorter maxLifetime value.
+2026-05-10 17:51:58.869 [http-nio-8081-exec-6] WARN  com.zaxxer.hikari.pool.PoolBase - MarkdownHikariCP - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@3ff1c00e (No operations allowed after connection closed.). Possibly consider using a shorter maxLifetime value.
+2026-05-10 17:52:03.873 [http-nio-8081-exec-6] WARN  com.zaxxer.hikari.pool.PoolBase - MarkdownHikariCP - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@671edca4 (No operations allowed after connection closed.). Possibly consider using a shorter maxLifetime value.
+2026-05-10 18:29:03.384 [http-nio-8081-exec-2] WARN  com.zaxxer.hikari.pool.PoolBase - MarkdownHikariCP - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@266cae49 (No operations allowed after connection closed.). Possibly consider using a shorter maxLifetime value.
+2026-05-10 18:29:03.384 [http-nio-8081-exec-9] WARN  com.zaxxer.hikari.pool.PoolBase - MarkdownHikariCP - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@44cc9471 (No operations allowed after connection closed.). Possibly consider using a shorter maxLifetime value.
+2026-05-10 18:29:03.384 [http-nio-8081-exec-6] WARN  com.zaxxer.hikari.pool.PoolBase - MarkdownHikariCP - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@202aae4f (No operations allowed after connection closed.). Possibly consider using a shorter maxLifetime value.
+2026-05-10 18:29:03.384 [http-nio-8081-exec-8] WARN  com.zaxxer.hikari.pool.PoolBase - MarkdownHikariCP - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@42efb542 (No operations allowed after connection closed.). Possibly consider using a shorter maxLifetime value.
+2026-05-10 18:29:03.446 [http-nio-8081-exec-1] WARN  com.zaxxer.hikari.pool.PoolBase - MarkdownHikariCP - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@309e7bcc (No operations allowed after connection closed.). Possibly consider using a shorter maxLifetime value.
+2026-05-10 18:38:40.265 [http-nio-8081-exec-7] WARN  com.zaxxer.hikari.pool.PoolBase - MarkdownHikariCP - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@5d6ddc82 (No operations allowed after connection closed.). Possibly consider using a shorter maxLifetime value.
+2026-05-10 18:38:41.686 [http-nio-8081-exec-1] WARN  com.zaxxer.hikari.pool.PoolBase - MarkdownHikariCP - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@53a8557f (No operations allowed after connection closed.). Possibly consider using a shorter maxLifetime value.
+2026-05-10 18:38:42.367 [http-nio-8081-exec-3] WARN  com.zaxxer.hikari.pool.PoolBase - MarkdownHikariCP - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@56fc38de (No operations allowed after connection closed.). Possibly consider using a shorter maxLifetime value.
+2026-05-10 18:38:42.524 [http-nio-8081-exec-12] WARN  com.zaxxer.hikari.pool.PoolBase - MarkdownHikariCP - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@71546b42 (No operations allowed after connection closed.). Possibly consider using a shorter maxLifetime value.
+2026-05-10 18:38:42.674 [http-nio-8081-exec-11] WARN  com.zaxxer.hikari.pool.PoolBase - MarkdownHikariCP - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@4369b4 (No operations allowed after connection closed.). Possibly consider using a shorter maxLifetime value.
+2026-05-10 18:38:42.849 [http-nio-8081-exec-6] WARN  com.zaxxer.hikari.pool.PoolBase - MarkdownHikariCP - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@5d3432e2 (No operations allowed after connection closed.). Possibly consider using a shorter maxLifetime value.
+2026-05-10 18:38:45.274 [http-nio-8081-exec-7] WARN  com.zaxxer.hikari.pool.PoolBase - MarkdownHikariCP - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@25f40aa7 (No operations allowed after connection closed.). Possibly consider using a shorter maxLifetime value.
+2026-05-10 18:38:46.689 [http-nio-8081-exec-1] WARN  com.zaxxer.hikari.pool.PoolBase - MarkdownHikariCP - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@2f602173 (No operations allowed after connection closed.). Possibly consider using a shorter maxLifetime value.
+2026-05-10 18:38:47.686 [http-nio-8081-exec-11] WARN  com.zaxxer.hikari.pool.PoolBase - MarkdownHikariCP - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@4aca596f (No operations allowed after connection closed.). Possibly consider using a shorter maxLifetime value.
+2026-05-10 18:43:29.962 [http-nio-8081-exec-2] WARN  com.zaxxer.hikari.pool.PoolBase - MarkdownHikariCP - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@2540dfed (No operations allowed after connection closed.). Possibly consider using a shorter maxLifetime value.
+2026-05-10 18:43:29.962 [http-nio-8081-exec-12] WARN  com.zaxxer.hikari.pool.PoolBase - MarkdownHikariCP - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@3b060aca (No operations allowed after connection closed.). Possibly consider using a shorter maxLifetime value.
+2026-05-10 18:43:29.962 [http-nio-8081-exec-6] WARN  com.zaxxer.hikari.pool.PoolBase - MarkdownHikariCP - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@7eddabd0 (No operations allowed after connection closed.). Possibly consider using a shorter maxLifetime value.
+2026-05-10 18:43:29.962 [http-nio-8081-exec-8] WARN  com.zaxxer.hikari.pool.PoolBase - MarkdownHikariCP - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@69982ea0 (No operations allowed after connection closed.). Possibly consider using a shorter maxLifetime value.
+2026-05-10 18:43:29.962 [http-nio-8081-exec-5] WARN  com.zaxxer.hikari.pool.PoolBase - MarkdownHikariCP - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@61ced991 (No operations allowed after connection closed.). Possibly consider using a shorter maxLifetime value.
+2026-05-10 18:43:30.181 [http-nio-8081-exec-1] WARN  com.zaxxer.hikari.pool.PoolBase - MarkdownHikariCP - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@21e45ff8 (No operations allowed after connection closed.). Possibly consider using a shorter maxLifetime value.
+2026-05-10 18:43:30.181 [http-nio-8081-exec-7] WARN  com.zaxxer.hikari.pool.PoolBase - MarkdownHikariCP - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@794f8968 (No operations allowed after connection closed.). Possibly consider using a shorter maxLifetime value.

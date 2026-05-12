@@ -1,0 +1,44 @@
+2026-05-04 18:05:04.483 [main] DEBUG c.m.editor.MarkdownEditorApplication - Running with Spring Boot v2.7.14, Spring v5.3.29
+2026-05-04 18:05:06.288 [main] DEBUG c.m.e.filter.JwtAuthenticationFilter - Filter 'jwtAuthenticationFilter' configured for use
+2026-05-04 18:06:43.769 [http-nio-8081-exec-1] ERROR c.markdown.editor.security.JwtUtils - JWT token is expired: JWT expired at 2026-05-02T17:31:52Z. Current time: 2026-05-04T18:06:43Z, a difference of 174891769 milliseconds.  Allowed clock skew: 0 milliseconds.
+2026-05-04 18:07:04.480 [trend-data-worker] ERROR c.m.e.service.impl.TrendServiceImpl - 获取评论数数据失败
+org.apache.ibatis.binding.BindingException: Invalid bound statement (not found): com.markdown.editor.mapper.CommentMapper.countByUserIdAndDateRange
+	at org.apache.ibatis.binding.MapperMethod$SqlCommand.<init>(MapperMethod.java:235)
+	at com.baomidou.mybatisplus.core.override.MybatisMapperMethod.<init>(MybatisMapperMethod.java:50)
+	at com.baomidou.mybatisplus.core.override.MybatisMapperProxy.lambda$cachedInvoker$0(MybatisMapperProxy.java:111)
+	at java.base/java.util.concurrent.ConcurrentHashMap.computeIfAbsent(ConcurrentHashMap.java:1708)
+	at com.baomidou.mybatisplus.core.toolkit.CollectionUtils.computeIfAbsent(CollectionUtils.java:115)
+	at com.baomidou.mybatisplus.core.override.MybatisMapperProxy.cachedInvoker(MybatisMapperProxy.java:98)
+	at com.baomidou.mybatisplus.core.override.MybatisMapperProxy.invoke(MybatisMapperProxy.java:89)
+	at jdk.proxy2/jdk.proxy2.$Proxy91.countByUserIdAndDateRange(Unknown Source)
+	at com.markdown.editor.service.impl.TrendServiceImpl.fetchCommentCountData(TrendServiceImpl.java:177)
+	at com.markdown.editor.service.impl.TrendServiceImpl.lambda$getTrendData$2(TrendServiceImpl.java:74)
+	at java.base/java.util.concurrent.CompletableFuture$AsyncRun.run(CompletableFuture.java:1804)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+	at java.base/java.lang.Thread.run(Thread.java:842)
+2026-05-04 18:17:20.401 [http-nio-8081-exec-5] WARN  com.zaxxer.hikari.pool.PoolBase - MarkdownHikariCP - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@6cccd4ad (No operations allowed after connection closed.). Possibly consider using a shorter maxLifetime value.
+2026-05-04 18:17:25.416 [http-nio-8081-exec-5] WARN  com.zaxxer.hikari.pool.PoolBase - MarkdownHikariCP - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@17eda3dd (No operations allowed after connection closed.). Possibly consider using a shorter maxLifetime value.
+2026-05-04 18:17:30.419 [http-nio-8081-exec-5] WARN  com.zaxxer.hikari.pool.PoolBase - MarkdownHikariCP - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@6f8b08a3 (No operations allowed after connection closed.). Possibly consider using a shorter maxLifetime value.
+2026-05-04 18:17:30.665 [http-nio-8081-exec-10] WARN  com.zaxxer.hikari.pool.PoolBase - MarkdownHikariCP - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@793cf4a0 (No operations allowed after connection closed.). Possibly consider using a shorter maxLifetime value.
+2026-05-04 18:17:30.665 [http-nio-8081-exec-2] WARN  com.zaxxer.hikari.pool.PoolBase - MarkdownHikariCP - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@464c3bbc (No operations allowed after connection closed.). Possibly consider using a shorter maxLifetime value.
+2026-05-04 18:17:30.665 [http-nio-8081-exec-3] WARN  com.zaxxer.hikari.pool.PoolBase - MarkdownHikariCP - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@2bba722 (No operations allowed after connection closed.). Possibly consider using a shorter maxLifetime value.
+2026-05-04 18:17:30.665 [http-nio-8081-exec-7] WARN  com.zaxxer.hikari.pool.PoolBase - MarkdownHikariCP - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@74f46798 (No operations allowed after connection closed.). Possibly consider using a shorter maxLifetime value.
+2026-05-04 18:17:30.665 [http-nio-8081-exec-8] WARN  com.zaxxer.hikari.pool.PoolBase - MarkdownHikariCP - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@7d26ebf7 (No operations allowed after connection closed.). Possibly consider using a shorter maxLifetime value.
+2026-05-04 18:17:30.883 [trend-data-worker] ERROR c.m.e.service.impl.TrendServiceImpl - 获取评论数数据失败
+org.apache.ibatis.binding.BindingException: Invalid bound statement (not found): com.markdown.editor.mapper.CommentMapper.countByUserIdAndDateRange
+	at org.apache.ibatis.binding.MapperMethod$SqlCommand.<init>(MapperMethod.java:235)
+	at com.baomidou.mybatisplus.core.override.MybatisMapperMethod.<init>(MybatisMapperMethod.java:50)
+	at com.baomidou.mybatisplus.core.override.MybatisMapperProxy.lambda$cachedInvoker$0(MybatisMapperProxy.java:111)
+	at java.base/java.util.concurrent.ConcurrentHashMap.computeIfAbsent(ConcurrentHashMap.java:1708)
+	at com.baomidou.mybatisplus.core.toolkit.CollectionUtils.computeIfAbsent(CollectionUtils.java:115)
+	at com.baomidou.mybatisplus.core.override.MybatisMapperProxy.cachedInvoker(MybatisMapperProxy.java:98)
+	at com.baomidou.mybatisplus.core.override.MybatisMapperProxy.invoke(MybatisMapperProxy.java:89)
+	at jdk.proxy2/jdk.proxy2.$Proxy91.countByUserIdAndDateRange(Unknown Source)
+	at com.markdown.editor.service.impl.TrendServiceImpl.fetchCommentCountData(TrendServiceImpl.java:177)
+	at com.markdown.editor.service.impl.TrendServiceImpl.lambda$getTrendData$2(TrendServiceImpl.java:74)
+	at java.base/java.util.concurrent.CompletableFuture$AsyncRun.run(CompletableFuture.java:1804)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+	at java.base/java.lang.Thread.run(Thread.java:842)
+2026-05-04 18:17:35.433 [http-nio-8081-exec-5] WARN  com.zaxxer.hikari.pool.PoolBase - MarkdownHikariCP - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@1fbbfffe (No operations allowed after connection closed.). Possibly consider using a shorter maxLifetime value.

@@ -1,0 +1,154 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.markdown.editor.mapper.DocumentMapper">
+
+    <select id="selectPageWithCounts" resultType="com.markdown.editor.entity.Document">
+        SELECT 
+            d.*,
+            COALESCE(c.comment_count, 0) as comment_count,
+            COALESCE(col.collection_count, 0) as collection_count
+        FROM documents d
+        LEFT JOIN (
+            SELECT document_id, COUNT(*) as comment_count
+            FROM comments
+            GROUP BY document_id
+        ) c ON d.id = c.document_id
+        LEFT JOIN (
+            SELECT document_id, COUNT(*) as collection_count
+            FROM document_collections
+            GROUP BY document_id
+        ) col ON d.id = col.document_id
+        WHERE d.user_id = #{userId}
+        <if test="category != null and category != ''">
+            AND d.category = #{category}
+        </if>
+        <if test="tags != null and tags != ''">
+            AND d.tags LIKE CONCAT('%', #{tags}, '%')
+        </if>
+        <if test="keyword != null and keyword != ''">
+            AND (d.title LIKE CONCAT('%', #{keyword}, '%') OR d.content LIKE CONCAT('%', #{keyword}, '%'))
+        </if>
+        ORDER BY d.updated_at DESC
+        LIMIT #{offset}, #{size}
+    </select>
+
+    <select id="selectPageWithCountsCount" resultType="java.lang.Long">
+        SELECT COUNT(*)
+        FROM documents d
+        WHERE d.user_id = #{userId}
+        <if test="category != null and category != ''">
+            AND d.category = #{category}
+        </if>
+        <if test="tags != null and tags != ''">
+            AND d.tags LIKE CONCAT('%', #{tags}, '%')
+        </if>
+        <if test="keyword != null and keyword != ''">
+            AND (d.title LIKE CONCAT('%', #{keyword}, '%') OR d.content LIKE CONCAT('%', #{keyword}, '%'))
+        </if>
+    </select>
+
+    <select id="selectUserDocumentsWithStats" resultType="com.markdown.editor.entity.Document">
+        SELECT 
+            d.*,
+            COALESCE(c.comment_count, 0) as comment_count,
+            COALESCE(col.collection_count, 0) as collection_count
+        FROM documents d
+        LEFT JOIN (
+            SELECT document_id, COUNT(*) as comment_count
+            FROM comments
+            GROUP BY document_id
+        ) c ON d.id = c.document_id
+        LEFT JOIN (
+            SELECT document_id, COUNT(*) as collection_count
+            FROM document_collections
+            GROUP BY document_id
+        ) col ON d.id = col.document_id
+        WHERE d.user_id = #{userId}
+        ORDER BY d.updated_at DESC
+    </select>
+
+    <select id="selectUserCollections" resultType="com.markdown.editor.entity.Document">
+        SELECT d.*
+        FROM document_collections dc
+        JOIN documents d ON dc.document_id = d.id
+        WHERE dc.user_id = #{userId}
+        ORDER BY dc.created_at DESC
+    </select>
+
+    <select id="selectDocumentsWithStatsByIds" resultType="com.markdown.editor.entity.Document">
+        SELECT 
+            d.*,
+            COALESCE(c.comment_count, 0) as comment_count,
+            COALESCE(col.collection_count, 0) as collection_count
+        FROM documents d
+        LEFT JOIN (
+            SELECT document_id, COUNT(*) as comment_count
+            FROM comments
+            GROUP BY document_id
+        ) c ON d.id = c.document_id
+        LEFT JOIN (
+            SELECT document_id, COUNT(*) as collection_count
+            FROM document_collections
+            GROUP BY document_id
+        ) col ON d.id = col.document_id
+        WHERE d.id IN
+        <foreach collection="ids" item="id" open="(" separator="," close=")">
+            #{id}
+        </foreach>
+    </select>
+
+    <select id="selectAllExceptSecretWithCounts" resultType="com.markdown.editor.entity.Document">
+        SELECT 
+            d.*,
+            COALESCE(c.comment_count, 0) as comment_count,
+            COALESCE(col.collection_count, 0) as collection_count
+        FROM documents d
+        LEFT JOIN (
+            SELECT document_id, COUNT(*) as comment_count
+            FROM comments
+            GROUP BY document_id
+        ) c ON d.id = c.document_id
+        LEFT JOIN (
+            SELECT document_id, COUNT(*) as collection_count
+            FROM document_collections
+            GROUP BY document_id
+        ) col ON d.id = col.document_id
+        WHERE d.permission != 'secret'
+        <if test="category != null and category != ''">
+            AND d.category = #{category}
+        </if>
+        <if test="keyword != null and keyword != ''">
+            AND (d.title LIKE CONCAT('%', #{keyword}, '%') OR d.content LIKE CONCAT('%', #{keyword}, '%'))
+        </if>
+        ORDER BY d.updated_at DESC
+        LIMIT #{offset}, #{size}
+    </select>
+
+    <select id="selectPublicWithCounts" resultType="com.markdown.editor.entity.Document">
+        SELECT 
+            d.*,
+            COALESCE(c.comment_count, 0) as comment_count,
+            COALESCE(col.collection_count, 0) as collection_count
+        FROM documents d
+        LEFT JOIN (
+            SELECT document_id, COUNT(*) as comment_count
+            FROM comments
+            GROUP BY document_id
+        ) c ON d.id = c.document_id
+        LEFT JOIN (
+            SELECT document_id, COUNT(*) as collection_count
+            FROM document_collections
+            GROUP BY document_id
+        ) col ON d.id = col.document_id
+        WHERE d.permission = 'public'
+        <if test="category != null and category != ''">
+            AND d.category = #{category}
+        </if>
+        <if test="keyword != null and keyword != ''">
+            AND (d.title LIKE CONCAT('%', #{keyword}, '%') OR d.content LIKE CONCAT('%', #{keyword}, '%'))
+        </if>
+        ORDER BY d.updated_at DESC
+        LIMIT #{offset}, #{size}
+    </select>
+
+</mapper>
