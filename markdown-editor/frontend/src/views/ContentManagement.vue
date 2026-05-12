@@ -3977,25 +3977,33 @@ onMounted(async () => {
 
 .works-data-grid {
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
+  grid-template-columns: repeat(5, 1fr);
   gap: 20px;
   margin-top: 20px;
 }
 
-.content-area .stat-item {
+.works-data-grid .stat-item {
   background-color: #f9f9f9;
   padding: 20px;
   border-radius: 8px;
   text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 100px;
 }
 
-.stat-title {
+.works-data-grid .stat-title {
   font-size: 14px;
   color: #666;
   margin-bottom: 10px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+}
+
+.works-data-grid .stat-value {
+  font-size: 24px;
+  font-weight: bold;
+  color: #333;
 }
 
 .info-icon {
