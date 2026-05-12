@@ -1134,3 +1134,86 @@ Action:
 
 Identify and stop the process that's listening on port 8081 or configure this application to listen on another port.
 
+2026-05-12 15:45:44.248 [http-nio-8081-exec-5] WARN  com.zaxxer.hikari.pool.PoolBase - MarkdownHikariCP - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@1f2c2cde (No operations allowed after connection closed.). Possibly consider using a shorter maxLifetime value.
+2026-05-12 15:45:49.265 [http-nio-8081-exec-5] WARN  com.zaxxer.hikari.pool.PoolBase - MarkdownHikariCP - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@fac211d (No operations allowed after connection closed.). Possibly consider using a shorter maxLifetime value.
+2026-05-12 15:45:54.277 [http-nio-8081-exec-5] WARN  com.zaxxer.hikari.pool.PoolBase - MarkdownHikariCP - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@1a9902d5 (No operations allowed after connection closed.). Possibly consider using a shorter maxLifetime value.
+2026-05-12 15:45:59.280 [http-nio-8081-exec-5] WARN  com.zaxxer.hikari.pool.PoolBase - MarkdownHikariCP - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@5535a418 (No operations allowed after connection closed.). Possibly consider using a shorter maxLifetime value.
+2026-05-12 15:46:04.293 [http-nio-8081-exec-5] WARN  com.zaxxer.hikari.pool.PoolBase - MarkdownHikariCP - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@48fb7407 (No operations allowed after connection closed.). Possibly consider using a shorter maxLifetime value.
+2026-05-12 15:46:09.130 [http-nio-8081-exec-10] WARN  com.zaxxer.hikari.pool.PoolBase - MarkdownHikariCP - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@1d5afbcf (No operations allowed after connection closed.). Possibly consider using a shorter maxLifetime value.
+2026-05-12 15:46:09.303 [http-nio-8081-exec-5] WARN  com.zaxxer.hikari.pool.PoolBase - MarkdownHikariCP - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@450a8424 (No operations allowed after connection closed.). Possibly consider using a shorter maxLifetime value.
+2026-05-12 15:46:14.135 [http-nio-8081-exec-10] WARN  com.zaxxer.hikari.pool.PoolBase - MarkdownHikariCP - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@2c547da9 (No operations allowed after connection closed.). Possibly consider using a shorter maxLifetime value.
+2026-05-12 15:46:19.143 [http-nio-8081-exec-10] WARN  com.zaxxer.hikari.pool.PoolBase - MarkdownHikariCP - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@13d2a952 (No operations allowed after connection closed.). Possibly consider using a shorter maxLifetime value.
+2026-05-12 15:46:24.158 [http-nio-8081-exec-10] WARN  com.zaxxer.hikari.pool.PoolBase - MarkdownHikariCP - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@5c1a35f (No operations allowed after connection closed.). Possibly consider using a shorter maxLifetime value.
+2026-05-12 15:46:24.279 [http-nio-8081-exec-10] DEBUG c.m.e.s.impl.LoginRecordServiceImpl - 使用缓存的公网IP: 117.9.92.66
+2026-05-12 15:46:24.279 [http-nio-8081-exec-10] DEBUG c.m.e.s.impl.LoginRecordServiceImpl - IP 117.9.92.66 的地理位置: 天津市
+2026-05-12 15:46:30.638 [trend-data-worker] ERROR c.m.e.service.impl.TrendServiceImpl - 获取评论数数据失败
+org.apache.ibatis.binding.BindingException: Invalid bound statement (not found): com.markdown.editor.mapper.CommentMapper.countByUserIdAndDateRange
+	at org.apache.ibatis.binding.MapperMethod$SqlCommand.<init>(MapperMethod.java:235)
+	at com.baomidou.mybatisplus.core.override.MybatisMapperMethod.<init>(MybatisMapperMethod.java:50)
+	at com.baomidou.mybatisplus.core.override.MybatisMapperProxy.lambda$cachedInvoker$0(MybatisMapperProxy.java:111)
+	at java.base/java.util.concurrent.ConcurrentHashMap.computeIfAbsent(ConcurrentHashMap.java:1708)
+	at com.baomidou.mybatisplus.core.toolkit.CollectionUtils.computeIfAbsent(CollectionUtils.java:115)
+	at com.baomidou.mybatisplus.core.override.MybatisMapperProxy.cachedInvoker(MybatisMapperProxy.java:98)
+	at com.baomidou.mybatisplus.core.override.MybatisMapperProxy.invoke(MybatisMapperProxy.java:89)
+	at jdk.proxy2/jdk.proxy2.$Proxy95.countByUserIdAndDateRange(Unknown Source)
+	at com.markdown.editor.service.impl.TrendServiceImpl.fetchCommentCountData(TrendServiceImpl.java:177)
+	at com.markdown.editor.service.impl.TrendServiceImpl.lambda$getTrendData$2(TrendServiceImpl.java:74)
+	at java.base/java.util.concurrent.CompletableFuture$AsyncRun.run(CompletableFuture.java:1804)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+	at java.base/java.lang.Thread.run(Thread.java:842)
+2026-05-12 15:47:12.870 [http-nio-8081-exec-3] DEBUG c.m.e.s.impl.LoginRecordServiceImpl - 使用缓存的公网IP: 117.9.92.66
+2026-05-12 15:47:12.870 [http-nio-8081-exec-3] DEBUG c.m.e.s.impl.LoginRecordServiceImpl - IP 117.9.92.66 的地理位置: 天津市
+2026-05-12 15:47:58.968 [http-nio-8081-exec-5] DEBUG c.m.e.s.impl.LoginRecordServiceImpl - 使用缓存的公网IP: 117.9.92.66
+2026-05-12 15:47:58.968 [http-nio-8081-exec-5] DEBUG c.m.e.s.impl.LoginRecordServiceImpl - IP 117.9.92.66 的地理位置: 天津市
+2026-05-12 15:49:33.151 [trend-data-worker] ERROR c.m.e.service.impl.TrendServiceImpl - 获取评论数数据失败
+org.apache.ibatis.binding.BindingException: Invalid bound statement (not found): com.markdown.editor.mapper.CommentMapper.countByUserIdAndDateRange
+	at org.apache.ibatis.binding.MapperMethod$SqlCommand.<init>(MapperMethod.java:235)
+	at com.baomidou.mybatisplus.core.override.MybatisMapperMethod.<init>(MybatisMapperMethod.java:50)
+	at com.baomidou.mybatisplus.core.override.MybatisMapperProxy.lambda$cachedInvoker$0(MybatisMapperProxy.java:111)
+	at java.base/java.util.concurrent.ConcurrentHashMap.computeIfAbsent(ConcurrentHashMap.java:1708)
+	at com.baomidou.mybatisplus.core.toolkit.CollectionUtils.computeIfAbsent(CollectionUtils.java:115)
+	at com.baomidou.mybatisplus.core.override.MybatisMapperProxy.cachedInvoker(MybatisMapperProxy.java:98)
+	at com.baomidou.mybatisplus.core.override.MybatisMapperProxy.invoke(MybatisMapperProxy.java:89)
+	at jdk.proxy2/jdk.proxy2.$Proxy95.countByUserIdAndDateRange(Unknown Source)
+	at com.markdown.editor.service.impl.TrendServiceImpl.fetchCommentCountData(TrendServiceImpl.java:177)
+	at com.markdown.editor.service.impl.TrendServiceImpl.lambda$getTrendData$2(TrendServiceImpl.java:74)
+	at java.base/java.util.concurrent.CompletableFuture$AsyncRun.run(CompletableFuture.java:1804)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+	at java.base/java.lang.Thread.run(Thread.java:842)
+2026-05-12 15:49:54.716 [http-nio-8081-exec-9] WARN  c.m.e.controller.DocumentController - 用户[chen]尝试获取不存在的文档，文档ID: 12
+2026-05-12 15:51:00.642 [http-nio-8081-exec-3] DEBUG c.m.e.s.impl.LoginRecordServiceImpl - 使用缓存的公网IP: 117.9.92.66
+2026-05-12 15:51:00.642 [http-nio-8081-exec-3] DEBUG c.m.e.s.impl.LoginRecordServiceImpl - IP 117.9.92.66 的地理位置: 天津市
+2026-05-12 15:51:05.508 [trend-data-worker] ERROR c.m.e.service.impl.TrendServiceImpl - 获取评论数数据失败
+org.apache.ibatis.binding.BindingException: Invalid bound statement (not found): com.markdown.editor.mapper.CommentMapper.countByUserIdAndDateRange
+	at org.apache.ibatis.binding.MapperMethod$SqlCommand.<init>(MapperMethod.java:235)
+	at com.baomidou.mybatisplus.core.override.MybatisMapperMethod.<init>(MybatisMapperMethod.java:50)
+	at com.baomidou.mybatisplus.core.override.MybatisMapperProxy.lambda$cachedInvoker$0(MybatisMapperProxy.java:111)
+	at java.base/java.util.concurrent.ConcurrentHashMap.computeIfAbsent(ConcurrentHashMap.java:1708)
+	at com.baomidou.mybatisplus.core.toolkit.CollectionUtils.computeIfAbsent(CollectionUtils.java:115)
+	at com.baomidou.mybatisplus.core.override.MybatisMapperProxy.cachedInvoker(MybatisMapperProxy.java:98)
+	at com.baomidou.mybatisplus.core.override.MybatisMapperProxy.invoke(MybatisMapperProxy.java:89)
+	at jdk.proxy2/jdk.proxy2.$Proxy95.countByUserIdAndDateRange(Unknown Source)
+	at com.markdown.editor.service.impl.TrendServiceImpl.fetchCommentCountData(TrendServiceImpl.java:177)
+	at com.markdown.editor.service.impl.TrendServiceImpl.lambda$getTrendData$2(TrendServiceImpl.java:74)
+	at java.base/java.util.concurrent.CompletableFuture$AsyncRun.run(CompletableFuture.java:1804)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+	at java.base/java.lang.Thread.run(Thread.java:842)
+2026-05-12 15:53:29.612 [trend-data-worker] ERROR c.m.e.service.impl.TrendServiceImpl - 获取评论数数据失败
+org.apache.ibatis.binding.BindingException: Invalid bound statement (not found): com.markdown.editor.mapper.CommentMapper.countByUserIdAndDateRange
+	at org.apache.ibatis.binding.MapperMethod$SqlCommand.<init>(MapperMethod.java:235)
+	at com.baomidou.mybatisplus.core.override.MybatisMapperMethod.<init>(MybatisMapperMethod.java:50)
+	at com.baomidou.mybatisplus.core.override.MybatisMapperProxy.lambda$cachedInvoker$0(MybatisMapperProxy.java:111)
+	at java.base/java.util.concurrent.ConcurrentHashMap.computeIfAbsent(ConcurrentHashMap.java:1708)
+	at com.baomidou.mybatisplus.core.toolkit.CollectionUtils.computeIfAbsent(CollectionUtils.java:115)
+	at com.baomidou.mybatisplus.core.override.MybatisMapperProxy.cachedInvoker(MybatisMapperProxy.java:98)
+	at com.baomidou.mybatisplus.core.override.MybatisMapperProxy.invoke(MybatisMapperProxy.java:89)
+	at jdk.proxy2/jdk.proxy2.$Proxy95.countByUserIdAndDateRange(Unknown Source)
+	at com.markdown.editor.service.impl.TrendServiceImpl.fetchCommentCountData(TrendServiceImpl.java:177)
+	at com.markdown.editor.service.impl.TrendServiceImpl.lambda$getTrendData$2(TrendServiceImpl.java:74)
+	at java.base/java.util.concurrent.CompletableFuture$AsyncRun.run(CompletableFuture.java:1804)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+	at java.base/java.lang.Thread.run(Thread.java:842)
