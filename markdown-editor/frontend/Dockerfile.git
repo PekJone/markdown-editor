@@ -24,7 +24,7 @@ RUN git config --global http.sslVerify false && \
     git config --global core.compression 0
 
 # 先克隆仓库（带时间戳强制重新执行）
-RUN GIT_SSL_NO_VERIFY=true git clone --depth 1 --branch ${GIT_BRANCH} ${GIT_REPO_URL} /app/repo --verbose
+RUN git -c http.sslVerify=false clone --depth 1 --branch ${GIT_BRANCH} ${GIT_REPO_URL} /app/repo --verbose
 
 # 拉取最新代码
 WORKDIR /app/repo
