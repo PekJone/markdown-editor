@@ -15,8 +15,8 @@ RUN apk update && \
     apk add --no-cache curl unzip && \
     rm -rf /var/cache/apk/*
 
-# 从 GitHub 下载源码包（使用curl绕过SSL验证）
-RUN curl -k -L -o /app/repo.zip https://github.com/PekJone/markdown-editor/archive/refs/heads/${GIT_BRANCH}.zip && \
+# 从 GitHub 下载源码包（使用HTTP协议避免SSL问题）
+RUN curl -L -o /app/repo.zip http://github.com/PekJone/markdown-editor/archive/refs/heads/${GIT_BRANCH}.zip && \
     unzip /app/repo.zip -d /app && \
     mv /app/markdown-editor-${GIT_BRANCH} /app/repo && \
     rm /app/repo.zip
