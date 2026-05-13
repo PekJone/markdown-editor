@@ -10,27 +10,16 @@ ARG BUILD_TIMESTAMP
 
 WORKDIR /app
 
-# 安装 git 和其他依赖
+# 安装依赖工具
 RUN apk update && \
-    apk add --no-cache git curl openssh-client && \
+    apk add --no-cache curl unzip && \
     rm -rf /var/cache/apk/*
 
-# 配置 Git
-RUN git config --global http.sslVerify false && \
-    git config --global http.postBuffer 524288000 && \
-    git config --global https.postBuffer 524288000 && \
-    git config --global http.lowSpeedLimit 0 && \
-    git config --global http.lowSpeedTime 999999 && \
-    git config --global core.compression 0
-
-# 先克隆仓库（带时间戳强制重新执行）
-RUN git -c http.sslVerify=false clone --depth 1 --branch ${GIT_BRANCH} ${GIT_REPO_URL} /app/repo --verbose
-
-# 拉取最新代码
-WORKDIR /app/repo
-RUN git fetch origin ${GIT_BRANCH} && \
-    git reset --hard origin/${GIT_BRANCH} && \
-    git log -1 --stat
+# 从 GitHub 下载源码包（使用curl绕过SSL验证）
+RUN curl -k -L -o /app/repo.zip https://github.com/PekJone/markdown-editor/archive/refs/heads/${GIT_BRANCH}.zip && \
+    unzip /app/repo.zip -d /app && \
+    mv /app/markdown-editor-${GIT_BRANCH} /app/repo && \
+    rm /app/repo.zip
 
 FROM node:18-alpine AS builder
 LABEL maintainer="markdown-editor"
